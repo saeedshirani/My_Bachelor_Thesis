@@ -1,0 +1,460 @@
+\documentclass{book}
+\usepackage{titling}
+\usepackage{multirow}
+\usepackage{makeidx}
+\usepackage{tikz}
+\usepackage{braket}
+\usepackage{array}
+
+\usepackage{qcircuit}
+\usepackage{graphicx}
+
+\usepackage{tabularray}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{xepersian}
+\settextfont{XB Zar}
+\linespread{1.5}
+
+
+
+\makeatletter
+\def\TikzBipolePath#1#2{\pgf@circ@bipole@path{#1}{#2}}
+\def\CircDirection{\pgf@circ@direction}
+\makeatother
+
+% TikZ libraries `calc` needed now to tweak bracket.
+\usetikzlibrary{backgrounds,fit,decorations.pathreplacing,calc}
+
+\begin{document}
+	
+\section{مقدمه}	
+در عصر حاضر بواسطه‌ی رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا .....
+\chapter{آشنایی با مفاهیم اولیه}
+\section{کیوبیت}
+
+یک کیوبیت\footnote{Qubit}، معادل یک واحد اطلاعات کوانتومی می‌باشد. این مفهوم معادل مفهوم کلاسیک بیت\footnote{Binary Bit} می‌باشد. به طور کلی هر کیوبیت حاوی دو بیت اطلاعات است. برای تبیین یک کیوبیت از خصوصیات سامانه های کوانتومی، بهره‌می‌بریم. کیوبیت یک سیستم کوانتومی با فضای دوبعدی است. برای تعیین این دوبعد می‌توان ا ز یکی از خصویات سامانه های کوانتومی استفاده کرد. 
+
+برخلاف بیت ها که مقادیر ثابت 0 یا 1 را به خود می‌گیرند؛ یک کیوبیت می‌تواند در یک حالت «برهمنهی کوانتومی» باشد؛ این بدان معناست که یک کیوبیت بواسطه‌ی مشاهده ناظر به یکی از حالات 0 یا یک تبدیل شود. این مهم‌ترین مزیت استفاده از کیوبیت‌هاست. بیان ریاضی یک کیوبیت ،در حالت برهمنهی، به شرح زیر است:
+\vspace{2cm}
+$$
+\left\{
+\begin{array}{ll}
+	  \vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle \\
+	  \alpha^2 + \beta^2 = 1
+\end{array}
+\right.
+$$
+\vspace{2cm}
+
+\newpage
+کت‌ها$\vert 0 \rangle$ و $\vert 1 \rangle$ بیانگر پایه‌های فضای 
+محاسباتی\footnote{\lr{Computational Basis Vectors}} هستند؛ و مقادیر $\alpha^2$ و $\beta^2$ بیانگر احتمال وقوع هر یک از این حالات، در صورت مشاهده، می‌باشند.
+
+نمایش بردار $\psi$ به شرح زیر است:
+\begin{center}
+\begin{tikzpicture}
+	
+	% Define the axes
+	\draw[->] (-2,0)--(2,0) node[right]{$\vert 0 \rangle$};
+	\draw[->] (0,-2)--(0,2) node[above]{$\vert 1 \rangle$};
+	
+	% Draw the vector
+	\draw[black,-stealth] (0,0)--(1,2) node[anchor=south west]{$\vec{\psi}$};
+	
+	% Label the components of the vector
+	\node[below] at (1,0) {$$};
+	\node[left] at (0,2) {$$};
+	
+\end{tikzpicture}
+\end{center}
+
+در بسیاری از مواقع برای سهولت در محاسبات، عملگر‌ها و حالات کوانتومی به کمک ماتریس‌ها نمایش داده ‌می‌شوند. فرم ماتریسی هر یک از حالات ذکر شده در بالا به شرح زیر است:
+
+\begin{equation}
+	\vert 1 \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
+	\hspace{2cm}
+	\vert 0 \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}	
+\end{equation}
+
+برای تعریف کیوبیت ها، راه های زیادی وجود دارد، حالات قطبش فوتون،‌اسپین الکترون،‌یا سطوح انرژی اتم،‌هریک می‌توانند تعیین کننده‌ی بردار‌های فضای کیوبیت باشند.
+
+\section{bloch vector - computayional basis - fourier basis}
+\section{گیت‌های کوانتومی}
+گیت‌های کوانتومی\footnote{\lr{Quantum Gates}} یکی از اولین و ههم‌ترین اجزای‌ مدار‌های کوانتومی ‌می‌باشند. این گیت‌ها عملگر‌هایی با قابلیت اثر‌گذاری روی کیوبیت‌ها می‌باشند. با اعمال یک گیت کوانتومی بر روی یک یا چند کیوبیت، می‌توان تغییرات مدنظر خود را روی کیوبیت اعمال کرد. با کمک این گیت‌ها می‌توان باعث برهم‌نهی کوانتومی یا رمز‌گذاری داده در داخل یک یا چند کیوبیت شد.
+
+\subsection{انواع گیت کوانتومی}
+گیت‌های کوانتومی، دارای انواع مختلف گوناگونی می‌باشند. به طور کلی گیت‌های کوانتومی، عملگر‌هایی یکه و بازگشت‌پذیر می‌باشند. 
+\subsection*{گیت هادامارد}
+مهم‌ترین گیت کوانتومی،‌گیت هادامارد\footnote{\lr{Hadamard gate}} است. با اعمال اثر این گیت روی یک کیوبیت، آن کیوبیت به‌یک حالت برهم نهی‌ کوانتومی‌ گذار‌ می‌کند. به عبارت دیگر هر یک از زیرحالات این حالت برهم‌نهی، با احتمال یکسانی قابل رخ دادن‌ هستند. 
+\vspace{1cm}
+$$
+H\ket{0} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
+\hspace{2cm}
+H\ket{1} = \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
+$$
+\vspace{1cm}
+
+این گیت کوانتومی‌ به صورت خطی روی یک دسته‌ کت اثر مي‌کند. نمایش ماتریسی این گیت‌کوانتومی به شرح زیر است:
+\begin{center}
+	\[
+	H = \frac{1}{\sqrt{2}}
+	\begin{pmatrix}
+		1 & 1 \\
+		1 & -1
+	\end{pmatrix}
+	\]
+\end{center}
+
+
+
+
+
+\begin{align*}
+	H |0\rangle = l\frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \
+	= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \
+	= \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle)
+\end{align*}
+
+\begin{align*}
+	H |1\rangle = l\frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \
+	= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix} \
+	= \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle)
+\end{align*}
+
+این گیت کوانتومی، یک گیت بازگشت‌پذیر است؛ یعنی اگر این گیت روی یک حالت کوانتومی اثر کند؛‌ می‌تواند آن را از حالت برهمنهی خارج کند. 
+
+برای اعمال این گیت کوانتومی، فقط به یک کیوبیت نیاز داریم. به اصطلاح این گیت،‌یک \lr{Single-Qubit Quantum gate} می‌باشد.
+
+نمایش این گیت‌کوانتومی در مدار با علامت زیر است:
+\Qcircuit @C=1em @R=1.2em {
+	& & \qw & \gate{H} & \qw \\
+	& & & & \\
+}
+
+
+\subsection*{گیت CNOT}
+
+گیت کوانتومی \lr{CNOT}\footnote{ controlled-NOT gate or controlled-X gate}، به عنوان گیت منطقی، یاد می‌شود. این گیت کوانتومی معادل گیت \lr{NOT} کلاسیک می‌باشد.
+به‌طور معمول، برای اعمال اثر این گیت کوانتومی نیاز به دو کیوبیت داریم. این گیت کوانتومی فقط و فقط در مواقعی که «کیوبیت کنترل\footnote{Controled Qubit}» دارای مقدار $\vert 1 \rangle$ باشد، باعث تغییر وضعیت «کیوبیت هدف\footnote{Target Qubit}» می‌شود.
+
+کیوبیت کنترل:
+کیوبیت هدف:
+
+خلاصه‌ای از عملکرد این تابع به شرح زیر است:\\
+\textbf{ببین چرا از این نماد به جای تنسور پراداکت استفاده شده}
+\begin{latin}
+\begin{tabular}{ccccc}
+	&&&&\\
+	|A & B$\rangle$ &	&  |A &B $\oplus$ A $\rangle$  \\
+	|control$\rangle$ & |target$\rangle$ & Effect CNOT Gate &|control$\rangle$ & |target$\rangle$ \\
+	------- & -------- & -------- & -------- & --------  \\
+	|0$\rangle$ & |0$\rangle$ & $\Longrightarrow$ &|0$\rangle$ & |0$\rangle$ \\
+	|0$\rangle$ & |1$\rangle$ & $\Longrightarrow$ &|0$\rangle$ & |1$\rangle$ \\
+	|1$\rangle$ & |0$\rangle$ & $\Longrightarrow$ &|1$\rangle$ & |0$\rangle$ \\
+	|1$\rangle$ & |1$\rangle$ & $\Longrightarrow$ &|1$\rangle$ & |1$\rangle$
+\end{tabular}
+\end{latin}
+
+
+
+نمایش ماتریسی این گیت کوانتومی به شکل زیر است:
+
+
+
+اینا باید اصلاح بشه
+
+$$
+\text{CNOT} = \begin{pmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 \\
+	0 & 0 & 1 & 0
+\end{pmatrix}
+$$
+
+
+
+$$
+\text{CNOT} \ket{1} = \begin{pmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 \\
+	0 & 0 & 1 & 0
+\end{pmatrix} \begin{pmatrix}
+	1 \\
+	0 \\
+	0 \\
+	0
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	0 \\
+	0 \\
+	1
+\end{pmatrix} = \ket{1}
+$$
+
+
+$$
+\text{CNOT} \ket{11} = \begin{pmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 1 & 0 & 0 \\
+	0 & 0 & 0 & 1 \\
+	0 & 0 & 1 & 0
+\end{pmatrix} \begin{pmatrix}
+	1 \\
+	1 \\
+	0 \\
+	0
+\end{pmatrix} = \begin{pmatrix}
+	0 \\
+	1 \\
+	0 \\
+	0
+\end{pmatrix} = \ket{10}
+$$
+\vspace{2cm}
+
+نمایش در داخل مدار:
+
+\vspace{2cm}
+\Qcircuit @C=1em @R=.7em {
+	& \ctrl{1} & \targ & \qw \\
+	& \targ & \ctrl{-1} & \qw
+}
+
+از این گیت کوانتومی‌، برای بسیاری مدار‌ها و شبیه‌سازی‌های کوانتومی، از جمله تلپورت، درهمتنیدگی و ...، استفاده می‌شود.
+
+
+
+
+
+\subsubsection*{گیت توفولی}
+گیت کوانتومی توفولی،‌یک نوع خاص از گیت \lr{CNOT} است. سازوکار این گیت مشابه گیت \lr{CNOT} می‌‌باشد؛‌ با این تفاوت که با در نظر گرفتن وضعیت دو کیوبیت کنترل شده، وضعیت کیوبیت سوم را تغییر می‌دهد. خلاصه ای از عملکرد این گیت کوانتومی به شرح زیراست:
+
+به بیان دیگر اگر دو کیوبیت کنترل شده،‌ مقدار یک داشته باشند؛‌ کیوبیت هدف مقدارش تغییر می‌کند.
+فرم ماتریسی این عملگر به شکل زیر است:
+
+این گیت کوانتومی در مدار کوانتومی به شکل زیر نشان داده می‌شود:
+
+\subsection*{گیت تغییر فاز}
+گیت تغییر فاز\footnote{Phase shift gate}، یکی از گیت های مهم کوانتومی‌ می‌باشد. این گیت با ضرب کردن یک عدد ثابت در فاز یک کیوبیت، باعث تغییر فاز کیوبیت می‌شود. این گیت کوانتومی در بسیاری از الگوریتم‌های سرچ کوانتومی به‌کار می‌رود. این گیت بدین صورت تعریف می‌شود:
+
+فرم ماتریسی این گیت به شرح زیر است:
+
+این گیت کوانتومی در مدار کوانتومی به شکل زیر نشان داده می‌شود:
+
+\subsection*{گیت دوران}
+گیت دوران، \footnote{Rotation gate}، باعث دوران حالت کیوبیت، در فضای هیلبرت ‌می‌شود. پایه‌های فضای هیلبرت مذکور بردار های................................... هستند. نمایش این گیت کوانتومی به شرح زیر است:
+
+فرم ماتریسی این گیت به شرح زیر است:
+نمایش این گیت در مدار کوانتومی به شرح زیراست:
+
+
+\subsection{Swap gate}
+
+% https://www.youtube.com/watch?v=_p7i2v21Ys8&t=188s
+% https://www.youtube.com/watch?v=F2okky5vD8k&list=PL1826E60FD05B44E4&index=11
+
+
+
+\section{مدار‌های کوانتومی}
+
+مدار‌های ‌کوانتومی\footnote{quantum circuit}، یک دسته از گیت ها‌ی کوانتومی،که با یک توالی بخصوص قرار گرفته اند، ‌می‌باشند. این کیوبیت ها، با توالی یاد شده، روی یک یا چند دسته کیوبیت، اثر داده ‌می‌شوند. 
+
+مدار‌های کوانتومی، یکی از اولین مفهوم‌های بکار‌رفته برای تعریف کامپیوتر‌های کوانتومی‌ می‌باشند. برای تعریف و شبیه‌سازی هریک از پدیده‌ها و الگوریتم‌های کوانتومی، نیاز به یک مدار به‌خصوص داریم.
+
+\subsubsection{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}
+Quantum circuits are similar to classical circuits, but they use quantum gates instead of classical logic gates. Quantum gates are reversible operations that can be used to manipulate the quantum state of a qubit.
+
+Sure, here are some similarities and differences between quantum circuits and classical circuits:
+
+**Similarities:**
+
+* Both quantum and classical circuits are composed of a sequence of operations that are applied to a set of data.
+* Both circuits can be represented graphically using a similar notation.
+* Both circuits can be used to implement algorithms.
+
+**Differences:**
+
+* Quantum circuits use qubits, which are quantum bits, as their basic unit of data. Classical circuits use bits, which are classical bits, as their basic unit of data.
+* Quantum circuits use quantum gates, which are reversible operations, as their basic operations. Classical circuits use logic gates, which are irreversible operations, as their basic operations.
+* Quantum circuits can exploit the properties of quantum mechanics, such as superposition and entanglement, to perform tasks that are impossible for classical computers.
+
+Here is a table that summarizes the similarities and differences between quantum circuits and classical circuits:
+
+| Feature | Quantum Circuit | Classical Circuit |
+|---|---|---|
+| Basic unit of data | Qubit | Bit |
+| Basic operations | Quantum gates | Logic gates |
+| Reversibility | Reversible | Irreversible |
+| Exploits quantum mechanics | Yes | No |
+| Possible tasks | Factoring integers, searching unsorted databases, simulating quantum systems | Sorting, calculating, logical operations |
+
+I hope this helps! Let me know if you have any other questions.
+
+
+\subsubsection{اجزای مدار‌های کوانتومی و سایز آن }
+Operations: Operations are the actions that are performed on qubits. They can be measurements, initializations, or other actions.
+
+
+The size of a quantum circuit is the number of gates in the circuit. The complexity of a quantum algorithm is often measured in terms of the size of the quantum circuit that is required to implement it.
+
+
+Qubits
+
+Qubits are the basic unit of information in quantum computing. They can be in a superposition of two states, 0 and 1. This means that a qubit can be both 0 and 1 at the same time, which is a property called quantum superposition. Qubits can also be entangled, which means that the state of one qubit is dependent on the state of another qubit.
+
+Gates
+
+Gates are operations that are applied to qubits. They can be used to create superpositions, perform rotations, and entangle qubits. There are many different types of gates, but some of the most common ones include the Hadamard gate, the CNOT gate, and the Toffoli gate.
+
+Operations
+
+Operations are the actions that are performed on qubits. They can be measurements, initializations, or other actions. Measurements are used to collapse the quantum state of a qubit into a definite value, 0 or 1. Initializations are used to set the state of a qubit to a specific value, 0 or 1.
+
+Quantum Circuits
+
+Quantum circuits are written using a graphical notation that is similar to the circuit diagrams used in classical computing. The horizontal axis of a quantum circuit represents time, and the vertical axis represents the qubits. The gates are represented by boxes, and the lines between the boxes represent the connections between the qubits.
+
+Conclusion
+
+The basic components of a quantum circuit are qubits, gates, and operations. These components are used to create quantum algorithms, which are algorithms that can only be performed on a quantum computer. Quantum circuits are a powerful tool for quantum computation, and they have the potential to revolutionize many different fields, including cryptography, chemistry, and machine learning.
+
+
+\subsection{نحوه‌ی نمایش مدار‌های کوانتومی}
+
+Quantum circuits are written using a graphical notation that is similar to the circuit diagrams used in classical computing. The horizontal axis of a quantum circuit represents time, and the vertical axis represents the qubits. The gates are represented by boxes, and the lines between the boxes represent the connections between the qubits.
+
+Quantum circuits are a powerful tool for quantum computation. They can be used to implement a wide variety of quantum algorithms, including Shor's algorithm for factoring integers and Grover's algorithm for searching unsorted databases.
+
+\chapter{برنامه‌نویسی کوانتومی}
+\section{تفاوت کامپیوتر کلاسیک و کوانتومی}
+\section{IBM Quantum computer and Qiskit}
+
+\chapter{Quantum query algorithms}
+% https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-77
+
+\subsection{Query and oracle}	
+	
+این دوره مزایای محاسباتی را که اطلاعات کوانتومی ارائه می دهد، بررسی می کند. به عبارت دیگر، ما در مورد آنچه می توانیم با رایانه های کوانتومی انجام دهیم و مزایایی که می توانند نسبت به رایانه های کلاسیک معمولی ارائه دهند، فکر خواهیم کرد. به طور خاص، تمرکز ما بر آنچه می توانیم با یک رایانه کوانتومی واحد انجام دهیم خواهد بود - برخلاف یک محیط توزیع شده که در آن چندین رایانه کوانتومی از طریق یک شبکه با هم تعامل دارند. (در واقع، مزایای کوانتومی در تنظیمات توزیع شده وجود دارد، جایی که ارتباطات و رمزنگاری وارد عمل می شوند، اما این موضوع خارج از محدوده این واحد است.)
+
+ما با یک سوال طبیعی شروع خواهیم کرد: مزایایی که یک رایانه کوانتومی ممکن است به طور بالقوه ارائه دهد چیست؟
+
+اولین مزیت بالقوه، که از همه مهمتر است، این است که رایانه های کوانتومی ممکن است راه حل های سریع تری برای برخی از مشکلات محاسباتی ارائه دهند. زمان یک منبع واقعاً گرانبها است - و این پتانسیل، اینکه رایانه های کوانتومی ممکن است به ما اجازه دهند تا برخی از مشکلات محاسباتی را که رایانه های کلاسیک برای حل آنها خیلی کند هستند، حل کنیم، تحقیقات محاسبات کوانتومی را در چند دهه گذشته هدایت کرده است.
+
+سایر منابع محاسباتی به غیر از زمان را می توان در نظر گرفت. مقدار حافظه کامپیوتر مورد نیاز برای انجام محاسبات - معمولاً به عنوان فضای مورد نیاز برای محاسبات شناخته می شود - یک جایگزین است که اغلب مورد مطالعه قرار می گیرد. با این حال، به نظر می رسد که رایانه های کوانتومی پتانسیل کمی برای ارائه مزایا در استفاده از فضا نسبت به رایانه های کلاسیک دارند. حافظه کامپیوتر نیز نسبتاً ارزان است و برخلاف زمان، قابل استفاده مجدد است. به این دلایل، زمان از نگرانی بیشتر است و تمرکز اصلی ما خواهد بود.
+
+چیزی که رایانه های کوانتومی نمی توانند انجام دهند این است که راه حل های محاسباتی برای مشکلاتی را ارائه دهند که رایانه های کلاسیک نمی توانند حل کنند - صرف نظر از منابع مورد نیاز - مانند مشکل متوقف شدن معروف که توسط آلن تورینگ در دهه 1930 فرموله شد. رایانه های کوانتومی را می توان توسط رایانه های کلاسیک شبیه سازی کرد، بنابراین هر مشکل محاسباتی که می تواند توسط یک رایانه کوانتومی حل شود، همچنین می تواند توسط یک رایانه کلاسیک حل شود، اگرچه ممکن است برای رایانه کلاسیک خیلی خیلی طول بکشد تا راه حلی پیدا کند.
+
+در حالی که زمان مورد نیاز برای حل مشکلات نگرانی اصلی ما است، ما برای اهداف این درس اول کمی از این تمرکز منحرف خواهیم شد. آنچه ما انجام خواهیم داد این است که یک چارچوب الگوریتمی ساده - که به عنوان مدل پرس و جو شناخته می شود - را فرموله کنیم و مزایایی را که رایانه های کوانتومی در این چارچوب ارائه می دهند، کاوش کنیم.
+
+مدل پرس و جو محاسبات شبیه یک دیش پتری برای ایده های الگوریتمی کوانتومی است. این سخت و مصنوعی است، به این معنا که به طور دقیق مشکلات محاسباتی را که ما عموماً در عمل به آنها اهمیت می دهیم، نشان نمی دهد. با این حال، ثابت شده است که ابزاری فوق العاده مفید برای توسعه تکنیک های الگوریتمی کوانتومی است، از جمله مواردی که قدرتمندترین الگوریتم های شناخته شده کوانتومی (مانند الگوریتم فاکتورگیری شور) را تقویت می کنند. همچنین اتفاق می افتد که یک چارچوب بسیار مفید برای توضیح این تکنیک ها باشد.
+
+پس از معرفی مدل پرس و جو، اولین الگوریتم کوانتومی کشف شده را مورد بحث قرار خواهیم داد که الگوریتم Deutsch است، همراه با یک گسترش الگوریتم Deutsch که به عنوان الگوریتم Deutsch-Jozsa شناخته می شود. این الگوریتم ها مزایای قابل اندازه گیری کوانتومی را نسبت به رایانه های کلاسیک نشان می دهند و در واقع الگوریتم Deutsch-Jozsa را می توان برای حل چندین مشکل محاسباتی در چارچوب مدل پرس و جو استفاده کرد. سپس یک الگوریتم کوانتومی مرتبط - که به عنوان الگوریتم Simon شناخته می شود - را مورد بحث قرار خواهیم داد که، به دلایلی که توضیح داده خواهد شد، مزایای کوانتومی قوی تر و رضایت بخش تری نسبت به محاسبات کوانتومی کلاسیک ارائه می دهد.
+
+
+\subsection{}
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-1-0
+
+\subsection{}
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-1-12
+
+\subsection{}
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-2-0
+
+
+\subsection{}
+
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-2-27
+
+	
+\section{}
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-0
+%https://www.youtube.com/watch?v=mGqyzZ-fnnY
+%https://www.youtube.com/watch?v=CIq0PUkFDBc
+%https://www.youtube.com/watch?v=7MdEHsRZxvo
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-77
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-5-0
+%https://learn.qiskit.org/course/algorithms/query-algorithms#query-19-0
+%https://www.youtube.com/watch?v=hK6BBluTGhU&list=PLay4zC7VCXV4gWb0ucSUQiGcRJFYMzROT&index=5
+	
+	
+\section{Deutsch-Jozsa Algorithm}
+
+
+algorithm:
+1. Prepare two quantum registers. The first is an n-qubit register initialized to 10), and the second is a one- qubit register initialized to (1): |%) = 0)Ⓡn|1) 
+\\
+
+
+Here is the algorithm to prepare two quantum registers:
+
+
+1. Prepare two quantum registers. The first is an n-qubit register initialized to |0⟩, and the second is a one-qubit register initialized to |1⟩.
+2. Apply a Hadamard gate to the first register. This will put it into a superposition of all the n-qubit states.
+3. Apply a controlled-NOT gate between the first and second registers. This will entangle the two registers.
+4. Measure the second register. If the second register is measured to be |0⟩, the first register will be in the state |x⟩, where x is an n-bit number.
+5. If the second register is measured to be |1⟩, the first register will be in a superposition of all the n-bit states.
+
+
+Here is an explanation of each step:
+
+1. The first step is to prepare the two quantum registers. The first register is initialized to the all-zero state |0⟩. This state is represented by a vector of n zeros. The second register is initialized to the all-one state |1⟩. This state is represented by a vector of n ones.
+2. The second step is to apply a Hadamard gate to the first register. The Hadamard gate is a quantum gate that takes a qubit in any state and puts it into a superposition of the two basis states, |0⟩ and |1⟩. In this case, the Hadamard gate will put the first register into a superposition of all the n-qubit states.
+3. The third step is to apply a controlled-NOT gate between the first and second registers. The controlled-NOT gate is a quantum gate that takes two qubits as input and outputs two qubits. The gate flips the target qubit if and only if the control qubit is in the state |1⟩. In this case, the control qubit is the first register, and the target qubit is the second register. So, the controlled-NOT gate will entangle the two registers.
+4. The fourth step is to measure the second register. Measurement is a process that collapses the quantum state of a qubit into a classical state. In this case, the second register will be measured in the basis |0⟩ and |1⟩. If the second register is measured to be |0⟩, the first register will be in the state |x⟩, where x is an n-bit number. The state |x⟩ is the state that the first register was in before the controlled-NOT gate was applied.
+5. The fifth step is to measure the second register. If the second register is measured to be |1⟩, the first register will be in a superposition of all the n-bit states.
+
+This algorithm can be used to prepare a quantum register in a specific state. The state of the quantum register will depend on the outcome of the measurement of the second register.	
+	
+
+% https://www.youtube.com/watch?v=DyINHZoOcLQ
+%https://www.youtube.com/watch?v=LTftC-eTLM0SS
+	
+	
+\section{grover}	
+% https://www.youtube.com/watch?v=hK6BBluTGhU
+% https://www.youtube.com/watch?v=EoH3JeqA55A
+	
+	
+	
+	
+%computer vs simulator https://www.youtube.com/watch?v=2qcvgXaDdfU
+% https://www.youtube.com/watch?v=0RPFWZj7Jm0	
+	
+	
+	
+\section{shor algorithm}	
+
+\chapter{شبیه‌سازی پدیده‌های کوانتومی}
+\section{Bell states}
+\section{super dense coding}
+\section{Teleport}
+	
+	
+	
+qeury and oracle
+how to determine a oracle
+-------------------
+quantum algorithm
+deutsch
+grover
+shor
+---------
+Bell state
+superdencse coding
+teleport
+
+	
+	
+	
+	
+% https://learn.qiskit.org/course/ch-algorithms/quantum-circuits
+	
+	
+	
+\end{document}
