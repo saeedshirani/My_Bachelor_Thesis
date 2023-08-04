@@ -22,9 +22,10 @@
 \contentsline {section}{\numberline {3.2}Deutsch Algorithm}{18}{}%
 \contentsline {subsection}{\numberline {3.2.1}مسئله‌ی دوچ}{18}{}%
 \contentsline {subsection}{\numberline {3.2.2}الگوریتم دوچ}{19}{}%
-\contentsline {section}{\numberline {3.3}Deutsch-Jozsa Algorithm}{20}{}%
-\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{21}{}%
-\contentsline {section}{\numberline {4.1}Bell states}{21}{}%
-\contentsline {section}{\numberline {4.2}entanglement}{21}{}%
-\contentsline {section}{\numberline {4.3}super dense coding}{21}{}%
-\contentsline {section}{\numberline {4.4}Teleport}{21}{}%
+\contentsline {section}{\numberline {3.3}phase kickback}{22}{}%
+\contentsline {section}{\numberline {3.4}Deutsch-Jozsa Algorithm}{22}{}%
+\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{23}{}%
+\contentsline {section}{\numberline {4.1}Bell states}{23}{}%
+\contentsline {section}{\numberline {4.2}entanglement}{24}{}%
+\contentsline {section}{\numberline {4.3}super dense coding}{24}{}%
+\contentsline {section}{\numberline {4.4}Teleport}{24}{}%

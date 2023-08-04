@@ -452,6 +452,7 @@ $$
 \end{center}
 در الگوریتم‌های کلاسیک برای حل این مسئله، حداقل دو حالت باید بررسی شود.
 \subsection{الگوریتم دوچ}
+% https://www.youtube.com/watch?v=2wticzHE1vs&t=2014s
 حال به بررسی الگوریتم دوچ می‌پردازیم. الگوریتمی که مسئله‌ی دوچ را با یک مدار کوانتومی حل می‌کند:\\
 \begin{center}
 \begin{figure}[ht]
@@ -461,7 +462,88 @@ $$
 \end{figure}
 \end{center}
 
+
+$$
+\begin{aligned}
+	\left|\pi_1\right\rangle= & |-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
+	\left|\pi_2\right\rangle= & \frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
+	= & \frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
+	& |0 \oplus a\rangle-|1 \oplus a\rangle=(-1)^a(|0\rangle-|1\rangle)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+	\left|\pi_1\right\rangle & =|-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
+	\left|\pi_2\right\rangle & =\frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
+	& =\frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
+	& =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+	\left|\pi_2\right\rangle & =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right) \\
+	& =(-1)^{f(0)}|-\rangle\left(\frac{|0\rangle+(-1)^{f(0) \oplus f(1)}|1\rangle}{\sqrt{2}}\right) \\
+	& = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases}
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+	\left|\pi_2\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases} \\
+	\left|\pi_3\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|0\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|1\rangle & f(0) \oplus f(1)=1\end{cases} \\
+	& =(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
+\end{aligned}
+$$
+
+$$
+\left|\pi_3\right\rangle=(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
+$$
+توضیحات رو بنویس
+
+
+
 \newpage
+\section{phase kickback}
+% https://www.youtube.com/watch?v=2wticzHE1vs&t=2014s
+
+$$
+\begin{gathered}
+	|b \oplus c\rangle=X^c|b\rangle \\
+	u_f(|b\rangle|a\rangle)=|b \oplus f(a)\rangle|a\rangle=\left(X^{f(a)}|b\rangle\right)|a\rangle
+\end{gathered}
+$$
+
+$$
+\begin{aligned}
+	\mathrm{U}_f(|b\rangle|a\rangle) & =\left(X^{f(a)}|b\rangle\right)|a\rangle \\
+	U_f(|\psi\rangle|a\rangle) & =\left(X^{f(a)}|\psi\rangle\right)|a\rangle
+\end{aligned}
+$$
+
+$$
+\begin{gathered}
+	u_f(|\psi\rangle|a\rangle)=\left(X^{f(a)}|\psi\rangle\right)|a\rangle \\
+	u_f(|-\rangle|a\rangle)=\left(X^{f(a)}|-\rangle\right)|a\rangle=(-1)^{f(a)}|-\rangle|a\rangle \\
+	X|-\rangle=-|-\rangle
+\end{gathered}
+$$
+$$
+\begin{aligned}
+	\mathrm{U}_{\mathrm{f}} & (|-\rangle|\mathrm{a}\rangle)=(-1)^{\mathrm{f}(\mathrm{a})}|-\rangle|\mathrm{a}\rangle \longleftarrow \begin{array}{l}
+		\text { phase } \\
+		\text { kickback }
+	\end{array} \\
+	\left|\pi_1\right\rangle & =|-\rangle|+\rangle \\
+	\left|\pi_2\right\rangle & =\mathrm{U}_{\mathrm{f}}(|-\rangle|+\rangle)=\frac{1}{\sqrt{2}} \mathrm{U}_{\mathrm{f}}(|-\rangle|0\rangle)+\frac{1}{\sqrt{2}} \mathrm{U}_{\mathrm{f}}(|-\rangle|1\rangle) \\
+	& =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right)
+\end{aligned}
+$$
 \section{Deutsch-Jozsa Algorithm}
 
 
@@ -479,6 +561,24 @@ $$
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 \section{Bell states}
+در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند:؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
+\begin{center}
+	$\vert \psi_{00} \rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
+\end{center}
+برای آماده‌سازی این حالت کوانتومی‌، در حالت \lr{$\vert0\rangle$} داریم. با اعمال یک گیت هدامارد روی یکی از کیوبیت‌ها و سپس با کنترل‌ آن با گیت \lr{CNOT}، (به نحوی که کیوبیت دوم هدف قرارگیرد.) می‌توان به یک حالت درهمتنیده رسید. می‌توان این مراحل را به شکل زیر شرح داد:
+\[
+\vert\psi{00}\rangle = C_{10}H_{1}\vert00\rangle
+\]
+
+%می‌توان رابطه‌ی بالا را به هریک از حالات $\vert00\rangle, \vert 01\rangl, \vert 10\rangl, \vert 11\rangl$ تعمیم داد:%
+\[
+\vert\psi{xy}\rangle = C_{10}H_{1}\vert xy \rangle
+\]
+
+از آنجایی که چهار حالت |xy〉 یک مجموعه orthonormal هستند و دروازه‌های Hadamard و cNOT واحدی هستند، چهار حالت درهم تنیده |ψxy〉 نیز یک مجموعه orthonormal هستند، که به نام پایه Bell نامگذاری شده‌اند. حال یک دسته‌ی سه‌کیوبیتی را درنظر ‌می‌گیریم:
+
+
+
 \section{entanglement}
 \section{super dense coding}
 \section{Teleport}
