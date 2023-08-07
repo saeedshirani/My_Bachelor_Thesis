@@ -1,4 +1,5 @@
 \contentsline {section}{\numberline {0.1}مقدمه}{2}{}%
+\contentsline {section}{\numberline {0.2}comp vs superpos basis}{2}{}%
 \contentsline {chapter}{\numberline {1}آشنایی با مفاهیم اولیه}{3}{}%
 \contentsline {section}{\numberline {1.1}کیوبیت}{3}{}%
 \contentsline {section}{\numberline {1.2}bloch vector - computayional basis - fourier basis}{4}{}%
@@ -12,20 +13,17 @@
 \contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{13}{}%
 \contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{13}{}%
 \contentsline {section}{\numberline {2.2}IBM Quantum computer and Qiskit}{13}{}%
-\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی درخواست داده‌}{15}{}%
-\contentsline {section}{\numberline {3.1}مدل کوئری}{16}{}%
-\contentsline {subsection}{\numberline {3.1.1}انواع مسئله}{16}{}%
-\contentsline {paragraph}{مسائل طبیعی}{16}{}%
-\contentsline {paragraph}{مسائل غیر طبیعی}{16}{}%
-\contentsline {subsection}{\numberline {3.1.2}مدل محاسباتی استاندارد}{17}{}%
-\contentsline {subsection}{\numberline {3.1.3}مدل کوئری}{17}{}%
-\contentsline {section}{\numberline {3.2}Deutsch Algorithm}{18}{}%
-\contentsline {subsection}{\numberline {3.2.1}مسئله‌ی دوچ}{18}{}%
-\contentsline {subsection}{\numberline {3.2.2}الگوریتم دوچ}{19}{}%
-\contentsline {section}{\numberline {3.3}phase kickback}{22}{}%
-\contentsline {section}{\numberline {3.4}Deutsch-Jozsa Algorithm}{22}{}%
-\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{23}{}%
-\contentsline {section}{\numberline {4.1}Bell states}{23}{}%
-\contentsline {section}{\numberline {4.2}entanglement}{24}{}%
-\contentsline {section}{\numberline {4.3}super dense coding}{24}{}%
-\contentsline {section}{\numberline {4.4}Teleport}{24}{}%
+\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{15}{}%
+\contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{15}{}%
+\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{19}{}%
+\contentsline {subsection}{\numberline {3.1.2}مدل کوئری}{19}{}%
+\contentsline {section}{\numberline {3.2}Deutsch Algorithm}{20}{}%
+\contentsline {subsection}{\numberline {3.2.1}مسئله‌ی دوچ}{20}{}%
+\contentsline {subsection}{\numberline {3.2.2}الگوریتم دوچ}{21}{}%
+\contentsline {section}{\numberline {3.3}Deutsch-Jozsa Algorithm}{24}{}%
+\contentsline {section}{\numberline {3.4}oracle}{24}{}%
+\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{25}{}%
+\contentsline {section}{\numberline {4.1}Bell states}{25}{}%
+\contentsline {section}{\numberline {4.2}entanglement}{26}{}%
+\contentsline {section}{\numberline {4.3}super dense coding}{26}{}%
+\contentsline {section}{\numberline {4.4}Teleport}{26}{}%

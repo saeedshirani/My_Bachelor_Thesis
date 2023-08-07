@@ -35,6 +35,16 @@
 \tableofcontents
 \section{مقدمه}	
 در عصر حاضر بواسطه‌ی رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا .....
+
+\section{comp vs superpos basis}
+Consider the circuit shown in Figure 1.17, which applies Uf to an input not in the
+computational basis. Instead, the data register is prepared in the superposition (|0〉 +
+|1〉)/√2, which can be created with a Hadamard gate acting on |0〉. Then we apply Uf ,
+resulting in the state:
+% https://g.co/bard/share/2972a6a63b24
+
+
+
 \chapter{آشنایی با مفاهیم اولیه}
 \section{کیوبیت}
 
@@ -337,38 +347,161 @@ Quantum circuits are a powerful tool for quantum computation. They can be used t
 \section{تفاوت کامپیوتر کلاسیک و کوانتومی}
 \section{IBM Quantum computer and Qiskit}
 
-\chapter{الگوریتم‌های‌کوانتومی درخواست داده‌}
-% https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-77
-الگوریتم‌های کوانتومی برای درخواست داده\footnote{Quantum query algorithms}، برای مدیریت داده‌ها،‌در پایگاه‌های‌داده استفاده می‌شود. در این بخش به مزایای‌کامپیوتر‌های کوانتومی می‌پردازیم و به تفاوت‌های آنها با کامپیوتر‌های کلاسیک می‌پردازیم.
+\chapter{الگوریتم‌های‌کوانتومی‌}
 
-ما با یک سوال طبیعی شروع خواهیم کرد: چه مزایایی ممکن است یک کامپیوتر کوانتومی ارائه دهد؟
 
-\textbf{نقاط قوت}\\
-اولین و مهم‌ترین مزیت کامپیوتر‌های کوانتومی،‌ارائه‌ی راه‌حل های سریع برای مسائل و محاسبات است. کامپیوتر‌های کوانتومی می‌توانند مسائلی را که برای کامپیوتر‌های کلاسیک چندین روز یا حتی سال زمان می‌برد؛‌ در مدت زمانی کوتاه حل کند.
-از طرفی ‌کامپیوتر‌های کوانتومی،برای حل مسائل یادشده،‌نیازمند منابع کمتری نسبت به کامپیوتر‌های کلاسیک هستند.\\
-\textbf{نقاط ضعف}\\
-کامپیوتر‌های کوانتومی در ابتدای مسیر رشد و توسعه‌ی خود می‌باشند؛ بسیاری از مسائل هنوز توسط کامپیوتر‌های کوانتومی غیرقابل حل ‌می‌باشند. این مشکل نه بخاطر منابع محدود و نه بخاطر زمان کم است؛ بلکه به علت نبود الگوریتم ها و راه حل های‌مناسب کوانتومی‌ می‌باشد.
+چه گونه‌ای از مسائل محاسباتی قابل اجرا با مدارهای کوانتومی می‌باشند؟ 
+تفاوت و برتری مدار‌های کوانتومی نسبت به مدار‌های کلاسیک چیست؟
+آیا می‌توان یک حوزه‌ی خاص را تعیین کرد؛ به گونه‌ای که عملکرد کامپیوترهای‌‌کوانتومی نسبت به کامپیوتر‌های کلاسیک مزیت داشته باشند؟
+
+در این بخش می‌خواهیم به طور خلاصه این سوالات را پاسخ دهیم و توضیح دهیم چگونه می‌توان از کامپیوتر‌های کوانتومی به شکلی سودمند استفاده کنیم.
+
+\section{موازی سازی کوانتومی}
+
+موازی‌سازی کوانتومی\footnote{Quantum parallelism}، پایه‌واساس بسیاری از الگوریتم‌های کوانتومی است. با گذار یک حالت کوانتومی به حالت برهمنهی کوانتومی، درحین محاسبات کوانتومی یک تابع نظیر \lr{f(x)}، می‌تواند مقادیر مختلف \lr{x} را به طور همزمان بررسی کند. این درحالیست که در محاسبات کلاسیک به دلیل ماهیت بیت‌های اطلاعات، تابع \lr{f(x)} فقط می‌تواند یکی از مقادیر مجاز برای \lr{x} را بررسی کند.
+
+
+فرض کنید تابع f ،یک تابع تک-کیوبیت، به صورت زیر تعریف شده است:\\
+\begin{center}
+	$f (x) : \{0, 1\} \rightarrow \{0, 1\}$\\
+\end{center}
+
+convenient way of computing this function on a quantum computer is to consider a two
+qubit quantum computer which starts in the state |x, y〉. With an appropriate sequence
+of logic gates it is possible to transform this state into |x, y ⊕ f (x)〉, where ⊕ indicates
+addition modulo 2; 
+
+روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
+
+\footnote{Modulo 2 is a mathematical operation that returns the remainder of a division by 2. For example, 5 mod 2 is 1, because 5 divided by 2 has a quotient of 2 and a remainder of 1.
+	
+	The symbol "⊕" is often used to indicate addition modulo 2. So, the expression "5 ⊕ 3" would be evaluated as follows:
+	
+	5 ⊕ 3 = (5 + 3) mod 2 = 8 mod 2 = 0
+	This is because 8 divided by 2 has a quotient of 4 and a remainder of 0.
+	
+	Modulo 2 is a useful operation in many different areas of mathematics, including cryptography, computer science, and number theory. It is also used in everyday life, for example, when checking whether a number is even or odd.
+	
+	Here are some other examples of modulo 2:
+	
+	1 mod 2 = 1
+	2 mod 2 = 0
+	3 mod 2 = 1
+	4 mod 2 = 0
+	5 mod 2 = 1}
+
+
+
+
+the first register is called the ‘data’ register, and the second register the
+‘target’ register. We give the transformation defined by the map |x, y〉 → |x, y ⊕ f (x)〉 a
+name, Uf , and note that it is easily shown to be unitary.
+
+هریک از دسته‌های کیوبیت، \textbf{رجیستر کوانتومی} نامیده‌می‌شوند. اولین رجیستر، «رجیستر داده» و دومین رجیستر «رجیستر هدف» نامیده می‌شود.\\
+ازین پس در این بخش به عامل گذار $\vert x, y \rangle \rightarrow \vert x, y \oplus f(x) \rangle$، عنوان «تابع \lr{$U_{f}$}» را اطلاق خواهیم کرد. لازم به ذکرست که این تبدیل، یک تبدیل یکه به شمار می‌آید.\footnote{اثبات این مطلب از حوصله‌ی بحث خارج است.}
+
+
+اگر \lr{y = 0} آنگاه مقدار دومین کیوبیت بعد از اعمال تابع \lr{$U_{f}$} برابر با مقدار \lr{f(x)} خواهد بود.
+
+ \begin{center}
+ 	 \begin{figure}[ht]
+ 		\centering
+ 		\includegraphics[width=0.8\textwidth]{Uforacle.png}
+ 		\caption{مدار کوانتومی برای ارزیابی $f (0)$ و $f (1)$ به طور همزمان. Uf مدار کوانتومی است که ورودی هایی مانند $\vert x, y\rangle$ را به $\vert x, y \rangle \rightarrow \vert x, y \oplus f(x) \rangle$، تصویر می‌کند.}
+ 	\end{figure}
+ \end{center}
 
  
- مانند مسئله معروف توقف که توسط آلن تورینگ در دهه 1930 فرموله شد. کامپیوترهای کوانتومی توسط کامپیوترهای کلاسیک شبیه‌سازی می‌شوند.
- 
- در بخش‌های بعدی با چند الگوریتم ساده‌ی کوانتومی آشنا خواهیم شد؛ این الگوریتم ها براساس مدل کوئری کوانتومی‌ \footnote{Quantum query algorithms}می‌باشند. 
-
-
-مدل کوئری کوانتومی، سنگ بنای ایده‌های الگوریتم کوانتومی‌ است. این مدل انعطاف پذیر و ساده‌شده است. این مدل یک طرح ساده‌ شده از مدل محاسبات کوانتومی است. مدل کوئری کوانتومی‌ نمی‌تواند تعاملات بین کیوبیت‌هارا به شرح دهد؛ ولی این مدل به دلیل ساده بودن و کارآمد بودن در توضیح برخی از پدیده‌ها کوانتومی‌ مانند درهمتنیدگی و برهمنهی کوانتومی می‌تواند حائز اهمیت باشد. 
 
 
 
+Consider the circuit shown in Figure 1.17, which applies Uf to an input not in the
+computational basis. Instead, the data register is prepared in the superposition (|0〉 +
+|1〉)/√2, which can be created with a Hadamard gate acting on |0〉. Then we apply Uf ,
+resulting in the state:
+|0, f (0)〉 + |1, f (1)〉
+√2 . (1.37)
 
 
-\section{مدل کوئری}	
+
+This is a remarkable state! The different terms contain information about both f (0) and
+f (1); it is almost as if we have evaluated f (x) for two values of x simultaneously, a feature
+known as ‘quantum parallelism’. Unlike classical parallelism, where multiple circuits each
+built to compute f (x) are executed simultaneously, here a single f (x) circuit is employed
+to evaluate the function for multiple values of x simultaneously, by exploiting the ability
+of a quantum computer to be in superpositions of different states.
 
 
-در این بخش به بررسی مزایای محاسبات کوانتومی و برتری‌های این نوع از محاسبات نسبت به محاسبات کلاسیک می‌پردازیم. مدل کوئری یک مدل ساده شده برای تعریف و تبیین مدل های پیچیده‌تر است.  
 
-\subsection{انواع مسئله}
-\paragraph{مسائل طبیعی}
-\paragraph{مسائل غیر طبیعی}
+
+This procedure can easily be generalized to functions on an arbitrary number of bits, by
+using a general operation known as the Hadamard transform, or sometimes the Walsh–
+Hadamard transform. This operation is just n Hadamard gates acting in parallel on n
+qubits. For example, shown in Figure 1.18 is the case n = 2 with qubits initially prepared
+as |0〉, which gives
+( |0〉 + |1〉
+√2
+) ( |0〉 + |1〉
+√2
+)
+= |00〉 + |01〉 + |10〉 + |11〉
+2 (1.38)
+as output.
+
+
+ We write H⊗2 to denote the parallel action of two Hadamard gates, and read
+‘⊗’ as ‘tensor’. More generally, the result of performing the Hadamard transform on n
+ubits initially in the all |0〉 state is
+1
+√2n
+∑
+x
+|x〉 , (1.39)
+
+
+
+
+where the sum is over all possible values of x, and we write H⊗n to denote this action.
+That is, the Hadamard transform produces an equal superposition of all computational
+basis states. Moreover, it does this extremely efficiently, producing a superposition of 2n
+states using just n gates.
+
+
+
+Figure 1.18. The Hadamard transform H⊗2 on two qubits.
+Quantum parallel evaluation of a function with an n bit input x and 1 bit output, f (x),
+can thus be performed in the following manner. Prepare the n + 1 qubit state |0〉⊗n|0〉,
+then apply the Hadamard transform to the first n qubits, followed by the quantum circuit
+implementing Uf . This produces the state
+1
+√2n
+∑
+x
+|x〉|f (x)〉 . (1.40)
+
+
+
+
+
+
+In some sense, quantum parallelism enables all possible values of the function f to be
+evaluated simultaneously, even though we apparently only evaluated f once. However,
+this parallelism is not immediately useful. In our single qubit example, measurement of the
+state gives only either |0, f (0)〉 or |1, f (1)〉! Similarly, in the general case, measurement of
+the state ∑
+x |x, f (x)〉 would give only f (x) for a single value of x. Of course, a classical
+computer can do this easily! Quantum computation requires something more than just
+quantum parallelism to be useful; it requires the ability to extract information about more
+than one value of f (x) from superposition states like ∑
+x |x, f (x)〉. Over the next two
+sections we investigate examples of how this may be done
+
+
+
+
+
+
+
 
 \newpage
 \subsection{مدل محاسباتی استاندارد}
@@ -424,6 +557,7 @@ $$
 %https://www.youtube.com/watch?v=hK6BBluTGhU&list=PLay4zC7VCXV4gWb0ucSUQiGcRJFYMzROT&index=5
 	
 \section{Deutsch Algorithm}
+tell combnation of books
 \subsection{مسئله‌ی دوچ}
 الگوریتم \lr{Deutsch} اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{David Deutsch} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
 
@@ -453,6 +587,8 @@ $$
 در الگوریتم‌های کلاسیک برای حل این مسئله، حداقل دو حالت باید بررسی شود.
 \subsection{الگوریتم دوچ}
 % https://www.youtube.com/watch?v=2wticzHE1vs&t=2014s
+% page 32
+
 حال به بررسی الگوریتم دوچ می‌پردازیم. الگوریتمی که مسئله‌ی دوچ را با یک مدار کوانتومی حل می‌کند:\\
 \begin{center}
 \begin{figure}[ht]
@@ -509,41 +645,7 @@ $$
 
 
 \newpage
-\section{phase kickback}
-% https://www.youtube.com/watch?v=2wticzHE1vs&t=2014s
 
-$$
-\begin{gathered}
-	|b \oplus c\rangle=X^c|b\rangle \\
-	u_f(|b\rangle|a\rangle)=|b \oplus f(a)\rangle|a\rangle=\left(X^{f(a)}|b\rangle\right)|a\rangle
-\end{gathered}
-$$
-
-$$
-\begin{aligned}
-	\mathrm{U}_f(|b\rangle|a\rangle) & =\left(X^{f(a)}|b\rangle\right)|a\rangle \\
-	U_f(|\psi\rangle|a\rangle) & =\left(X^{f(a)}|\psi\rangle\right)|a\rangle
-\end{aligned}
-$$
-
-$$
-\begin{gathered}
-	u_f(|\psi\rangle|a\rangle)=\left(X^{f(a)}|\psi\rangle\right)|a\rangle \\
-	u_f(|-\rangle|a\rangle)=\left(X^{f(a)}|-\rangle\right)|a\rangle=(-1)^{f(a)}|-\rangle|a\rangle \\
-	X|-\rangle=-|-\rangle
-\end{gathered}
-$$
-$$
-\begin{aligned}
-	\mathrm{U}_{\mathrm{f}} & (|-\rangle|\mathrm{a}\rangle)=(-1)^{\mathrm{f}(\mathrm{a})}|-\rangle|\mathrm{a}\rangle \longleftarrow \begin{array}{l}
-		\text { phase } \\
-		\text { kickback }
-	\end{array} \\
-	\left|\pi_1\right\rangle & =|-\rangle|+\rangle \\
-	\left|\pi_2\right\rangle & =\mathrm{U}_{\mathrm{f}}(|-\rangle|+\rangle)=\frac{1}{\sqrt{2}} \mathrm{U}_{\mathrm{f}}(|-\rangle|0\rangle)+\frac{1}{\sqrt{2}} \mathrm{U}_{\mathrm{f}}(|-\rangle|1\rangle) \\
-	& =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right)
-\end{aligned}
-$$
 \section{Deutsch-Jozsa Algorithm}
 
 
@@ -558,39 +660,171 @@ $$
 %computer vs simulator https://www.youtube.com/watch?v=2qcvgXaDdfU
 % https://www.youtube.com/watch?v=0RPFWZj7Jm0	
 	
-
+\section{oracle}
+use qiskit site
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 \section{Bell states}
+% pls search about bell eq
 در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند:؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
 \begin{center}
 	$\vert \psi_{00} \rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
 \end{center}
 برای آماده‌سازی این حالت کوانتومی‌، در حالت \lr{$\vert0\rangle$} داریم. با اعمال یک گیت هدامارد روی یکی از کیوبیت‌ها و سپس با کنترل‌ آن با گیت \lr{CNOT}، (به نحوی که کیوبیت دوم هدف قرارگیرد.) می‌توان به یک حالت درهمتنیده رسید. می‌توان این مراحل را به شکل زیر شرح داد:
-\[
-\vert\psi{00}\rangle = C_{10}H_{1}\vert00\rangle
-\]
+\begin{center}
+	$\vert\psi_{00}\rangle = C_{10}H_{1}\vert00\rangle$
+\end{center}
 
 %می‌توان رابطه‌ی بالا را به هریک از حالات $\vert00\rangle, \vert 01\rangl, \vert 10\rangl, \vert 11\rangl$ تعمیم داد:%
 \[
-\vert\psi{xy}\rangle = C_{10}H_{1}\vert xy \rangle
+\vert\psi_{xy}\rangle = C_{10}H_{1}\vert xy \rangle
 \]
 
 از آنجایی که چهار حالت |xy〉 یک مجموعه orthonormal هستند و دروازه‌های Hadamard و cNOT واحدی هستند، چهار حالت درهم تنیده |ψxy〉 نیز یک مجموعه orthonormal هستند، که به نام پایه Bell نامگذاری شده‌اند. حال یک دسته‌ی سه‌کیوبیتی را درنظر ‌می‌گیریم:
 
+% read about bell state equation
+\begin{center}
+$\vert \psi_{xy}\rangle = C10H1X^{x}_{1} X^{y}_{0} \vert00\rangle$\\
+\end{center}
 
-
+last paragraph of page 136 of quantum computer scince book??\\
 \section{entanglement}
 \section{super dense coding}
+quntum computer scinse
 \section{Teleport}
+isac book
+فرض کنید آلیس یک کیوبیت در حالت زیر دارد:
+\begin{center}
+$\vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle $\\	
+\end{center}
+
+	کارول ممکن است با اعمال یک عملگر یکه‌ به یک کیوبیت در حالت استاندارد، کیوبیت را از حالت $\vert0\rangle$ به حالت $\vert\psi\rangle$  تبدیل کرده باشد. کارول بدون اعلام نوع عملگر یکه به آلیس،‌ کیوبیت را برای او ارسال می‌کند. 
+	حال آلیس می‌خواهد بدون دسترسی داشتن به کیوبیت باب، تغییراتی را در کیوبیت او ایجاد کند؛ این تنها درصورتی ممکن است که کیوبیت باب و آلیس درهمتنیده باشند. هرچند آلیس و باب می‌توانند از طریق راه‌های کلاسیک(نظیر تلفنی صحبت کردن و ...) با یکدیگر ارتباط برقرار کنند؛ ولی نمی‌توانند دسترسی مستقیم به کیوبیت یکدیگر داشته باشند. 
 	
+	کیوبیت باب را می‌توان به حالت زیر تعریف کرد:
+$\vert\phi\rangle = 1/\sqrt{2}(\vert0\rangle \vert0\rangle + \vert1\rangle\vert1\rangle)$ 
 	
 
-how to determine a oracle
--------------------
-Bell state
-superdencse coding
-teleport
+==============
+اکنون تکنیک های چند صفحه آخر را برای درک چیزی غیرمعمول به کار خواهیم برد.
+پیش پا افتاده، غافلگیر کننده و بسیار سرگرم کننده - دوربری کوانتومی! تله پورت کوانتومی یک است
+تکنیک حرکت حالات کوانتومی به اطراف، حتی در غیاب ارتباط کوانتومی
+کانال nications که فرستنده حالت کوانتومی را به گیرنده پیوند می دهد.
+در اینجا نحوه عملکرد دوربری کوانتومی آمده است. آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون زندگی می کنند
+دور از هم. در حالی که آنها با هم یک جفت EPR تولید کردند که هر کدام یک کیوبیت از EPR را می گرفتند
+وقتی از هم جدا شدند جفت شوند سال‌ها بعد، باب مخفی است و ماموریت آلیس باید انجام شود
+او تصمیم می گیرد آن را بپذیرد، یعنی یک کیوبیت |ψ〉 به باب تحویل دهد. او وضعیت را نمی داند
+کیوبیت، و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید قبول کند
+ماموریت؟
+به طور شهودی، همه چیز برای آلیس بسیار بد به نظر می رسد. او وضعیت |ψ〉 آن را نمی داند
+کیوبیت او باید برای باب بفرستد و قوانین مکانیک کوانتومی او را از این کار باز می دارد
+تعیین وضعیت زمانی که او فقط یک نسخه از |ψ〉 در اختیار دارد. چه
+بدتر از آن، حتی اگر او حالت |ψ〉 را می دانست، توصیف دقیق آن به مقدار بی نهایت نیاز دارد.
+اطلاعات کلاسیک از آنجایی که |ψ〉 مقادیر را در یک فضای پیوسته می گیرد. بنابراین حتی اگر او انجام دهد
+بدانید |ψ〉، همیشه طول می کشد تا آلیس وضعیت را برای باب توصیف کند. نگاه نمی کند
+برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از آن است
+جفت EPR درهم به منظور ارسال |ψ〉 به باب، تنها با سربار کوچک کلاسیک
+ارتباط
+به طور کلی، مراحل حل به شرح زیر است: آلیس با کیوبیت |ψ〉 با
+نصف او از جفت EPR، و سپس دو کیوبیت در اختیارش را اندازه گیری می کند و به دست می آورد
+یکی از چهار نتیجه کلاسیک ممکن، 00، 01، 10، و 11. او این اطلاعات را به
+باب بسته به پیام کلاسیک آلیس، باب یکی از چهار عمل خود را انجام می دهد
+نیمی از جفت EPR. به طرز شگفت انگیزی، با انجام این کار او می تواند حالت اولیه را بازیابی کند |ψ〉!
+مدار کوانتومی نشان داده شده در شکل 1.13 توصیف دقیق تری از کوانتوم ارائه می دهد
+دوربری حالتی که باید از راه دور منتقل شود عبارت است از |ψ〉 = α|0〉+β|1〉 که α و β ناشناخته هستند.
+دامنه ها حالت ورودی مدار |ψ0〉 است
+|ψ0〉 = |ψ〉|β00〉
 
+
+
+
+
+ 1
+√2
+[
+α|0〉(|00〉 + |11〉) + β|1〉(|00〉 + |11〉)
+]
+, (1.29
+\\
+
+که در آن از این قرارداد استفاده می کنیم که دو کیوبیت اول (در سمت چپ) متعلق به آلیس هستند و
+کیوبیت سوم به باب. همانطور که قبلا توضیح دادیم، کیوبیت دوم آلیس و کیوبیت باب
+در حالت EPR شروع کنید. آلیس کیوبیت های خود را از طریق دروازه می فرستد و به دست می آورد
+|ψ1〉 = 1
+√2
+[
+α|0〉(|00〉 + |11〉) + β|1〉(|10〉 + |01〉)
+]
+. (1.30)
+سپس اولین کیوبیت را از طریق دروازه هادامارد می فرستد و به دست می آورد
+|ψ2〉 = 1
+2
+[
+α(|0〉 + |1〉)(|00〉 + |11〉) + β(|0〉− |1〉)(|10〉 + |01〉)
+]
+.
+(1.31)
+این حالت را می توان به روش زیر بازنویسی کرد، به سادگی با گروه بندی مجدد عبارات:
+|ψ2〉 = 1
+2
+[
+|00〉 (α|0〉 + β|1〉) + |01〉 (α|1〉 + β|0〉)
++ |10〉 (α|0〉 − β|1〉) + |11〉 (α|1〉− β|0〉)]
+. (1.32)
+این عبارت به طور طبیعی به چهار اصطلاح تقسیم می شود. عبارت اول دارای کیوبیت های آلیس است
+در حالت |00〉 و کیوبیت باب در حالت α|0〉 + β|1〉 - که حالت اصلی است.
+|ψ〉. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، سیستم باب این کار را انجام می دهد
+در حالت بودن |ψ〉. به طور مشابه، از عبارت قبلی می‌توانیم پست باب را بخوانیم
+حالت اندازه گیری، با توجه به نتیجه اندازه گیری آلیس:
+00 −→ |ψ3 (00)〉 ≡
+[
+α|0〉 + β|1〉
+]
+(1.33)
+01 −→ |ψ3 (01)〉 ≡
+[
+α|1 + β|0»
+]
+(1.34)
+10 −→ |ψ3 (10)〉 ≡
+[
+α|0〉 − β|1〉
+]
+(1.35)
+11 −→ |ψ3 (11)〉 ≡
+[
+α|1〉− β|0〉
+]
+. (1.36)
+بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این موارد ختم می شود
+چهار حالت ممکن البته برای اینکه بدانیم در کدام حالت است باید نتیجه را به باب گفت
+اندازه گیری آلیس - بعداً نشان خواهیم داد که این واقعیت است که از دوربری جلوگیری می کند
+
+
+
+
+رام برای انتقال اطلاعات سریعتر از نور استفاده می شود. وقتی باب این معنی را یاد گرفت
+در نتیجه، باب می‌تواند وضعیت خود را «تثبیت» کند، و با استفاده از روش مناسب |ψ〉 بهبود یابد.
+دروازه کوانتومی به عنوان مثال، در موردی که اندازه گیری 00 را به دست می آورد، باب این کار را نمی کند
+نیاز به انجام هر کاری اگر اندازه گیری 01 باشد، باب می تواند با اعمال کردن حالت خود را اصلاح کند
+دروازه X اگر اندازه گیری 10 باشد، باب می تواند وضعیت خود را با اعمال Z ثابت کند
+دروازه. اگر اندازه‌گیری 11 باشد، باب می‌تواند با اعمال ابتدا یک X و حالت خود را اصلاح کند
+سپس یک دروازه Z. به طور خلاصه، باب باید تبدیل ZM1 XM2 را اعمال کند (به چگونگی آن توجه کنید
+زمان در نمودارهای مداری از چپ به راست می‌رود، اما در سمت راست در محصولات ماتریسی می‌رود
+اول اتفاق می افتد) به کیوبیت او، و او حالت |ψ〉 را بازیابی می کند.
+بسیاری از ویژگی های جالب تله پورت وجود دارد که به برخی از آنها اشاره خواهیم کرد
+به بعد در کتاب. در حال حاضر به اظهار نظر در مورد چند مورد بسنده می کنیم
+جنبه های. اولا، آیا تله‌پورتاسیون به فرد اجازه نمی‌دهد حالت‌های کوانتومی را سریع‌تر از آن ارسال کند
+سبک؟ این امر نسبتاً عجیب و غریب خواهد بود، زیرا نظریه نسبیت نشان می دهد که سریعتر
+از انتقال اطلاعات نور می توان برای ارسال اطلاعات به عقب در زمان استفاده کرد.
+خوشبختانه، تله‌پورت کوانتومی امکان ارتباط سریع‌تر از نور را فراهم نمی‌کند.
+زیرا برای تکمیل دوربری، آلیس باید نتیجه اندازه گیری خود را به آن ارسال کند
+باب از طریق یک کانال ارتباطی کلاسیک.
+
+
+ما در بخش 2.4.3 نشان خواهیم داد که بدون این ارتباط کلاسیک، از راه دور هیچ اطلاعاتی را منتقل نمی کند. کانال کلاسیک با سرعت نور محدود می شود، بنابراین نتیجه می شود که تله پورت کوانتومی نمی تواند سریعتر از سرعت نور انجام شود و پارادوکس ظاهری را حل کند. معمای دوم در مورد تلهپورتاسیون این است که به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می کند، که آشکارا قضیه عدم شبیه سازی مورد بحث در بخش 1.3.5 را نقض می کند. این نقض فقط توهمی است زیرا پس از فرآیند انتقال از راه دور فقط کیوبیت هدف در حالت |ψ〉 باقی می ماند و کیوبیت داده اصلی بسته به نتیجه اندازه گیری به یکی از حالت های پایه محاسباتی |0 یا |1 می رسد. در کیوبیت اول از تله پورت کوانتومی چه چیزی می توانیم یاد بگیریم؟ خیلی زیاد! این خیلی بیشتر از یک ترفند ساده است که می توان با حالت های کوانتومی انجام داد. تله پورت کوانتومی بر قابلیت تعویض منابع مختلف در مکانیک کوانتومی تاکید می کند و نشان می دهد که یک جفت EPR مشترک به همراه دو بیت کلاسیک ارتباط، منبعی حداقل برابر با یک کیوبیت ارتباط است. محاسبات کوانتومی و اطلاعات کوانتومی روش‌های زیادی را برای تبادل منابع نشان داده‌اند که بسیاری از آنها بر اساس تله‌پورت کوانتومی ساخته شده‌اند. به طور خاص، در فصل 10 توضیح می دهیم که چگونه می توان از تله پورت برای ساخت دروازه های کوانتومی مقاوم در برابر اثرات نویز استفاده کرد و در فصل 12 نشان دادیم که انتقال از راه دور با ویژگی های کدهای تصحیح خطای کوانتومی ارتباط نزدیکی دارد. علیرغم این ارتباط با موضوعات دیگر، منصفانه است که بگوییم که ما تازه در حال درک این موضوع هستیم که چرا انتقال از راه دور کوانتومی در مکانیک کوانتومی امکان پذیر است. در فصل‌های بعدی سعی می‌کنیم برخی از بینش‌هایی را توضیح دهیم که چنین درکی را ممکن می‌سازد. 1
+
+\newpage
+how to determine a oracle\\
 	
 	
 	
