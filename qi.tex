@@ -366,11 +366,6 @@ Quantum circuits are a powerful tool for quantum computation. They can be used t
 	$f (x) : \{0, 1\} \rightarrow \{0, 1\}$\\
 \end{center}
 
-convenient way of computing this function on a quantum computer is to consider a two
-qubit quantum computer which starts in the state |x, y〉. With an appropriate sequence
-of logic gates it is possible to transform this state into |x, y ⊕ f (x)〉, where ⊕ indicates
-addition modulo 2; 
-
 روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
 
 \footnote{Modulo 2 is a mathematical operation that returns the remainder of a division by 2. For example, 5 mod 2 is 1, because 5 divided by 2 has a quotient of 2 and a remainder of 1.
@@ -390,13 +385,6 @@ addition modulo 2;
 	4 mod 2 = 0
 	5 mod 2 = 1}
 
-
-
-
-the first register is called the ‘data’ register, and the second register the
-‘target’ register. We give the transformation defined by the map |x, y〉 → |x, y ⊕ f (x)〉 a
-name, Uf , and note that it is easily shown to be unitary.
-
 هریک از دسته‌های کیوبیت، \textbf{رجیستر کوانتومی} نامیده‌می‌شوند. اولین رجیستر، «رجیستر داده» و دومین رجیستر «رجیستر هدف» نامیده می‌شود.\\
 ازین پس در این بخش به عامل گذار $\vert x, y \rangle \rightarrow \vert x, y \oplus f(x) \rangle$، عنوان «تابع \lr{$U_{f}$}» را اطلاق خواهیم کرد. لازم به ذکرست که این تبدیل، یک تبدیل یکه به شمار می‌آید.\footnote{اثبات این مطلب از حوصله‌ی بحث خارج است.}
 
@@ -411,55 +399,33 @@ name, Uf , and note that it is easily shown to be unitary.
  	\end{figure}
  \end{center}
 
- 
+در شکل بالا مقادیر ورودی داده شده به تابع \lr{$U_{f}$} در پایه‌های محاسباتی قرار ندارند. رجیستر داده در حالت برهمنهی  قرار دارد. این حالت برهمنهی را می‌توان با اعمال گیت هادامارد بر حالت کوانتومی $\vert 0 \rangle$ ایجاد کرد. پس از ایجاد این حالت، تابع \lr{$U_{f}$} را به حالت جدید اعمال می‌کنیم:
+\begin{center}
+	$\frac{\vert 0,f(0) \rangle +\vert 1,f(1) \rangle }{\sqrt{2}}$
+\end{center}
+
+این یک حالت استثنایی است! جملات مختلف کسر بالا حاوی اطلاعاتی در مورد f (0) وf (1) می‌باشند؛ به‌نحوی که انگار f (x) را برای دو مقدار x به طور همزمان ارزیابی کرده ایم، این ویژگی به "موازی  سازی کوانتومی" موسوم می‌باشد. بر خلاف موازی سازی کلاسیک، که در آن هر یک مدارهای متعددی دارند ساخته شده برای محاسبه f (x) به طور همزمان اجرا می شوند، در اینجا برای ارزیابی تابع برای چندین مقدار x به طور همزمان، یک مدار f (x) (با قابلیت برهمنهی کوانتومی)استفاده می شود.
+
+این فرآیند را می توان به راحتی  با استفاده از یک عمل کلی به نام تبدیل هادامارد، به توابعی با تعداد بیت دلخواه تعمیم داد. این عمل فقط تعداد n گیت هادامارد است که به طور موازی روی n کوبیت عمل می کنند.
 
 
 
-Consider the circuit shown in Figure 1.17, which applies Uf to an input not in the
-computational basis. Instead, the data register is prepared in the superposition (|0〉 +
-|1〉)/√2, which can be created with a Hadamard gate acting on |0〉. Then we apply Uf ,
-resulting in the state:
-|0, f (0)〉 + |1, f (1)〉
-√2 . (1.37)
-
-
-
-This is a remarkable state! The different terms contain information about both f (0) and
-f (1); it is almost as if we have evaluated f (x) for two values of x simultaneously, a feature
-known as ‘quantum parallelism’. Unlike classical parallelism, where multiple circuits each
-built to compute f (x) are executed simultaneously, here a single f (x) circuit is employed
-to evaluate the function for multiple values of x simultaneously, by exploiting the ability
-of a quantum computer to be in superpositions of different states.
-
-
-
-
-This procedure can easily be generalized to functions on an arbitrary number of bits, by
-using a general operation known as the Hadamard transform, or sometimes the Walsh–
-Hadamard transform. This operation is just n Hadamard gates acting in parallel on n
-qubits. For example, shown in Figure 1.18 is the case n = 2 with qubits initially prepared
-as |0〉, which gives
-( |0〉 + |1〉
-√2
-) ( |0〉 + |1〉
-√2
-)
-= |00〉 + |01〉 + |10〉 + |11〉
+ For example, shown in Figure 1.18 is the case n = 2 with qubits initially prepared as |0〉, which gives
+( |0〉 + |1〉√2) ( |0〉 + |1〉√2) = |00〉 + |01〉 + |10〉 + |11〉 as output.
 2 (1.38)
-as output.
 
+برای مثال در شکل زیر؛ دو کیوبیت در حالت $\vert 0 \rangle$ آماده شده‌‌اند. پس از اعمال گیت‌های هادامارد بر روی این رجیستر به خروجی زیر خواهیم رسید: 
 
- We write H⊗2 to denote the parallel action of two Hadamard gates, and read
-‘⊗’ as ‘tensor’. More generally, the result of performing the Hadamard transform on n
-ubits initially in the all |0〉 state is
-1
-√2n
-∑
-x
-|x〉 , (1.39)
+\begin{center}
+	$ \Biggl( \frac{\vert 0 \rangle + \vert 1 \rangle}{\sqrt{2}}\Biggl)\Biggl( \frac{\vert 0 \rangle + \vert 1 \rangle}{\sqrt{2}}\Biggl) = \frac{\textbar00\rangle + \textbar01\rangle + \textbar10\rangle + \textbar11\rangle}{\sqrt{2}}$
 
+\end{center}
 
+از نماد $\operatorname{H} \otimes 2$ به عنوان نشانه‌ی عملکرد موازی دو گیت هادامارد استفاده می‌کنیم؛از علامت $\otimes$ به عنوان تانسور یاد می‌کنیم. به طور کلی نتایج اعمال موازی گیت هادامارد روی \lr{n} کیوبیت روی حالت کوانتومی برابرست با:
 
+\begin{center}
+	\[\frac{1}{\sqrt{2}} \sum_{x} \vert x \rangle\]
+\end{center}
 
 where the sum is over all possible values of x, and we write H⊗n to denote this action.
 That is, the Hadamard transform produces an equal superposition of all computational
