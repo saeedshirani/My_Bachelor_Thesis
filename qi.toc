@@ -15,13 +15,13 @@
 \contentsline {section}{\numberline {2.2}IBM Quantum computer and Qiskit}{13}{}%
 \contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{15}{}%
 \contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{15}{}%
-\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{20}{}%
-\contentsline {subsection}{\numberline {3.1.2}مدل کوئری}{20}{}%
-\contentsline {section}{\numberline {3.2}Deutsch Algorithm}{21}{}%
-\contentsline {subsection}{\numberline {3.2.1}مسئله‌ی دوچ}{21}{}%
-\contentsline {subsection}{\numberline {3.2.2}الگوریتم دوچ}{22}{}%
-\contentsline {section}{\numberline {3.3}Deutsch-Jozsa Algorithm}{25}{}%
-\contentsline {section}{\numberline {3.4}oracle}{25}{}%
+\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{19}{}%
+\contentsline {section}{\numberline {3.2}مدل کوئری}{19}{}%
+\contentsline {section}{\numberline {3.3}Deutsch Algorithm}{20}{}%
+\contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{20}{}%
+\contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{21}{}%
+\contentsline {section}{\numberline {3.4}Deutsch-Jozsa Algorithm}{26}{}%
+\contentsline {section}{\numberline {3.5}oracle}{26}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{27}{}%
 \contentsline {section}{\numberline {4.1}Bell states}{27}{}%
 \contentsline {section}{\numberline {4.2}entanglement}{28}{}%

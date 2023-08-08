@@ -37,6 +37,9 @@
 در عصر حاضر بواسطه‌ی رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا .....
 
 \section{comp vs superpos basis}
+
+Chapter 1 chuang book
+
 Consider the circuit shown in Figure 1.17, which applies Uf to an input not in the
 computational basis. Instead, the data register is prepared in the superposition (|0〉 +
 |1〉)/√2, which can be created with a Hadamard gate acting on |0〉. Then we apply Uf ,
@@ -448,26 +451,15 @@ Quantum circuits are a powerful tool for quantum computation. They can be used t
 \end{center}
 
 
+به طور کلی موازی‌سازی کوانتومی امکان ارزیابی همزمان همه مقادیر ممکن تابع f را فراهم می‌کند، حتی اگر ظاهراً فقط یک بار f را ارزیابی کرده باشیم. با این حال، این موازی‌سازی بلافاصله مفید نیست. 
 
 
-In some sense, quantum parallelism enables all possible values of the function f to be
-evaluated simultaneously, even though we apparently only evaluated f once. However,
-this parallelism is not immediately useful. In our single qubit example, measurement of the
-state gives only either |0, f (0)〉 or |1, f (1)〉! Similarly, in the general case, measurement of
-the state ∑
-x |x, f (x)〉 would give only f (x) for a single value of x. Of course, a classical
-computer can do this easily! Quantum computation requires something more than just
-quantum parallelism to be useful; it requires the ability to extract information about more
-than one value of f (x) from superposition states like ∑
-x |x, f (x)〉. Over the next two
-sections we investigate examples of how this may be done
-
-
-به طور کلی موازی‌سازی کوانتومی امکان ارزیابی همزمان همه مقادیر ممکن تابع f را فراهم می‌کند، حتی اگر ظاهراً فقط یک بار f را ارزیابی کرده باشیم. با این حال، این موازی‌سازی بلافاصله مفید نیست. در مثال تک کوبیتی ما، اندازه‌گیری حالت فقط |0, f (0)〉 یا |1, f (1)〉 را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت ∑x |x, f (x)〉 فقط f (x) را برای یک مقدار x خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار f (x) از حالت‌های سوپرپوزیسیون مانند ∑x |x, f (x)〉 نیاز دارد. در دو بخش بعدی ما به بررسی مثال‌هایی از نحوه انجام این کار می‌پردازیم.
+در مثال تک کوبیتی ما، اندازه‌گیری حالت فقط $\vert 0, f(0)\rangle$ یا $\vert 1, f(1)\rangle$ را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت ∑x |x, f (x)〉 فقط$ f (x)$ را برای یک مقدار x خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار f (x) از حالت‌های سوپرپوزیسیون مانند ∑x |x, f (x)〉 نیاز دارد. 
+در بخش های بعدی به مثال‌های خواهیم پرداخت که این مسائل را حل کند.
 
 
 
-
+$\sum_{x} \vert x, f(x)\rangle$
 
 \newpage
 \subsection{مدل محاسباتی استاندارد}
@@ -484,7 +476,7 @@ sections we investigate examples of how this may be done
 
 مهم‌ترین نکته درباره‌ی این واحد محاسباتی،‌ \textbf{در دسترس بودن کل مقادیر ورودی برای واحد پردازش} است. به عبارت دیگر\textbf{ واحد پردازش می‌تواند تمامی مقادیر ورودی را دریافت کرده و تشخیص} دهد. 
 
-\subsection{مدل کوئری}
+\section{مدل کوئری}
 در مدل کوئری، داده‌های ورودی توسط یک تابع تولید می‌شوند. واحد محاسباتی دسترسی به تابع تولیدورودی دارد و می‌تواند برای دریافت داده‌های جدید،‌از تابع یاد شده،‌درخواست کند.
 
 \begin{figure}[ht]
@@ -510,18 +502,6 @@ $$
 
 ما در این نظریه کوئری‌ها را می‌شماریم و وضعیت آن‌‌ها را بررسی می‌کنیم.
 
-\section*{الگوریتم‌های کوانتومی}
-
-
-%https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-0
-%https://www.youtube.com/watch?v=mGqyzZ-fnnY
-%https://www.youtube.com/watch?v=CIq0PUkFDBc
-%https://www.youtube.com/watch?v=7MdEHsRZxvo
-%https://learn.qiskit.org/course/algorithms/query-algorithms#query-3-77
-%https://learn.qiskit.org/course/algorithms/query-algorithms#query-5-0
-%https://learn.qiskit.org/course/algorithms/query-algorithms#query-19-0
-%https://www.youtube.com/watch?v=hK6BBluTGhU&list=PLay4zC7VCXV4gWb0ucSUQiGcRJFYMzROT&index=5
-	
 \section{Deutsch Algorithm}
 tell combnation of books
 \subsection{مسئله‌ی دوچ}
@@ -552,6 +532,7 @@ tell combnation of books
 \end{center}
 در الگوریتم‌های کلاسیک برای حل این مسئله، حداقل دو حالت باید بررسی شود.
 \subsection{الگوریتم دوچ}
+% quantum computer scinse : read it for yourself
 % https://www.youtube.com/watch?v=2wticzHE1vs&t=2014s
 % page 32
 
@@ -564,7 +545,108 @@ tell combnation of books
 \end{figure}
 \end{center}
 
+ 
+یک تغییر ساده در مدار شکل 1.3 نشان می دهد که چگونه مدارهای کوانتومی می توانند با پیاده سازی الگوریتم Deutsch از مدارهای کلاسیک پیشی بگیرند\footnote{ما در واقع یک نسخه ساده شده و بهبود یافته از الگوریتم اصلی را ارائه می دهیم.}. الگوریتم Deutsch ترکیبی از موازی سازی کوانتومی با خاصیتی از مکانیک کوانتوم به نام تداخل\footnote{how interference is using in deutsch algorithm : Interference is used in the Deutsch algorithm to distinguish between constant and balanced functions. A constant function is a function that always returns the same value, regardless of its input. A balanced function is a function that returns 0 for half of its inputs and 1 for the other half.
+	
+	The Deutsch algorithm works by first preparing two qubits in a superposition of states. The first qubit is prepared in the state |+⟩, which is the equal superposition of |0⟩ and |1⟩. The second qubit is prepared in the state |ψ⟩, which is a superposition of the states |0⟩ and |1⟩ with opposite phases.
+	
+	The two qubits are then passed through a quantum circuit that includes a Hadamard gate and a CNOT gate. The Hadamard gate transforms |+⟩ into the superposition |0⟩ + |1⟩, and the CNOT gate copies the state of the first qubit to the second qubit.
+	
+	After the quantum circuit has been executed, the two qubits are measured. If the first qubit is measured to be |0⟩, then the function f is constant. This is because the state |ψ⟩ is orthogonal to the state |0⟩, so the interference between the two states will destructively interfere.
+	
+	If the first qubit is measured to be |1⟩, then the function f is balanced. This is because the state |ψ⟩ is parallel to the state |1⟩, so the interference between the two states will constructively interfere.
+	
+	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} 
 
+
+
+As before, let us use theHadamard gate to prepare the first qubit as the superposition (|0〉 + |1〉)/√2, but now let us prepare the second qubit y as the superposition (|0〉 − |1〉)/√2, using a Hadamard gate applied to the state |1〉. Let us follow the states along to see what happens in this circuit, shown in Figure 1.19
+
+است.
+مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کوبیت به عنوان superposition (|0〉 + |1〉)/√2 استفاده کنیم، اما اکنون کوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان superposition (|0〉 - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Quantum circuit implementing Deutsch’s algorithm.png}
+	\caption{پیاده‌سازی مدارکوانتومی‌ الگوریتم دوچ}
+\end{figure}
+
+\newpage
+
+حالت ورودی:\\
+\begin{center}
+	$\vert\psi_{0}\rangle = \vert01\rangle$
+\end{center}
+
+سیستم دو کیوبیتی تشکیل شده،‌ پس از اعمال اثر دو گیت هادامارد می‌دهد:\\
+
+\begin{center}
+$\left|\psi_1\right\rangle=\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
+\end{center}
+با کمی تأمل می‌توان دریافت که اگر Uf را به حالت |x〉(|0〉 - |1〉)/√2 اعمال کنیم، سپس به حالت (−1)f (x)|x〉(|0〉 - |1〉)/√2 می رسیم. بنابرین اعمال Uf به |ψ1〉 ما را با یکی از دو امکان زیر مواجه می کند:
+\begin{center}
+	$\left|\psi_2\right\rangle= \begin{cases} \pm\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
+\end{center}
+با اعمال آخرین گیت هادامارد روی کیوبیت اول به حالت زیر خواهیم رسید:
+\begin{center}
+	$\left|\psi_3\right\rangle= \begin{cases} \pm|0\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm|1\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
+\end{center}
+با درنظر گرفتن شرایط زیر می‌توان $\vert\psi_{3}\rangle$ را به شکل زیر بازنویسی کرد:
+
+$$
+\begin{aligned}
+	\left\{
+	\begin{aligned}
+		f(0) &= f(1) 
+		\implies \qquad f(0) \oplus f(1) &= 0\\
+		f(0) &\neq f(1) 
+		\implies \qquad f(0) \oplus f(1) &= 1
+	\end{aligned}
+	\right.
+\end{aligned}$$
+
+از این رو:
+
+\begin{center}
+	$\left|\psi_3\right\rangle= \pm|f(0) \oplus f(1)\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
+\end{center}
+
+
+
+so by measuring the first qubit we may determine f (0) ⊕ f (1). This is very interesting
+indeed: the quantum circuit has given us the ability to determine a global property of
+f (x), namely f (0)⊕ f (1), using only one evaluation of f (x)! This is faster than is possible
+with a classical apparatus, which would require at least two evaluations.
+
+بنابراین با اندازه گیری کیوبیت اول می توانیم f (0) ⊕ f (1) را تعیین کنیم. خیلی جالبه
+در واقع: مدار کوانتومی این توانایی را به ما داده است که یک خاصیت جهانی را تعیین کنیم
+f (x)، یعنی f (0)⊕ f (1)، با استفاده از تنها یک ارزیابی از f (x)! این سریعتر از حد ممکن است
+با یک دستگاه کلاسیک، که حداقل به دو ارزیابی نیاز دارد.
+
+This example highlights the difference between quantum parallelism and classical
+randomized algorithms. Naively, one might think that the state |0〉|f (0)〉 + |1〉|f (1)〉
+corresponds rather closely to a probabilistic classical computer that evaluates f (0) with
+probability one-half, or f (1) with probability one-half.
+
+این مثال تفاوت بین موازی سازی کوانتومی و کلاسیک را برجسته می کند
+الگوریتم های تصادفی ساده لوحانه، ممکن است فکر کنیم که حالت |0〉|f (0)〉 + |1〉|f (1)〉
+با یک کامپیوتر کلاسیک احتمالاتی که f (0) را با آن ارزیابی می کند، بسیار نزدیک است
+احتمال یک دوم، یا f (1) با احتمال یک دوم.
+
+This example highlights the difference between quantum parallelism and classical
+randomized algorithms. Naively, one might think that the state |0〉|f (0)〉 + |1〉|f (1)〉
+corresponds rather closely to a probabilistic classical computer that evaluates f (0) with
+probability one-half, or f (1) with probability one-half.
+
+
+این مثال تفاوت بین موازی سازی کوانتومی و کلاسیک را برجسته می کند
+الگوریتم های تصادفی ساده لوحانه، ممکن است فکر کنیم که حالت |0〉|f (0)〉 + |1〉|f (1)〉
+با یک کامپیوتر کلاسیک احتمالاتی که f (0) را با آن ارزیابی می کند، بسیار نزدیک است
+احتمال یک دوم، یا f (1) با احتمال یک دوم.
+
+\newpage
 $$
 \begin{aligned}
 	\left|\pi_1\right\rangle= & |-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
