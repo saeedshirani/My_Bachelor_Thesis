@@ -408,12 +408,6 @@ Quantum circuits are a powerful tool for quantum computation. They can be used t
 
 این فرآیند را می توان به راحتی  با استفاده از یک عمل کلی به نام تبدیل هادامارد، به توابعی با تعداد بیت دلخواه تعمیم داد. این عمل فقط تعداد n گیت هادامارد است که به طور موازی روی n کوبیت عمل می کنند.
 
-
-
- For example, shown in Figure 1.18 is the case n = 2 with qubits initially prepared as |0〉, which gives
-( |0〉 + |1〉√2) ( |0〉 + |1〉√2) = |00〉 + |01〉 + |10〉 + |11〉 as output.
-2 (1.38)
-
 برای مثال در شکل زیر؛ دو کیوبیت در حالت $\vert 0 \rangle$ آماده شده‌‌اند. پس از اعمال گیت‌های هادامارد بر روی این رجیستر به خروجی زیر خواهیم رسید: 
 
 \begin{center}
@@ -427,25 +421,31 @@ Quantum circuits are a powerful tool for quantum computation. They can be used t
 	\[\frac{1}{\sqrt{2}} \sum_{x} \vert x \rangle\]
 \end{center}
 
-where the sum is over all possible values of x, and we write H⊗n to denote this action.
-That is, the Hadamard transform produces an equal superposition of all computational
-basis states. Moreover, it does this extremely efficiently, producing a superposition of 2n
-states using just n gates.
 
+در اینجا، $\sum$ نشان دهنده جمع بر روی همه مقادیر ممکن \lr{x} است، و ما$\operatorname{H} \otimes n$  را برای نشان دادن این عمل می نویسیم.
+اعمال تبدیل هادامارد روی یک بهمنهی کوانتومی برابر از همه حالت های محاسباتی تولید می کند؛ و با استفاده از فقط $n$ گیت، یک برهمنهی از $2n$ حالت تولید می کند.
+\begin{center}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.8\textwidth]{Multyhadamard.png}
+		\caption{اعمال تبدیل هادامارد $\operatorname{H} \otimes n$روی دو کیوبیت}
+	\end{figure}
+\end{center}
 
+تبدیل هادامارد $\operatorname{H} \otimes 2$ روی دو بیت کوانتومی پیاده می‌شود. ارزیابی موازی کوانتومی یک تابع f(x) با ورودی n بیتی x و خروجی 1 بیتی، به روش زیر قابل پیاده‌سازی می‌باشد:
 
-Figure 1.18. The Hadamard transform H⊗2 on two qubits.
-Quantum parallel evaluation of a function with an n bit input x and 1 bit output, f (x),
-can thus be performed in the following manner. Prepare the n + 1 qubit state |0〉⊗n|0〉,
-then apply the Hadamard transform to the first n qubits, followed by the quantum circuit
-implementing Uf . This produces the state
-1
-√2n
-∑
-x
-|x〉|f (x)〉 . (1.40)
+\begin{enumerate}
+	\item ابتدا حالت $n + 1$ کیوبیت $\vert0\rangle^{\otimes n} \vert 0\rangle$ را آماده کنید،
+	\item سپس تبدیل هادامارد را به $n$ کیوبیت اول و به دنبال آن مدار کوانتومی اعمال کنید.
+	\item اعمال تابع $U_{f}$ به کیوبیت‌هایی که در حالت برهمنهی قرار دارند.
+\end{enumerate}
+درنهایت حالت زیر تولید ‌می‌شود:
 
+1√2n∑x|x〉|f (x)〉
 
+\begin{center}
+	$\frac{1}{\sqrt{2^n}} \sum_{x} \vert x \rangle \vert f (x)\rangle$ 
+\end{center}
 
 
 
@@ -463,7 +463,7 @@ x |x, f (x)〉. Over the next two
 sections we investigate examples of how this may be done
 
 
-
+به طور کلی موازی‌سازی کوانتومی امکان ارزیابی همزمان همه مقادیر ممکن تابع f را فراهم می‌کند، حتی اگر ظاهراً فقط یک بار f را ارزیابی کرده باشیم. با این حال، این موازی‌سازی بلافاصله مفید نیست. در مثال تک کوبیتی ما، اندازه‌گیری حالت فقط |0, f (0)〉 یا |1, f (1)〉 را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت ∑x |x, f (x)〉 فقط f (x) را برای یک مقدار x خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار f (x) از حالت‌های سوپرپوزیسیون مانند ∑x |x, f (x)〉 نیاز دارد. در دو بخش بعدی ما به بررسی مثال‌هایی از نحوه انجام این کار می‌پردازیم.
 
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  7 AUG 2023 22:13
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  8 AUG 2023 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1231,50 +1231,20 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 File: Uforacle.png Graphic file (type bmp)
 <Uforacle.png>
 [16]
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 420.
+LaTeX Warning: Command \textbar invalid in math mode on input line 414.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 420.
+LaTeX Warning: Command \textbar invalid in math mode on input line 414.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 420.
+LaTeX Warning: Command \textbar invalid in math mode on input line 414.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 420.
+LaTeX Warning: Command \textbar invalid in math mode on input line 414.
 
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
+File: Multyhadamard.png Graphic file (type bmp)
+<Multyhadamard.png>
 [17]
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
@@ -1284,12 +1254,24 @@ Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[18]
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[18] [19]
 File: standard computation model.png Graphic file (type bmp)
 <standard computation model.png>
 File: Query computation model.png Graphic file (type bmp)
 <Query computation model.png>
- [19] [20]
+ [20] [21]
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
@@ -1299,11 +1281,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
 File: Deutsch algorithm.png Graphic file (type bmp)
 <Deutsch algorithm.png>
-[21]
+[22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-[23] [24]
+ [23]
+[24] [25] [26
+
+]
 فصل 4.
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
@@ -1316,9 +1300,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 655--656
 [][]
  []
 
-[25
-
-]
+[27]
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1383,7 +1365,7 @@ Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[26]
+[28]
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1547,7 +1529,7 @@ Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[27]
+[29]
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1560,19 +1542,19 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[28] [29]
+[30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 793--794
 [][]
  []
 
-[30] (./qi.aux) ) 
+[32] (./qi.aux) ) 
 Here is how much of TeX's memory you used:
- 37860 strings out of 476179
- 951899 string characters out of 5813072
+ 37868 strings out of 476179
+ 952070 string characters out of 5813072
  1611611 words of memory out of 5000000
- 58033 multiletter control sequences out of 15000+600000
+ 58040 multiletter control sequences out of 15000+600000
  475811 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,22n,104p,1631b,901s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on qi.pdf (30 pages).
+Output written on qi.pdf (32 pages).
