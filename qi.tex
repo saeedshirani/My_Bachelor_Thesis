@@ -612,104 +612,195 @@ $$
 \begin{center}
 	$\left|\psi_3\right\rangle= \pm|f(0) \oplus f(1)\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
 \end{center}
+بنابراین با اندازه گیری کیوبیت اول می توانیم $f(0) \oplus f(1)$ را تعیین کنیم. واقعاً جالب است! مدار کوانتومی به ما توانایی تعیین یک ویژگی جهانی از $f(x)$، یعنی$ f(0)\oplus f(1)$ را داده است، با استفاده از تنها یک ارزیابی از $f(x)$!این سریعتر از آن چیزی است که با یک دستگاه کلاسیک امکان‌پذیر است،یک دستگاه کلاسیک حداقل به دو ارزیابی نیاز دارد.
+این مثال تفاوت بین موازی‌سازی کوانتومی و الگوریتم‌های تصادفی کلاسیک را برجسته می‌کند. به سادگی، ممکن است تصور شود که حالت $\vert0\rangle \vert f(0) \rangle + \vert1\rangle \vert f(1) \rangle$ مطابقت نزدیکی با یک رایانه کلاسیک تصادفی دارد که هرکدام از حالات $ f (0)$ یا$ f (1) $ با احتمال $1/2$ اندازه‌گیری می‌کند.
+تفاوت این است که در یک رایانه کلاسیک این دو گزینه همیشه یکدیگر را حذف می‌کنند. در یک رایانه کوانتومی، امکان دارد که دو گزینه با یکدیگر تداخل داشته باشند تا برخی از خواص کلی تابع $f$ را با استفاده از چیزی شبیه به گیت هادامارد برای بازترکیب گزینه‌های مختلف، مانند آنچه در الگوریتم دوچ انجام شد، به دست آورند.
+اساس طراحی بسیاری از الگوریتم‌های کوانتومی این است که یک انتخاب هوشمندانه از تابع و تبدیل نهایی اجازه می‌دهد تا اطلاعات جهانی مفیدی در مورد تابع تعیین شود - اطلاعاتی که نمی‌توان به سرعت در یک رایانه کلاسیک به دست آورد.
+
+\section{الگوریتم دوچ - جوزا}
+Deutsch’s algorithm is a simple case of a more general quantum algorithm, which we shall
+refer to as the Deutsch–Jozsa algorithm. The application, known as Deutsch’s problem,
+may be described as the following game. Alice, in Amsterdam, selects a number x from
+0 to 2n − 1, and mails it in a letter to Bob, in Boston. Bob calculates some function
+f (x) and replies with the result, which is either 0 or 1. Now, Bob has promised to use
+a function f which is of one of two kinds; either f (x) is constant for all values of x,
+or else f (x) is balanced, that is, equal to 1 for exactly half of all the possible x, and 0
+for the other half. Alice’s goal is to determine with certainty whether Bob has chosen a
+constant or a balanced function, corresponding with him as little as possible. How fast
+can she succeed?
+
+الگوریتم دوچ یک مورد ساده از یک الگوریتم کوانتومی عمومی‌تر است که به عنوان الگوریتم دوچ-جوزا شناخته می‌شود. کاربرد این الگوریتم، که به عنوان مشکل دوچ شناخته می‌شود، به شرح بازی زیر است:
+
+آلیس، در آمستردام، یک عدد x را از بازه‌ $[0, 2n-1]$ انتخاب می‌کند و آن را در یک نامه به باب، در بوستون، می‌فرستد. باب یک تابع$ f(x)$ را محاسبه می‌کند و نتیجه را که 0 یا 1 است، ارسال می‌کند. اکنون، باب قول داده است که از تابعی از دو نوع استفاده کند؛ یا$ f(x)$ برای همه مقادیر $x$ ثابت است، یا $f(x)$ متعادل است، یعنی برای دقیقاً نیمی از همه xهای ممکن برابر با 1 است و برای نیمی دیگر برابر با 0 است.
+
+هدف الی این است که با اطمینان تعیین کند که باب یک تابع ثابت یا متعادل را انتخاب کرده است، با او به حداقل ارتباط ممکن. او چگونه می‌تواند به سرعت موفق شود؟
 
 
 
-so by measuring the first qubit we may determine f (0) ⊕ f (1). This is very interesting
-indeed: the quantum circuit has given us the ability to determine a global property of
-f (x), namely f (0)⊕ f (1), using only one evaluation of f (x)! This is faster than is possible
-with a classical apparatus, which would require at least two evaluations.
-
-بنابراین با اندازه گیری کیوبیت اول می توانیم f (0) ⊕ f (1) را تعیین کنیم. خیلی جالبه
-در واقع: مدار کوانتومی این توانایی را به ما داده است که یک خاصیت جهانی را تعیین کنیم
-f (x)، یعنی f (0)⊕ f (1)، با استفاده از تنها یک ارزیابی از f (x)! این سریعتر از حد ممکن است
-با یک دستگاه کلاسیک، که حداقل به دو ارزیابی نیاز دارد.
-
-This example highlights the difference between quantum parallelism and classical
-randomized algorithms. Naively, one might think that the state |0〉|f (0)〉 + |1〉|f (1)〉
-corresponds rather closely to a probabilistic classical computer that evaluates f (0) with
-probability one-half, or f (1) with probability one-half.
-
-این مثال تفاوت بین موازی سازی کوانتومی و کلاسیک را برجسته می کند
-الگوریتم های تصادفی ساده لوحانه، ممکن است فکر کنیم که حالت |0〉|f (0)〉 + |1〉|f (1)〉
-با یک کامپیوتر کلاسیک احتمالاتی که f (0) را با آن ارزیابی می کند، بسیار نزدیک است
-احتمال یک دوم، یا f (1) با احتمال یک دوم.
-
-This example highlights the difference between quantum parallelism and classical
-randomized algorithms. Naively, one might think that the state |0〉|f (0)〉 + |1〉|f (1)〉
-corresponds rather closely to a probabilistic classical computer that evaluates f (0) with
-probability one-half, or f (1) with probability one-half.
-
-
-این مثال تفاوت بین موازی سازی کوانتومی و کلاسیک را برجسته می کند
-الگوریتم های تصادفی ساده لوحانه، ممکن است فکر کنیم که حالت |0〉|f (0)〉 + |1〉|f (1)〉
-با یک کامپیوتر کلاسیک احتمالاتی که f (0) را با آن ارزیابی می کند، بسیار نزدیک است
-احتمال یک دوم، یا f (1) با احتمال یک دوم.
-
-\newpage
-$$
-\begin{aligned}
-	\left|\pi_1\right\rangle= & |-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
-	\left|\pi_2\right\rangle= & \frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
-	= & \frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
-	& |0 \oplus a\rangle-|1 \oplus a\rangle=(-1)^a(|0\rangle-|1\rangle)
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-	\left|\pi_1\right\rangle & =|-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
-	\left|\pi_2\right\rangle & =\frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
-	& =\frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
-	& =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right)
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-	\left|\pi_2\right\rangle & =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right) \\
-	& =(-1)^{f(0)}|-\rangle\left(\frac{|0\rangle+(-1)^{f(0) \oplus f(1)}|1\rangle}{\sqrt{2}}\right) \\
-	& = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
-		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases}
-\end{aligned}
-$$
-
-
-$$
-\begin{aligned}
-	\left|\pi_2\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
-		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases} \\
-	\left|\pi_3\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|0\rangle & f(0) \oplus f(1)=0 \\
-		(-1)^{f(0)}|-\rangle|1\rangle & f(0) \oplus f(1)=1\end{cases} \\
-	& =(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
-\end{aligned}
-$$
-
-$$
-\left|\pi_3\right\rangle=(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
-$$
-توضیحات رو بنویس
+In the classical case, Alice may only send Bob one value of x in each letter. At worst,
+Alice will need to query Bob at least 2n/2 + 1 times, since she may receive 2n/2 0s before
+finally getting a 1, telling her that Bob’s function is balanced. The best deterministic
+classical algorithm she can use therefore requires 2n/2 + 1 queries. Note that in each
+letter, Alice sends Bob n bits of information. Furthermore, in this example, physical
+distance is being used to artificially elevate the cost of calculating f (x), but this is not
+needed in the general problem, where f (x) may be inherently difficult to calculate.
 
 
 
-\newpage
-
-\section{Deutsch-Jozsa Algorithm}
-
-
-
-
-% https://www.youtube.com/watch?v=DyINHZoOcLQ
-%https://www.youtube.com/watch?v=LTftC-eTLM0SS
---------------	
+در حالت کلاسیک، الی ممکن است فقط یک مقدار x را در هر نامه به باب ارسال کند. در بدترین حالت، الی باید حداقل 2n/2 + 1 بار از باب سوال کند، زیرا ممکن است 2n/2 0 دریافت کند قبل از اینکه
+سرانجام 1 را دریافت کند و به او بگوید که تابع باب متعادل است. بهترین الگوریتم
+دترمینیستی کلاسیک که می تواند استفاده کند بنابراین به 2n/2 + 1 پرسش نیاز دارد. توجه داشته باشید که در هر
+نامه، الی n بیت اطلاعات را به باب ارسال می کند. علاوه بر این، در این مثال، فاصله فیزیکی
+برای افزایش مصنوعی هزینه محاسبه f (x) استفاده می شود، اما این مورد در مسئله عمومی لازم نیست، جایی که f (x) ممکن است ذاتاً دشوار باشد برای محاسبه.
 	
 	
 	
-%computer vs simulator https://www.youtube.com/watch?v=2qcvgXaDdfU
-% https://www.youtube.com/watch?v=0RPFWZj7Jm0	
+	If Bob and Alice were able to exchange qubits, instead of just classical bits, and if Bob
+	agreed to calculate f (x) using a unitary transform Uf , then Alice could achieve her goal
+	in just one correspondence with Bob, using the following algorithm.
+	
+	اگر باب و الی بتوانند کوبیت ها را به جای بیت های کلاسیک مبادله کنند، و اگر باب موافقت کند f (x) را با استفاده از تبدیل یونیتاری Uf محاسبه کند، سپس الی می تواند هدف خود را
+	در یک مکاتبه با باب با استفاده از الگوریتم زیر به دست آورد.
+	
+	Analogously to Deutsch’s algorithm, Alice has an n qubit register to store her query
+	in, and a single qubit register which she will give to Bob, to store the answer in. She
+	begins by preparing both her query and answer registers in a superposition state. Bob
+	will evaluate f (x) using quantum parallelism and leave the result in the answer register.
+	Alice then interferes states in the superposition using a Hadamard transform on the query
+	register, and finishes by performing a suitable measurement to determine whether f was
+	constant or balanced.
+	
+	
+	با توجه به الگوریتم دوچ، الی یک رجیستر n کوبیتی را برای ذخیره پرس و جو خود آماده می کند و یک رجیستر کوبیت واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند. او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت فوق العاده آماده می کند. باب f(x) را با استفاده از موازی سازی کوانتومی ارزیابی می کند و نتیجه را به الی برمی گرداند. الی سپس با استفاده از تبدیل هادامارد روی رجیستر پرس و جو، حالت های تداخل را در حالت فوق العاده مداخله می کند و با انجام یک اندازه گیری مناسب، تعیین می کند که آیا f ثابت یا متعادل است.
+	
+	
+	
+	
+	
+	
+	The specific steps of the algorithm are depicted in Figure 1.20. Let us follow the states
+	through this circuit. The input state
+	|ψ0〉 = |0〉⊗n|1〉 (1.46)
+	is similar to that of Equation (1.41), but here the query register describes the state of n
+	qubits all prepared in the |0〉 state. After the Hadamard transform on the query register
+	and the Hadamard gate on the answer register we have
+	|ψ1〉 = ∑
+	x∈{0,1}n
+	|x〉
+	√2n
+	[ |0〉 − |1〉
+	√2
+	]
+	
+	
+	
+	گام‌های خاص الگوریتم در شکل 1.20 نشان داده شده است. بیایید با دنبال کردن این مدار، به حالت‌ها بپردازیم.
+	
+	حالت ورودی
+	
+	|ψ0〉 = |0〉⊗n|1〉 (1.46)
+	
+	این شبیه حالت معادله (1.41) است، اما در اینجا رجیستر پرس و جو وضعیت n کوبیت را توصیف می‌کند که همه در حالت |0〉 آماده شده‌اند.
+	
+	پس از تبدیل هامادارد روی رجیستر پرس و جو و گیت هادامارد روی رجیستر پاسخ، ما داریم
+	
+	|ψ1〉 = ∑
+	x∈{0,1}n
+	|x〉
+	√2n
+	[ |0〉 − |1〉
+	√2
+	]
+	
+	
+	
+	The query register is now a superposition of all values, and the answer register is in an evenly weighted superposition of 0 and 1. Next, the function f is evaluated (by Bob)
+	using Uf : |x, y〉 → |x, y ⊕ f (x)〉, giving (1.48) Alice now has a set of qubits in which the result of Bob’s function evaluation is stored
+	in the amplitude of the qubit superposition state. She now interferes terms in the super-
+	position using a Hadamard transform on the query register. To determine the result of
+	the Hadamard transform it helps to first calculate the effect of the Hadamard transform
+	on a state |x〉. By checking the cases x = 0 and x = 1 separately we see that for a single
+	qubit H|x〉 = ∑
+	z (−1)xz |z〉/√2. Thus (1.49) This can be summarized more succinctly in the very useful equation(1.50) where x · z is the bitwise inner product of x and z, modulo 2. Using this equation
+	and (1.48) we can now evaluate |ψ3〉,(1.51) Alice now observes the query register. Note that the amplitude for the state |0〉⊗n is
+	∑
+	x(−1)f (x)/2n. 
+	
+	
+	رجیستر پرس و جو اکنون یک superposition از همه مقادیر است، و رجیستر پاسخ در یک superposition به طور مساوی وزن شده از 0 و 1 است.
+	
+در مرحله بعد، تابع f ارزیابی می شود (توسط باب) با استفاده از Uf : |x, y〉 → |x, y ⊕ f (x)〉، که (1.48) را می دهد.
+	
+	الی اکنون یک مجموعه کوبیت دارد که در آن نتیجه ارزیابی تابع باب در دامنه کوبیت superposition state ذخیره می شود. او اکنون با استفاده از تبدیل Hadamard روی رجیستر پرس و جو، عبارات را در super-
+	position تداخل می کند.
+	
+	برای تعیین نتیجه تبدیل Hadamard، کمک می کند تا ابتدا اثر تبدیل Hadamard
+	را روی یک حالت |x〉 محاسبه کنیم. با بررسی موارد x = 0 و x = 1 به صورت جداگانه می بینیم که برای یک کوبیت واحد H|x〉 = ∑
+	z (−1)xz |z〉/√2. بنابراین (1.49)
+	
+	این را می توان به طور خلاصه در معادله بسیار مفید زیر خلاصه کرد:
+	
+	(1.50)
+	
+	جایی که x · z bitwise inner product x و z است، به modulo 2.
+	
+	با استفاده از این معادله و (1.48) اکنون می توانیم |ψ3〉 را ارزیابی کنیم:
+	
+	(1.51)
+	
+	الی اکنون رجیستر پرس و جو را مشاهده می کند. توجه داشته باشید که دامنه برای حالت |0〉⊗n است
+	∑
+	x(−1)f (x)/2n.
+	
+	
+	
+	
+	
+	
+	
+	Let’s look at the two possible cases – f constant and f balanced – to
+	discern what happens. In the case where f is constant the amplitude for |0〉⊗n is +1 or
+	−1, depending on the constant value f (x) takes. Because |ψ3〉 is of unit length it follows
+	that all the other amplitudes must be zero, and an observation will yield 0s for all qubits
+	in the query register. If f is balanced then the positive and negative contributions to the
+	amplitude for |0〉⊗n cancel, leaving an amplitude of zero, and a measurement must yield
+	a result other than 0 on at least one qubit in the query register. Summarizing, if Alice measures all 0s then the function is constant; otherwise the function is balanced. The
+	Deutsch–Jozsa algorithm is summarized below.
+	
+	
+	بیایید به دو مورد ممکن - f ثابت و f متعادل - نگاه کنیم تا ببینیم چه اتفاقی می افتد.
+	
+	در صورتی که f ثابت باشد، دامنه برای حالت |0〉⊗n برابر است با +1 یا
+	−1، بسته به مقدار ثابت f (x) که می گیرد.
+	
+	از آنجایی که |ψ3〉 طول واحد است، نتیجه می‌گیریم که تمام دامنه‌های دیگر باید صفر باشند، و یک مشاهده 0 را برای همه کوبیت‌ها در رجیستر پرس و جو به همراه خواهد داشت.
+	
+	اگر f متعادل باشد، سهم مثبت و منفی دامنه برای |0〉⊗n خنثی می‌شود، و یک دامنه صفر باقی می‌ماند، و یک اندازه‌گیری باید نتیجه‌ای غیر از 0 را در حداقل یک کوبیت در رجیستر پرس و جو به همراه داشته باشد.
+	
+	به طور خلاصه، اگر الی همه 0 را اندازه گیری کند، تابع ثابت است؛ در غیر این صورت تابع متعادل است.
+	
+	الگوریتم Deutsch-Jozsa در زیر خلاصه شده است:
+	
+	الگوریتم Deutsch-Jozsa
+	
+	الی یک n کوبیت رجیستر را برای ذخیره پرس و جو خود آماده می کند و یک کوبیت رجیستر واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند.
+	او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت فوق العاده آماده می کند.
+	باب f(x) را با استفاده از Uf : |x, y〉 → |x, y ⊕ f (x)〉 ارزیابی می کند.
+	الی با استفاده از تبدیل Hadamard روی رجیستر پرس و جو، عبارات را در super- position تداخل می کند.
+	الی کوبیت های پرس و جو را اندازه گیری می کند.
+	
+	
+	
+	
 	
 \section{oracle}
 use qiskit site
+
+\section{comp vs simulation}
+	
+% computer vs simulator https://www.youtube.com/watch?v=2qcvgXaDdfU
+% https://www.youtube.com/watch?v=0RPFWZj7Jm0	
+
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 \section{Bell states}
 % pls search about bell eq

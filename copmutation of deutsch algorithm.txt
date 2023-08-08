@@ -1,0 +1,41 @@
+$$
+\begin{aligned}
+	\left|\pi_1\right\rangle= & |-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
+	\left|\pi_2\right\rangle= & \frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
+	= & \frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
+	& |0 \oplus a\rangle-|1 \oplus a\rangle=(-1)^a(|0\rangle-|1\rangle)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+	\left|\pi_1\right\rangle & =|-\rangle|+\rangle=\frac{1}{2}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(|0\rangle-|1\rangle)|1\rangle \\
+	\left|\pi_2\right\rangle & =\frac{1}{2}(|0 \oplus f(0)\rangle-|1 \oplus f(0)\rangle)|0\rangle+\frac{1}{2}(|0 \oplus f(1)\rangle-|1 \oplus f(1)\rangle)|1\rangle \\
+	& =\frac{1}{2}(-1)^{f(0)}(|0\rangle-|1\rangle)|0\rangle+\frac{1}{2}(-1)^{f(1)}(|0\rangle-|1\rangle)|1\rangle \\
+	& =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+	\left|\pi_2\right\rangle & =|-\rangle\left(\frac{(-1)^{f(0)}|0\rangle+(-1)^{f(1)}|1\rangle}{\sqrt{2}}\right) \\
+	& =(-1)^{f(0)}|-\rangle\left(\frac{|0\rangle+(-1)^{f(0) \oplus f(1)}|1\rangle}{\sqrt{2}}\right) \\
+	& = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases}
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+	\left|\pi_2\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|+\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|-\rangle & f(0) \oplus f(1)=1\end{cases} \\
+	\left|\pi_3\right\rangle & = \begin{cases}(-1)^{f(0)}|-\rangle|0\rangle & f(0) \oplus f(1)=0 \\
+		(-1)^{f(0)}|-\rangle|1\rangle & f(0) \oplus f(1)=1\end{cases} \\
+	& =(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
+\end{aligned}
+$$
+
+$$
+\left|\pi_3\right\rangle=(-1)^{f(0)}|-\rangle|f(0) \oplus f(1)\rangle
+$$
