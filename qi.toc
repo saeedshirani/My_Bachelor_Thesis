@@ -17,14 +17,14 @@
 \contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{15}{}%
 \contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{19}{}%
 \contentsline {section}{\numberline {3.2}مدل کوئری}{19}{}%
-\contentsline {section}{\numberline {3.3}Deutsch Algorithm}{20}{}%
+\contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{20}{}%
 \contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{20}{}%
 \contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{21}{}%
 \contentsline {section}{\numberline {3.4}الگوریتم دوچ - جوزا}{24}{}%
-\contentsline {section}{\numberline {3.5}oracle}{28}{}%
-\contentsline {section}{\numberline {3.6}comp vs simulation}{29}{}%
+\contentsline {section}{\numberline {3.5}ساخت یک اوراکل کوانتومی}{29}{}%
+\contentsline {section}{\numberline {3.6}comp vs simulation}{30}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{31}{}%
 \contentsline {section}{\numberline {4.1}Bell states}{31}{}%
 \contentsline {section}{\numberline {4.2}entanglement}{32}{}%
 \contentsline {section}{\numberline {4.3}super dense coding}{32}{}%
-\contentsline {section}{\numberline {4.4}Teleport}{32}{}%
+\contentsline {section}{\numberline {4.4}Teleport}{35}{}%

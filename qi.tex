@@ -4,6 +4,7 @@
 \usepackage{setspace}
 \usepackage{makeidx}
 \usepackage{tikz}
+\usepackage{subfigure}
 \usepackage{braket}
 \usepackage{graphicx}
 \usepackage{array}
@@ -502,8 +503,8 @@ $$
 
 ما در این نظریه کوئری‌ها را می‌شماریم و وضعیت آن‌‌ها را بررسی می‌کنیم.
 
-\section{Deutsch Algorithm}
-tell combnation of books
+\section{معرفی و پیاده سازی الگوریتم دوچ}
+
 \subsection{مسئله‌ی دوچ}
 الگوریتم \lr{Deutsch} اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{David Deutsch} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
 
@@ -556,13 +557,7 @@ tell combnation of books
 	
 	If the first qubit is measured to be |1⟩, then the function f is balanced. This is because the state |ψ⟩ is parallel to the state |1⟩, so the interference between the two states will constructively interfere.
 	
-	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} 
-
-
-
-As before, let us use theHadamard gate to prepare the first qubit as the superposition (|0〉 + |1〉)/√2, but now let us prepare the second qubit y as the superposition (|0〉 − |1〉)/√2, using a Hadamard gate applied to the state |1〉. Let us follow the states along to see what happens in this circuit, shown in Figure 1.19
-
-است.
+	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} است.
 مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کوبیت به عنوان superposition (|0〉 + |1〉)/√2 استفاده کنیم، اما اکنون کوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان superposition (|0〉 - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
 
 
@@ -629,88 +624,24 @@ for the other half. Alice’s goal is to determine with certainty whether Bob ha
 constant or a balanced function, corresponding with him as little as possible. How fast
 can she succeed?
 
-الگوریتم دوچ یک مورد ساده از یک الگوریتم کوانتومی عمومی‌تر است که به عنوان الگوریتم دوچ-جوزا شناخته می‌شود. کاربرد این الگوریتم، که به عنوان مشکل دوچ شناخته می‌شود، به شرح بازی زیر است:
+الگوریتم دوچ توضیح ساده از یک الگوریتم کوانتومی عمومی‌تر است که به عنوان الگوریتم دوچ-جوزا شناخته می‌شود. کاربرد این الگوریتم، که به عنوان مشکل دوچ شناخته می‌شود، به شرح زیر است:
 
-آلیس، در آمستردام، یک عدد x را از بازه‌ $[0, 2n-1]$ انتخاب می‌کند و آن را در یک نامه به باب، در بوستون، می‌فرستد. باب یک تابع$ f(x)$ را محاسبه می‌کند و نتیجه را که 0 یا 1 است، ارسال می‌کند. اکنون، باب قول داده است که از تابعی از دو نوع استفاده کند؛ یا$ f(x)$ برای همه مقادیر $x$ ثابت است، یا $f(x)$ متعادل است، یعنی برای دقیقاً نیمی از همه xهای ممکن برابر با 1 است و برای نیمی دیگر برابر با 0 است.
+آلیس، در آمستردام، یک عدد x را از بازه‌ $[0, 2^n-1]$ انتخاب می‌کند و آن را در یک نامه به باب، در بوستون، می‌فرستد. باب یک تابع$ f(x)$ را محاسبه می‌کند و نتیجه را که 0 یا 1 است، ارسال می‌کند. اکنون، باب قول داده است که از یک مدل تابع استفاده خواهد کرد؛ این تابع یا$ f(x)$ که برای همه مقادیر $x$ ثابت است، یا $f(x)$ متعادل است، یعنی‌ حاصل آن برای دقیقاً نیمی از همه xهای ممکن برابر با 1 است و برای نیمی دیگر برابر با 0 است.
 
-هدف الی این است که با اطمینان تعیین کند که باب یک تابع ثابت یا متعادل را انتخاب کرده است، با او به حداقل ارتباط ممکن. او چگونه می‌تواند به سرعت موفق شود؟
+هدف آلیس این است که با اطمینان و بکار بستن کمترین گام‌های ممکن تعیین کند که باب یک تابع ثابت یا متعادل را انتخاب کرده است. او چگونه می‌تواند به سرعت موفق شود؟
 
+در حالت کلاسیک، آلیس ممکن است فقط یک مقدار x را در هر نامه به باب ارسال کند. در بدترین حالت، الی باید حداقل $\frac{2^n}{2} + 1$ بار از باب سوال کند، زیرا ممکن است قبل از دریافت یک، $\frac{2^n}{2}$ مرتبه پاسخ $0$ را دریافت کند. آلیس باید یک را دریافت کند؛‌تا بتواند به او بگوید که تابع باب متعادل است. 
 
+یعنی در بهترین الگوریتم کلاسیک که می تواند استفاده کند بنابراین به$\frac{2^n}{2} + 1$ پرسش نیاز دارد. توجه داشته باشید که در هر نامه، آلیس n بیت اطلاعات را به باب ارسال می کند. علاوه بر این، در این مثال، فاصله فیزیکی باب و آلیس و به تبع آن افزایش هزینه محاسبه $f(x)$ و دشواری‌های احتمالی اجرای تابع $f(x)$ درنظر گرفته نشده‌است.
 
-In the classical case, Alice may only send Bob one value of x in each letter. At worst,
-Alice will need to query Bob at least 2n/2 + 1 times, since she may receive 2n/2 0s before
-finally getting a 1, telling her that Bob’s function is balanced. The best deterministic
-classical algorithm she can use therefore requires 2n/2 + 1 queries. Note that in each
-letter, Alice sends Bob n bits of information. Furthermore, in this example, physical
-distance is being used to artificially elevate the cost of calculating f (x), but this is not
-needed in the general problem, where f (x) may be inherently difficult to calculate.
-
-
-
-در حالت کلاسیک، الی ممکن است فقط یک مقدار x را در هر نامه به باب ارسال کند. در بدترین حالت، الی باید حداقل 2n/2 + 1 بار از باب سوال کند، زیرا ممکن است 2n/2 0 دریافت کند قبل از اینکه
-سرانجام 1 را دریافت کند و به او بگوید که تابع باب متعادل است. بهترین الگوریتم
-دترمینیستی کلاسیک که می تواند استفاده کند بنابراین به 2n/2 + 1 پرسش نیاز دارد. توجه داشته باشید که در هر
-نامه، الی n بیت اطلاعات را به باب ارسال می کند. علاوه بر این، در این مثال، فاصله فیزیکی
-برای افزایش مصنوعی هزینه محاسبه f (x) استفاده می شود، اما این مورد در مسئله عمومی لازم نیست، جایی که f (x) ممکن است ذاتاً دشوار باشد برای محاسبه.
+	اگر باب و آلیس بتوانند کوبیت ها را به جای بیت های کلاسیک مبادله کنند، و اگر باب موافقت کند $f (x)$ را با استفاده از تبدیل یکه‌ی \lr{$U_{f}$} محاسبه کند، سپس آلیس می تواند هدف خود را در یک مکاتبه با باب و با استفاده از الگوریتم زیر به دست آورد.
 	
+	با توجه به الگوریتم دوچ، آلیس یک رجیستر n کوبیتی را برای ذخیره پرس و جو خود آماده می کند و یک رجیستر کوبیت واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند. او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت برهمنهی آماده می کند. باب f(x) را با استفاده از موازی سازی کوانتومی ارزیابی می کند و نتیجه را به آلیس برمی گرداند. آلیس سپس با استفاده از اعمال تبدیل هادامارد روی رجیستر پرس و جو(n-کیوبیتی)، حالات برهمنهی تداخل می‌دهد و با انجام یک اندازه گیری مناسب، تعیین می کند که آیا f ثابت یا متعادل است.
+		
+	گام‌های خاص الگوریتم در شکل 1.20 نشان داده شده است. بیایید با دنبال کردن این مدار، به بررسی حالات ایجاد شده بپردازیم.
+	حالت ورودی |ψ0〉 = |0〉⊗n|1〉 (1.46)؛‌ شبیه حالت معادله (1.41) است، اما در اینجا رجیستر پرس و جو وضعیت n کوبیت را توصیف می‌کند که همه در حالت |0〉 آماده شده‌اند. پس از اعمال تبدیل هامادارد روی رجیستر پرس و جو  و روی رجیستر پاسخ، می‌توان نوشت:
 	
-	
-	If Bob and Alice were able to exchange qubits, instead of just classical bits, and if Bob
-	agreed to calculate f (x) using a unitary transform Uf , then Alice could achieve her goal
-	in just one correspondence with Bob, using the following algorithm.
-	
-	اگر باب و الی بتوانند کوبیت ها را به جای بیت های کلاسیک مبادله کنند، و اگر باب موافقت کند f (x) را با استفاده از تبدیل یونیتاری Uf محاسبه کند، سپس الی می تواند هدف خود را
-	در یک مکاتبه با باب با استفاده از الگوریتم زیر به دست آورد.
-	
-	Analogously to Deutsch’s algorithm, Alice has an n qubit register to store her query
-	in, and a single qubit register which she will give to Bob, to store the answer in. She
-	begins by preparing both her query and answer registers in a superposition state. Bob
-	will evaluate f (x) using quantum parallelism and leave the result in the answer register.
-	Alice then interferes states in the superposition using a Hadamard transform on the query
-	register, and finishes by performing a suitable measurement to determine whether f was
-	constant or balanced.
-	
-	
-	با توجه به الگوریتم دوچ، الی یک رجیستر n کوبیتی را برای ذخیره پرس و جو خود آماده می کند و یک رجیستر کوبیت واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند. او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت فوق العاده آماده می کند. باب f(x) را با استفاده از موازی سازی کوانتومی ارزیابی می کند و نتیجه را به الی برمی گرداند. الی سپس با استفاده از تبدیل هادامارد روی رجیستر پرس و جو، حالت های تداخل را در حالت فوق العاده مداخله می کند و با انجام یک اندازه گیری مناسب، تعیین می کند که آیا f ثابت یا متعادل است.
-	
-	
-	
-	
-	
-	
-	The specific steps of the algorithm are depicted in Figure 1.20. Let us follow the states
-	through this circuit. The input state
-	|ψ0〉 = |0〉⊗n|1〉 (1.46)
-	is similar to that of Equation (1.41), but here the query register describes the state of n
-	qubits all prepared in the |0〉 state. After the Hadamard transform on the query register
-	and the Hadamard gate on the answer register we have
-	|ψ1〉 = ∑
-	x∈{0,1}n
-	|x〉
-	√2n
-	[ |0〉 − |1〉
-	√2
-	]
-	
-	
-	
-	گام‌های خاص الگوریتم در شکل 1.20 نشان داده شده است. بیایید با دنبال کردن این مدار، به حالت‌ها بپردازیم.
-	
-	حالت ورودی
-	
-	|ψ0〉 = |0〉⊗n|1〉 (1.46)
-	
-	این شبیه حالت معادله (1.41) است، اما در اینجا رجیستر پرس و جو وضعیت n کوبیت را توصیف می‌کند که همه در حالت |0〉 آماده شده‌اند.
-	
-	پس از تبدیل هامادارد روی رجیستر پرس و جو و گیت هادامارد روی رجیستر پاسخ، ما داریم
-	
-	|ψ1〉 = ∑
-	x∈{0,1}n
-	|x〉
-	√2n
-	[ |0〉 − |1〉
-	√2
-	]
+	|ψ1〉 = ∑x∈{0,1}n|x〉√2n[ |0〉 − |1〉√2]
 	
 	
 	
@@ -727,16 +658,13 @@ needed in the general problem, where f (x) may be inherently difficult to calcul
 	x(−1)f (x)/2n. 
 	
 	
-	رجیستر پرس و جو اکنون یک superposition از همه مقادیر است، و رجیستر پاسخ در یک superposition به طور مساوی وزن شده از 0 و 1 است.
+	رجیستر پرس و جو اکنون یک برهمنهی از همه مقادیر ممکن به‌شمار می‌آید؛ درحالی که رجیستر پاسخ در یک برهمنهی به طور مساوی وزن شده از 0 و 1 محسوب می‌شود\footnote{یعنی احتمال رخ‌دادن صفر و یک یکسان است.}.
 	
-در مرحله بعد، تابع f ارزیابی می شود (توسط باب) با استفاده از Uf : |x, y〉 → |x, y ⊕ f (x)〉، که (1.48) را می دهد.
+در مرحله بعد، تابع f توسط باب و به شکل Uf : |x, y〉 → |x, y ⊕ (x)〉f  ارزیابی می شود ، که (1.48) را می دهد.
 	
-	الی اکنون یک مجموعه کوبیت دارد که در آن نتیجه ارزیابی تابع باب در دامنه کوبیت superposition state ذخیره می شود. او اکنون با استفاده از تبدیل Hadamard روی رجیستر پرس و جو، عبارات را در super-
-	position تداخل می کند.
+	آلیس اکنون یک مجموعه کوبیت دارد که در آن نتیجه اعمال تابع باب در دامنه کوبیت حالت برهمنهی ذخیره می شود. او اکنون با استفاده از تبدیل هادامارد روی رجیستر پرس و جو، عبارات را در حالت برهمنهی کوانتومی تداخل می کند.
 	
-	برای تعیین نتیجه تبدیل Hadamard، کمک می کند تا ابتدا اثر تبدیل Hadamard
-	را روی یک حالت |x〉 محاسبه کنیم. با بررسی موارد x = 0 و x = 1 به صورت جداگانه می بینیم که برای یک کوبیت واحد H|x〉 = ∑
-	z (−1)xz |z〉/√2. بنابراین (1.49)
+	برای تعیین نتیجه تبدیل هادامارد، بهترست ابتدا اثر تبدیل هادامارد را روی یک حالت |x〉 محاسبه کنیم. با بررسی موارد x = 0 و x = 1 به صورت جداگانه می بینیم که برای یک کوبیت واحد H|x〉 = ∑z (−1)xz |z〉/√2 می‌باشد. بنابراین (1.49)
 	
 	این را می توان به طور خلاصه در معادله بسیار مفید زیر خلاصه کرد:
 	
@@ -748,7 +676,7 @@ needed in the general problem, where f (x) may be inherently difficult to calcul
 	
 	(1.51)
 	
-	الی اکنون رجیستر پرس و جو را مشاهده می کند. توجه داشته باشید که دامنه برای حالت |0〉⊗n است
+	آلیس اکنون رجیستر پرس و جو را مشاهده می کند. توجه داشته باشید که دامنه برای حالت |0〉⊗n است
 	∑
 	x(−1)f (x)/2n.
 	
@@ -756,7 +684,7 @@ needed in the general problem, where f (x) may be inherently difficult to calcul
 	
 	
 	
-	
+	\textbf{از استاد بپرس اشکاااااللللل}
 	
 	Let’s look at the two possible cases – f constant and f balanced – to
 	discern what happens. In the case where f is constant the amplitude for |0〉⊗n is +1 or
@@ -770,8 +698,7 @@ needed in the general problem, where f (x) may be inherently difficult to calcul
 	
 	بیایید به دو مورد ممکن - f ثابت و f متعادل - نگاه کنیم تا ببینیم چه اتفاقی می افتد.
 	
-	در صورتی که f ثابت باشد، دامنه برای حالت |0〉⊗n برابر است با +1 یا
-	−1، بسته به مقدار ثابت f (x) که می گیرد.
+	در صورتی که f ثابت باشد، دامنه برای حالت |0〉⊗n برابر است با +1 یا −1، بسته به مقدار ثابت f (x) که می‌گیرد.
 	
 	از آنجایی که |ψ3〉 طول واحد است، نتیجه می‌گیریم که تمام دامنه‌های دیگر باید صفر باشند، و یک مشاهده 0 را برای همه کوبیت‌ها در رجیستر پرس و جو به همراه خواهد داشت.
 	
@@ -781,30 +708,146 @@ needed in the general problem, where f (x) may be inherently difficult to calcul
 	
 	الگوریتم Deutsch-Jozsa در زیر خلاصه شده است:
 	
-	الگوریتم Deutsch-Jozsa
-	
-	الی یک n کوبیت رجیستر را برای ذخیره پرس و جو خود آماده می کند و یک کوبیت رجیستر واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند.
-	او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت فوق العاده آماده می کند.
-	باب f(x) را با استفاده از Uf : |x, y〉 → |x, y ⊕ f (x)〉 ارزیابی می کند.
-	الی با استفاده از تبدیل Hadamard روی رجیستر پرس و جو، عبارات را در super- position تداخل می کند.
-	الی کوبیت های پرس و جو را اندازه گیری می کند.
 	
 	
 	
 	
+	Algorithm: Deutsch–Jozsa
+	Inputs: (1) A black box Uf which performs the transformation
+	|x〉|y〉 → |x〉|y ⊕ f (x)〉, for x ∈ {0, . . . , 2n − 1} and f (x) ∈ {0, 1}. It is
+	promised that f (x) is either constant for all values of x, or else f (x) is balanced,
+	that is, equal to 1 for exactly half of all the possible x, and 0 for the other half.
+	Outputs: 0 if and only if f is constant.
+	Runtime: One evaluation of Uf . Always succeeds.
+	Procedure:
+	1. |0〉⊗n|1〉 initialize state
+	2. → 1
+	√2n
+	2n −1∑
+	x=0
+	|x〉
+	[ |0〉 − |1〉
+	√2
+	] create superposition using
+	Hadamard gates
+	3. → ∑
+	x
+	(−1)f (x)|x〉
+	[ |0〉 − |1〉
+	√2
+	]
+	calculate function f using Uf
+	4. → ∑
+	z
+	∑
+	x
+	(−1)x·z+f (x)|z〉
+	√2n
+	[ |0〉 − |1〉
+	√2
+	]
+	perform Hadamard transform
+	5. → z measure to obtain final output z
+	We’ve shown that a quantum computer can solve Deutsch’s problem with one evalu-
+	ation of the function f compared to the classical requirement for 2n/2 + 1 evaluations.
+	This appears impressive, but there are several important caveats. First, Deutsch’s prob-
+	lem is not an especially important problem; it has no known applications. Second, the
+	comparison between classical and quantum algorithms is in some ways an apples and
+	oranges comparison, as the method for evaluating the function is quite different in the
+	two cases. Third, if Alice is allowed to use a probabilistic classical computer, then by
+	asking Bob to evaluate f (x) for a few randomly chosen x she can very quickly determine
+	with high probability whether f is constant or balanced. This probabilistic scenario is
+	perhaps more realistic than the deterministic scenario we have been considering. Despite
+	these caveats, the Deutsch–Jozsa algorithm contains the seeds for more impressive quan-
+	tum algorithms, and it is enlightening to attempt to understand the principles behind its
+	operation.
+	الگوریتم: Deutsch–Jozsa
+	ورودی‌ها: (1) یک جعبه سیاه Uf که تبدیل زیر را انجام می‌دهد
+	|x〉|y〉 → |x〉|y ⊕ f (x)〉, برای x ∈ {0، ...، 2n - 1} و f (x) ∈ {0، 1}. قول داده شده است که f (x) برای همه مقادیر x ثابت است یا f (x) متعادل است،
+	یعنی برای دقیقاً نیمی از همه xهای ممکن برابر با 1 و برای نیمی دیگر 0 است.
+	خروجی: 0 اگر و فقط اگر f ثابت باشد.
+	زمان اجرا: یک ارزیابی Uf. همیشه موفق می شود.
+	روش:
 	
-\section{oracle}
-use qiskit site
+	|0〉⊗n|1〉 حالت را initialize کنید
+	→ 1 √2n 2n −1∑ x=0 |x〉 [ |0〉 − |1〉 √2 ] ایجاد superposition با استفاده از دروازه‌های Hadamard
+	→ ∑ x (−1)f (x)|x〉 [ |0〉 − |1〉 √2 ] تابع f را با استفاده از Uf محاسبه کنید
+	→ ∑ z ∑ x (−1)x·z+f (x)|z〉 √2n [ |0〉 − |1〉 √2 ] تبدیل Hadamard را انجام دهید
+	→ z اندازه گیری کنید تا خروجی نهایی z را بدست آورید ما نشان داده‌ایم که یک کامپیوتر کوانتومی می‌تواند مشکل Deutsch را با یک ارزیابی حل کند – ارزشیابی تابع f در مقایسه با نیاز کلاسیک برای 2n/2 + 1 ارزیابی. این به نظر چشمگیر است، اما چند نکته مهم وجود دارد. اول، مشکل Deutsch نیست یک مشکل مهم است؛ هیچ کاربرد شناخته شده ای ندارد. دوم، مقایسه بین الگوریتم های کلاسیک و کوانتومی تا حدودی مقایسه سیب و پرتقال است، زیرا روش برای ارزیابی تابع در دو مورد بسیار متفاوت است. سوم، اگر آلیس مجاز باشد از یک کامپیوتر کلاسیک احتمالی استفاده کند، سپس با درخواست از باب برای ارزیابی f (x) برای چند x به صورت تصادفی می تواند بسیار سریع تعیین کند با احتمال بالا اینکه f ثابت یا متعادل است. این سناریو احتمالی است شاید واقع بینانه تر از سناریوی determinstic که ما در نظر گرفته ایم. علیرغم این ظرافت ها، الگوریتم Deutsch–Jozsa حاوی بذرهای الگوریتم های کوانتومی بیشتر و چشمگیرتر است، و درک اصول پشت آن روشنگر است. عملکرد آن.
+	
+	
+	
+\section{ساخت یک اوراکل کوانتومی}
+بیایید راه های مختلفی را ببینیم که می توانیم یک اوراکل کوانتومی ایجاد کنیم.
 
+برای یک تابع ثابت، ساده است:
+
+اگر f(x) = 0، گیت را به کیوبیت در ثبات 2 اعمال کنید.
+اگر f(x) = 1، گیت را به کیوبیت در ثبات 2 اعمال کنید.
+
+برای عملکرد متعادل، مدارهای مختلفی وجود دارد که می توانیم ایجاد کنیم. یکی از راه‌هایی که می‌توانیم متوازن بودن مدار خود را تضمین کنیم، انجام یک CNOT برای هر کیوبیت در ثبات 1، با کیوبیت موجود در ثبات 2 به عنوان هدف است. مثلا:
+
+\begin{center}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.8\textwidth]{oraclecon.png}
+		\caption{}
+	\end{figure}
+\end{center}
+
+
+
+
+در تصویر بالا، سه کیوبیت بالا، رجیستر ورودی را تشکیل می دهند و کیوبیت پایین، ثبات خروجی است. در جدول زیر می‌توانیم ببینیم کدام حالت‌های ورودی کدام خروجی را می‌دهند:
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		حالاتی ورودی که به خروجی صفر منجر می‌شوند &  حالاتی ورودی که به خروجی صفر منجر می‌شوند \\ \hline
+		000 & 001 \\ \hline
+		011 & 100 \\ \hline
+		101 & 010 \\ \hline
+		110 & 111 \\ \hline
+	\end{tabular}
+	\caption{This is a simple table.}
+\end{table}
+ما می توانیم نتایج را تغییر دهیم و در عین حال تعادل آنها را با قرار دادن کنترل های انتخاب شده در X-Gates حفظ کنیم. برای مثال، مدار و جدول نتایج آن را در زیر ببینید:
+\begin{center}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.8\textwidth]{oraclebalance.png}
+		\caption{}
+	\end{figure}
+\end{center}
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		حالاتی ورودی که به خروجی صفر منجر می‌شوند &  حالاتی ورودی که به خروجی صفر منجر می‌شوند \\ \hline
+		001 & 000 \\ \hline
+		010 & 011 \\ \hline
+		100 & 101 \\ \hline
+		111 & 110 \\ \hline
+	\end{tabular}
+	\caption{This is a simple table.}
+\end{table}
+
+
+
+% implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
 \section{comp vs simulation}
 	
 % computer vs simulator https://www.youtube.com/watch?v=2qcvgXaDdfU
 % https://www.youtube.com/watch?v=0RPFWZj7Jm0	
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
+در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. 
 \section{Bell states}
+% https://www.youtube.com/watch?v=I0jH1_H3x1o
 % pls search about bell eq
-در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند:؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
+در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
 \begin{center}
 	$\vert \psi_{00} \rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
 \end{center}
@@ -818,17 +861,113 @@ use qiskit site
 \vert\psi_{xy}\rangle = C_{10}H_{1}\vert xy \rangle
 \]
 
-از آنجایی که چهار حالت |xy〉 یک مجموعه orthonormal هستند و دروازه‌های Hadamard و cNOT واحدی هستند، چهار حالت درهم تنیده |ψxy〉 نیز یک مجموعه orthonormal هستند، که به نام پایه Bell نامگذاری شده‌اند. حال یک دسته‌ی سه‌کیوبیتی را درنظر ‌می‌گیریم:
+از آنجایی که چهار حالت $\vert xy\rangle$ یک مجموعه متعامد هستند و گیت‌های هادامارد و cNOT یکه هستند، چهار حالت درهم تنیده $\vert \psi_{xy}\rangle$ نیز یک مجموعه متعامد هستند، که به نام پایه Bell نامگذاری شده‌اند.  می‌توان رابطه‌ی بالا را یک حالت کلی تعمیم داد:
 
 % read about bell state equation
 \begin{center}
 $\vert \psi_{xy}\rangle = C10H1X^{x}_{1} X^{y}_{0} \vert00\rangle$\\
 \end{center}
 
-last paragraph of page 136 of quantum computer scince book??\\
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{}
+		\centering
+		\includegraphics[width=0.2\textwidth]{psi00.png}
+		\caption{$y=x$}
+		\label{fig:y equals x}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{}
+		\centering
+		\includegraphics[width=0.2\textwidth]{psixy.png}
+		\caption{$y=3\sin x$}
+		\label{fig:three sin x}
+	\end{subfigure}
+	\caption{(a) A circuit that creates the entangled state
+		|ψ00〉 = 1√2
+		(|00〉 + |11〉) from the unentangled computational-basis
+		state |00〉. (b) A circuit that creates the four orthonormal entangled
+		Bell states |ψxy〉 from the unentangled computational-basis state |xy〉}
+	\label{fig:three graphs}
+\end{figure}
+
+
+درنظر داشته باشید که حالات بل قابل تبدیل به یکدیگرند؛ با کمک رابطه‌ی تعمیم یافته ‌می‌توان از هر حالت بل به حالت $\vert00 \rangle$ رسید.
+توضیحات درباره‌ی تبدیلات بنویس
+
+این روابط به شکل‌های متعدد قابل بیان است که از حوصله‌ی بحث خارج است.
+
+
+
+
+
+
+
 \section{entanglement}
 \section{super dense coding}
-quntum computer scinse
+
+
+Although an infinite amount of information is needed to specify the state |ψ〉 = α|0〉 + β|1〉 of a single Qbit, there is no way for somebody who has acquired possession of the Qbit to learn what that state is, as we have often noted. If Alice prepares a Qbit in the state |ψ〉 and sends it to Bob, all he can do is apply a unitary transformation of his choice and then measure the Qbit, getting the value 0 or 1. 
+
+
+
+
+
+After that the state of the Qbit is either |0〉 or |1〉 and no further measurement can teach him anything about its original state |ψ〉. The most Alice can communicate to Bob by sending him a single Qbit is a single bit of information. If, however, Alice has one member of an entangled pair of Qbits in the state |〉 = 1√2 (|0〉|0〉 + |1〉|1〉) (6.15) and Bob has the other, then by suitably preparing her member of the pair and then sending it to Bob, she can convey to him two bits of information.
+
+
+
+
+ She does this by first applying the transformation 1, X, Z, or ZX to her Qbit, depending on whether she wants to send Bob the message 00, 01, 10, or 11. If hers is the Qbit on the left in (6.15) these transform the state of the pair into one of the four mutually orthogonal Bell states (6.5), 
+1a |〉 = 1√2 (|0〉|0〉 + |1〉|1〉),
+Xa |〉 = 1√2 (|1〉|0〉 + |0〉|1〉),(6.16)
+Za |〉 = 1√2 (|0〉|0〉 − |1〉|1〉),
+Za Xa |〉 = 1√2 (|0〉|1〉 − |1〉|0〉).
+
+
+
+She then sends her Qbit over to Bob. He sends the pair through the controlled-NOT gate Cab , using the Qbit he received from Alice as control, to get
+Cab 1a |〉 = 1√2 (|0〉 + |1〉)|0〉,
+Cab Xa |〉 = 1√2 (|0〉 + |1〉)|1〉, (6.17)
+Cab Za |〉 = 1√2 (|0〉 − |1〉)|0〉,
+Cab Za Xa |〉 = 1√2 (|0〉 − |1〉)|1〉,
+
+
+and then he applies a Hadamard transform to get 
+Ha Cab 1a |〉 = |0〉|0〉,
+Ha Cab Xa |〉 = |0〉|1〉, (6.18)
+Ha Cab Za |〉 = |1〉|0〉,
+Ha Cab Za Xa |〉 = |1〉|1〉.
+
+
+
+Measuring the two Qbits then gives him 00, 01, 10, or 11 – precisely the two-bit message Alice wished to send. This process of transforming the Bell basis back into the computational basis – i.e. undoing the process (6.3) by which the Bell basis was constructed from the computational basis – and then measuring is called “measuring in the Bell basis.” One can directly demonstrate that this works with circuit diagrams,
+without going through any of the analysis in (6.15)–(6.18). 
+
+
+
+
+
+Suppose that Alice represents the two bits x and y she wishes to transmit to Bob as the computational-basis state |x〉|y〉 of two Qbits (the top two wires, Figure 6.4(a)). If Bob has two Qbits initially in the state |0〉|0〉 (the bottom two wires in Figure 6.4(a)), then the circuit in Figure 6.4(a) gets the two bits to Bob in a straightforward classical way, transforming the state |x〉|y〉|0〉|0〉 on the right to |x〉|y〉|x〉|y〉 on the left by means of direct Qbit-to-Qbit coupling via two cNOT gates. The procedure involves only classical operations on classically meaningful states.
+
+
+
+
+ It gets the two bits from Alice to Bob by explicit interactions between her Qbits and his. It would work equally well for Cbits. One can transform this direct classical procedure into the more exotic quantum protocol by expanding the cNOT gates into products of quantum gates. One first expands one of the C gates into HCZH in Figure 6.4(b). Because Z acting on the control Qbit commutes with C and because C is its own inverse, we can further expand Figure 6.4(b) to Figure 6.4(c). We can then bring the H and C gates on either side of the CZ to the extreme left and right to get Figure 6.4(d).
+ 
+ 
+ 
+ 
+  We can also expand the two C gates on the left of Figure 6.4(d) into the three C gates on the left of Figure 6.4(e), since the action of either set is to flip the target Qbit if and only if the computational-basis states of the two control Qbits are different, while leaving the states of the control Qbits unaltered. Because the state H|0〉 = (1/√2)(|0〉 + |1〉) is invariant under the action of X, the C on the extreme left of Figure 6.4(e) acts as the identity, and Figure 6.4(e) simplifies to Figure 6.4(f). The fact that Figure 6.4(f) has the same action as Figure 6.4(a) contains all the content of the dense-coding protocol. The pair of gates C10H1 on the left of Figure 6.4(f) acts on the state |0〉|0〉 to produce the entangled state (6.15). The bottom Qbit of the pair, Qbit 0, is given to Bob and the upper one, Qbit 1, is given to Alice, who also possesses the upper two, Qbits 2 and 3. 
+  
+  
+  
+  
+  The pair of gates CZ 31 C21 acts as 1, X, Z, or ZX on Qbit 1 depending on whether the states of Qbits 3 and 2 are |0〉|0〉, |0〉|1〉, |1〉|0〉, or |1〉|1〉. This reproduces the transformation Alice applies to the member of the entangled pair in her possession, depending on the values of the two bits she wishes to transmit to Bob.
+  
+  
+  
+   Alice then sends Qbit 1 to Bob. The final pair H1C10 on the right is precisely the transformation (6.18) that Bob performs on the reunited entangled pair before making his measurement, which yields the values x, y that Alice wished to transmit. Like dense coding, many tricks of quantum information theory, including the one we examine next, teleportation, rely on two or more people sharing entangled Qbits, prepared some time ago, carefully stored in their remote locations awaiting an occasion for their use. While the preparation of entangled Qbits (in the form of photons) and their transmission to distant places has been achieved, putting them into entanglement-preserving, local, long-term storage remains a difficult challenge.
 \section{Teleport}
 isac book
 فرض کنید آلیس یک کیوبیت در حالت زیر دارد:
@@ -842,126 +981,106 @@ $\vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle $\\
 	کیوبیت باب را می‌توان به حالت زیر تعریف کرد:
 $\vert\phi\rangle = 1/\sqrt{2}(\vert0\rangle \vert0\rangle + \vert1\rangle\vert1\rangle)$ 
 	
-
-==============
-اکنون تکنیک های چند صفحه آخر را برای درک چیزی غیرمعمول به کار خواهیم برد.
-پیش پا افتاده، غافلگیر کننده و بسیار سرگرم کننده - دوربری کوانتومی! تله پورت کوانتومی یک است
-تکنیک حرکت حالات کوانتومی به اطراف، حتی در غیاب ارتباط کوانتومی
-کانال nications که فرستنده حالت کوانتومی را به گیرنده پیوند می دهد.
-در اینجا نحوه عملکرد دوربری کوانتومی آمده است. آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون زندگی می کنند
-دور از هم. در حالی که آنها با هم یک جفت EPR تولید کردند که هر کدام یک کیوبیت از EPR را می گرفتند
-وقتی از هم جدا شدند جفت شوند سال‌ها بعد، باب مخفی است و ماموریت آلیس باید انجام شود
-او تصمیم می گیرد آن را بپذیرد، یعنی یک کیوبیت |ψ〉 به باب تحویل دهد. او وضعیت را نمی داند
-کیوبیت، و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید قبول کند
-ماموریت؟
-به طور شهودی، همه چیز برای آلیس بسیار بد به نظر می رسد. او وضعیت |ψ〉 آن را نمی داند
-کیوبیت او باید برای باب بفرستد و قوانین مکانیک کوانتومی او را از این کار باز می دارد
-تعیین وضعیت زمانی که او فقط یک نسخه از |ψ〉 در اختیار دارد. چه
-بدتر از آن، حتی اگر او حالت |ψ〉 را می دانست، توصیف دقیق آن به مقدار بی نهایت نیاز دارد.
-اطلاعات کلاسیک از آنجایی که |ψ〉 مقادیر را در یک فضای پیوسته می گیرد. بنابراین حتی اگر او انجام دهد
-بدانید |ψ〉، همیشه طول می کشد تا آلیس وضعیت را برای باب توصیف کند. نگاه نمی کند
-برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از آن است
-جفت EPR درهم به منظور ارسال |ψ〉 به باب، تنها با سربار کوچک کلاسیک
-ارتباط
-به طور کلی، مراحل حل به شرح زیر است: آلیس با کیوبیت |ψ〉 با
-نصف او از جفت EPR، و سپس دو کیوبیت در اختیارش را اندازه گیری می کند و به دست می آورد
-یکی از چهار نتیجه کلاسیک ممکن، 00، 01، 10، و 11. او این اطلاعات را به
-باب بسته به پیام کلاسیک آلیس، باب یکی از چهار عمل خود را انجام می دهد
-نیمی از جفت EPR. به طرز شگفت انگیزی، با انجام این کار او می تواند حالت اولیه را بازیابی کند |ψ〉!
-مدار کوانتومی نشان داده شده در شکل 1.13 توصیف دقیق تری از کوانتوم ارائه می دهد
-دوربری حالتی که باید از راه دور منتقل شود عبارت است از |ψ〉 = α|0〉+β|1〉 که α و β ناشناخته هستند.
-دامنه ها حالت ورودی مدار |ψ0〉 است
-|ψ0〉 = |ψ〉|β00〉
-
-
-
-
-
- 1
-√2
-[
-α|0〉(|00〉 + |11〉) + β|1〉(|00〉 + |11〉)
-]
-, (1.29
-\\
-
-که در آن از این قرارداد استفاده می کنیم که دو کیوبیت اول (در سمت چپ) متعلق به آلیس هستند و
-کیوبیت سوم به باب. همانطور که قبلا توضیح دادیم، کیوبیت دوم آلیس و کیوبیت باب
-در حالت EPR شروع کنید. آلیس کیوبیت های خود را از طریق دروازه می فرستد و به دست می آورد
-|ψ1〉 = 1
-√2
-[
-α|0〉(|00〉 + |11〉) + β|1〉(|10〉 + |01〉)
-]
-. (1.30)
-سپس اولین کیوبیت را از طریق دروازه هادامارد می فرستد و به دست می آورد
-|ψ2〉 = 1
-2
-[
-α(|0〉 + |1〉)(|00〉 + |11〉) + β(|0〉− |1〉)(|10〉 + |01〉)
-]
-.
-(1.31)
-این حالت را می توان به روش زیر بازنویسی کرد، به سادگی با گروه بندی مجدد عبارات:
-|ψ2〉 = 1
-2
-[
-|00〉 (α|0〉 + β|1〉) + |01〉 (α|1〉 + β|0〉)
-+ |10〉 (α|0〉 − β|1〉) + |11〉 (α|1〉− β|0〉)]
-. (1.32)
-این عبارت به طور طبیعی به چهار اصطلاح تقسیم می شود. عبارت اول دارای کیوبیت های آلیس است
-در حالت |00〉 و کیوبیت باب در حالت α|0〉 + β|1〉 - که حالت اصلی است.
-|ψ〉. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، سیستم باب این کار را انجام می دهد
-در حالت بودن |ψ〉. به طور مشابه، از عبارت قبلی می‌توانیم پست باب را بخوانیم
-حالت اندازه گیری، با توجه به نتیجه اندازه گیری آلیس:
-00 −→ |ψ3 (00)〉 ≡
-[
-α|0〉 + β|1〉
-]
-(1.33)
-01 −→ |ψ3 (01)〉 ≡
-[
-α|1 + β|0»
-]
-(1.34)
-10 −→ |ψ3 (10)〉 ≡
-[
-α|0〉 − β|1〉
-]
-(1.35)
-11 −→ |ψ3 (11)〉 ≡
-[
-α|1〉− β|0〉
-]
-. (1.36)
-بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این موارد ختم می شود
-چهار حالت ممکن البته برای اینکه بدانیم در کدام حالت است باید نتیجه را به باب گفت
-اندازه گیری آلیس - بعداً نشان خواهیم داد که این واقعیت است که از دوربری جلوگیری می کند
+he no-cloning theorem prohibits duplicating the unknown state
+of Alice’s first Qbit, either far away from her or nearby. But it turns
+out to be possible for Alice and Bob to cooperate over the telephone
+in assigning the state |ψ〉 to Bob’s member of the entangled pair. The
+no-cloning theorem is not violated because in doing so Alice obliterates
+all traces of the state |ψ〉 from either of her own Qbits. The process –
+called teleporting the state from Alice to Bob – also eliminates the en-
+tanglement Alice and Bob formerly shared. For each shared entangled
+pair, they can teleport just a single 1-Qbit state. The term “teleporta-
+tion” emphasizes that the state assignment acquired by Bob’s Qbit no
+longer applies to Alice’s; it has been transported from her Qbit to his.
+Here is how teleportation works. Alice’s first Qbit and the entangled
+pair she shares with Bob are characterized by the 3-Qbit state
+|ψ〉a |〉ab = (α|0〉a + β|1〉a
+) 1√2
+(|0〉a |0〉b + |1〉a |1〉b
+), (6.21)
+where I have given the state symbols for the Qbits in Alice’s and Bob’s
+possession subscripts a and b . To teleport the unknown state of her
+Qbit to Bob’s member of the entangled pair, Alice first applies a cNOT
+gate, using her first Qbit in the state |ψ〉 as the control and her member
+of the shared entangled pair as the target. This produces the 3-Qbit
+state
+α|0〉a 1√2
+(|0〉a |0〉b + |1〉a |1〉b
+) + β|1〉a 1√2
+(|1〉a |0〉b + |0〉a |1〉b
+).
+(6.22)
+Next she applies a Hadamard transformation H to her first Qbit, giving
+all three Qbits the state
+α 1√2
+(|0〉a + |1〉a
+) 1√2
+(|0〉a |0〉b + |1〉a |1〉b
+)
++ β 1√2
+(|0〉a − |1〉a
+) 1√2
+(|1〉a |0〉b + |0〉a |1〉b
+)
+= 1
+2 |0〉a |0〉a
+(α|0〉b + β|1〉b
+) + 1
+2 |1〉a |0〉a
+(α|0〉b − β|1〉b
+)
++ 1
+2 |0〉a |1〉a
+(α|1〉b + β|0〉b
+) + 1
+2 |1〉a |1〉a
+(α|1〉b − β|0〉b
+). (6.23)
+Now Alice measures both Qbits in her possession. (As remarked
+in Section 6.4, such an application of cNOT and Hadamard gates,
+immediately followed by measurement gates, is called “measuring in
+the Bell basis.”) If the result is 00, Bob’s Qbit will indeed acquire the
+state |ψ〉 originally possessed by Alice’s first Qbit (whose state would
+then be reduced to |0〉). But if the result of Alice’s measurement is 10,
+01, or 11 then the state of Bob’s Qbit becomes
+α|0〉b − β|1〉b , α|1〉b + β|0〉b , or α|1〉b − β|0〉b . (6.24)
+In each of these three cases there is a unitary transformation that re-
+stores the state of Bob’s Qbit to Alice’s original state |ψ〉. In the first
+case we can apply Z (which leaves |0〉 alone but changes the sign of |1〉),
+in the second case, X (which interchanges |0〉 and |1〉), and in the third
+case, ZX.
+6 . 5 TE L E P O R T A T I O N 151
+So all Alice need do to transfer the state of her Qbit to Bob’s member
+of their entangled pair is to telephone Bob and report to him the results
+of her two measurements. He then knows whether the state has already
+been transferred (if Alice’s result is 00) or what unitary transformation
+he must apply to his member of the entangled pair in order to com-
+plete the transfer (if Alice’s result is one of the other three.) Note the
+resemblance to quantum error correction: by making a measurement
+Alice acquires the information needed for Bob to reconstruct a partic-
+ular quantum state, without anybody acquiring any information about
+what the state actually is.
+This appears to be remarkable. A general state of a Qbit is described
+by two complex numbers α and β that take on a continuum of values,
+constrained only by the requirement that |α|2 + |β|2 = 1. Yet, with the
+aid of a standard entangled pair, whose state does not depend on α and
+β, Alice is able to provide Bob with a Qbit described by the unknown
+state, at the price of only two bits of classical information (giving the
+results of her two measurements) and the loss of the entanglement of their pair.
 
 
 
 
-رام برای انتقال اطلاعات سریعتر از نور استفاده می شود. وقتی باب این معنی را یاد گرفت
-در نتیجه، باب می‌تواند وضعیت خود را «تثبیت» کند، و با استفاده از روش مناسب |ψ〉 بهبود یابد.
-دروازه کوانتومی به عنوان مثال، در موردی که اندازه گیری 00 را به دست می آورد، باب این کار را نمی کند
-نیاز به انجام هر کاری اگر اندازه گیری 01 باشد، باب می تواند با اعمال کردن حالت خود را اصلاح کند
-دروازه X اگر اندازه گیری 10 باشد، باب می تواند وضعیت خود را با اعمال Z ثابت کند
-دروازه. اگر اندازه‌گیری 11 باشد، باب می‌تواند با اعمال ابتدا یک X و حالت خود را اصلاح کند
-سپس یک دروازه Z. به طور خلاصه، باب باید تبدیل ZM1 XM2 را اعمال کند (به چگونگی آن توجه کنید
-زمان در نمودارهای مداری از چپ به راست می‌رود، اما در سمت راست در محصولات ماتریسی می‌رود
-اول اتفاق می افتد) به کیوبیت او، و او حالت |ψ〉 را بازیابی می کند.
-بسیاری از ویژگی های جالب تله پورت وجود دارد که به برخی از آنها اشاره خواهیم کرد
-به بعد در کتاب. در حال حاضر به اظهار نظر در مورد چند مورد بسنده می کنیم
-جنبه های. اولا، آیا تله‌پورتاسیون به فرد اجازه نمی‌دهد حالت‌های کوانتومی را سریع‌تر از آن ارسال کند
-سبک؟ این امر نسبتاً عجیب و غریب خواهد بود، زیرا نظریه نسبیت نشان می دهد که سریعتر
-از انتقال اطلاعات نور می توان برای ارسال اطلاعات به عقب در زمان استفاده کرد.
-خوشبختانه، تله‌پورت کوانتومی امکان ارتباط سریع‌تر از نور را فراهم نمی‌کند.
-زیرا برای تکمیل دوربری، آلیس باید نتیجه اندازه گیری خود را به آن ارسال کند
-باب از طریق یک کانال ارتباطی کلاسیک.
 
 
-ما در بخش 2.4.3 نشان خواهیم داد که بدون این ارتباط کلاسیک، از راه دور هیچ اطلاعاتی را منتقل نمی کند. کانال کلاسیک با سرعت نور محدود می شود، بنابراین نتیجه می شود که تله پورت کوانتومی نمی تواند سریعتر از سرعت نور انجام شود و پارادوکس ظاهری را حل کند. معمای دوم در مورد تلهپورتاسیون این است که به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می کند، که آشکارا قضیه عدم شبیه سازی مورد بحث در بخش 1.3.5 را نقض می کند. این نقض فقط توهمی است زیرا پس از فرآیند انتقال از راه دور فقط کیوبیت هدف در حالت |ψ〉 باقی می ماند و کیوبیت داده اصلی بسته به نتیجه اندازه گیری به یکی از حالت های پایه محاسباتی |0 یا |1 می رسد. در کیوبیت اول از تله پورت کوانتومی چه چیزی می توانیم یاد بگیریم؟ خیلی زیاد! این خیلی بیشتر از یک ترفند ساده است که می توان با حالت های کوانتومی انجام داد. تله پورت کوانتومی بر قابلیت تعویض منابع مختلف در مکانیک کوانتومی تاکید می کند و نشان می دهد که یک جفت EPR مشترک به همراه دو بیت کلاسیک ارتباط، منبعی حداقل برابر با یک کیوبیت ارتباط است. محاسبات کوانتومی و اطلاعات کوانتومی روش‌های زیادی را برای تبادل منابع نشان داده‌اند که بسیاری از آنها بر اساس تله‌پورت کوانتومی ساخته شده‌اند. به طور خاص، در فصل 10 توضیح می دهیم که چگونه می توان از تله پورت برای ساخت دروازه های کوانتومی مقاوم در برابر اثرات نویز استفاده کرد و در فصل 12 نشان دادیم که انتقال از راه دور با ویژگی های کدهای تصحیح خطای کوانتومی ارتباط نزدیکی دارد. علیرغم این ارتباط با موضوعات دیگر، منصفانه است که بگوییم که ما تازه در حال درک این موضوع هستیم که چرا انتقال از راه دور کوانتومی در مکانیک کوانتومی امکان پذیر است. در فصل‌های بعدی سعی می‌کنیم برخی از بینش‌هایی را توضیح دهیم که چنین درکی را ممکن می‌سازد. 1
+But of course the teleportation process does not communicate to Bob the information that can be encoded in α and β. Bob is no more able to learn the values of α and β from manipulating his Qbit, now assigned the state |ψ〉, than Alice was able to do when it was her Qbit that was assigned the same state |ψ〉. On the other hand Alice’s state could be produced at a crucial stage of an elaborate quantum computation, and its transfer to Bob could enable him to continue with the computation on his own far-away quantum computer, s  one can achieve a nontrivial objective by such teleportations. Like dense coding, teleportation can also be constructed by manipulating an elementary classical circuit diagram, without going through any of the analysis in (6.21)–(6.24). Figure 6.5(a) shows a circuit that exchanges the state |ψ〉 = |x〉 of Alice’s Cbit with the state |0〉 of Bob’s Cbit, regardless of whether x = 0 or 1. The transfer is achieved by direct physical coupling between the two Cbits. As a linear quantum circuit it continues to perform this exchange for arbitrary superpositions, |ψ〉 = α|0〉 + β|1〉. The entire teleportation protocol can be constructed by appropriately expanding the two gates in Figure 6.5(a), with the aid of an ancillary Qbit. The aim of the expansion is to eliminate the direct interaction between Alice’s and Bob’s Qbits through the two cNOT gates in Figure 6.5(a), in favor of the telephoned message from Alice to Bob, and the interaction necessary to produce their shared pair of entangled Qbits (which can take place well before Alice has even acquired her Qbit in the state |ψ〉).
 
+
+
+
+
+In Figure 6.5(b) an ancillary Qbit, not acted upon throughout the process, is introduced in the state |φ〉 = H|0〉 = 1√2 (|0〉 + |1〉). (6.25) In Figure 6.5(c) the identities X = HZH and 1 = HH have been used to rewrite the cNOT gate on the right of Figure 6.5(b), and an additional cNOT gate has been added on the left, which acts as the identity, since X acts as the identity on the state H|0〉. Figure 6.5(d) follows from Figure 6.5(c) because the action of CZ is independent of which Qbit is the control and which the target, and because the two cNOT gates on the left of Figure 6.5(c) have exactly the same action as the three cNOT gates on the left of Figure 6.5(d): acting on the computational basis, both sets of gates apply X on both of the bottom two wires if the state of the top wire is |1〉 and act as the identity if the state of the top wire is |0〉. Figure 6.5(e) follows from Figure 6.5(d) if we write the |φ〉 on the left of Figure 6.5(d) as H|0〉 and explicitly write the |0〉 on the right of Figure 6.5(d) as H|φ〉. But Figure 6.5(e) is an automated version of teleportation. To relate it to ordinary teleportation, introduce mea- surements of the upper two Qbits after the circuit of Figure 6.5(e) has acted, as in Figure 6.5(f). Their effect is to collapse the states of each of the two upper wires randomly and independently to |0〉 or |1〉. But as noted in Section 3.6, measurement of a control Qbit commutes with any operation controlled by that Qbit, so the measurement gates can be moved to the positions they occupy in Figure 6.5(g). Figure 6.5(g) is precisely the teleportation protocol. The two gates on the left transform the two lower Qbits into the entangled state (6.20). The subsequent applications to the top two Qbits of cNOT followed by H followed by two measurement gates are precisely Alice’s “measurement in the Bell basis.” Since Alice knows the outcomes of the measurements, she knows whether the subsequent cNOT and CZ gates will or will not act, and she can replace these physical couplings by a phone call to Bob telling him whether or not to apply X and/or Z directly to his own Qbit. Figure 6.6 demonstrates that entanglement can also be teleported. The figure reproduces parts (b), (e), and (g) of Figure 6.5 with three changes. (1) A bar representing n Qbits in the n-Qbit state |〉i has been added above each part of the figure. No operations act on these additional Qbits. (2) The state to be teleported has been given a subscript i so it is now one of several possible states |ψi 〉. (3) Because of the linearity of the unitary gates we may sum over the index i . The effect of the circuit is to transfer participation in the entangled state ∑ i |i 〉|ψi 〉 from the third wire from the bottom to the bottom wire. So even if Alice’s Qbit has no state of its own but is entangled with other Qbits, Alice can use the same protocol to teleport its role in the entangled state over to Bob’s Qbit. The result is that Bob’s Qbit becomes entangled in exactly the same way Alice’s was, and Alice’s Qbit becomes entirely unentangled.
+1
 \newpage
 how to determine a oracle\\
 	
