@@ -12,7 +12,8 @@
 \contentsline {subsection}{\numberline {1.4.1}نحوه‌ی نمایش مدار‌های کوانتومی}{11}{}%
 \contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{13}{}%
 \contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{13}{}%
-\contentsline {section}{\numberline {2.2}IBM Quantum computer and Qiskit}{13}{}%
+\contentsline {section}{\numberline {2.2}comp vs simulation}{13}{}%
+\contentsline {section}{\numberline {2.3}IBM Quantum computer and Qiskit}{14}{}%
 \contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{15}{}%
 \contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{15}{}%
 \contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{19}{}%
@@ -22,9 +23,8 @@
 \contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{21}{}%
 \contentsline {section}{\numberline {3.4}الگوریتم دوچ - جوزا}{24}{}%
 \contentsline {section}{\numberline {3.5}ساخت یک اوراکل کوانتومی}{29}{}%
-\contentsline {section}{\numberline {3.6}comp vs simulation}{30}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{31}{}%
 \contentsline {section}{\numberline {4.1}Bell states}{31}{}%
-\contentsline {section}{\numberline {4.2}entanglement}{32}{}%
-\contentsline {section}{\numberline {4.3}super dense coding}{32}{}%
-\contentsline {section}{\numberline {4.4}Teleport}{35}{}%
+\contentsline {section}{\numberline {4.2}entanglement}{33}{}%
+\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{34}{}%
+\contentsline {section}{\numberline {4.4}دوربری}{37}{}%
