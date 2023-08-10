@@ -240,23 +240,146 @@ that we grapple with for much of this book, and which lies at the heart of what 
 quantum mechanics a powerful tool for information processing.
 
 
-\section{}
-فرض کنید دو کیوبیت داریم. اگر این دو بیت کلاسیک بودند، چهار بیت وجود داشت
-حالت های ممکن، 00، 01، 10، و 11. به همین ترتیب، یک سیستم دو کیوبیتی دارای چهار ترکیب است.
-حالت های مبنای فرضی با |00〉, |01〉, |10〉, |11〉 مشخص می شود. یک جفت کیوبیت نیز می تواند در آن وجود داشته باشد
-برهم نهی این چهار حالت، بنابراین حالت کوانتومی دو کیوبیت شامل ارتباط است
-یک ضریب پیچیده - که گاهی اوقات دامنه نامیده می شود - با هر مبنای محاسباتی
-حالت، به طوری که بردار حالت توصیف کننده دو کیوبیت باشد
+\section{کیوبیت‌های چندتایی}
+Hilbert space is a big place.
+– Carlton Caves
+
+
+
+فرض کنید دو کوبیت داریم. اگر این دو بیت کلاسیک بودند، چهار حالت ممکن وجود داشت: 00، 01، 10 و 11. به همین ترتیب، یک سیستم دو کوبیتی دارای چهار حالت محاسباتی است که با $\vert 00 \rangle, \vert 01 \rangle, \vert 10 \rangle, \vert 11 \rangle$ نشان داده می شود. یک جفت کوبیت همچنین می تواند در برهمنهی این چهار حالت وجود داشته باشد.
+بنابراین حالت کوانتومی دو کوبیت با اختصاص یک عدد مختلط - گاهی اوقات به عنوان یک دامنه شناخته می شود - به هر حالت محاسباتی، بیان می‌شود. بردار حالت توصیف کننده دو کوبیت به شکل زیر است:
+\begin{center}
+	$\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d \vert11\rangle $
+\end{center}
+
+جایی که a، b، c و d دامنه های چهار حالت را نشان می دهند. دامنه ها می توانند هر عدد مختلطی باشند، اما معمولاً به گونه ای نرمال می شوند که مجموع آنها برابر 1 باشد. این بدان معناست که بردار حالت یک حالت کوانتومی معتبر را نشان می دهد و کوبیت ها به طور مساوی احتمال اندازه گیری در هر یک از چهار حالت محاسباتی را دارند.
+
+به عنوان مثال، بردار حالت:
+
+\begin{center}
+$\vert \Psi \rangle = \frac{1}{\sqrt{2}} \vert00\rangle + \frac{1}{\sqrt{2}} \vert11\rangle$	
+\end{center}
+
+یک سیستم دو کوبیتی را نشان می دهد که در یک برهمنهی مساوی از حالت های 00 و 11 است. این بدان معناست که کوبیت ها به طور مساوی احتمال اندازه گیری در حالت 00 یا 11 را دارند.
+
+بردار حالت یک سیستم دو کوبیتی را می توان برای محاسبه احتمال اندازه گیری کوبیت ها در هر یک از چهار حالت محاسباتی استفاده کرد. به عنوان مثال، احتمال اندازه گیری کوبیت ها در حالت 00 با فرمول زیر داده می شود:
+\begin{center}
+$P(\vert00\rangle) = \vert a\vert^ 2 = \frac{1}{2}$
+\end{center}
+
+
+احتمال اندازه گیری کوبیت ها در هر حالت دیگر را می توان به روشی مشابه محاسبه کرد.
+
+نتیجه اندازه گیری $x (= 00, 01, 10 , 11)$ با احتمال $\vert a_{x} \vert ^ 2$ رخ می دهد، با حالت کوبیت ها پس از اندازه گیری$\vert x \rangle$ . این بدان معناست که اگر ما یک سیستم دو کوبیتی را در حالت
+$\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d \vert11\rangle $ داشته باشیم، و اگر ما اولین کوبیت را اندازه گیری کنیم، احتمال اینکه 0 را اندازه گیری کنیم برابر $\vert a \rangle^2 + \vert b \rangle ^ 2$ خواهد بود. در این حالت، حالت کوبیت ها پس از اندازه گیری $\vert 0 \rangle$ خواهد بود.
+
+
+
+
+\begin{center}
+	$\left|\psi^{\prime}\right\rangle=\frac{\alpha_{00}|00\rangle+\alpha_{01}|01\rangle}{\sqrt{\left|\alpha_{00}\right|^2+\left|\alpha_{01}\right|^2}}$
+\end{center}
+توجه داشته باشید که حالت پس از اندازه گیری با عامل $\sqrt{|{α}_{00}|^2 + |{α}_{01}|^2}$ نرمال می شود
+تا همچنان شرط نرمال سازی را، درست همانطور که برای یک
+حالت کوانتومی معتبر انتظار می‌‌رود، برآورده کند. این بدان معناست که حالت پس از اندازه گیری به گونه ای تغییر می کند که احتمالات آن جمع شده و برابر 1 شود.
 
 \section{bloch vector - computational basis - fourier basis-comp vs superpos basis}
-
-Chapter 1 chuang book
-
-Consider the circuit shown in Figure 1.17, which applies Uf to an input not in the
-computational basis. Instead, the data register is prepared in the superposition (|0〉 +
-|1〉)/√2, which can be created with a Hadamard gate acting on |0〉. Then we apply Uf ,
-resulting in the state:
 % https://g.co/bard/share/2972a6a63b24
+
+
+We’ve described quantum measurements of a single qubit in the state α|0〉 + β|1〉 as
+yielding the result 0 or 1 and leaving the qubit in the corresponding state |0〉 or |1〉,
+with respective probabilities |α|2 and |β|2 . In fact, quantum mechanics allows somewhat
+more versatility in the class of measurements that may be performed, although certainly
+nowhere near enough to recover α and β from a single measurement!
+Note that the states |0〉 and |1〉 represent just one of many possible choices of basis
+states for a qubit. Another possible choice is the set |+〉 ≡ (|0〉 + |1〉)/√2 and |−〉 ≡
+(|0〉 − |1〉)/√2. An arbitrary state |ψ〉 = α|0〉 + β|1〉 can be re-expressed in terms of the
+states |+〉 and |−〉:
+
+
+
+
+
+ما تاکنون اندازه گیری های کوانتومی یک کیوبیت در حالت $\alpha\vert0\rangle + \beta\vert1\rangle$را به عنوان نتیجه 0 یا 1 توصیف کرده ایم که کیوبیت را در حالت $\vert 0 \rangle$ یا $\vert 1 \rangle$مربوطه باقی می گذارد، با احتمالات $\vert\alpha\vert ^ 2$ و $\vert\beta\vert ^ 2$. در حقیقت، مکانیک کوانتوم به اندازه کافی انعطاف پذیری در کلاس اندازه گیری هایی که می توان انجام داد، اگرچه مطمئناً به اندازه کافی نیست که $\alpha$ و $\beta$ را از یک اندازه گیری واحد بازیابی کند!
+
+توجه داشته باشید که $\vert 0 \rangle$ و $\vert 1 \rangle$ فقط یکی از بسیاری از انتخاب های ممکن برای پایه های حالت برای یک کیوبیت هستند. یک انتخاب دیگر مجموعه به شرح زیر است:
+\begin{center}
+$\vert+\rangle  \equiv (\vert0\rangle + \vert1\rangle)\sqrt{2}$
+$\vert-\rangle \equiv  (\vert0\rangle - \vert1\rangle)\sqrt{2}$
+\end{center}
+ 
+ 
+ یک حالت دلخواه $\vert\Psi\rangle = \alpha0\rangle + \beta1\rangle$ را می توان با استفاده از حالت های $\vert + \rangle$ و $\vert - \rangle$ بازنویسی کرد:
+
+|ψ⟩ = α|0⟩ + β|1⟩ = (α + β)/√² |+⟩ + (α - β)/√² |−⟩
+\begin{center}
+	$\vert\Psi\rangle = \alpha \vert0\rangle + \beta\vert1\rangle = \frac{(\alpha + \beta)}{2}\vert+\rangle + \frac{(\alpha - \beta)}{2}\vert-\rangle$
+\end{center}
+
+
+در این بیان، $\vert+\rangle$و $\vert-\rangle$ به عنوان پایه های "پایه +" و "پایه -" شناخته می شوند. اندازه گیری در پایه + یا پایه - یک کیوبیت را در حالت $\vert+\rangle$ یا $\vert-\rangle$قرار می دهد، با احتمالات $\vert\alpha+\beta\vert^2$ و $\vert\alpha-\beta\vert^2$.
+
+ 
+
+اندازه گیری در پایه های دیگر به غیر از پایگاه محاسباتی یک ابزار قدرتمند در محاسبات کوانتومی است. این امکان را می دهد تا ما در حالت های کوانتومی که در پایگاه محاسباتی قابل اندازه گیری نیستند، اندازه گیری کنیم. این امکان را می دهد تا ما از روش های محاسباتی جدیدی استفاده کنیم که در محاسبات کلاسیک غیرممکن است.
+
+
+
+It turns out that it is possible to treat the |+〉 and |−〉 states as though they were the com-
+putational basis states, and measure with respect to this new basis. Naturally, measuring
+with respect to the |+〉, |−〉 basis results in the result ‘+’ with probability |α + β|2/2 and
+the result ‘−’ with probability |α − β|2/2, with corresponding post-measurement states
+|+〉 and |−〉, respectively.
+
+
+در واقع، این امکان وجود دارد که حالت های |+⟩ و |−⟩ را به گونه ای که گویی آنها حالت های پایه محاسباتی هستند، در نظر بگیریم و با توجه به این پایه جدید اندازه گیری کنیم. طبیعی است که اندازه گیری با توجه به پایه |+⟩، |−⟩ منجر به نتیجه "+" با احتمال |α + β|²/² و نتیجه "-" با احتمال |α - β|²/² می شود، با حالت های پس از اندازه گیری |+⟩ و |−⟩ به ترتیب.
+
+در این بیان، |+⟩ و |−⟩ به عنوان "پایه +" و "پایه -" شناخته می شوند. اندازه گیری در پایه + یا پایه - یک کیوبیت را در حالت |+⟩ یا |−⟩ قرار می دهد، با احتمالات |α + β|² و |α - β|².
+
+به عنوان مثال، اگر یک کیوبیت در حالت |ψ⟩ = (1/√2)|0⟩ + (1/√2)|1⟩ قرار داشته باشد، پس از اندازه گیری در پایه + یا پایه -، در حالت |+⟩ یا |−⟩ قرار خواهد گرفت، با احتمالات 1/2 هر کدام.
+
+اندازه گیری در پایه های دیگر به غیر از پایگاه محاسباتی یک ابزار قدرتمند در محاسبات کوانتومی است. این امکان را می دهد تا ما در حالت های کوانتومی که در پایگاه محاسباتی قابل اندازه گیری نیستند، اندازه گیری کنیم. این امکان را می دهد تا ما از روش های محاسباتی جدیدی استفاده کنیم که در محاسبات کلاسیک غیرممکن است.
+
+
+
+More generally, given any basis states |a〉 and |b〉 for a qubit, it is possible to express an
+arbitrary state as a linear combination α|a〉 + β|b〉 of those states. Furthermore, provided
+the states are orthonormal, it is possible to perform a measurement with respect to
+the |a〉, |b〉 basis, giving the result a with probability |α|2 and b with probability |β|2 .
+The orthonormality constraint is necessary in order that |α|2 + |β|2 = 1 as we expect for
+probabilities. In an analogous way it is possible in principle to measure a quantum system
+of many qubits with respect to an arbitrary orthonormal basis. However, just because it
+is possible in principle does not mean that such a measurement can be done easily, and
+we return later to the question of how efficiently a measurement in an arbitrary basis can
+be performed.
+
+
+**به طور کلی تر، با توجه به هر دو پایه حالت |a⟩ و |b⟩ برای یک کیوبیت، می توان هر حالت دلخواهی را به عنوان یک ترکیب خطی α|a⟩ + β|b⟩ از آن حالات بیان کرد. علاوه بر این، اگر این حالات  orthonormal باشند، می توان با توجه به پایه |a⟩، |b⟩ اندازه گیری کرد، که نتیجه a با احتمال |α|² و b با احتمال |β|² می دهد.
+
+محدودیت orthonormal لازم است تا |α|² + |β|² = 1 باشد همانطور که برای احتمالات انتظار می رود. به طور مشابه، در اصل می توان یک سیستم کوانتومی از بسیاری از کیوبیت ها را با توجه به یک پایه orthonormal دلخواه اندازه گیری کرد.
+
+با این حال، فقط به این دلیل که در اصل امکان پذیر است، به این معنی نیست که چنین اندازه گیری به راحتی انجام می شود، و ما بعداً به این سوال که چگونه می توان اندازه گیری در یک پایه دلخواه را به طور کارآمد انجام داد، باز می گردیم.**
+
+در این پاراگراف، نویسنده در مورد اندازه گیری در پایه های دیگر به غیر از پایه محاسباتی بحث می کند. آنها نشان می دهند که می توان هر حالت کوانتومی را به عنوان یک ترکیب خطی از دو پایه دلخواه بیان کرد و سپس با توجه به آن پایه ها اندازه گیری کرد. آنها همچنین اشاره می کنند که این اندازه گیری ها در اصل امکان پذیر است، اما لزوماً کارآمد نیستند.
+
+اندازه گیری در پایه های دیگر یک ابزار قدرتمند در محاسبات کوانتومی است. این امکان را می دهد تا ما در حالت های کوانتومی که در پایگاه محاسباتی قابل اندازه گیری نیستند، اندازه گیری کنیم. این امکان را می دهد تا ما از روش های محاسباتی جدیدی استفاده کنیم که در محاسبات کلاسیک غیرممکن است.
+
+
+There are many reasons for using this extended formalism for quantum measure-
+ments, but ultimately the best one is this: the formalism allows us to describe observed
+experimental results, as we will see in our discussion of the Stern–Gerlach experiment
+in Section 1.5.1. An even more sophisticated and convenient (but essentially equivalent)
+formalism for describing quantum measurements is described in the next chapter, in
+Section 2.2.3.
+
+دلایل زیادی برای استفاده از این formalism گسترش یافته برای اندازه گیری های کوانتومی وجود دارد، اما در نهایت بهترین دلیل این است: این formalism به ما امکان توصیف نتایج تجربی مشاهده شده را می دهد، همانطور که در بحث ما در مورد آزمایش Stern–Gerlach در بخش 1.5.1 خواهیم دید. یک formalism حتی پیچیده تر و راحت تر (اما اساساً معادل) برای توصیف اندازه گیری های کوانتومی در فصل بعدی، در بخش 2.2.3 توصیف شده است.
+
+در این پاراگراف، نویسنده در مورد formalism گسترش یافته برای اندازه گیری های کوانتومی بحث می کند. آنها استدلال می کنند که این formalism بهترین روش برای توصیف نتایج تجربی مشاهده شده است. آنها همچنین اشاره می کنند که یک formalism حتی پیچیده تر و راحت تر برای توصیف اندازه گیری های کوانتومی وجود دارد، اما این formalism اساساً معادل است.
+
+اندازه گیری های کوانتومی یکی از مهمترین مفاهیم در مکانیک کوانتوم است. آنها به ما امکان می دهند تا اطلاعات را در مورد سیستم های کوانتومی استخراج کنیم. formalism گسترش یافته برای اندازه گیری های کوانتومی یک ابزار قدرتمند برای توصیف اندازه گیری های کوانتومی است. این امکان را می دهد تا ما نتایج تجربی مشاهده شده را توصیف کنیم و همچنین به ما امکان می دهد تا اندازه گیری های کوانتومی را در سیستم های پیچیده تر انجام دهیم. 
+
+
 
 \newpage
 \section{گیت‌های کوانتومی}
@@ -428,7 +551,6 @@ $$
 
 % https://www.youtube.com/watch?v=_p7i2v21Ys8&t=188s
 % https://www.youtube.com/watch?v=F2okky5vD8k&list=PL1826E60FD05B44E4&index=11
-
 
 
 \section{مدار‌های کوانتومی}
