@@ -84,7 +84,171 @@ $$
 
 برای تعریف کیوبیت ها، راه های زیادی وجود دارد، حالات قطبش فوتون،‌اسپین الکترون،‌یا سطوح انرژی اتم،‌هریک می‌توانند تعیین کننده‌ی بردار‌های فضای کیوبیت باشند.
 
-\section{bloch vector - computayional basis - fourier basis-comp vs superpos basis}
+
+
+
+Geometrically, we can interpret
+this as the condition that the qubit’s state be normalized to length 1. Thus, in general a
+qubit’s state is a unit vector in a two-dimensional complex vector space.
+This dichotomy between the unobservable state of a qubit and the observations we
+can make lies at the heart of quantum computation and quantum information. In most
+of our abstract models of the world, there is a direct correspondence between elements
+of the abstraction and the real world, just as an architect’s plans for a building are in
+correspondence with the final building. The lack of this direct correspondence in quantum
+mechanics makes it difficult to intuit the behavior of quantum systems; however, there
+is an indirect correspondence, for qubit states can be manipulated and transformed in
+ways which lead to measurement outcomes which depend distinctly on the different
+properties of the state. Thus, these quantum states have real, experimentally verifiable
+consequences, which we shall see are essential to the power of quantum computation and
+quantum information.
+
+هندسی، ما می توانیم این را به عنوان شرطی که حالت کوبیت به طول 1 نرمال شود، تفسیر کنیم. بنابراین، به طور کلی، حالت کوبیت یک بردار واحد در فضای برداری دو بعدی پیچیده است.
+این دودستگی بین حالت نامرئی کوبیت و مشاهداتی که ما می توانیم انجام دهیم، در قلب محاسبات و اطلاعات کوانتومی قرار دارد. در بیشتر مدل های انتزاعی ما از جهان، یک ارتباط مستقیم بین عناصر انتزاع و دنیای واقعی وجود دارد، درست همانطور که طرح های یک معمار برای یک ساختمان با ساختمان نهایی مطابقت دارد. فقدان این ارتباط مستقیم در مکانیک کوانتوم باعث می شود که رفتار سیستم های کوانتومی دشوار باشد؛ با این حال، یک ارتباط غیرمستقیم وجود دارد، زیرا می توان حالت های کوبیت را دستکاری و تبدیل کرد به روش هایی که منجر به نتایج اندازه گیری می شود که به طور متمایز به خواص مختلف حالت بستگی دارد. بنابراین، این حالت های کوانتومی دارای پیامدهای واقعی و قابل آزمایش تجربی هستند، که ما خواهیم دید که برای قدرت محاسبات و اطلاعات کوانتومی ضروری هستند.
+
+
+
+The ability of a qubit to be in a superposition state runs counter to our ‘common sense’
+understanding of the physical world around us. A classical bit is like a coin: either heads
+or tails up. For imperfect coins, there may be intermediate states like having it balanced
+on an edge, but those can be disregarded in the ideal case. By contrast, a qubit can exist
+in a continuum of states between |0〉 and |1〉 – until it is observed. Let us emphasize
+again that when a qubit is measured, it only ever gives ‘0’ or ‘1’ as the measurement
+result – probabilistically. For example, a qubit can be in the state
+
+
+با «فهم رایج» ما از جهان فیزیکی اطراف ما مغایرت دارد. یک بیت کلاسیک مانند سکه است: یا رو یا پشت. برای سکه های غیراایده آل، ممکن است حالت های واسطه ای مانند قرار گرفتن آن روی لبه وجود داشته باشد، اما در حالت ایده آل می توان آنها را نادیده گرفت. در مقابل، یک کوبیت می تواند در یک طیف پیوسته از حالت ها بین |0〉 و |1〉 وجود داشته باشد - تا زمانی که مشاهده شود. بار دیگر تاکید می کنیم که وقتی یک کوبیت اندازه گیری می شود، فقط «0» یا «1» را به عنوان نتیجه اندازه گیری می دهد - به صورت تصادفی. به عنوان مثال، یک کوبیت می تواند در حالت |0〉 + |1〉 باشد، که به این معنی است که با احتمال 50/50 می تواند به عنوان 0 یا 1 اندازه گیری شود.
+
+√2 |0〉 + 1
+√2 |1〉
+
+
+which, when measured, gives the result 0 fifty percent (|1/√2|2 ) of the time, and the
+result 1 fifty percent of the time. We will return often to this state, which is sometimes
+denoted |+〉.
+Despite this strangeness, qubits are decidedly real, their existence and behavior ex-
+tensively validated by experiments (discussed in Section 1.5 and Chapter 7), and many
+different physical systems can be used to realize qubits. To get a concrete feel for how a
+qubit can be realized it may be helpful to list some of the ways this realization may occur:
+as the two different polarizations of a photon; as the alignment of a nuclear spin in a
+uniform magnetic field; as two states of an electron orbiting a single atom such as shown
+in Figure 1.2. In the atom model, the electron can exist in either the so-called ‘ground’
+or ‘excited’ states, which we’ll call |0〉 and |1〉, respectively. By shining light on the atom,
+with appropriate energy and for an appropriate length of time, it is possible to move
+the electron from the |0〉 state to the |1〉 state and vice versa. But more interestingly, by
+reducing the time we shine the light, an electron initially in the state |0〉 can be moved
+‘halfway’ between |0〉 and |1〉, into the |+〉 state.
+
+
+حالت |+〉 حالتی از کوبیت است که با یک بردار 2 بعدی واحد |+〉 = 1/√2 (|0〉 + |1〉) نشان داده می شود. این حالت، زمانی که اندازه گیری شود، نتیجه 0 را 50 درصد از زمان و نتیجه 1 را 50 درصد از زمان می دهد. این حالت را می توان به عنوان یک ترکیب خطی از دو حالت پایه |0〉 و |1〉 در نظر گرفت.
+
+این حالت به دلیل عجیب بودنش جالب است. حالت های پایه |0〉 و |1〉 تنها حالاتی هستند که می توانند به طور مستقیم مشاهده شوند. حالت |+〉، با این حال، یک حالت ترکیبی است که به طور مستقیم قابل مشاهده نیست. تنها زمانی می توان آن را مشاهده کرد که اندازه گیری شود.
+
+با وجود غیرقابل مشاهده بودن، حالت |+〉 واقعی است. وجود آن توسط آزمایشات به طور گسترده ای تأیید شده است. همچنین می توان از آن برای انجام محاسبات کوانتومی استفاده کرد.
+
+در آینده، ممکن است حالت |+〉 برای اهداف مختلف دیگری نیز استفاده شود. به عنوان مثال، می تواند برای ذخیره اطلاعات یا برای ایجاد ارتباطات امن استفاده شود.
+
+
+
+
+14 Introduction and overview
+The ability of a qubit to be in a superposition state runs counter to our ‘common sense’
+understanding of the physical world around us. A classical bit is like a coin: either heads
+or tails up. For imperfect coins, there may be intermediate states like having it balanced
+on an edge, but those can be disregarded in the ideal case. By contrast, a qubit can exist
+in a continuum of states between |0〉 and |1〉 – until it is observed. Let us emphasize
+again that when a qubit is measured, it only ever gives ‘0’ or ‘1’ as the measurement
+result – probabilistically. For example, a qubit can be in the state
+1
+√2 |0〉 + 1
+√2 |1〉 , (1.2)
+which, when measured, gives the result 0 fifty percent (|1/√2|2 ) of the time, and the
+result 1 fifty percent of the time. We will return often to this state, which is sometimes
+denoted |+〉.
+Despite this strangeness, qubits are decidedly real, their existence and behavior ex-
+tensively validated by experiments (discussed in Section 1.5 and Chapter 7), and many
+different physical systems can be used to realize qubits. To get a concrete feel for how a
+qubit can be realized it may be helpful to list some of the ways this realization may occur:
+as the two different polarizations of a photon; as the alignment of a nuclear spin in a
+uniform magnetic field; as two states of an electron orbiting a single atom such as shown
+in Figure 1.2. In the atom model, the electron can exist in either the so-called ‘ground’
+or ‘excited’ states, which we’ll call |0〉 and |1〉, respectively. By shining light on the atom,
+with appropriate energy and for an appropriate length of time, it is possible to move
+the electron from the |0〉 state to the |1〉 state and vice versa. But more interestingly, by
+reducing the time we shine the light, an electron initially in the state |0〉 can be moved
+‘halfway’ between |0〉 and |1〉, into the |+〉 state.
+Figure 1.2. Qubit represented by two electronic levels in an atom.
+Naturally, a great deal of attention has been given to the ‘meaning’ or ‘interpretation’
+that might be attached to superposition states, and of the inherently probabilistic nature of
+observations on quantum systems. However, by and large, we shall not concern ourselves
+with such discussions in this book. Instead, our intent will be to develop mathematical
+and conceptual pictures which are predictive.
+One picture useful in thinking about qubits is the following geometric representation.
+
+
+
+
+
+
+Because |α|2 + |β|2 = 1, we may rewrite Equation (1.1) as
+|ψ〉 = eiγ
+(
+cos θ
+2 |0〉 + eiϕ sin θ
+2 |1〉
+)
+, (1.3)
+where θ, ϕ and γ are real numbers. In Chapter 2 we will see that we can ignore the factor
+of eiγ out the front, because it has no observable effects, and for that reason we can
+effectively write
+|ψ〉 = cos θ
+2 |0〉 + eiϕ sin θ
+2 |1〉. (1.4)
+The numbers θ and ϕ define a point on the unit three-dimensional sphere, as shown in
+Figure 1.3. This sphere is often called the Bloch sphere; it provides a useful means of
+visualizing the state of a single qubit, and often serves as an excellent testbed for ideas
+about quantum computation and quantum information. Many of the operations on single
+qubits which we describe later in this chapter are neatly described within the Bloch sphere
+picture. However, it must be kept in mind that this intuition is limited because there is
+no simple generalization of the Bloch sphere known for multiple qubits.
+
+
+
+
+How much information is represented by a qubit? Paradoxically, there are an infinite
+number of points on the unit sphere, so that in principle one could store an entire text
+of Shakespeare in the infinite binary expansion of θ. However, this conclusion turns
+out to be misleading, because of the behavior of a qubit when observed. Recall that
+measurement of a qubit will give only either 0 or 1. Furthermore, measurement changes
+the state of a qubit, collapsing it from its superposition of |0〉 and |1〉 to the specific state
+consistent with the measurement result. For example, if measurement of |+〉 gives 0,
+then the post-measurement state of the qubit will be |0〉. Why does this type of collapse
+occur? Nobody knows. As discussed in Chapter 2, this behavior is simply one of the
+fundamental postulates of quantum mechanics. What is relevant for our purposes is that
+from a single measurement one obtains only a single bit of information about the state of
+the qubit, thus resolving the apparent paradox. It turns out that only if infinitely many identically prepared qubits were measured would one be able to determine α and β for
+a qubit in the state given in Equation (1.1).
+But an even more interesting question to ask might be: how much information is
+represented by a qubit if we do not measure it? This is a trick question, because how
+can one quantify information if it cannot be measured? Nevertheless, there is something
+conceptually important here, because when Nature evolves a closed quantum system of
+qubits, not performing any ‘measurements’, she apparently does keep track of all the
+continuous variables describing the state, like α and β. In a sense, in the state of a qubit,
+Nature conceals a great deal of ‘hidden information’. And even more interestingly, we will
+see shortly that the potential amount of this extra ‘information’ grows exponentially with
+the number of qubits. Understanding this hidden quantum information is a question
+that we grapple with for much of this book, and which lies at the heart of what makes
+quantum mechanics a powerful tool for information processing.
+
+
+\section{}
+فرض کنید دو کیوبیت داریم. اگر این دو بیت کلاسیک بودند، چهار بیت وجود داشت
+حالت های ممکن، 00، 01، 10، و 11. به همین ترتیب، یک سیستم دو کیوبیتی دارای چهار ترکیب است.
+حالت های مبنای فرضی با |00〉, |01〉, |10〉, |11〉 مشخص می شود. یک جفت کیوبیت نیز می تواند در آن وجود داشته باشد
+برهم نهی این چهار حالت، بنابراین حالت کوانتومی دو کیوبیت شامل ارتباط است
+یک ضریب پیچیده - که گاهی اوقات دامنه نامیده می شود - با هر مبنای محاسباتی
+حالت، به طوری که بردار حالت توصیف کننده دو کیوبیت باشد
+
+\section{bloch vector - computational basis - fourier basis-comp vs superpos basis}
 
 Chapter 1 chuang book
 
