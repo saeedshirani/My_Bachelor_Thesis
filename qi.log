@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  11 AUG 2023 09:15
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  11 AUG 2023 13:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1216,60 +1216,288 @@ Overfull \hbox (0.7363pt too wide) in paragraph at lines 214--215
  []
 
 [10] <xymatrix 5x2 205>
-Underfull \hbox (badness 10000) in paragraph at lines 261--263
-[][]
- []
-
-Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 277--292
 [][]
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Missing character: There is no Ψ (U+03A8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no σ (U+03C3) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[12]
+Missing character: There is no Ψ (U+03A8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no γ (U+03B3) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no δ (U+03B4) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--364
 [][]
  []
 
+Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+[][]
+ []
+
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[13]
 File: Matrix-representation-and-quantum-circuit-of-CNOT-gate.png Graphic file (
 type bmp)
 <Matrix-representation-and-quantum-circuit-of-CNOT-gate.png>
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+[][]
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+[][]
+ []
+
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[15]
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no σ (U+03C3) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[16]
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no Ψ (U+03A8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no γ (U+03B3) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no δ (U+03B4) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [17]
+File: cnot in circuit.png Graphic file (type bmp)
+<cnot in circuit.png>
+
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+
+Underfull \vbox (badness 6542) has occurred while \output is active []
+
+ [18]
+[19] [20]
 فصل 2.
 
-Overfull \hbox (6.00267pt too wide) in paragraph at lines 450--451
+Overfull \hbox (6.00267pt too wide) in paragraph at lines 684--685
 []\TU/XBZar(0)/m/n/10 کوانتومی از بیت‌های کوانتومی (کوبیت‌ها) برای ذخیره اطلاعا
 ت استفاده می‌کنند، در حالی که کامپیوترهای[]
  []
 
-[17
+[21
 
-] [18]
+] [22]
 Missing character: There is no 🤖 (U+1F916) in font XB Zar/OT:script=latn;langua
 ge=dflt;script=arab;mapping=persian-tex-text;!
-[19] [20] [21] [22
+[23] [24] [25] [26
 
 ]
 فصل 3.
 
-Overfull \hbox (0.4648pt too wide) in paragraph at lines 527--528
+Overfull \hbox (0.4648pt too wide) in paragraph at lines 761--762
 []\TU/XBZar(0)/m/n/10 موازی‌سازی کوانتومی[][]، پایه‌واساس بسیاری از الگوریتم‌ها
 ی کوانتومی است. با گذار یک حالت کوانتومی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 [][]
  []
 
-[23]
+[27]
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
@@ -1278,22 +1506,22 @@ Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 File: Uforacle.png Graphic file (type bmp)
 <Uforacle.png>
-[24]
+[28]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 580.
-
-
-LaTeX Warning: Command \textbar invalid in math mode on input line 580.
+LaTeX Warning: Command \textbar invalid in math mode on input line 814.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 580.
+LaTeX Warning: Command \textbar invalid in math mode on input line 814.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 580.
+LaTeX Warning: Command \textbar invalid in math mode on input line 814.
+
+
+LaTeX Warning: Command \textbar invalid in math mode on input line 814.
 
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
-[25]
+[29]
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1302,16 +1530,16 @@ Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[26]
+[30]
 File: standard computation model.png Graphic file (type bmp)
 <standard computation model.png>
 File: Query computation model.png Graphic file (type bmp)
 <Query computation model.png>
- [27] [28]
+ [31] [32]
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 936--937
 [][]
  []
 
@@ -1361,17 +1589,17 @@ Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[29]
+[33]
 File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type b
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
- [30]
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+ [34]
+Underfull \hbox (badness 10000) in paragraph at lines 969--970
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--741
+Underfull \hbox (badness 10000) in paragraph at lines 974--975
 [][]
  []
 
@@ -1391,246 +1619,246 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[31]
-Overfull \hbox (1.54195pt too wide) in paragraph at lines 778--788
+[35]
+Overfull \hbox (1.54195pt too wide) in paragraph at lines 1012--1022
 []\TU/XBZar(0)/m/n/10 which we shall refer to as the Deutsch–Jozsa algorithm. T
 he application، known[]
  []
 
-[32]
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[33]
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[34]
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[35]
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
 [36]
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[37]
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[38]
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ∈ (U+2208) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[39]
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no ⊗ (U+2297) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+Missing character: There is no → (U+2192) in font XB Zar/OT:script=latn;languag
+e=dflt;script=arab;mapping=persian-tex-text;!
+[40]
 File: oraclecon.png Graphic file (type bmp)
 <oraclecon.png>
 
-Overfull \hbox (5.77618pt too wide) in paragraph at lines 966--974
+Overfull \hbox (5.77618pt too wide) in paragraph at lines 1200--1208
  [][][][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[37]
+[41]
 File: oraclebalance.png Graphic file (type bmp)
 <oraclebalance.png>
 
-Overfull \hbox (5.77618pt too wide) in paragraph at lines 988--996
+Overfull \hbox (5.77618pt too wide) in paragraph at lines 1222--1230
  [][][][] 
  []
 
-[38]
+[42]
 فصل 4.
-[39
+[43
 
 ]
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1031--1031
+Overfull \hbox (9.44922pt too wide) in paragraph at lines 1265--1265
 [][]\TU/XBZar(0)/m/n/8 (آ)[]
  []
 
 
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1031--1031
+Overfull \hbox (4.44922pt too wide) in paragraph at lines 1265--1265
 []\TU/XBZar(0)/m/n/8 b []
  []
 
 File: psi00.png Graphic file (type bmp)
 <psi00.png>
 
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1038--1038
+Overfull \hbox (9.44922pt too wide) in paragraph at lines 1272--1272
 [][]\TU/XBZar(0)/m/n/8 (آ)[]
  []
 
 
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1038--1038
+Overfull \hbox (4.44922pt too wide) in paragraph at lines 1272--1272
 []\TU/XBZar(0)/m/n/8 b []
  []
 
@@ -1668,7 +1896,7 @@ Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[40] [41]
+[44] [45]
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1682,11 +1910,11 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1089--1091
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1325
 [][]
  []
 
-[42]
+[46]
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1728,11 +1956,11 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1111
+Underfull \hbox (badness 10000) in paragraph at lines 1336--1345
 [][]
  []
 
-[43] [44]
+[47] [48]
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
@@ -1883,7 +2111,7 @@ Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[45]
+[49]
 Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
@@ -1918,19 +2146,19 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[46] [47]
-Underfull \hbox (badness 10000) in paragraph at lines 1248--1249
+[50] [51]
+Underfull \hbox (badness 10000) in paragraph at lines 1482--1483
 [][]
  []
 
-[48] (./qi.aux) ) 
+[52] (./qi.aux) ) 
 Here is how much of TeX's memory you used:
- 38102 strings out of 476179
- 956807 string characters out of 5813072
+ 38123 strings out of 476179
+ 957111 string characters out of 5813072
  1598594 words of memory out of 5000000
- 58259 multiletter control sequences out of 15000+600000
- 475811 words of font info for 95 fonts, out of 8000000 for 9000
+ 58270 multiletter control sequences out of 15000+600000
+ 478568 words of font info for 104 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,14n,104p,3072b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on qi.pdf (48 pages).
+Output written on qi.pdf (52 pages).
