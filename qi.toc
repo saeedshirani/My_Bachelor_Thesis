@@ -1,20 +1,21 @@
 \contentsline {section}{\numberline {0.1}مقدمه}{2}{}%
 \contentsline {chapter}{\numberline {1}آشنایی با مفاهیم اولیه}{3}{}%
 \contentsline {section}{\numberline {1.1}کیوبیت}{3}{}%
-\contentsline {section}{\numberline {1.2}کیوبیت‌های چندتایی}{5}{}%
-\contentsline {section}{\numberline {1.3}اندازه‌گیری در فضای هیلبرت}{6}{}%
-\contentsline {section}{\numberline {1.4}bloch vector}{6}{}%
-\contentsline {section}{\numberline {1.5}گیت‌های کوانتومی}{9}{}%
-\contentsline {subsection}{\numberline {1.5.1}انواع گیت کوانتومی}{9}{}%
-\contentsline {subsection}{\numberline {1.5.2}Swap gate}{13}{}%
-\contentsline {section}{\numberline {1.6}مدار‌های کوانتومی}{13}{}%
-\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{13}{}%
-\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{14}{}%
-\contentsline {paragraph}{اندازه مدار کوانتومی}{14}{}%
-\contentsline {paragraph}{کوبیت}{14}{}%
-\contentsline {paragraph}{دروازه}{14}{}%
-\contentsline {paragraph}{عملیات}{14}{}%
-\contentsline {subsection}{\numberline {1.6.1}نحوه‌ی نمایش مدار‌های کوانتومی}{15}{}%
+\contentsline {subsection}{\numberline {1.1.1}کیوبیت‌ واحد}{3}{}%
+\contentsline {subsection}{\numberline {1.1.2}کیوبیت‌های چندتایی}{6}{}%
+\contentsline {section}{\numberline {1.2}اندازه‌گیری در فضای هیلبرت}{7}{}%
+\contentsline {subsection}{\numberline {1.2.1}bloch vector}{7}{}%
+\contentsline {section}{\numberline {1.3}گیت‌های کوانتومی}{10}{}%
+\contentsline {subsection}{\numberline {1.3.1}انواع گیت کوانتومی}{10}{}%
+\contentsline {subsection}{\numberline {1.3.2}Swap gate}{14}{}%
+\contentsline {section}{\numberline {1.4}مدار‌های کوانتومی}{14}{}%
+\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{14}{}%
+\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{15}{}%
+\contentsline {paragraph}{اندازه مدار کوانتومی}{15}{}%
+\contentsline {paragraph}{کوبیت}{15}{}%
+\contentsline {paragraph}{دروازه}{15}{}%
+\contentsline {paragraph}{عملیات}{16}{}%
+\contentsline {subsection}{\numberline {1.4.1}نحوه‌ی نمایش مدار‌های کوانتومی}{16}{}%
 \contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{17}{}%
 \contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{17}{}%
 \contentsline {section}{\numberline {2.2}comp vs simulation}{18}{}%
