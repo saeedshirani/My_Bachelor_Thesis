@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  11 AUG 2023 13:09
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  11 AUG 2023 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1487,13 +1487,13 @@ ge=dflt;script=arab;mapping=persian-tex-text;!
 ]
 فصل 3.
 
-Overfull \hbox (0.4648pt too wide) in paragraph at lines 761--762
+Overfull \hbox (0.4648pt too wide) in paragraph at lines 765--766
 []\TU/XBZar(0)/m/n/10 موازی‌سازی کوانتومی[][]، پایه‌واساس بسیاری از الگوریتم‌ها
 ی کوانتومی است. با گذار یک حالت کوانتومی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 764--765
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 [][]
  []
 
@@ -1508,16 +1508,16 @@ File: Uforacle.png Graphic file (type bmp)
 <Uforacle.png>
 [28]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 814.
+LaTeX Warning: Command \textbar invalid in math mode on input line 818.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 814.
+LaTeX Warning: Command \textbar invalid in math mode on input line 818.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 814.
+LaTeX Warning: Command \textbar invalid in math mode on input line 818.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 814.
+LaTeX Warning: Command \textbar invalid in math mode on input line 818.
 
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
@@ -1539,7 +1539,7 @@ File: Query computation model.png Graphic file (type bmp)
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 940--941
 [][]
  []
 
@@ -1594,12 +1594,12 @@ File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type 
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
  [34]
-Underfull \hbox (badness 10000) in paragraph at lines 969--970
+Underfull \hbox (badness 10000) in paragraph at lines 973--974
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 974--975
+Underfull \hbox (badness 10000) in paragraph at lines 978--979
 [][]
  []
 
@@ -1620,7 +1620,7 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 [35]
-Overfull \hbox (1.54195pt too wide) in paragraph at lines 1012--1022
+Overfull \hbox (1.54195pt too wide) in paragraph at lines 1016--1026
 []\TU/XBZar(0)/m/n/10 which we shall refer to as the Deutsch–Jozsa algorithm. T
 he application، known[]
  []
@@ -1821,7 +1821,7 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 File: oraclecon.png Graphic file (type bmp)
 <oraclecon.png>
 
-Overfull \hbox (5.77618pt too wide) in paragraph at lines 1200--1208
+Overfull \hbox (5.77618pt too wide) in paragraph at lines 1204--1212
  [][][][] 
  []
 
@@ -1832,7 +1832,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: oraclebalance.png Graphic file (type bmp)
 <oraclebalance.png>
 
-Overfull \hbox (5.77618pt too wide) in paragraph at lines 1222--1230
+Overfull \hbox (5.77618pt too wide) in paragraph at lines 1226--1234
  [][][][] 
  []
 
@@ -1841,24 +1841,24 @@ Overfull \hbox (5.77618pt too wide) in paragraph at lines 1222--1230
 [43
 
 ]
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (9.44922pt too wide) in paragraph at lines 1269--1269
 [][]\TU/XBZar(0)/m/n/8 (آ)[]
  []
 
 
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1265--1265
+Overfull \hbox (4.44922pt too wide) in paragraph at lines 1269--1269
 []\TU/XBZar(0)/m/n/8 b []
  []
 
 File: psi00.png Graphic file (type bmp)
 <psi00.png>
 
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1272--1272
+Overfull \hbox (9.44922pt too wide) in paragraph at lines 1276--1276
 [][]\TU/XBZar(0)/m/n/8 (آ)[]
  []
 
 
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1272--1272
+Overfull \hbox (4.44922pt too wide) in paragraph at lines 1276--1276
 []\TU/XBZar(0)/m/n/8 b []
  []
 
@@ -1910,7 +1910,7 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1323--1325
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1329
 [][]
  []
 
@@ -1956,7 +1956,7 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1336--1345
+Underfull \hbox (badness 10000) in paragraph at lines 1340--1349
 [][]
  []
 
@@ -2147,7 +2147,7 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 [50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1482--1483
+Underfull \hbox (badness 10000) in paragraph at lines 1486--1487
 [][]
  []
 
