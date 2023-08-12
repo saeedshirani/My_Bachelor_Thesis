@@ -1,43 +1,42 @@
-\contentsline {section}{\numberline {0.1}مقدمه}{2}{}%
-\contentsline {chapter}{\numberline {1}آشنایی با مفاهیم اولیه}{3}{}%
-\contentsline {section}{\numberline {1.1}کیوبیت}{3}{}%
-\contentsline {subsection}{\numberline {1.1.1}کیوبیت‌ واحد}{3}{}%
-\contentsline {subsection}{\numberline {1.1.2}کیوبیت‌های چندتایی}{6}{}%
-\contentsline {section}{\numberline {1.2}اندازه‌گیری در فضای هیلبرت}{7}{}%
-\contentsline {subsection}{\numberline {1.2.1}bloch vector}{7}{}%
-\contentsline {section}{\numberline {1.3}گیت‌های کوانتومی}{10}{}%
-\contentsline {subsection}{\numberline {1.3.1}انواع گیت کوانتومی}{10}{}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت CNOT}{11}{}%
-\contentsline {subsubsection}{مدار NOT و خصوصیات آن}{12}{}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{16}{}%
-\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{16}{}%
-\contentsline {subsection}{\numberline {1.3.2}Swap gate}{17}{}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت swap}{17}{}%
-\contentsline {subsubsection}{گیت swap در مدار و خصوصیات آن}{17}{}%
-\contentsline {section}{\numberline {1.4}مدار‌های کوانتومی}{18}{}%
-\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{19}{}%
-\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{20}{}%
-\contentsline {paragraph}{اندازه مدار کوانتومی}{20}{}%
-\contentsline {paragraph}{کوبیت}{20}{}%
-\contentsline {paragraph}{دروازه}{20}{}%
-\contentsline {paragraph}{عملیات}{20}{}%
-\contentsline {subsection}{\numberline {1.4.1}نحوه‌ی نمایش مدار‌های کوانتومی}{20}{}%
-\contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{21}{}%
-\contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{21}{}%
-\contentsline {section}{\numberline {2.2}comp vs simulation}{22}{}%
-\contentsline {subsection}{\numberline {2.2.1}تفاوت کامپیوترهای کوانتومی و شبیه‌سازهای کلاسیک}{23}{}%
-\contentsline {section}{\numberline {2.3}IBM Quantum computer and Qiskit}{25}{}%
-\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{27}{}%
-\contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{27}{}%
-\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{31}{}%
-\contentsline {section}{\numberline {3.2}مدل کوئری}{31}{}%
-\contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{32}{}%
-\contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{32}{}%
-\contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{33}{}%
-\contentsline {section}{\numberline {3.4}الگوریتم دوچ - جوزا}{36}{}%
-\contentsline {section}{\numberline {3.5}ساخت یک اوراکل کوانتومی}{41}{}%
-\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{43}{}%
-\contentsline {section}{\numberline {4.1}Bell states}{43}{}%
-\contentsline {section}{\numberline {4.2}entanglement}{45}{}%
-\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{46}{}%
-\contentsline {section}{\numberline {4.4}دوربری}{49}{}%
+\contentsline {chapter}{\numberline {1}آشنایی با مفاهیم اولیه}{5}{}%
+\contentsline {section}{\numberline {1.1}کیوبیت}{5}{}%
+\contentsline {subsection}{\numberline {1.1.1}کیوبیت‌ واحد}{5}{}%
+\contentsline {subsection}{\numberline {1.1.2}کیوبیت‌های چندتایی}{8}{}%
+\contentsline {section}{\numberline {1.2}اندازه‌گیری در فضای هیلبرت}{9}{}%
+\contentsline {subsection}{\numberline {1.2.1}bloch vector}{9}{}%
+\contentsline {section}{\numberline {1.3}گیت‌های کوانتومی}{11}{}%
+\contentsline {subsection}{\numberline {1.3.1}انواع گیت کوانتومی}{11}{}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{12}{}%
+\contentsline {subsubsection}{مدار NOT و خصوصیات آن}{13}{}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{17}{}%
+\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{17}{}%
+\contentsline {subsection}{\numberline {1.3.2}Swap gate}{18}{}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت swap}{19}{}%
+\contentsline {subsubsection}{گیت swap در مدار و خصوصیات آن}{19}{}%
+\contentsline {section}{\numberline {1.4}مدار‌های کوانتومی}{19}{}%
+\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{20}{}%
+\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{21}{}%
+\contentsline {paragraph}{اندازه مدار کوانتومی}{21}{}%
+\contentsline {paragraph}{کیوبیت}{21}{}%
+\contentsline {paragraph}{دروازه}{22}{}%
+\contentsline {paragraph}{عملیات}{22}{}%
+\contentsline {subsection}{\numberline {1.4.1}نحوه‌ی نمایش مدار‌های کوانتومی}{22}{}%
+\contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{23}{}%
+\contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{23}{}%
+\contentsline {section}{\numberline {2.2}comp vs simulation}{24}{}%
+\contentsline {subsection}{\numberline {2.2.1}تفاوت کامپیوترهای کوانتومی و شبیه‌سازهای کلاسیک}{25}{}%
+\contentsline {section}{\numberline {2.3}IBM Quantum computer and Qiskit}{27}{}%
+\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{29}{}%
+\contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{29}{}%
+\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{33}{}%
+\contentsline {section}{\numberline {3.2}مدل کوئری}{33}{}%
+\contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{34}{}%
+\contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{34}{}%
+\contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{35}{}%
+\contentsline {section}{\numberline {3.4}الگوریتم دوچ - جوزا}{38}{}%
+\contentsline {section}{\numberline {3.5}ساخت یک اوراکل کوانتومی}{43}{}%
+\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{45}{}%
+\contentsline {section}{\numberline {4.1}Bell states}{45}{}%
+\contentsline {section}{\numberline {4.2}entanglement}{47}{}%
+\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{49}{}%
+\contentsline {section}{\numberline {4.4}دوربری}{52}{}%
