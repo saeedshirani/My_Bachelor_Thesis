@@ -1214,7 +1214,7 @@ $$
 \end{figure}
 \end{center}
 
- 
+
 یک تغییر ساده در مدار شکل 1.3 نشان می دهد که چگونه مدارهای کوانتومی می توانند با پیاده سازی الگوریتم Deutsch از مدارهای کلاسیک پیشی بگیرند\footnote{ما در واقع یک نسخه ساده شده و بهبود یافته از الگوریتم اصلی را ارائه می دهیم.}. الگوریتم Deutsch ترکیبی از موازی سازی کوانتومی با خاصیتی از مکانیک کوانتوم به نام تداخل\footnote{how interference is using in deutsch algorithm : Interference is used in the Deutsch algorithm to distinguish between constant and balanced functions. A constant function is a function that always returns the same value, regardless of its input. A balanced function is a function that returns 0 for half of its inputs and 1 for the other half.
 	
 	The Deutsch algorithm works by first preparing two qubits in a superposition of states. The first qubit is prepared in the state |+⟩, which is the equal superposition of $\vert 0 \rangle$ and $\vert 1 \rangle$. The second qubit is prepared in the state |ψ⟩, which is a superposition of the states $\vert 0 \rangle$ and $\vert 1 \rangle$ with opposite phases.
@@ -1341,11 +1341,12 @@ $$
 
 
 
+
 % implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. 
-\section{Bell states}
+\section{درهمتنیدگی و حالات بل}
 % https://www.youtube.com/watch?v=I0jH1_H3x1o
 % pls search about bell eq
 در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
@@ -1404,7 +1405,7 @@ $\vert \psi_{xy}\rangle = C10H1X^{x}_{1} X^{y}_{0} \vert00\rangle$\\
 
 
 
-\section{entanglement}
+\subsection{درهمتنیدگی}
 
 Entanglement: The Mysterious Connection in Quantum Physics
 
@@ -1436,21 +1437,32 @@ In conclusion, entanglement stands as one of the most intriguing and perplexing 
 
 رمزگذاری متراکم به ما می‌گوید که پاسخ این سؤال بله است. فرض کنید آلیس و باب در ابتدا یک جفت کیوبیت در حالت درهم‌تنیده زیر به اشتراک می‌گذارند:
 
-|ψ〉 = |00〉 + |11〉
-√2 . (2.133)\\
-=========
+
+\begin{center}
+	$\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}$
+\end{center}
+
 
 بیانات چی بیتی
-آلیس می‌تواند با استفاده از این جفت کیوبیت‌های درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک تبدیل واحد به کیوبیت خود انجام می‌دهد، بسته به اینکه می‌خواهد کدام دو بیت کلاسیک را به باب ارسال کند. به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل 1 را به کیوبیت خود اعمال می‌کند.
 
-این تبدیل واحد باعث می‌شود که کیوبیت آلیس و کیوبیت باب در یکی از چهار حالت بل اورتوگونال قرار گیرند. اگر آلیس کیوبیت خود را در حالت |00〉 قرار دهد، کیوبیت باب به طور خودکار به حالت |00〉 تبدیل می‌شود. این بدان معناست که آلیس دو بیت اطلاعات (0 و 0) را به باب منتقل کرده است.
 
-باب سپس کیوبیت خود را اندازه‌گیری می‌کند و مقدار 0 یا 1 را به دست می‌آورد. بسته به مقداری که باب اندازه‌گیری می‌کند، او می‌تواند دو بیت کلاسیک که آلیس به او ارسال کرده است را بازیابی کند.
+آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات باتوجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل 1 را به کیوبیت خود اعمال می‌کند.
 
-رمزگذاری متراکم یک پروتکل کوانتومی بسیار کارآمد است که می‌تواند دو بیت کلاسیک را با ارسال یک کیوبیت منتقل کند. این پروتکل می‌تواند در کاربردهای مختلفی مانند رمزنگاری کوانتومی و ارتباطات کوانتومی استفاده شود.\\
-==========\\
+این تبدیل واحد باعث می‌شود که کیوبیت آلیس و کیوبیت باب در یکی از چهار حالت متعامد بل قرار گیرند. اگر آلیس کیوبیت خود را در حالت $\vert 00 \rangle$ قرار دهد، کیوبیت باب به طور خودکار به حالت $\vert 00 \rangle$ تبدیل می‌شود. این بدان معناست که آلیس دو بیت اطلاعات $(0, 0)$ را به باب منتقل کرده است.
 
-همانطور که در شکل 2.3 قابل ملاحظه است؛ آلیس و باب، هرکدام یک کیوبیت در اختیار دارند. توجه داشته باشید که $\Psi$ یک حالت ثابت است؛ نیازی نیست که آلیس برای آماده‌سازی این حالت، کیوبیتی را به باب ارسال کند. در عوض، ممکن است یک طرف ثالث قبلاً حالت درهم‌تنیده را آماده کند، یکی از کیوبیت‌ها را به آلیس و دیگری را به باب ارسال کند.
+باب سپس کیوبیت خود را اندازه‌گیری می‌کند و یکی از مقادیر 0 یا 1 را به دست می‌آورد. بسته به مقداری که باب اندازه‌گیری می‌کند، او می‌تواند دو بیت کلاسیک که آلیس به او ارسال کرده است را بازیابی کند.
+\pagebreak
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=3in]{super dence.png}
+		\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهمتنیده را در اختیار دارند.}
+		\label{fig:myimage}
+	\end{figure}
+\end{center}
+
+همانطور که در شکل بالا قابل ملاحظه است؛ آلیس و باب، هرکدام یک کیوبیت در اختیار دارند. توجه داشته باشید که $\Psi$ یک حالت ثابت است؛ نیازی نیست که آلیس برای آماده‌سازی این حالت، کیوبیتی را به باب ارسال کند. در عوض، ممکن است یک طرف ثالث قبلاً حالت درهم‌تنیده را آماده کند، یکی از کیوبیت‌ها را به آلیس و دیگری را به باب ارسال کند.
 
 با ارسال تک کیوبیت آلیس  به باب، معلوم می‌شود که آلیس می‌تواند دو بیت اطلاعات کلاسیک را به باب منتقل کند. در اینجا روشی که او استفاده می‌کند؛ آورده شده است. اگر او بخواهد رشته‌بیت :
 
@@ -1460,156 +1472,172 @@ In conclusion, entanglement stands as one of the most intriguing and perplexing 
 	\item  $"10"$ را ارسال کند $\impliedby$ گیت کوانتومی NOT، X، را به کیوبیت خود اعمال می‌کند.
 	\item  $"11"$ را ارسال کند $\impliedby$ تبدیل iY را به کیوبیت خود اعمال می‌کند.
 \end{itemize}
-چهار حالت حاصل به راحتی قابل مشاهده هستند:\\
-00 : |ψ〉 → |00〉 + |11〉
-√2 (2.134)
-01 : |ψ〉 → |00〉 − |11〉
-√2 (2.135)
-10 : |ψ〉 → |10〉 + |01〉
-√2 (2.136)
-11 : |ψ〉 → |01〉 − |10〉
-√2 . (2.137)\\
+چهار حالت حاصل به راحتی قابل مشاهده هستند:
+\begin{center}
+$$\begin{aligned}
+	& 00:|\psi\rangle \rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}} \\
+	& 01:|\psi\rangle \rightarrow \frac{|00\rangle-|11\rangle}{\sqrt{2}} \\
+	& 10:|\psi\rangle \rightarrow \frac{|10\rangle+|01\rangle}{\sqrt{2}} \\
+	& 11:|\psi\rangle \rightarrow \frac{|01\rangle-|10\rangle}{\sqrt{2}} .
+\end{aligned}$$	
+\end{center}
 
-
-همانطور که در بخش 1.3.6 اشاره کردیم، این چهار حالت به عنوان پایه بل، حالت‌های بل، یا جفت‌های EPR شناخته می‌شوند، به احترام چندین تن از پیشگامان که اولین بار از نوآوری درهم‌تنیدگی قدردانی کردند. توجه داشته باشید که حالت‌های بل یک پایه متعامد هستند، و بنابراین می‌توانند با اندازه‌گیری کوانتومی مناسب از یکدیگر متمایز شوند. اگر آلیس کیوبیت خود را به باب بفرستد، و باب هر دو کیوبیت را در اختیار داشته باشد، سپس با انجام اندازه‌گیری در پایه بل، باب می‌تواند تعیین کند که کدام یک از چهار رشته بیت ممکن را آلیس ارسال کرده است.
+همانطور که پیش‌از این اشاره شد؛این چهار حالت به عنوان پایه بل، حالت‌های بل، یا جفت‌های EPR شناخته می‌شوند.
+ توجه داشته باشید که حالت‌های بل؛ پایه‌های متعامد هستند؛ و بنابراین می‌توانند با اندازه‌گیری کوانتومی مناسب از یکدیگر متمایز شوند. اگر آلیس کیوبیت خود را به باب بفرستد، و باب هر دو کیوبیت را در اختیار داشته باشد، سپس با انجام اندازه‌گیری در پایه بل، باب می‌تواند تعیین کند که کدام یک از چهار رشته بیت ممکن را آلیس ارسال کرده است.
 
 به طور خلاصه می‌توان گفت:
  آلیس، با تعامل و اثرگذاری تنها روی یک کیوبیت، قادر به انتقال دو بیت اطلاعات به باب است. البته دو کیوبیت در پروتکل دخیل هستند، اما آلیس هرگز نیازی به تعامل با کیوبیت دوم ندارد. از نظر کلاسیک، وظیفه‌ای که آلیس انجام می‌دهد، اگر فقط یک بیت کلاسیک ارسال می‌کرد، غیرممکن بود.
 
 علاوه بر این، پروتکل رمزگذاری متراکم، تا حدی در آزمایشگاه تأیید شده است.  یک نکته کلیدی را می‌توان در این مثال زیبا مشاهده کرد: اطلاعات فیزیکی است، و نظریه‌های فیزیکی شگفت‌انگیز مانند مکانیک کوانتوم ممکن است توانایی‌های پردازش اطلاعات شگفت‌انگیزی را پیش‌بینی کنند.
 
+مراحل این پروتکل به اختصار به شرح زیر است:\\
 
+\begin{itemize}
+	\item آلیس و باب یک جفت کیوبیت درهم‌تنیده را با هم به اشتراک می‌گذارند.
+	\item آلیس می‌خواهد دو بیت کلاسیک، 00 یا 01 را به باب ارسال کند.
+	\item آلیس یک عمل واحد بر روی کیوبیت خود اعمال می‌کند که بسته به بیت‌هایی که می‌خواهد به باب ارسال کند متفاوت است.
+	\item آلیس کیوبیت خود را به باب می‌فرستد.
+	\item باب کیوبیت را اندازه‌گیری می‌کند و دو بیت کلاسیکی که آلیس به او ارسال کرده است را دریافت می‌کند.
+	\item اگر آلیس یک عمل یکه بر روی کیوبیت خود اعمال نکند، باب فقط می‌تواند یک بیت کلاسیک را دریافت کند. با این حال، اگر آلیس عمل یکه مناسب را اعمال کند، می‌تواند دو بیت کلاسیک را با ارسال یک کیوبیت انتقال دهد.
+\end{itemize}
 
-بیانات چی پی تی:
-پروتکل سوپردنس کدینگ یک پروتکل کوانتومی است که آلیس می‌تواند از آن برای انتقال دو بیت کلاسیک به باب با ارسال یک کیوبیت استفاده کند. پروتکل به شرح زیر است:
-
-آلیس و باب یک جفت کیوبیت درهم‌تنیده را با هم به اشتراک می‌گذارند.
-آلیس می‌خواهد دو بیت کلاسیک، 00 یا 01 را به باب ارسال کند.
-آلیس یک عمل واحد بر روی کیوبیت خود اعمال می‌کند که بسته به بیت‌هایی که می‌خواهد به باب ارسال کند متفاوت است.
-آلیس کیوبیت خود را به باب می‌فرستد.
-باب کیوبیت را اندازه‌گیری می‌کند و دو بیت کلاسیکی که آلیس به او ارسال کرده است را دریافت می‌کند.
-اگر آلیس یک عمل واحد بر روی کیوبیت خود اعمال نکند، باب فقط می‌تواند یک بیت کلاسیک را دریافت کند. با این حال، اگر آلیس عمل واحد مناسب را اعمال کند، می‌تواند دو بیت کلاسیک را با ارسال یک کیوبیت انتقال دهد.
-
-پروتکل سوپردنس کدینگ یک مثال عالی از قدرت مکانیک کوانتوم در انتقال اطلاعات است. این پروتکل نشان می‌دهد که می‌توان با استفاده از قوانین مکانیک کوانتوم، اطلاعات را به روش‌های غیرممکن در فیزیک کلاسیک انتقال داد.
+پروتکل رمزگذاری متراکم؛ یک مثال عالی از قدرت مکانیک کوانتوم در انتقال اطلاعات است. این پروتکل نشان می‌دهد که می‌توان با استفاده از قوانین مکانیک کوانتوم، اطلاعات را به روش‌های غیرممکن در فیزیک کلاسیک انتقال داد.
 \newpage
 \section{دوربری}
-isac book
-فرض کنید آلیس یک کیوبیت در حالت زیر دارد:
-\begin{center}
-$\vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle $\\	
-\end{center}
 
-	کارول ممکن است با اعمال یک عملگر یکه‌ به یک کیوبیت در حالت استاندارد، کیوبیت را از حالت $\vert0\rangle$ به حالت $\vert\psi\rangle$  تبدیل کرده باشد. کارول بدون اعلام نوع عملگر یکه به آلیس،‌ کیوبیت را برای او ارسال می‌کند. 
-	حال آلیس می‌خواهد بدون دسترسی داشتن به کیوبیت باب، تغییراتی را در کیوبیت او ایجاد کند؛ این تنها درصورتی ممکن است که کیوبیت باب و آلیس درهمتنیده باشند. هرچند آلیس و باب می‌توانند از طریق راه‌های کلاسیک(نظیر تلفنی صحبت کردن و ...) با یکدیگر ارتباط برقرار کنند؛ ولی نمی‌توانند دسترسی مستقیم به کیوبیت یکدیگر داشته باشند. 
-	
-	کیوبیت باب را می‌توان به حالت زیر تعریف کرد:
-$\vert\phi\rangle = 1/\sqrt{2}(\vert0\rangle \vert0\rangle + \vert1\rangle\vert1\rangle)$ 
-	
-he no-cloning theorem prohibits duplicating the unknown state
-of Alice’s first Qbit, either far away from her or nearby. But it turns
-out to be possible for Alice and Bob to cooperate over the telephone
-in assigning the state |ψ〉 to Bob’s member of the entangled pair. The
-no-cloning theorem is not violated because in doing so Alice obliterates
-all traces of the state |ψ〉 from either of her own Qbits. The process –
-called teleporting the state from Alice to Bob – also eliminates the en-
-tanglement Alice and Bob formerly shared. For each shared entangled
-pair, they can teleport just a single 1-Qbit state. The term “teleporta-
-tion” emphasizes that the state assignment acquired by Bob’s Qbit no
-longer applies to Alice’s; it has been transported from her Qbit to his.
-Here is how teleportation works. Alice’s first Qbit and the entangled
-pair she shares with Bob are characterized by the 3-Qbit state
-%|ψ〉a |〉ab = (α$vert 0 \rangle$a + β|1〉a
-) 1√2
-($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
-), (6.21)
-where I have given the state symbols for the Qbits in Alice’s and Bob’s
-possession subscripts a and b . To teleport the unknown state of her
-Qbit to Bob’s member of the entangled pair, Alice first applies a cNOT
-gate, using her first Qbit in the state |ψ〉 as the control and her member
-of the shared entangled pair as the target. This produces the 3-Qbit
-state
-α$vert 0 \rangle$a 1√2
-($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
-) + β|1〉a 1√2
-(|1〉a $vert 0 \rangle$b + $vert 0 \rangle$a |1〉b
-).
-(6.22)
-Next she applies a Hadamard transformation H to her first Qbit, giving
-all three Qbits the state
-α 1√2
-($vert 0 \rangle$a + |1〉a
-) 1√2
-($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
-)
-+ β 1√2
-($vert 0 \rangle$a − |1〉a
-) 1√2
-(|1〉a $vert 0 \rangle$b + $vert 0 \rangle$a |1〉b
-)
-= 1
-2 $vert 0 \rangle$a $vert 0 \rangle$a
-(α$vert 0 \rangle$b + β|1〉b
-) + 1
-2 |1〉a $vert 0 \rangle$a
-(α$vert 0 \rangle$b − β|1〉b
-)
-+ 1
-2 $vert 0 \rangle$a |1〉a
-(α|1〉b + β$vert 0 \rangle$b
-) + 1
-2 |1〉a |1〉a
-(α|1〉b − β$vert 0 \rangle$b
-). (6.23)
-Now Alice measures both Qbits in her possession. (As remarked
-in Section 6.4, such an application of cNOT and Hadamard gates,
-immediately followed by measurement gates, is called “measuring in
-the Bell basis.”) If the result is 00, Bob’s Qbit will indeed acquire the
-state |ψ〉 originally possessed by Alice’s first Qbit (whose state would
-then be reduced to $vert 0 \rangle$). But if the result of Alice’s measurement is 10,
-01, or 11 then the state of Bob’s Qbit becomes
-α$vert 0 \rangle$b − β|1〉b , α|1〉b + β$vert 0 \rangle$b , or α|1〉b − β$vert 0 \rangle$b . (6.24)
-In each of these three cases there is a unitary transformation that re-
-stores the state of Bob’s Qbit to Alice’s original state |ψ〉. In the first
-case we can apply Z (which leaves $vert 0 \rangle$ alone but changes the sign of |1〉),
-in the second case, X (which interchanges $vert 0 \rangle$ and |1〉), and in the third
-case, ZX.
-6 . 5 TE L E P O R T A T I O N 151
-So all Alice need do to transfer the state of her Qbit to Bob’s member
-of their entangled pair is to telephone Bob and report to him the results
-of her two measurements. He then knows whether the state has already
-been transferred (if Alice’s result is 00) or what unitary transformation
-he must apply to his member of the entangled pair in order to com-
-plete the transfer (if Alice’s result is one of the other three.) Note the
-resemblance to quantum error correction: by making a measurement
-Alice acquires the information needed for Bob to reconstruct a partic-
-ular quantum state, without anybody acquiring any information about
-what the state actually is.
-This appears to be remarkable. A general state of a Qbit is described
-by two complex numbers α and β that take on a continuum of values,
-constrained only by the requirement that |α|2 + |β|2 = 1. Yet, with the
-aid of a standard entangled pair, whose state does not depend on α and
-β, Alice is able to provide Bob with a Qbit described by the unknown
-state, at the price of only two bits of classical information (giving the
-results of her two measurements) and the loss of the entanglement of their pair.
+We will now apply the techniques of the last few pages to understand something nontrivial, surprising, and a lot of fun – quantum teleportation! Quantum teleportation is a technique for moving quantum states around, even in the absence of a quantum communications channel linking the sender of the quantum state to the recipient. Here’s how quantum teleportation works.
+اکنون تکنیک‌های چند صفحه آخر را برای درک چیزی غیر پیش پا افتاده، شگفت‌انگیز و بسیار سرگرم‌کننده - دوربری کوانتومی - به کار می‌گیریم! تله پورت کوانتومی تکنیکی برای جابجایی حالات کوانتومی به اطراف است، حتی در غیاب کانال ارتباطی کوانتومی که فرستنده حالت کوانتومی را به گیرنده متصل می کند. در اینجا نحوه عملکرد دوربری کوانتومی آمده است.
+
+
+ Alice and Bob met long ago but now live far apart. While together they generated an EPR pair, each taking one qubit of the EPR pair when they separated. Many years later, Bob is in hiding, and Alice’s mission, should she choose to accept it, is to deliver a qubit |ψ〉 to Bob. She does not know the state of the qubit, and moreover can only send classical information to Bob. Should Alice accept the mission?
+ آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت |ψ〉 به باب است. او وضعیت کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟
+
+
+Intuitively, things look pretty bad for Alice. She doesn’t know the state |ψ〉 of the qubit she has to send to Bob, and the laws of quantum mechanics prevent her from determining the state when she only has a single copy of |ψ〉 in her possession. What’s worse, even if she did know the state |ψ〉, describing it precisely takes an infinite amount of classical information since |ψ〉 takes values in a continuous space.
+به طور شهودی، همه چیز برای آلیس بسیار بد به نظر می رسد. او وضعیت |ψ〉 کیوبیتی را که باید برای باب بفرستد نمی داند، و قوانین مکانیک کوانتومی او را از تعیین وضعیت زمانی که فقط یک کپی از |ψ〉 در اختیار دارد، باز می دارد. بدتر از آن، حتی اگر او حالت |ψ〉 را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا |ψ〉 مقادیری را در یک فضای پیوسته می گیرد.
+
+ So even if she did know |ψ〉, it would take forever for Alice to describe the state to Bob. It’s not looking
+good for Alice. Fortunately for Alice, quantum teleportation is a way of utilizing the entangled EPR pair in order to send |ψ〉 to Bob, with only a small overhead of classical communication.
+
+بنابراین حتی اگر او |ψ〉 را می دانست، برای آلیس تا ابد طول می کشید تا وضعیت را برای باب توصیف کند. نگاه نمی کند برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از جفت EPR درهم تنیده به منظور ارسال |ψ〉 به باب، تنها با سربار کوچکی از ارتباطات کلاسیک است.
+
+
+In outline, the steps of the solution are as follows: Alice interacts the qubit |ψ〉 with
+her half of the EPR pair, and then measures the two qubits in her possession, obtaining
+one of four possible classical results, 00, 01, 10, and 11. She sends this information to
+Bob. 
+
+به طور کلی، مراحل حل به شرح زیر است: آلیس با کیوبیت |ψ〉 با
+نصف او از جفت EPR، و سپس دو کیوبیت در اختیارش را اندازه گیری می کند و به دست می آورد
+یکی از چهار نتیجه کلاسیک ممکن، 00، 01، 10، و 11. او این اطلاعات را به
+باب
+
+
+Depending on Alice’s classical message, Bob performs one of four operations on his
+half of the EPR pair. Amazingly, by doing this he can recover the original state |ψ〉!
+The quantum circuit shown in Figure 1.13 gives a more precise description of quantum
+teleportation. The state to be teleported is |ψ〉 = α|0〉+β|1〉, where α and β are unknown
+amplitudes. The state input into the circuit |ψ0〉 is
+
+بسته به پیام کلاسیک آلیس، باب یکی از چهار عمل خود را انجام می دهد
+نیمی از جفت EPR. به طرز شگفت انگیزی، با انجام این کار او می تواند حالت اولیه را بازیابی کند |ψ〉!
+مدار کوانتومی نشان داده شده در شکل 1.13 توصیف دقیق تری از کوانتوم ارائه می دهد
+دوربری حالتی که باید از راه دور منتقل شود عبارت است از |ψ〉 = α|0〉+β|1〉 که α و β ناشناخته هستند.
+دامنه ها حالت ورودی مدار |ψ0〉 است
+
+
+1.28
+
+fig 1.13
+1.29
+
+
+where we use the convention that the first two qubits (on the left) belong to Alice, and
+the third qubit to Bob. As we explained previously, Alice’s second qubit and Bob’s qubit
+start out in an EPR state. Alice sends her qubits through a gate, obtaining
+که در آن از این قرارداد استفاده می کنیم که دو کیوبیت اول (در سمت چپ) متعلق به آلیس هستند و
+کیوبیت سوم به باب. همانطور که قبلا توضیح دادیم، کیوبیت دوم آلیس و کیوبیت باب
+در حالت EPR شروع کنید. آلیس کیوبیت های خود را از طریق دروازه می فرستد و به دست می آورد
+
+1.30
+
+
+She then sends the first qubit through a Hadamard gate, obtaining
+سپس اولین کیوبیت را از طریق دروازه هادامارد می فرستد و به دست می آورد
+
+1.31
+
+
+This state may be re-written in the following way, simply by regrouping terms:
+این حالت را می توان به روش زیر بازنویسی کرد، به سادگی با گروه بندی مجدد عبارات:
+
+1.32
+
+
+This expression naturally breaks down into four terms. The first term has Alice’s qubits
+in the state |00〉, and Bob’s qubit in the state α|0〉 + β|1〉 – which is the original state
+|ψ〉. If Alice performs a measurement and obtains the result 00 then Bob’s system will
+be in the state |ψ〉. Similarly, from the previous expression we can read off Bob’s post-
+measurement state, given the result of Alice’s measurement:
+این عبارت به طور طبیعی به چهار اصطلاح تقسیم می شود. عبارت اول دارای کیوبیت های آلیس است
+در حالت |00〉 و کیوبیت باب در حالت α|0〉 + β|1〉 - که حالت اصلی است.
+|ψ〉. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، سیستم باب این کار را انجام می دهد
+در حالت بودن |ψ〉. به طور مشابه، از عبارت قبلی می‌توانیم پست باب را بخوانیم
+حالت اندازه گیری، با توجه به نتیجه اندازه گیری آلیس:
 
 
 
+1.33 - 1.36
 
 
+Depending on Alice’s measurement outcome, Bob’s qubit will end up in one of these four possible states. Of course, to know which state it is in, Bob must be told the result of Alice’s measurement – we will show later that it is this fact which prevents teleportation from being used to transmit information faster than light.
 
-But of course the teleportation process does not communicate to Bob the information that can be encoded in α and β. Bob is no more able to learn the values of α and β from manipulating his Qbit, now assigned the state |ψ〉, than Alice was able to do when it was her Qbit that was assigned the same state |ψ〉. On the other hand Alice’s state could be produced at a crucial stage of an elaborate quantum computation, and its transfer to Bob could enable him to continue with the computation on his own far-away quantum computer, s  one can achieve a nontrivial objective by such teleportations. Like dense coding, teleportation can also be constructed by manipulating an elementary classical circuit diagram, without going through any of the analysis in (6.21)–(6.24). Figure 6.5(a) shows a circuit that exchanges the state |ψ〉 = |x〉 of Alice’s Cbit with the state $vert 0 \rangle$ of Bob’s Cbit, regardless of whether x = 0 or 1. The transfer is achieved by direct physical coupling between the two Cbits. As a linear quantum circuit it continues to perform this exchange for arbitrary superpositions, |ψ〉 = α$vert 0 \rangle$ + β|1〉. The entire teleportation protocol can be constructed by appropriately expanding the two gates in Figure 6.5(a), with the aid of an ancillary Qbit. The aim of the expansion is to eliminate the direct interaction between Alice’s and Bob’s Qbits through the two cNOT gates in Figure 6.5(a), in favor of the telephoned message from Alice to Bob, and the interaction necessary to produce their shared pair of entangled Qbits (which can take place well before Alice has even acquired her Qbit in the state |ψ〉).
+بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این چهار حالت ممکن ختم می شود. البته، برای اینکه بدانیم در کدام حالت قرار دارد، باید نتیجه اندازه‌گیری آلیس را به باب گفت - بعداً نشان خواهیم داد که این واقعیت است که مانع از استفاده از دوربری برای انتقال اطلاعات سریع‌تر از نور می‌شود.
+
+
+ Once Bob has learned the measurement outcome, Bob can ‘fix up’ his state, recovering |ψ〉, by applying the appropriate quantum gate. For example, in the case where the measurement yields 00, Bob doesn’t need to do anything. If the measurement is 01 then Bob can fix up his state by applyingthe X gate. 
+
+
+هنگامی که باب نتیجه اندازه گیری را یاد گرفت، باب می تواند حالت خود را «تثبیت» کند و با استفاده از گیت کوانتومی مناسب، |ψ〉 را بازیابی کند. به عنوان مثال، در موردی که اندازه گیری 00 را نشان می دهد، باب نیازی به انجام کاری ندارد. اگر اندازه گیری 01 باشد، باب می تواند وضعیت خود را با اعمال دروازه X اصلاح کند.
+
+If the measurement is 10 then Bob can fix up his state by applying the Z gate. If the measurement is 11 then Bob can fix up his state by applying first an X and then a Z gate. Summing up, Bob needs to apply the transformation ZM1 XM2 (note how time goes from left to right in circuit diagrams, but in matrix products terms on the right happen first) to his qubit, and he will recover the state |ψ〉. here are many interesting features of teleportation, some of which we shall return to later in the book. For now we content ourselves with commenting on a couple of aspects. 
+
+اگر اندازه گیری 10 باشد، باب می تواند وضعیت خود را با استفاده از گیت Z ثابت کند. اگر اندازه‌گیری 11 باشد، باب می‌تواند با اعمال ابتدا یک X و سپس یک دروازه Z وضعیت خود را اصلاح کند. به طور خلاصه، باب باید تبدیل ZM1 XM2 را اعمال کند (توجه داشته باشید که چگونه زمان در نمودارهای مدار از چپ به راست می‌گذرد، اما در محصولات ماتریسی سمت راست اول اتفاق می‌افتد) در کیوبیت خود، و او حالت |ψ〉 را بازیابی می‌کند. در اینجا بسیاری از ویژگی های جالب انتقال از راه دور وجود دارد که در ادامه کتاب به برخی از آنها باز خواهیم گشت. در حال حاضر ما به اظهار نظر در مورد چند جنبه بسنده می کنیم.
 
 
 
 
+First, doesn’t teleportation allow one to transmit quantum states faster than light? This would be rather peculiar, because the theory of relativity implies that faster than light information transfer could be used to send information backwards in time. Fortunately, quantum teleportation does not enable faster than light communication, because to complete the teleportation Alice must transmit her measurement result to Bob over a classical communications channel. 
+اولاً، آیا تله‌پورتاسیون به فرد اجازه نمی‌دهد حالت‌های کوانتومی را سریع‌تر از نور منتقل کند؟ این امر نسبتاً عجیب و غریب است، زیرا تئوری نسبیت نشان می دهد که انتقال اطلاعات سریعتر از نور می تواند برای ارسال اطلاعات به عقب در زمان استفاده شود. خوشبختانه، تله‌پورت کوانتومی ارتباط سریع‌تر از نور را امکان‌پذیر نمی‌کند، زیرا برای تکمیل دوربری، آلیس باید نتیجه اندازه‌گیری خود را از طریق یک کانال ارتباطی کلاسیک به باب منتقل کند.
 
-%In Figure 6.5(b) an ancillary Qbit, not acted upon throughout the process, is introduced in the state |φ〉 = H$vert 0 \rangle$ = 1√2 ($vert 0 \rangle$ + |1〉). (6.25) In Figure 6.5(c) the identities X = HZH and 1 = HH have been used to rewrite the cNOT gate on the right of Figure 6.5(b), and an additional cNOT gate has been added on the left, which acts as the identity, since X acts as the identity on the state H$vert 0 \rangle$. Figure 6.5(d) follows from Figure 6.5(c) because the action of CZ is independent of which Qbit is the control and which the target, and because the two cNOT gates on the left of Figure 6.5(c) have exactly the same action as the three cNOT gates on the left of Figure 6.5(d): acting on the computational basis, both sets of gates apply X on both of the bottom two wires if the state of the top wire is |1〉 and act as the identity if the state of the top wire is $vert 0 \rangle$. Figure 6.5(e) follows from Figure 6.5(d) if we write the |φ〉 on the left of Figure 6.5(d) as H$vert 0 \rangle$ and explicitly write the $vert 0 \rangle$ on the right of Figure 6.5(d) as H|φ〉. But Figure 6.5(e) is an automated version of teleportation. To relate it to ordinary teleportation, introduce mea- surements of the upper two Qbits after the circuit of Figure 6.5(e) has acted, as in Figure 6.5(f). Their effect is to collapse the states of each of the two upper wires randomly and independently to $vert 0 \rangle$ or |1〉. But as noted in Section 3.6, measurement of a control Qbit commutes with any operation controlled by that Qbit, so the measurement gates can be moved to the positions they occupy in Figure 6.5(g). Figure 6.5(g) is precisely the teleportation protocol. The two gates on the left transform the two lower Qbits into the entangled state (6.20). The subsequent applications to the top two Qbits of cNOT followed by H followed by two measurement gates are precisely Alice’s “measurement in the Bell basis.” Since Alice knows the outcomes of the measurements, she knows whether the subsequent cNOT and CZ gates will or will not act, and she can replace these physical couplings by a phone call to Bob telling him whether or not to apply X and/or Z directly to his own Qbit. Figure 6.6 demonstrates that entanglement can also be teleported. The figure reproduces parts (b), (e), and (g) of Figure 6.5 with three changes. (1) A bar representing n Qbits in the n-Qbit state |〉i has been added above each part of the figure. No operations act on these additional Qbits. (2) The state to be teleported has been given a subscript i so it is now one of several possible states |ψi 〉. (3) Because of the linearity of the unitary gates we may sum over the index i . The effect of the circuit is to transfer participation in the entangled state ∑ i |i 〉|ψi 〉 from the third wire from the bottom to the bottom wire. So even if Alice’s Qbit has no state of its own but is entangled with other Qbits, Alice can use the same protocol to teleport its role in the entangled state over to Bob’s Qbit. The result is that Bob’s Qbit becomes entangled in exactly the same way Alice’s was, and Alice’s Qbit becomes entirely unentangled.
-1
+
+
+
+We will show in Section 2.4.3 that without this classical communication, teleportation does not convey any information at all. The classical channel is limited by the speed of light, so it follows that quantum teleportation cannot be accomplished faster than the speed of light, resolving the apparent paradox. A second puzzle about teleportation is that it appears to create a copy of the quantum state being teleported, in apparent violation of the no-cloning theorem discussed in Section 1.3.5.
+
+ما در بخش 2.4.3 نشان خواهیم داد که بدون این ارتباط کلاسیک، از راه دور هیچ اطلاعاتی را منتقل نمی کند. کانال کلاسیک با سرعت نور محدود می شود، بنابراین نتیجه می شود که تله پورت کوانتومی نمی تواند سریعتر از سرعت نور انجام شود و پارادوکس ظاهری را حل کند. معمای دوم در مورد تلهپورتاسیون این است که به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می کند، در حالی که آشکارا قضیه عدم شبیه سازی مورد بحث در بخش 1.3.5 را نقض می کند.
+
+ This violation is only illusory since after the teleportation process only the target qubit is left in the state |ψ〉, and the original data qubit ends up in one of the computational basis states |0〉 or |1〉, depending upon the measurement result on the first
+qubit. What can we learn from quantum teleportation? Quite a lot! It’s much more than just a neat trick one can do with quantum states. 
+
+این نقض فقط توهمی است زیرا پس از فرآیند انتقال از راه دور فقط کیوبیت هدف در حالت |ψ〉 باقی می ماند و کیوبیت داده اصلی بسته به نتیجه اندازه گیری به یکی از حالت های پایه محاسباتی |0 یا |1 می رسد. در اول
+کیوبیت از تله پورت کوانتومی چه چیزی می توانیم یاد بگیریم؟ خیلی زیاد! این خیلی بیشتر از یک ترفند ساده است که می توان با حالت های کوانتومی انجام داد.
+
+
+
+
+Quantum teleportation emphasizes the interchangeability of different resources in quantum mechanics, showing that one shared EPR pair together with two classical bits of communication is a resource at least the equal of one qubit of communication. Quantum computation and quantum information has revealed a plethora of methods for interchanging resources, many built upon quantum teleportation. 
+
+تله پورت کوانتومی بر قابلیت تعویض منابع مختلف در مکانیک کوانتومی تاکید می کند و نشان می دهد که یک جفت EPR مشترک به همراه دو بیت کلاسیک ارتباط، منبعی حداقل برابر با یک کیوبیت ارتباط است. محاسبات کوانتومی و اطلاعات کوانتومی روش‌های زیادی را برای تبادل منابع نشان داده‌اند که بسیاری از آنها بر اساس تله‌پورت کوانتومی ساخته شده‌اند.
+
+
+In particular, in Chapter 10 we explain how teleportation can be used to build quantum gates which are resistant to the effects of noise, and in Chapter 12 we show that teleportation is intimately connected with the properties of quantum error-correcting codes. Despite these connections with other subjects, it is fair to say that we are only beginning to understand why it is that quantum teleportation is possible in quantum mechanics; in later chapters we endeavor to explain some of the insights that make such an understanding possible.
+
+به طور خاص، در فصل 10 توضیح می دهیم که چگونه می توان از تله پورت برای ساخت دروازه های کوانتومی مقاوم در برابر اثرات نویز استفاده کرد و در فصل 12 نشان دادیم که انتقال از راه دور با ویژگی های کدهای تصحیح خطای کوانتومی ارتباط نزدیکی دارد. علیرغم این ارتباط با موضوعات دیگر، منصفانه است که بگوییم که ما تازه در حال درک این موضوع هستیم که چرا انتقال از راه دور کوانتومی در مکانیک کوانتومی امکان پذیر است. در فصل‌های بعدی سعی می‌کنیم برخی از بینش‌هایی را توضیح دهیم که چنین درکی را ممکن می‌سازد.
+
+
+
 \newpage
-how to determine a oracle\\
-	
-	
-	
 	
 % https://learn.qiskit.org/course/ch-algorithms/quantum-circuits
 % ket + and ket - must be deffined.
