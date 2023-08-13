@@ -512,115 +512,193 @@ $$
 گیت تغییر فاز که به آن گیت P یا گیت فاز نیز می گویند، یک کیوبیت است.
 دروازه ای که فاز نسبی را بین دو بردار پایه جابجا می کند. به عنوان زیر تعریف شده است:
 \begin{center}
-	$U_{SWAP} \vert ab \rangle = \vert ba \rangle$
+	$$\begin{aligned}
+		& \boldsymbol{U}_{\boldsymbol{PS}, \boldsymbol{\phi}}|0\rangle=|0\rangle \\
+		& \boldsymbol{U}_{\boldsymbol{PS},  \boldsymbol{\phi}}|1\rangle=e^{i \Phi}|1\rangle
+	\end{aligned}$$
 \end{center}
 
 
-که در آن Φ فاز و e iΦ فاکتور فاز است. زمانی که گیت شیفت فاز باشد
-اعمال بر بردار پایه |0〉، هیچ کاری انجام نمی دهد. اما زمانی که آن را به
-بردار پایه |1〉، یک فاز اضافی به آن اضافه می کند. اضافه کردن یک فاز اضافی به معنای
-که بردار در e iΦ ضرب شود. چرا ما فقط فاز اضافی را اعمال می کنیم
-به پایه دوم؟ منظور از جابجایی فاز نسبی بین چیست؟
-دو بردار پایه؟ اگر به شکل ماتریس آن نگاه کنیم و مشاهده کنیم، درک آن آسانتر است
-چگونه یک بردار کلی را ایجاد می کند
+که در آن $\Phi$ فاز و $e^{i\Phi}$ عامل فاز است. 
+زمانی که گیت تغییر فاز بر حالت $\vert 0 \rangle$  اثرکند، هیچ تغییری حاصل نمی‌شود. اما با اعمال این گیت به بردار حالت $\vert 1 \rangle$، یک فاز اضافه به بردار افزوده خواهد شد. برای افزدون فاز اضافه  باید یک عامل نظیر  $e^{i\Phi}$ در بردارد حالت ضرب شود. برای درک بهتر مطلب باید به حالت ماتریسی این گیت رجوع کنیم.
+
+
+
 
 
 \subsubsection{نمایش ماتریسی گیت تغییر فاز}
-16.7
-شما می توانید آن را به راحتی بررسی کنید که معادله. (16.7) معادله را برآورده می کند. (16.6). مثلا
-16.8
+
+نمایش ماتریسی گیت تغییر فاز $\boldsymbol{U}_{\boldsymbol{P} \boldsymbol{S}, \boldsymbol{\Phi}}$ به صورت زیر است:
+
+\begin{center}
+	$$\boldsymbol{U}_{\boldsymbol{P} \boldsymbol{S}, \boldsymbol{\Phi}}=\left(\begin{array}{cc}
+		1 & 0 \\
+		0 & e^{i \Phi}
+	\end{array}\right)$$
+\end{center}
+با استفاده از روابط بالا می‌توان  به راحتی اثبات کرد: 
+\begin{center}
+	$$U_{P S, \boldsymbol{\phi}}|1\rangle=\left(\begin{array}{cc}
+		1 & 0 \\
+		0 & e^{i \Phi}
+	\end{array}\right)\left(\begin{array}{l}
+		0 \\
+		1
+	\end{array}\right)=\left(\begin{array}{c}
+		0 \\
+		e^{i \Phi}
+	\end{array}\right)=e^{i \Phi}\left(\begin{array}{l}
+		0 \\
+		1
+	\end{array}\right)=e^{i \Phi}|1\rangle$$
+\end{center}
+
+
+
 
 \subsubsection{گیت تغییر فاز در مدار و خصوصیات آن}
-16.9
-در بردار اصلی، α و β که به طور کلی اعداد مختلط هستند، می توانند باشند
-به عنوان حاصل ضرب ضریب فاز و بزرگی آنها نشان داده می شود. به عنوان مثال α =
-e iθ1 |α| و β = e iθ2 |β|، که در آن θ1 و θ2 به ترتیب فازهای α و β هستند.
-بنابراین، اختلاف فاز آنها θ1 - θ2 است. با توجه به گیت شیفت فاز، فاز
-از α بدون تغییر است اما فاز β به Φ + θ2 تغییر می کند. بنابراین، خویشاوندان آنها
-فاز با Φ تغییر می کند. این همچنین توضیح می دهد که چرا تغییر فاز فقط در مورد اعمال می شود
-حالت پایه دوم معنادار باشد. اگر برای هر دو اعمال شود، تغییری ایجاد نمی شود
-در اختلاف فاز
-Φ پارامتری از گیت تغییر فاز است. هنگامی که Φ = π، دروازه تبدیل می شود (1 0
+درحالت کلی برای سیستم های تک کیوبیتی می‌توان نوشت:
+
+\begin{center}
+	$$\begin{aligned}
+		\boldsymbol{U}_{\boldsymbol{P S}, \boldsymbol{\Phi}}|\Psi\rangle & =\left(\begin{array}{cc}
+			1 & 0 \\
+			0 & e^{i \Phi}
+		\end{array}\right)\left(\begin{array}{l}
+			\alpha \\
+			\beta
+		\end{array}\right)=\left(\begin{array}{c}
+			\alpha \\
+			e^{i \Phi} \beta
+		\end{array}\right) \\
+		& =\alpha|0\rangle+e^{i \Phi} \beta|1\rangle
+	\end{aligned}$$
+\end{center}
+در بردار اصلی، $\alpha$ و $\beta$ اعداد مختلط می‌باشند؛ به همین دلیل این اعداد را می‌توان به به عنوان یک ضریب فاز معرفی کرد:
+
+ \begin{center}
+ 	$\alpha = e^{i\theta_{1} \vert\alpha\vert }, \beta = e^{i\theta_{2} \vert\beta\vert}$
+ \end{center}
+که در آن $\theta1$ و $\theta2$ به ترتیب فازهای $\alpha$ و $\beta$ هستند.
+
+بنابراین، اختلاف فاز آنها θ1 - θ2 است. با توجه به رفتارگیت تغییر فاز، تغییر فاز $\alpha$ صفر می‌باشد؛‌اما فاز β به Φ + θ2 تغییر می کند. بنابراین، خویشاوندان آنها فاز با Φ تغییر می کند. 
+
+\begin{center}
+	 This also explains why the phase shift is only applied to the
+	second basis state to be meaningful. If it is applied to both, there will be no change
+	in the phase difference.
+\end{center}
+
+ (1 0
 0 e iπ
 )
 =
 (1 0
 0-1
 )
-زیرا e iπ = cos π + i sin π = -1. و این فقط
-ماتریس σz، یکی از ماتریس های مهم پائولی. و به آن Z-gate نیز می گویند.
-گیت تغییر فاز فاز نسبی |0〉و |1〉 را با Φ تغییر می دهد. و به این ترتیب
-گیت Z فاز نسبی را با π تغییر می دهد. این باعث می شود Z-gate بسیار خاص باشد و بچرخد
-در مبنای |+〉 / |−〉، دروازه Z به عنوان یک دروازه NOT (دروازه X) عمل می کند. این ممکن است
-صدای گیج کننده بیایید به یاد بیاوریم که معنای دروازه NOT چیست. وقتی NOT
-گیت به حالت پایه اعمال می شود، حالت پایه به حالت پایه دیگر تبدیل می شود.
-از آنجایی که یک گیت 1 کیوبیتی است، تنها 2 بردار پایه وجود دارد. این به این معنی است که NOT
-گیت حالت پایه را به یکدیگر تبدیل می کند. به عنوان مثال، در فضای تشکیل شده توسط
-بردارهای پایه |0〉و |1〉، دروازه NOT |0〉 به |1〉 و بالعکس تبدیل می کند. از این رو،
-انتظار می رود یک دروازه NOT در فضای |+〉 / |−〉 |+〉 ​​به |−〉 و بالعکس تبدیل شود.
-اجازه دهید بررسی کنیم که آیا دروازه Z در مبنای |+〉 / |−〉 به عنوان یک گیت NOT رفتار می کند.
-16.10
-fig 16.2
+زیرا e iπ = cos π + i sin π = -1.
 
 
-می بینیم که گیت Z |+〉 را به |−〉 تبدیل می کند. در اینجا من از ماتریس استفاده نمی کنم
-نمایندگی. من از درک خود از Z-gate استفاده می کنم که تغییر فاز را اضافه می کند
-از π به ضریب حالت پایه دوم (یعنی |1〉). بنابراین، من فقط ضرب می کنم
-−1 تا |1〉. امیدوارم بتوانید آموزش خود را در مورد این مهارت شروع کنید زیرا چنین است
-درک و بینش برای شما مهم است که بتوانید کوانتومی جدید طراحی کنید
-الگوریتم ها ضرب ماتریس درست مانند شبیه سازی مدار است که باید
-اجازه دهید کامپیوتر این کار را انجام دهد. درک ماهیت دروازه درست مانند آنچه ما هستیم
-درک مدار آنالوگ از طریق بازرسی
-شکل 16.2 مدار یک گیت شیفت فاز و گیت Z را نشان می دهد
+
+ این ماتریس پائولی $ \sigma_{z}$ می‌باشد؛ که به آن Z-gate نیز می گویند. گیت تغییر فاز، فاز نسبی $vert 0 \rangle$و |1〉 را با Φ تغییر می دهد. و به این ترتیب گیت $Z$ فاز نسبی را با $\pi$ تغییر می دهد. 
+ 
+ 
+ 
 \subsection{Swap gate}
-یک گیت SWAP، همانطور که از نامش پیداست، اعداد را در حالت های پایه یک 2 کیوبیتی مبادله می کند.
-ثبت نام. اگر فقط حالت های پایه را در نظر بگیریم، معادل مبادله حالات است
-از دو الکترون تعریف این است
-16.1
+یک گیت SWAP اعداد را در حالت های پایه یک رجیستر 2 کیوبیتی جابجا می کند. اگر فقط حالت های پایه را در نظر بگیریم، معادل مبادله حالات دو الکترون است. این گیت به صورت  زیر تعریف می‌شود:
+\begin{center}
+	$U_{SWAP}   \vert ab\rangle = \vert ba \rangle$
+\end{center}
+که در آن a و b فقط اعداد کیوبیت اول و دوم در پایه هستند. a و b می‌توانند مقادیر 0 و 1 را اتخاذ کنند. بنابرین می‌توان نوشت:
+\begin{center}
+	$$\begin{aligned}
+		& U_{S W A P}|00\rangle=|00\rangle \\
+		& U_{S W A P}|01\rangle=|10\rangle \\
+		& U_{S W A P}|10\rangle=|01\rangle \\
+		& U_{S W A P}|11\rangle=|11\rangle
+	\end{aligned}$$
+\end{center}
 
-که در آن a و b فقط اعداد کیوبیت اول و دوم در پایه هستند
-ایالت ها به ترتیب. آنها می توانند 0 یا 1 باشند. ساده ترین راه برای به دست آوردن عمق بیشتر
-درک فقط برای وصل کردن همه حالت های پایه است و ما دریافت می کنیم
-16.2
 
 
-بنابراین، تنها |01〉 و |10〉 تحت SWAP (به یکدیگر) تغییر می کنند.
-عمل. برای |00〉 و |11〉، آنها بدون تغییر هستند زیرا "0" و "0" تعویض می شوند.
-یا "1" و "1" معادل انجام هیچ کاری است.
+
+بنابراین، تنها $\vert 01 \rangle$ و $\vert 10 \rangle$ تحت SWAP (به یکدیگر) تغییر می کنند.
+اعمال این گیت برای حالات $\vert 00 \rangle$ و $\vert 11 \rangle$، بدون اثر است؛ زیرا "0" و "0" یا "1" و "1" تعویض می‌شوند؛ که پیامد خاصی در پی ندارد.
 
 
 \subsubsection{نمایش ماتریسی گیت swap}
-16.3
-
-از این طریق می توانیم آن را درک کنیم. از آنجایی که این یک گیت 2 کیوبیتی برای عملیات است
-یک بردار در فضای چهار بعدی C4، ماتریس (اپراتور) باید 4 × 4 باشد.
-علاوه بر این، فقط حالت پایه دوم و سوم را مبادله می کند. بنابراین، تنها
-ردیف دوم و سوم با ماتریس هویت متفاوت هستند. بیایید امتحان کنیم
-مثال عددی
-16.4
+نمایش ماتریسی $U_{S W A P}$ به شکل زیر است:
+\begin{center}
+	$$U_{S W A P}=\left(\begin{array}{llll}
+		1 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 0 & 1
+	\end{array}\right)$$
+\end{center}
+\
+ از آنجایی که این یک گیت 2 کیوبیتی برای عملیات است یک بردار در فضای چهار بعدی $\mathbb{c}^4$، ماتریس (اپراتور) باید 4 × 4 باشد. علاوه بر این، فقط حالت پایه دوم و سوم را جابجا می کند. بنابراین، تنها ردیف دوم و سوم با ماتریس یکه متفاوت هستند. به طور مثال:
+\begin{center}
+	$$U_{S W A P}|10\rangle=\left(\begin{array}{llll}
+		1 & 0 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 0 & 1
+	\end{array}\right)\left(\begin{array}{l}
+		0 \\
+		0 \\
+		1 \\
+		0
+	\end{array}\right)=\left(\begin{array}{l}
+		0 \\
+		1 \\
+		0 \\
+		0
+	\end{array}\right)=|01\rangle$$
+\end{center}
 این رابطه‌ بصورت معکوس نیز برقرارست.
-\subsubsection{گیت swap در مدار و خصوصیات آن}
-به طور کلی، برای یک بردار 2 کیوبیتی، |Ψ 〉 = α |00〉 + β |01〉 + γ |10〉 + δ |11〉 داریم
 
-16.5
-fig16.1
+\subsubsection{گیت swap در مدار و خصوصیات آن}
+به طور کلی، برای یک بردار 2 کیوبیتی، نظیر $\vert \Psi \rangle=\alpha|00\rangle+\gamma|01\rangle+\beta|10\rangle+\delta|11\rangle$ داریم:
+
+\begin{center}
+	$$\begin{aligned}
+		\boldsymbol{U}_{\boldsymbol{SWAP}}|\Psi\rangle & =\left(\begin{array}{llll}
+			1 & 0 & 0 & 0 \\
+			0 & 0 & 1 & 0 \\
+			0 & 1 & 0 & 0 \\
+			0 & 0 & 0 & 1
+		\end{array}\right)\left(\begin{array}{l}
+			\alpha \\
+			\beta \\
+			\gamma \\
+			\delta
+		\end{array}\right)=\left(\begin{array}{l}
+			\alpha \\
+			\gamma \\
+			\beta \\
+			\delta
+		\end{array}\right) \\
+		\vspace{2cm}
+		& =\alpha|00\rangle+\gamma|01\rangle+\beta|10\rangle+\delta|11\rangle
+	\end{aligned}$$
+\end{center}
+
+
+
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=50mm,scale=0.5]{swap.png}
+	\caption{ نمایش گیت کوانتومی \lr{SWAP}}
+	\label{SWAP}
+\end{figure}
+
+
 
 همانطور که انتظار می رود، ضرایب حالت های پایه دوم و سوم با هم مبادله می شوند.
-شکل 16.1 مدار یک عملیات SWAP را نشان می دهد. توجه داشته باشید که دوباره کیوبیت پایین
-MSB است. همانطور که تاکید کردیم، یک مدار کوانتومی یک جریان را نشان می دهد
-زمان نه یک جریان سیگنال بنابراین، بر خلاف عملیات مبادله کلاسیک،
-اجرای یک گیت SWAP پیچیده است و به این سادگی نیست
-مدار را نشان می دهد برای انجام یک عملیات SWAP، باید مقداری خارجی صحیح اعمال کنیم
-پالس می کند تا حالت های دو اسپین الکترون مبادله شود.
-
-
-
-
-
-
-
-
-
+\newpage
 \section{مدار‌های کوانتومی}
 مدار‌های ‌کوانتومی\footnote{quantum circuit}، یک دسته از گیت ها‌ی کوانتومی،که با یک توالی بخصوص قرار گرفته اند، ‌می‌باشند. این کیوبیت ها، با توالی یاد شده، روی یک یا چند دسته کیوبیت، اثر داده ‌می‌شوند. 
 
@@ -637,18 +715,18 @@ MSB است. همانطور که تاکید کردیم، یک مدار کوانت
 	\label{fig:my_image}
 \end{figure}
 
+یکی دیگر از عملگر‌های مهم در مدار کوانتومی، عملگر اندازه‌گیری است. که در شکل زیر نشان داده شده است. همانطور که پیش از این بیان شد؛ در بردار حالت $\vert \Psi \rangle = \alpha \vert 0 \rangle + \beta \vert 1 \rangle$ هنگام مشاهده به یک حالت کلاسیکی رمبش می‌کند؛‌احتمال اینکه به حالت $\vert 0 \rangle$رمبش کند، $\vert \alpha \vert ^2$, و احتمال اینکه به حالت $\vert 1 \rangle$ رمبش کند، $\vert \beta \vert ^2$، می‌باشد.
 
-as shown in Figure 1.10. As previously described, this operation converts a single qubit
-state |ψ〉 = α|0〉 + β|1〉 into a probabilistic classical bit M (distinguished from a qubit by
-drawing it as a double-line wire), which is 0 with probability |α|2 , or 1 with probability
-|β|2 .
+ 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\linewidth, scale=0.5]{measurment.png}
+	\caption{نمایش‌های مختلف گیت CNOT در مدار کوانتومی}
+	\label{fig:my_image}
+\end{figure}
 
 
-fig1.10 L chuang book
-
-We shall find quantum circuits useful as models of all quantum processes, including
-but not limited to computation, communication, and even quantum noise. Several simple
-examples illustrate this below.
+مدار‌های کوانتومی مدلی بسیار سودمند برای شبیه‌سازی‌ فرآیندهای کوانتومی‌ است. این فرآیندها محدود به عملیات‌های محاسباتی نخواهد شد؛ بلکه در اغلب حوزه‌‌ها اعم از ارتباطات، اختلالات کوانتومی\footnote{quantum noise} و ... بکار‌خواهدرفت.
 \subsubsection{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}
 مدارهای کوانتومی مشابه مدارهای کلاسیک هستند، اما از دروازه های کوانتومی به جای دروازه های منطقی کلاسیک استفاده می کنند. دروازه های کوانتومی عملیات قابل برگشت هستند که می توانند برای دستکاری حالت کوانتومی یک کیوبیت استفاده شوند.
 
@@ -685,7 +763,7 @@ examples illustrate this below.
 		برگشت پذیری & قابل برگشت & برگشت ناپذیر \\
 		\hline
 	\end{tabular}
-	\caption{This is a table with 3 rows and 3 columns.}
+	\caption{شباهت‌ها و تفاوت های مدارهای کلاسیک و کوانتومی}
 \end{table}
 
 
@@ -1006,7 +1084,7 @@ $$
 	If the first qubit is measured to be $\vert 1 \rangle$, then the function f is balanced. This is because the state |ψ⟩ is parallel to the state $\vert 1 \rangle$, so the interference between the two states will constructively interfere.
 	
 	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} است.
-مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان superposition (|0〉 + |1〉)/√2 استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان superposition (|0〉 - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
+مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان superposition ($vert 0 \rangle$ + |1〉)/√2 استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان superposition ($vert 0 \rangle$ - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
 
 
 
@@ -1028,7 +1106,7 @@ $$
 \begin{center}
 $\left|\psi_1\right\rangle=\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
 \end{center}
-با کمی تأمل می‌توان دریافت که اگر Uf را به حالت |x〉(|0〉 - |1〉)/√2 اعمال کنیم، سپس به حالت (−1)f (x)|x〉(|0〉 - |1〉)/√2 می رسیم. بنابرین اعمال Uf به |ψ1〉 ما را با یکی از دو امکان زیر مواجه می کند:
+با کمی تأمل می‌توان دریافت که اگر Uf را به حالت |x〉($vert 0 \rangle$ - |1〉)/√2 اعمال کنیم، سپس به حالت (−1)f (x)|x〉($vert 0 \rangle$ - |1〉)/√2 می رسیم. بنابرین اعمال Uf به |ψ1〉 ما را با یکی از دو امکان زیر مواجه می کند:
 \begin{center}
 	$\left|\psi_2\right\rangle= \begin{cases} \pm\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
 \end{center}
@@ -1087,9 +1165,9 @@ can she succeed?
 	با توجه به الگوریتم دوچ، آلیس یک رجیستر n کیوبیتی را برای ذخیره پرس و جو خود آماده می کند و یک رجیستر کیوبیت واحد را که به باب می دهد تا پاسخ را در آن ذخیره کند. او هر دو رجیستر پرس و جو و پاسخ خود را در یک حالت برهمنهی آماده می کند. باب f(x) را با استفاده از موازی سازی کوانتومی ارزیابی می کند و نتیجه را به آلیس برمی گرداند. آلیس سپس با استفاده از اعمال تبدیل هادامارد روی رجیستر پرس و جو(n-کیوبیتی)، حالات برهمنهی تداخل می‌دهد و با انجام یک اندازه گیری مناسب، تعیین می کند که آیا f ثابت یا متعادل است.
 		
 	گام‌های خاص الگوریتم در شکل 1.20 نشان داده شده است. بیایید با دنبال کردن این مدار، به بررسی حالات ایجاد شده بپردازیم.
-	حالت ورودی |ψ0〉 = |0〉⊗n|1〉 (1.46)؛‌ شبیه حالت معادله (1.41) است، اما در اینجا رجیستر پرس و جو وضعیت n کیوبیت را توصیف می‌کند که همه در حالت |0〉 آماده شده‌اند. پس از اعمال تبدیل هامادارد روی رجیستر پرس و جو  و روی رجیستر پاسخ، می‌توان نوشت:
+	حالت ورودی |ψ0〉 = $vert 0 \rangle$⊗n|1〉 (1.46)؛‌ شبیه حالت معادله (1.41) است، اما در اینجا رجیستر پرس و جو وضعیت n کیوبیت را توصیف می‌کند که همه در حالت $vert 0 \rangle$ آماده شده‌اند. پس از اعمال تبدیل هامادارد روی رجیستر پرس و جو  و روی رجیستر پاسخ، می‌توان نوشت:
 	
-	|ψ1〉 = ∑x∈{0,1}n|x〉√2n[ |0〉 − |1〉√2]
+	|ψ1〉 = ∑x∈{0,1}n|x〉√2n[ $vert 0 \rangle$ − |1〉√2]
 	
 	
 	
@@ -1101,7 +1179,7 @@ can she succeed?
 	on a state |x〉. By checking the cases x = 0 and x = 1 separately we see that for a single
 	qubit H|x〉 = ∑
 	z (−1)xz |z〉/√2. Thus (1.49) This can be summarized more succinctly in the very useful equation(1.50) where x · z is the bitwise inner product of x and z, modulo 2. Using this equation
-	and (1.48) we can now evaluate |ψ3〉,(1.51) Alice now observes the query register. Note that the amplitude for the state |0〉⊗n is
+	and (1.48) we can now evaluate |ψ3〉,(1.51) Alice now observes the query register. Note that the amplitude for the state $vert 0 \rangle$⊗n is
 	∑
 	x(−1)f (x)/2n. 
 	
@@ -1124,7 +1202,7 @@ can she succeed?
 	
 	(1.51)
 	
-	آلیس اکنون رجیستر پرس و جو را مشاهده می کند. توجه داشته باشید که دامنه برای حالت |0〉⊗n است
+	آلیس اکنون رجیستر پرس و جو را مشاهده می کند. توجه داشته باشید که دامنه برای حالت $vert 0 \rangle$⊗n است
 	∑
 	x(−1)f (x)/2n.
 	
@@ -1135,22 +1213,22 @@ can she succeed?
 	\textbf{از استاد بپرس اشکاااااللللل}
 	
 	Let’s look at the two possible cases – f constant and f balanced – to
-	discern what happens. In the case where f is constant the amplitude for |0〉⊗n is +1 or
+	discern what happens. In the case where f is constant the amplitude for $vert 0 \rangle$⊗n is +1 or
 	−1, depending on the constant value f (x) takes. Because |ψ3〉 is of unit length it follows
 	that all the other amplitudes must be zero, and an observation will yield 0s for all qubits
 	in the query register. If f is balanced then the positive and negative contributions to the
-	amplitude for |0〉⊗n cancel, leaving an amplitude of zero, and a measurement must yield
+	amplitude for $vert 0 \rangle$⊗n cancel, leaving an amplitude of zero, and a measurement must yield
 	a result other than 0 on at least one qubit in the query register. Summarizing, if Alice measures all 0s then the function is constant; otherwise the function is balanced. The
 	Deutsch–Jozsa algorithm is summarized below.
 	
 	
 	بیایید به دو مورد ممکن - f ثابت و f متعادل - نگاه کنیم تا ببینیم چه اتفاقی می افتد.
 	
-	در صورتی که f ثابت باشد، دامنه برای حالت |0〉⊗n برابر است با +1 یا −1، بسته به مقدار ثابت f (x) که می‌گیرد.
+	در صورتی که f ثابت باشد، دامنه برای حالت $vert 0 \rangle$⊗n برابر است با +1 یا −1، بسته به مقدار ثابت f (x) که می‌گیرد.
 	
 	از آنجایی که |ψ3〉 طول واحد است، نتیجه می‌گیریم که تمام دامنه‌های دیگر باید صفر باشند، و یک مشاهده 0 را برای همه کیوبیت‌ها در رجیستر پرس و جو به همراه خواهد داشت.
 	
-	اگر f متعادل باشد، سهم مثبت و منفی دامنه برای |0〉⊗n خنثی می‌شود، و یک دامنه صفر باقی می‌ماند، و یک اندازه‌گیری باید نتیجه‌ای غیر از 0 را در حداقل یک کیوبیت در رجیستر پرس و جو به همراه داشته باشد.
+	اگر f متعادل باشد، سهم مثبت و منفی دامنه برای $vert 0 \rangle$⊗n خنثی می‌شود، و یک دامنه صفر باقی می‌ماند، و یک اندازه‌گیری باید نتیجه‌ای غیر از 0 را در حداقل یک کیوبیت در رجیستر پرس و جو به همراه داشته باشد.
 	
 	به طور خلاصه، اگر الی همه 0 را اندازه گیری کند، تابع ثابت است؛ در غیر این صورت تابع متعادل است.
 	
@@ -1168,20 +1246,20 @@ can she succeed?
 	Outputs: 0 if and only if f is constant.
 	Runtime: One evaluation of Uf . Always succeeds.
 	Procedure:
-	1. |0〉⊗n|1〉 initialize state
+	1. $vert 0 \rangle$⊗n|1〉 initialize state
 	2. → 1
 	√2n
 	2n −1∑
 	x=0
 	|x〉
-	[ |0〉 − |1〉
+	[ $vert 0 \rangle$ − |1〉
 	√2
 	] create superposition using
 	Hadamard gates
 	3. → ∑
 	x
 	(−1)f (x)|x〉
-	[ |0〉 − |1〉
+	[ $vert 0 \rangle$ − |1〉
 	√2
 	]
 	calculate function f using Uf
@@ -1191,7 +1269,7 @@ can she succeed?
 	x
 	(−1)x·z+f (x)|z〉
 	√2n
-	[ |0〉 − |1〉
+	[ $vert 0 \rangle$ − |1〉
 	√2
 	]
 	perform Hadamard transform
@@ -1217,10 +1295,10 @@ can she succeed?
 	زمان اجرا: یک ارزیابی Uf. همیشه موفق می شود.
 	روش:
 	
-	|0〉⊗n|1〉 حالت را initialize کنید
-	→ 1 √2n 2n −1∑ x=0 |x〉 [ |0〉 − |1〉 √2 ] ایجاد superposition با استفاده از دروازه‌های Hadamard
-	→ ∑ x (−1)f (x)|x〉 [ |0〉 − |1〉 √2 ] تابع f را با استفاده از Uf محاسبه کنید
-	→ ∑ z ∑ x (−1)x·z+f (x)|z〉 √2n [ |0〉 − |1〉 √2 ] تبدیل Hadamard را انجام دهید
+	$vert 0 \rangle$⊗n|1〉 حالت را initialize کنید
+	→ 1 √2n 2n −1∑ x=0 |x〉 [ $vert 0 \rangle$ − |1〉 √2 ] ایجاد superposition با استفاده از دروازه‌های Hadamard
+	→ ∑ x (−1)f (x)|x〉 [ $vert 0 \rangle$ − |1〉 √2 ] تابع f را با استفاده از Uf محاسبه کنید
+	→ ∑ z ∑ x (−1)x·z+f (x)|z〉 √2n [ $vert 0 \rangle$ − |1〉 √2 ] تبدیل Hadamard را انجام دهید
 	→ z اندازه گیری کنید تا خروجی نهایی z را بدست آورید ما نشان داده‌ایم که یک کامپیوتر کوانتومی می‌تواند مشکل Deutsch را با یک ارزیابی حل کند – ارزشیابی تابع f در مقایسه با نیاز کلاسیک برای 2n/2 + 1 ارزیابی. این به نظر چشمگیر است، اما چند نکته مهم وجود دارد. اول، مشکل Deutsch نیست یک مشکل مهم است؛ هیچ کاربرد شناخته شده ای ندارد. دوم، مقایسه بین الگوریتم های کلاسیک و کوانتومی تا حدودی مقایسه سیب و پرتقال است، زیرا روش برای ارزیابی تابع در دو مورد بسیار متفاوت است. سوم، اگر آلیس مجاز باشد از یک کامپیوتر کلاسیک احتمالی استفاده کند، سپس با درخواست از باب برای ارزیابی f (x) برای چند x به صورت تصادفی می تواند بسیار سریع تعیین کند با احتمال بالا اینکه f ثابت یا متعادل است. این سناریو احتمالی است شاید واقع بینانه تر از سناریوی determinstic که ما در نظر گرفته ایم. علیرغم این ظرافت ها، الگوریتم Deutsch–Jozsa حاوی بذرهای الگوریتم های کوانتومی بیشتر و چشمگیرتر است، و درک اصول پشت آن روشنگر است. عملکرد آن.
 	
 	
@@ -1461,9 +1539,9 @@ tion” emphasizes that the state assignment acquired by Bob’s Qbit no
 longer applies to Alice’s; it has been transported from her Qbit to his.
 Here is how teleportation works. Alice’s first Qbit and the entangled
 pair she shares with Bob are characterized by the 3-Qbit state
-%|ψ〉a |〉ab = (α|0〉a + β|1〉a
+%|ψ〉a |〉ab = (α$vert 0 \rangle$a + β|1〉a
 ) 1√2
-(|0〉a |0〉b + |1〉a |1〉b
+($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
 ), (6.21)
 where I have given the state symbols for the Qbits in Alice’s and Bob’s
 possession subscripts a and b . To teleport the unknown state of her
@@ -1471,50 +1549,50 @@ Qbit to Bob’s member of the entangled pair, Alice first applies a cNOT
 gate, using her first Qbit in the state |ψ〉 as the control and her member
 of the shared entangled pair as the target. This produces the 3-Qbit
 state
-α|0〉a 1√2
-(|0〉a |0〉b + |1〉a |1〉b
+α$vert 0 \rangle$a 1√2
+($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
 ) + β|1〉a 1√2
-(|1〉a |0〉b + |0〉a |1〉b
+(|1〉a $vert 0 \rangle$b + $vert 0 \rangle$a |1〉b
 ).
 (6.22)
 Next she applies a Hadamard transformation H to her first Qbit, giving
 all three Qbits the state
 α 1√2
-(|0〉a + |1〉a
+($vert 0 \rangle$a + |1〉a
 ) 1√2
-(|0〉a |0〉b + |1〉a |1〉b
+($vert 0 \rangle$a $vert 0 \rangle$b + |1〉a |1〉b
 )
 + β 1√2
-(|0〉a − |1〉a
+($vert 0 \rangle$a − |1〉a
 ) 1√2
-(|1〉a |0〉b + |0〉a |1〉b
+(|1〉a $vert 0 \rangle$b + $vert 0 \rangle$a |1〉b
 )
 = 1
-2 |0〉a |0〉a
-(α|0〉b + β|1〉b
+2 $vert 0 \rangle$a $vert 0 \rangle$a
+(α$vert 0 \rangle$b + β|1〉b
 ) + 1
-2 |1〉a |0〉a
-(α|0〉b − β|1〉b
+2 |1〉a $vert 0 \rangle$a
+(α$vert 0 \rangle$b − β|1〉b
 )
 + 1
-2 |0〉a |1〉a
-(α|1〉b + β|0〉b
+2 $vert 0 \rangle$a |1〉a
+(α|1〉b + β$vert 0 \rangle$b
 ) + 1
 2 |1〉a |1〉a
-(α|1〉b − β|0〉b
+(α|1〉b − β$vert 0 \rangle$b
 ). (6.23)
 Now Alice measures both Qbits in her possession. (As remarked
 in Section 6.4, such an application of cNOT and Hadamard gates,
 immediately followed by measurement gates, is called “measuring in
 the Bell basis.”) If the result is 00, Bob’s Qbit will indeed acquire the
 state |ψ〉 originally possessed by Alice’s first Qbit (whose state would
-then be reduced to |0〉). But if the result of Alice’s measurement is 10,
+then be reduced to $vert 0 \rangle$). But if the result of Alice’s measurement is 10,
 01, or 11 then the state of Bob’s Qbit becomes
-α|0〉b − β|1〉b , α|1〉b + β|0〉b , or α|1〉b − β|0〉b . (6.24)
+α$vert 0 \rangle$b − β|1〉b , α|1〉b + β$vert 0 \rangle$b , or α|1〉b − β$vert 0 \rangle$b . (6.24)
 In each of these three cases there is a unitary transformation that re-
 stores the state of Bob’s Qbit to Alice’s original state |ψ〉. In the first
-case we can apply Z (which leaves |0〉 alone but changes the sign of |1〉),
-in the second case, X (which interchanges |0〉 and |1〉), and in the third
+case we can apply Z (which leaves $vert 0 \rangle$ alone but changes the sign of |1〉),
+in the second case, X (which interchanges $vert 0 \rangle$ and |1〉), and in the third
 case, ZX.
 6 . 5 TE L E P O R T A T I O N 151
 So all Alice need do to transfer the state of her Qbit to Bob’s member
@@ -1540,13 +1618,13 @@ results of her two measurements) and the loss of the entanglement of their pair.
 
 
 
-But of course the teleportation process does not communicate to Bob the information that can be encoded in α and β. Bob is no more able to learn the values of α and β from manipulating his Qbit, now assigned the state |ψ〉, than Alice was able to do when it was her Qbit that was assigned the same state |ψ〉. On the other hand Alice’s state could be produced at a crucial stage of an elaborate quantum computation, and its transfer to Bob could enable him to continue with the computation on his own far-away quantum computer, s  one can achieve a nontrivial objective by such teleportations. Like dense coding, teleportation can also be constructed by manipulating an elementary classical circuit diagram, without going through any of the analysis in (6.21)–(6.24). Figure 6.5(a) shows a circuit that exchanges the state |ψ〉 = |x〉 of Alice’s Cbit with the state |0〉 of Bob’s Cbit, regardless of whether x = 0 or 1. The transfer is achieved by direct physical coupling between the two Cbits. As a linear quantum circuit it continues to perform this exchange for arbitrary superpositions, |ψ〉 = α|0〉 + β|1〉. The entire teleportation protocol can be constructed by appropriately expanding the two gates in Figure 6.5(a), with the aid of an ancillary Qbit. The aim of the expansion is to eliminate the direct interaction between Alice’s and Bob’s Qbits through the two cNOT gates in Figure 6.5(a), in favor of the telephoned message from Alice to Bob, and the interaction necessary to produce their shared pair of entangled Qbits (which can take place well before Alice has even acquired her Qbit in the state |ψ〉).
+But of course the teleportation process does not communicate to Bob the information that can be encoded in α and β. Bob is no more able to learn the values of α and β from manipulating his Qbit, now assigned the state |ψ〉, than Alice was able to do when it was her Qbit that was assigned the same state |ψ〉. On the other hand Alice’s state could be produced at a crucial stage of an elaborate quantum computation, and its transfer to Bob could enable him to continue with the computation on his own far-away quantum computer, s  one can achieve a nontrivial objective by such teleportations. Like dense coding, teleportation can also be constructed by manipulating an elementary classical circuit diagram, without going through any of the analysis in (6.21)–(6.24). Figure 6.5(a) shows a circuit that exchanges the state |ψ〉 = |x〉 of Alice’s Cbit with the state $vert 0 \rangle$ of Bob’s Cbit, regardless of whether x = 0 or 1. The transfer is achieved by direct physical coupling between the two Cbits. As a linear quantum circuit it continues to perform this exchange for arbitrary superpositions, |ψ〉 = α$vert 0 \rangle$ + β|1〉. The entire teleportation protocol can be constructed by appropriately expanding the two gates in Figure 6.5(a), with the aid of an ancillary Qbit. The aim of the expansion is to eliminate the direct interaction between Alice’s and Bob’s Qbits through the two cNOT gates in Figure 6.5(a), in favor of the telephoned message from Alice to Bob, and the interaction necessary to produce their shared pair of entangled Qbits (which can take place well before Alice has even acquired her Qbit in the state |ψ〉).
 
 
 
 
 
-%In Figure 6.5(b) an ancillary Qbit, not acted upon throughout the process, is introduced in the state |φ〉 = H|0〉 = 1√2 (|0〉 + |1〉). (6.25) In Figure 6.5(c) the identities X = HZH and 1 = HH have been used to rewrite the cNOT gate on the right of Figure 6.5(b), and an additional cNOT gate has been added on the left, which acts as the identity, since X acts as the identity on the state H|0〉. Figure 6.5(d) follows from Figure 6.5(c) because the action of CZ is independent of which Qbit is the control and which the target, and because the two cNOT gates on the left of Figure 6.5(c) have exactly the same action as the three cNOT gates on the left of Figure 6.5(d): acting on the computational basis, both sets of gates apply X on both of the bottom two wires if the state of the top wire is |1〉 and act as the identity if the state of the top wire is |0〉. Figure 6.5(e) follows from Figure 6.5(d) if we write the |φ〉 on the left of Figure 6.5(d) as H|0〉 and explicitly write the |0〉 on the right of Figure 6.5(d) as H|φ〉. But Figure 6.5(e) is an automated version of teleportation. To relate it to ordinary teleportation, introduce mea- surements of the upper two Qbits after the circuit of Figure 6.5(e) has acted, as in Figure 6.5(f). Their effect is to collapse the states of each of the two upper wires randomly and independently to |0〉 or |1〉. But as noted in Section 3.6, measurement of a control Qbit commutes with any operation controlled by that Qbit, so the measurement gates can be moved to the positions they occupy in Figure 6.5(g). Figure 6.5(g) is precisely the teleportation protocol. The two gates on the left transform the two lower Qbits into the entangled state (6.20). The subsequent applications to the top two Qbits of cNOT followed by H followed by two measurement gates are precisely Alice’s “measurement in the Bell basis.” Since Alice knows the outcomes of the measurements, she knows whether the subsequent cNOT and CZ gates will or will not act, and she can replace these physical couplings by a phone call to Bob telling him whether or not to apply X and/or Z directly to his own Qbit. Figure 6.6 demonstrates that entanglement can also be teleported. The figure reproduces parts (b), (e), and (g) of Figure 6.5 with three changes. (1) A bar representing n Qbits in the n-Qbit state |〉i has been added above each part of the figure. No operations act on these additional Qbits. (2) The state to be teleported has been given a subscript i so it is now one of several possible states |ψi 〉. (3) Because of the linearity of the unitary gates we may sum over the index i . The effect of the circuit is to transfer participation in the entangled state ∑ i |i 〉|ψi 〉 from the third wire from the bottom to the bottom wire. So even if Alice’s Qbit has no state of its own but is entangled with other Qbits, Alice can use the same protocol to teleport its role in the entangled state over to Bob’s Qbit. The result is that Bob’s Qbit becomes entangled in exactly the same way Alice’s was, and Alice’s Qbit becomes entirely unentangled.
+%In Figure 6.5(b) an ancillary Qbit, not acted upon throughout the process, is introduced in the state |φ〉 = H$vert 0 \rangle$ = 1√2 ($vert 0 \rangle$ + |1〉). (6.25) In Figure 6.5(c) the identities X = HZH and 1 = HH have been used to rewrite the cNOT gate on the right of Figure 6.5(b), and an additional cNOT gate has been added on the left, which acts as the identity, since X acts as the identity on the state H$vert 0 \rangle$. Figure 6.5(d) follows from Figure 6.5(c) because the action of CZ is independent of which Qbit is the control and which the target, and because the two cNOT gates on the left of Figure 6.5(c) have exactly the same action as the three cNOT gates on the left of Figure 6.5(d): acting on the computational basis, both sets of gates apply X on both of the bottom two wires if the state of the top wire is |1〉 and act as the identity if the state of the top wire is $vert 0 \rangle$. Figure 6.5(e) follows from Figure 6.5(d) if we write the |φ〉 on the left of Figure 6.5(d) as H$vert 0 \rangle$ and explicitly write the $vert 0 \rangle$ on the right of Figure 6.5(d) as H|φ〉. But Figure 6.5(e) is an automated version of teleportation. To relate it to ordinary teleportation, introduce mea- surements of the upper two Qbits after the circuit of Figure 6.5(e) has acted, as in Figure 6.5(f). Their effect is to collapse the states of each of the two upper wires randomly and independently to $vert 0 \rangle$ or |1〉. But as noted in Section 3.6, measurement of a control Qbit commutes with any operation controlled by that Qbit, so the measurement gates can be moved to the positions they occupy in Figure 6.5(g). Figure 6.5(g) is precisely the teleportation protocol. The two gates on the left transform the two lower Qbits into the entangled state (6.20). The subsequent applications to the top two Qbits of cNOT followed by H followed by two measurement gates are precisely Alice’s “measurement in the Bell basis.” Since Alice knows the outcomes of the measurements, she knows whether the subsequent cNOT and CZ gates will or will not act, and she can replace these physical couplings by a phone call to Bob telling him whether or not to apply X and/or Z directly to his own Qbit. Figure 6.6 demonstrates that entanglement can also be teleported. The figure reproduces parts (b), (e), and (g) of Figure 6.5 with three changes. (1) A bar representing n Qbits in the n-Qbit state |〉i has been added above each part of the figure. No operations act on these additional Qbits. (2) The state to be teleported has been given a subscript i so it is now one of several possible states |ψi 〉. (3) Because of the linearity of the unitary gates we may sum over the index i . The effect of the circuit is to transfer participation in the entangled state ∑ i |i 〉|ψi 〉 from the third wire from the bottom to the bottom wire. So even if Alice’s Qbit has no state of its own but is entangled with other Qbits, Alice can use the same protocol to teleport its role in the entangled state over to Bob’s Qbit. The result is that Bob’s Qbit becomes entangled in exactly the same way Alice’s was, and Alice’s Qbit becomes entirely unentangled.
 1
 \newpage
 how to determine a oracle\\
