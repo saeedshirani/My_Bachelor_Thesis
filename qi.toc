@@ -22,21 +22,35 @@
 \contentsline {paragraph}{عملیات}{23}{}%
 \contentsline {subsection}{\numberline {1.4.1}نحوه‌ی نمایش مدار‌های کوانتومی}{24}{}%
 \contentsline {chapter}{\numberline {2}برنامه‌نویسی کوانتومی}{25}{}%
-\contentsline {section}{\numberline {2.1}تفاوت کامپیوتر کلاسیک و کوانتومی}{25}{}%
-\contentsline {section}{\numberline {2.2}comp vs simulation}{26}{}%
+\contentsline {section}{\numberline {2.1}کامپیوترهای کوانتومی در مقابل کامپیوترهای کلاسیک}{25}{}%
+\contentsline {paragraph}{رمزنگاری}{26}{}%
+\contentsline {paragraph}{شبیه‌سازی مواد در علم شیمی}{26}{}%
+\contentsline {paragraph}{یادگیری ماشینی}{26}{}%
+\contentsline {section}{\numberline {2.2}شبیه‌سازی کلاسیک در مقابل کامپیوتر کوانتومی}{26}{}%
 \contentsline {subsection}{\numberline {2.2.1}تفاوت کامپیوترهای کوانتومی و شبیه‌سازهای کلاسیک}{27}{}%
-\contentsline {section}{\numberline {2.3}IBM Quantum computer and Qiskit}{29}{}%
-\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{31}{}%
-\contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{31}{}%
-\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{35}{}%
-\contentsline {section}{\numberline {3.2}مدل کوئری}{35}{}%
-\contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{36}{}%
-\contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{36}{}%
-\contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{37}{}%
-\contentsline {section}{\numberline {3.4}الگوریتم دوچ - جوزا}{40}{}%
-\contentsline {section}{\numberline {3.5}ساخت یک اوراکل کوانتومی}{45}{}%
-\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{47}{}%
-\contentsline {section}{\numberline {4.1}Bell states}{47}{}%
-\contentsline {section}{\numberline {4.2}entanglement}{49}{}%
-\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{51}{}%
-\contentsline {section}{\numberline {4.4}دوربری}{54}{}%
+\contentsline {paragraph}{دما}{27}{}%
+\contentsline {paragraph}{برخورد}{27}{}%
+\contentsline {paragraph}{تابش الکترومغناطیسی}{28}{}%
+\contentsline {paragraph}{سردسازی کیوبیت‌ها}{28}{}%
+\contentsline {paragraph}{استفاده از مواد با همدوسی بالا}{28}{}%
+\contentsline {paragraph}{توسعه‌ی الگوریتم‌های جایگزین برای تصحیح خطای‌‌کوانتومی}{28}{}%
+\contentsline {section}{\numberline {2.3}شبیه‌سازی کلاسیک}{28}{}%
+\contentsline {section}{\numberline {2.4}کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}{29}{}%
+\contentsline {subsection}{\numberline {2.4.1}معرفی QisKit}{29}{}%
+\contentsline {subsection}{\numberline {2.4.2}کدنویسی به زبان QisKit}{29}{}%
+\contentsline {subsection}{\numberline {2.4.3}قواعد نوشتاری و ساختار داده}{29}{}%
+\contentsline {subsection}{\numberline {2.4.4}پیاده‌سازی گیت‌های کوانتومی}{30}{}%
+\contentsline {subsection}{\numberline {2.4.5}تصویر سازی}{31}{}%
+\contentsline {chapter}{\numberline {3}الگوریتم‌های‌کوانتومی‌}{33}{}%
+\contentsline {section}{\numberline {3.1}موازی سازی کوانتومی}{33}{}%
+\contentsline {subsection}{\numberline {3.1.1}مدل محاسباتی استاندارد}{37}{}%
+\contentsline {section}{\numberline {3.2}مدل کوئری}{37}{}%
+\contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{38}{}%
+\contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{38}{}%
+\contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{39}{}%
+\contentsline {section}{\numberline {3.4}ساخت یک اوراکل کوانتومی}{42}{}%
+\contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{45}{}%
+\contentsline {section}{\numberline {4.1}Bell states}{45}{}%
+\contentsline {section}{\numberline {4.2}entanglement}{47}{}%
+\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{49}{}%
+\contentsline {section}{\numberline {4.4}دوربری}{52}{}%
