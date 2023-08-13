@@ -1226,7 +1226,7 @@ $$
 	If the first qubit is measured to be $\vert 1 \rangle$, then the function f is balanced. This is because the state |ψ⟩ is parallel to the state $\vert 1 \rangle$, so the interference between the two states will constructively interfere.
 	
 	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} است.
-مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان superposition ($vert 0 \rangle$ + |1〉)/√2 استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان superposition ($vert 0 \rangle$ - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
+مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان برهمنهی ($vert 0 \rangle$ + |1〉)/√2 استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان بهرهمنهی ($vert 0 \rangle$ - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
 
 
 
@@ -1279,67 +1279,6 @@ $$
 این مثال تفاوت بین موازی‌سازی کوانتومی و الگوریتم‌های تصادفی کلاسیک را برجسته می‌کند. به سادگی، ممکن است تصور شود که حالت $\vert0\rangle \vert f(0) \rangle + \vert1\rangle \vert f(1) \rangle$ مطابقت نزدیکی با یک رایانه کلاسیک تصادفی دارد که هرکدام از حالات $ f (0)$ یا$ f (1) $ با احتمال $1/2$ اندازه‌گیری می‌کند.
 تفاوت این است که در یک رایانه کلاسیک این دو گزینه همیشه یکدیگر را حذف می‌کنند. در یک رایانه کوانتومی، امکان دارد که دو گزینه با یکدیگر تداخل داشته باشند تا برخی از خواص کلی تابع $f$ را با استفاده از چیزی شبیه به گیت هادامارد برای بازترکیب گزینه‌های مختلف، مانند آنچه در الگوریتم دوچ انجام شد، به دست آورند.
 اساس طراحی بسیاری از الگوریتم‌های کوانتومی این است که یک انتخاب هوشمندانه از تابع و تبدیل نهایی اجازه می‌دهد تا اطلاعات جهانی مفیدی در مورد تابع تعیین شود - اطلاعاتی که نمی‌توان به سرعت در یک رایانه کلاسیک به دست آورد.
-
-
-	
-\section{ساخت یک اوراکل کوانتومی}
-بیایید راه های مختلفی را ببینیم که می توانیم یک اوراکل کوانتومی ایجاد کنیم.
-
-برای یک تابع ثابت، ساده است:
-
-اگر f(x) = 0، گیت را به کیوبیت در رجیستر 2 اعمال کنید.
-اگر f(x) = 1، گیت را به کیوبیت در رجیستر 2 اعمال کنید.
-
-برای تابع متعادل، مدارهای مختلفی می توانیم ایجاد کنیم. یکی از راه‌هایی که می‌توان متوازن بودن مدار خود ایجاد کرد؛ اعمال یک CNOT برای هر کیوبیت در رجیستر 1، با کیوبیت موجود در رجیستر 2 به عنوان هدف است. مثلا:
-
-\begin{center}
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width=0.8\textwidth]{oraclecon.png}
-		\caption{}
-	\end{figure}
-\end{center}
-
-
-
-
-در تصویر بالا، سه کیوبیت بالا، رجیستر ورودی را تشکیل می دهند و کیوبیت پایین، ثبات خروجی است. در جدول زیر می‌توانیم ببینیم کدام حالت‌های ورودی کدام خروجی را می‌دهند:
-\begin{table}[h]
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		حالاتی ورودی که به خروجی صفر منجر می‌شوند &  حالاتی ورودی که به خروجی صفر منجر می‌شوند \\ \hline
-		000 & 001 \\ \hline
-		011 & 100 \\ \hline
-		101 & 010 \\ \hline
-		110 & 111 \\ \hline
-	\end{tabular}
-	\caption{This is a simple table.}
-\end{table}
-ما می توانیم نتایج را تغییر دهیم و در عین حال تعادل آنها را با قرار دادن کنترل های انتخاب شده در X-Gates حفظ کنیم. برای مثال، مدار و جدول نتایج آن را در زیر ببینید:
-\begin{center}
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[width=0.8\textwidth]{oraclebalance.png}
-		\caption{}
-	\end{figure}
-\end{center}
-
-
-\begin{table}[h]
-	\centering
-	\begin{tabular}{|c|c|}
-		\hline
-		حالاتی ورودی که به خروجی صفر منجر می‌شوند &  حالاتی ورودی که به خروجی صفر منجر می‌شوند \\ \hline
-		001 & 000 \\ \hline
-		010 & 011 \\ \hline
-		100 & 101 \\ \hline
-		111 & 110 \\ \hline
-	\end{tabular}
-	\caption{This is a simple table.}
-\end{table}
-
-
 
 
 % implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
@@ -1504,22 +1443,18 @@ $$\begin{aligned}
 پروتکل رمزگذاری متراکم؛ یک مثال عالی از قدرت مکانیک کوانتوم در انتقال اطلاعات است. این پروتکل نشان می‌دهد که می‌توان با استفاده از قوانین مکانیک کوانتوم، اطلاعات را به روش‌های غیرممکن در فیزیک کلاسیک انتقال داد.
 \newpage
 \section{دوربری}
+دوربری کوانتومی تکنیکی برای جابجایی حالات کوانتومی به نقاط دیگر است. در اینجا نحوه عملکرد دوربری کوانتومی آمده است:
 
-We will now apply the techniques of the last few pages to understand something nontrivial, surprising, and a lot of fun – quantum teleportation! Quantum teleportation is a technique for moving quantum states around, even in the absence of a quantum communications channel linking the sender of the quantum state to the recipient. Here’s how quantum teleportation works.
-اکنون تکنیک‌های چند صفحه آخر را برای درک چیزی غیر پیش پا افتاده، شگفت‌انگیز و بسیار سرگرم‌کننده - دوربری کوانتومی - به کار می‌گیریم! تله پورت کوانتومی تکنیکی برای جابجایی حالات کوانتومی به اطراف است، حتی در غیاب کانال ارتباطی کوانتومی که فرستنده حالت کوانتومی را به گیرنده متصل می کند. در اینجا نحوه عملکرد دوربری کوانتومی آمده است.
-
-
- Alice and Bob met long ago but now live far apart. While together they generated an EPR pair, each taking one qubit of the EPR pair when they separated. Many years later, Bob is in hiding, and Alice’s mission, should she choose to accept it, is to deliver a qubit |ψ〉 to Bob. She does not know the state of the qubit, and moreover can only send classical information to Bob. Should Alice accept the mission?
- آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت |ψ〉 به باب است. او وضعیت کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟
+ آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت $\vert \Psi \rangle$ به باب است. او وضعیت  و خصوصیات کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟
 
 
 Intuitively, things look pretty bad for Alice. She doesn’t know the state |ψ〉 of the qubit she has to send to Bob, and the laws of quantum mechanics prevent her from determining the state when she only has a single copy of |ψ〉 in her possession. What’s worse, even if she did know the state |ψ〉, describing it precisely takes an infinite amount of classical information since |ψ〉 takes values in a continuous space.
-به طور شهودی، همه چیز برای آلیس بسیار بد به نظر می رسد. او وضعیت |ψ〉 کیوبیتی را که باید برای باب بفرستد نمی داند، و قوانین مکانیک کوانتومی او را از تعیین وضعیت زمانی که فقط یک کپی از |ψ〉 در اختیار دارد، باز می دارد. بدتر از آن، حتی اگر او حالت |ψ〉 را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا |ψ〉 مقادیری را در یک فضای پیوسته می گیرد.
+به طور شهودی، تمام شرایط علیه آلیس است. او وضعیت $\vert \Psi \rangle$ کیوبیتی را که باید برای باب بفرستد نمی داند، و طبق قوانین مکانیک کوانتومی، او حق تعیین وضعیت $\vert \Psi \rangle$ را ندارد؛‌زیرا فقط یک نسخه در اختیار دارد، باز می دارد. بدتر از آن، حتی اگر او حالت $\vert \Psi \rangle$ را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا $\vert \Psi \rangle$ مقادیری را در یک فضای پیوسته می گیرد.
 
  So even if she did know |ψ〉, it would take forever for Alice to describe the state to Bob. It’s not looking
 good for Alice. Fortunately for Alice, quantum teleportation is a way of utilizing the entangled EPR pair in order to send |ψ〉 to Bob, with only a small overhead of classical communication.
 
-بنابراین حتی اگر او |ψ〉 را می دانست، برای آلیس تا ابد طول می کشید تا وضعیت را برای باب توصیف کند. نگاه نمی کند برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از جفت EPR درهم تنیده به منظور ارسال |ψ〉 به باب، تنها با سربار کوچکی از ارتباطات کلاسیک است.
+بنابراین حتی اگر او $\vert \Psi \rangle$ را می دانست، برای آلیس تا ابد طول می کشید تا وضعیت را برای باب توصیف کند. نگاه نمی کند برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از جفت EPR درهم تنیده به منظور ارسال $\vert \Psi \rangle$ به باب، تنها با سربار کوچکی از ارتباطات کلاسیک است.
 
 
 In outline, the steps of the solution are as follows: Alice interacts the qubit |ψ〉 with
