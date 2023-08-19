@@ -1445,132 +1445,101 @@ $$\begin{aligned}
 \section{دوربری}
 دوربری کوانتومی تکنیکی برای جابجایی حالات کوانتومی به نقاط دیگر است. در اینجا نحوه عملکرد دوربری کوانتومی آمده است:
 
- آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت $\vert \Psi \rangle$ به باب است. او وضعیت  و خصوصیات کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟
+ آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت $\vert \Psi \rangle$ به باب است. او وضعیت  و خصوصیات کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟\\
 
 
-Intuitively, things look pretty bad for Alice. She doesn’t know the state |ψ〉 of the qubit she has to send to Bob, and the laws of quantum mechanics prevent her from determining the state when she only has a single copy of |ψ〉 in her possession. What’s worse, even if she did know the state |ψ〉, describing it precisely takes an infinite amount of classical information since |ψ〉 takes values in a continuous space.
-به طور شهودی، تمام شرایط علیه آلیس است. او وضعیت $\vert \Psi \rangle$ کیوبیتی را که باید برای باب بفرستد نمی داند، و طبق قوانین مکانیک کوانتومی، او حق تعیین وضعیت $\vert \Psi \rangle$ را ندارد؛‌زیرا فقط یک نسخه در اختیار دارد، باز می دارد. بدتر از آن، حتی اگر او حالت $\vert \Psi \rangle$ را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا $\vert \Psi \rangle$ مقادیری را در یک فضای پیوسته می گیرد.
+درظاهر، تمام شرایط علیه آلیس است. او وضعیت $\vert \Psi \rangle$ کیوبیتی را که باید برای باب بفرستد نمی داند، و طبق قوانین مکانیک کوانتومی، او حق تعیین وضعیت $\vert \Psi \rangle$ را ندارد؛‌زیرا فقط یک نسخه از جفت کیوبیت را در اختیار دارد. به علاوه، حتی اگر او حالت $\vert \Psi \rangle$ را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا $\vert \Psi \rangle$ مقادیری را در یک فضای پیوسته می گیرد.
 
- So even if she did know |ψ〉, it would take forever for Alice to describe the state to Bob. It’s not looking
-good for Alice. Fortunately for Alice, quantum teleportation is a way of utilizing the entangled EPR pair in order to send |ψ〉 to Bob, with only a small overhead of classical communication.
+بنابراین حتی اگر او $\vert \Psi \rangle$ را می دانست، برای آلیس تا ابد طول می کشید تا وضعیت را برای باب توصیف کند. دوربری کوانتومی راهی برای استفاده از جفت EPR درهم تنیده به منظور ارسال $\vert \Psi \rangle$ به باب، تنها با سربار کوچکی از ارتباطات کلاسیک است. این مسأله وضعیت را برای آلیس تغییر می‌دهد.
 
-بنابراین حتی اگر او $\vert \Psi \rangle$ را می دانست، برای آلیس تا ابد طول می کشید تا وضعیت را برای باب توصیف کند. نگاه نمی کند برای آلیس خوبه خوشبختانه برای آلیس، انتقال از راه دور کوانتومی راهی برای استفاده از جفت EPR درهم تنیده به منظور ارسال $\vert \Psi \rangle$ به باب، تنها با سربار کوچکی از ارتباطات کلاسیک است.
-
-
-In outline, the steps of the solution are as follows: Alice interacts the qubit |ψ〉 with
-her half of the EPR pair, and then measures the two qubits in her possession, obtaining
-one of four possible classical results, 00, 01, 10, and 11. She sends this information to
-Bob. 
-
-به طور کلی، مراحل حل به شرح زیر است: آلیس با کیوبیت |ψ〉 با
-نصف او از جفت EPR، و سپس دو کیوبیت در اختیارش را اندازه گیری می کند و به دست می آورد
-یکی از چهار نتیجه کلاسیک ممکن، 00، 01، 10، و 11. او این اطلاعات را به
-باب
+به طور کلی، مراحل حل به شرح زیر است: آلیس با کیوبیت $\vert \Psi \rangle$ با یک کیوبیت خود از جفت EPR، و سپس دو کیوبیت در اختیارش را اندازه گیری می کند و یکی از چهار نتیجه کلاسیک ممکن
+، 00، 01، 10، 11 را بدست می‌آورد. درنهایت او این اطلاعات را به باب ارسال می‌کند.
 
 
-Depending on Alice’s classical message, Bob performs one of four operations on his
-half of the EPR pair. Amazingly, by doing this he can recover the original state |ψ〉!
-The quantum circuit shown in Figure 1.13 gives a more precise description of quantum
-teleportation. The state to be teleported is |ψ〉 = α|0〉+β|1〉, where α and β are unknown
-amplitudes. The state input into the circuit |ψ0〉 is
+ بسته به پیام کلاسیک آلیس، باب یکی از چهار عملگر جدول زیر را روی کیوبیت $EPR$ خود اعمال می‌کند.
+ به طرز شگفت انگیزی، با انجام این کار او می تواند حالت اولیه را بازیابی کند $\vert \Psi \rangle$! مدار کوانتومی نشان داده شده در شکل زیر توصیف دقیق تری از دوربری کوانتومی ارائه می دهد.
+دوربری حالتی که باید از راه دور منتقل شود عبارت است از $\vert \Psi \rangle = \alpha \vert 0 \rangle + \beta \vert 1 \rangle$ که $\alpha$ و $\beta$ ناشناخته هستند.
 
-بسته به پیام کلاسیک آلیس، باب یکی از چهار عمل خود را انجام می دهد
-نیمی از جفت EPR. به طرز شگفت انگیزی، با انجام این کار او می تواند حالت اولیه را بازیابی کند |ψ〉!
-مدار کوانتومی نشان داده شده در شکل 1.13 توصیف دقیق تری از کوانتوم ارائه می دهد
-دوربری حالتی که باید از راه دور منتقل شود عبارت است از |ψ〉 = α|0〉+β|1〉 که α و β ناشناخته هستند.
-دامنه ها حالت ورودی مدار |ψ0〉 است
+\begin{center}
+	$$\left.\left|\psi_0\right\rangle=|\psi\rangle\right\rangle\left|\beta_{00}\right\rangle$$
+\end{center}
 
 
-1.28
 
 fig 1.13
-1.29
 
 
-where we use the convention that the first two qubits (on the left) belong to Alice, and
-the third qubit to Bob. As we explained previously, Alice’s second qubit and Bob’s qubit
-start out in an EPR state. Alice sends her qubits through a gate, obtaining
-که در آن از این قرارداد استفاده می کنیم که دو کیوبیت اول (در سمت چپ) متعلق به آلیس هستند و
-کیوبیت سوم به باب. همانطور که قبلا توضیح دادیم، کیوبیت دوم آلیس و کیوبیت باب
-در حالت EPR شروع کنید. آلیس کیوبیت های خود را از طریق دروازه می فرستد و به دست می آورد
-
-1.30
 
 
-She then sends the first qubit through a Hadamard gate, obtaining
-سپس اولین کیوبیت را از طریق دروازه هادامارد می فرستد و به دست می آورد
+\begin{center}
+	$$=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|00\rangle+|11\rangle)]$$
+\end{center}
 
-1.31
+جایی که ما از این قاعده استفاده می کنیم که دو کوبیت اول (در سمت چپ) متعلق به آلیس هستند و
+کوبیت سوم متعلق به باب است. همانطور که قبلا توضیح دادیم ، کوبیت دوم آلیس و کوبیت باب
+در یک حالت EPR شروع می شوند. آلیس یک گیت $CNOT$ را روی کیوبیت‌های خود اثر می‌دهد. از این رو:
 
 
-This state may be re-written in the following way, simply by regrouping terms:
+\begin{center}
+	$$\left|\psi_1\right\rangle=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|10\rangle+|01\rangle)]$$
+\end{center}
+
+سپس گیت هادامارد را روی اولین کیوبیت اثر می‌دهد و به دست می آورد:
+
+\begin{center}
+	$$\left|\psi_2\right\rangle=\frac{1}{2}[\alpha(|0\rangle+|1\rangle)(|00\rangle+|11\rangle)+\beta(|0\rangle-|1\rangle)(|10\rangle+|01\rangle)]$$
+\end{center}
+
 این حالت را می توان به روش زیر بازنویسی کرد، به سادگی با گروه بندی مجدد عبارات:
 
-1.32
+\begin{center}
+	$$\begin{aligned}
+		\left|\psi_2\right\rangle= & \frac{1}{2}[|00\rangle(\alpha|0\rangle+\beta|1\rangle)+|01\rangle(\alpha|1\rangle+\beta|0\rangle) \\
+		& +|10\rangle(\alpha|0\rangle-\beta|1\rangle)+|11\rangle(\alpha|1\rangle-\beta|0\rangle)]
+	\end{aligned}$$
+\end{center}
 
 
-This expression naturally breaks down into four terms. The first term has Alice’s qubits
-in the state |00〉, and Bob’s qubit in the state α|0〉 + β|1〉 – which is the original state
-|ψ〉. If Alice performs a measurement and obtains the result 00 then Bob’s system will
-be in the state |ψ〉. Similarly, from the previous expression we can read off Bob’s post-
-measurement state, given the result of Alice’s measurement:
 این عبارت به طور طبیعی به چهار اصطلاح تقسیم می شود. عبارت اول دارای کیوبیت های آلیس است
-در حالت |00〉 و کیوبیت باب در حالت α|0〉 + β|1〉 - که حالت اصلی است.
-|ψ〉. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، سیستم باب این کار را انجام می دهد
-در حالت بودن |ψ〉. به طور مشابه، از عبارت قبلی می‌توانیم پست باب را بخوانیم
-حالت اندازه گیری، با توجه به نتیجه اندازه گیری آلیس:
+در حالت $\vert 00 \rangle$ و کیوبیت باب، که بیانگر حالت اصلی $\vert \Psi \rangle$ است؛ در حالت     $\alpha \vert 0 \rangle + \beta \ vert 1 \rangle$  قرار دارد.
+
+
+. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، آنگاه کیوبیت باب دقیقا همان $\vert \Psi \rangle$ می‌باشد.
+
+
+ به طور مشابه:
+\begin{center}
+	$$\begin{aligned}
+		00 \longmapsto\left|\psi_3(00)\right\rangle & \equiv[\alpha|0\rangle+\beta|1\rangle] \\
+		01 \longmapsto\left|\psi_3(01)\right\rangle & \equiv[\alpha|1\rangle+\beta|0\rangle] \\
+		10 \longmapsto\left|\psi_3(10)\right\rangle & \equiv[\alpha|0\rangle-\beta|1\rangle] \\
+		11 \longmapsto\left|\psi_3(11)\right\rangle & \equiv[\alpha|1\rangle-\beta|0\rangle]
+	\end{aligned}$$
+\end{center}
+
+بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این چهار حالت ممکن قرار خواهد گرفت. البته، برای پیدا کردن حالت کیوبیت، باید نتیجه اندازه‌گیری آلیس را به باب اعلام کرد.
+کمی پیش‌‌تر نشان خواهیم داد که همین وضعیت مانع از استفاده از دوربری برای انتقال اطلاعات با سرعتی، سریع‌تر ازسرعت نور می‌شود.
 
 
 
-1.33 - 1.36
+هنگامی که باب نتیجه اندازه گیری را فهمید، باب می تواند حالت کیوبیت خود را «تثبیت» کند و با استفاده از گیت کوانتومی مناسب، $\vert \Psi \rangle$ را بازیابی کند. به عنوان مثال، در موردی که اندازه گیری نتیجه‌ی 00 را نشان می دهد، باب نیازی به انجام کاری ندارد. اگر نتیجه‌ی اندازه گیری 01 باشد، باب می تواند حالت کیوبیت خود را با اعمال دروازه X اصلاح کند.
+
+اگر نتیجه‌ی اندازه گیری 10 باشد، باب می تواند حالت کیوبیت خود را با استفاده از گیت Z ثابت کند. اگر اندازه‌گیری 11 باشد، باب می‌تواند با اعمال ابتدا یک X و سپس یک گیت Z حالت کیوبیت خود را اصلاح کند. به طور خلاصه، باب باید تبدیل $  ZM1 XM2$ را در کیوبیت خوداعمال کند \footnote{توجه داشته باشید که چگونه زمان در نمودارهای مدار از چپ به راست می‌گذرد، اما در عملیات‌های ماتریسی سمت راست اول اتفاق می‌افتد}؛ و بدین طریق او می‌تواند حالت $\vert \Psi \rangle$ را بازیابی می‌کند. 
+
+با مطرح کردن مفهوم تلپورت کوانتومی، سوالات زیادی مطرح می‌شود. در اینجا به تعدادی از متداول ترین سوالات مطرح کرده و پاسخ می‌دهیم:
+
+\textbf{سوال اول} \\
+آیا دوربری به فرد اجازه نمی‌دهد حالت‌های کوانتومی را سریع‌تر از نور منتقل کند؟ این امر بسیار جذاب و شگرف است؛ زیرا تئوری نسبیت نشان می دهد که انتقال اطلاعات سریعتر از نور می تواند برای ارسال اطلاعات به عقب در زمان استفاده شود. دوربری کوانتومی ارتباط سریع‌تر از سرعت نور را امکان‌پذیر نمی‌کند، زیرا برای تکمیل دوربری، آلیس باید نتیجه اندازه‌گیری خود را از طریق یک کانال ارتباطی کلاسیک به باب منتقل کند.
+
+می‌توان نشان داد؛ که بدون این کانال ارتباطی کلاسیک، دوربری توان انتقال هیچ اطلاعاتی را ندارد.
+
+کانال ارتباط کلاسیک با سرعت نور محدود می شود، بنابراین می‌توان نتیجه گرفت که تله پورت کوانتومی نمی تواند سریعتر از سرعت نور انجام شود و این تناقض ظاهری را حل می‌شود. \\
 
 
-Depending on Alice’s measurement outcome, Bob’s qubit will end up in one of these four possible states. Of course, to know which state it is in, Bob must be told the result of Alice’s measurement – we will show later that it is this fact which prevents teleportation from being used to transmit information faster than light.
+\textbf{سوال دوم}\\
+در فرآیند دوربری به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می‌شود؛ در حالی که آشکارا قضیه عدم شبیه سازی\footnote{No cloning theorem} مورد بحث نقض می کند.
 
-بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این چهار حالت ممکن ختم می شود. البته، برای اینکه بدانیم در کدام حالت قرار دارد، باید نتیجه اندازه‌گیری آلیس را به باب گفت - بعداً نشان خواهیم داد که این واقعیت است که مانع از استفاده از دوربری برای انتقال اطلاعات سریع‌تر از نور می‌شود.
-
-
- Once Bob has learned the measurement outcome, Bob can ‘fix up’ his state, recovering |ψ〉, by applying the appropriate quantum gate. For example, in the case where the measurement yields 00, Bob doesn’t need to do anything. If the measurement is 01 then Bob can fix up his state by applyingthe X gate. 
-
-
-هنگامی که باب نتیجه اندازه گیری را یاد گرفت، باب می تواند حالت خود را «تثبیت» کند و با استفاده از گیت کوانتومی مناسب، |ψ〉 را بازیابی کند. به عنوان مثال، در موردی که اندازه گیری 00 را نشان می دهد، باب نیازی به انجام کاری ندارد. اگر اندازه گیری 01 باشد، باب می تواند وضعیت خود را با اعمال دروازه X اصلاح کند.
-
-If the measurement is 10 then Bob can fix up his state by applying the Z gate. If the measurement is 11 then Bob can fix up his state by applying first an X and then a Z gate. Summing up, Bob needs to apply the transformation ZM1 XM2 (note how time goes from left to right in circuit diagrams, but in matrix products terms on the right happen first) to his qubit, and he will recover the state |ψ〉. here are many interesting features of teleportation, some of which we shall return to later in the book. For now we content ourselves with commenting on a couple of aspects. 
-
-اگر اندازه گیری 10 باشد، باب می تواند وضعیت خود را با استفاده از گیت Z ثابت کند. اگر اندازه‌گیری 11 باشد، باب می‌تواند با اعمال ابتدا یک X و سپس یک دروازه Z وضعیت خود را اصلاح کند. به طور خلاصه، باب باید تبدیل ZM1 XM2 را اعمال کند (توجه داشته باشید که چگونه زمان در نمودارهای مدار از چپ به راست می‌گذرد، اما در محصولات ماتریسی سمت راست اول اتفاق می‌افتد) در کیوبیت خود، و او حالت |ψ〉 را بازیابی می‌کند. در اینجا بسیاری از ویژگی های جالب انتقال از راه دور وجود دارد که در ادامه کتاب به برخی از آنها باز خواهیم گشت. در حال حاضر ما به اظهار نظر در مورد چند جنبه بسنده می کنیم.
-
-
-
-
-First, doesn’t teleportation allow one to transmit quantum states faster than light? This would be rather peculiar, because the theory of relativity implies that faster than light information transfer could be used to send information backwards in time. Fortunately, quantum teleportation does not enable faster than light communication, because to complete the teleportation Alice must transmit her measurement result to Bob over a classical communications channel. 
-اولاً، آیا تله‌پورتاسیون به فرد اجازه نمی‌دهد حالت‌های کوانتومی را سریع‌تر از نور منتقل کند؟ این امر نسبتاً عجیب و غریب است، زیرا تئوری نسبیت نشان می دهد که انتقال اطلاعات سریعتر از نور می تواند برای ارسال اطلاعات به عقب در زمان استفاده شود. خوشبختانه، تله‌پورت کوانتومی ارتباط سریع‌تر از نور را امکان‌پذیر نمی‌کند، زیرا برای تکمیل دوربری، آلیس باید نتیجه اندازه‌گیری خود را از طریق یک کانال ارتباطی کلاسیک به باب منتقل کند.
-
-
-
-
-We will show in Section 2.4.3 that without this classical communication, teleportation does not convey any information at all. The classical channel is limited by the speed of light, so it follows that quantum teleportation cannot be accomplished faster than the speed of light, resolving the apparent paradox. A second puzzle about teleportation is that it appears to create a copy of the quantum state being teleported, in apparent violation of the no-cloning theorem discussed in Section 1.3.5.
-
-ما در بخش 2.4.3 نشان خواهیم داد که بدون این ارتباط کلاسیک، از راه دور هیچ اطلاعاتی را منتقل نمی کند. کانال کلاسیک با سرعت نور محدود می شود، بنابراین نتیجه می شود که تله پورت کوانتومی نمی تواند سریعتر از سرعت نور انجام شود و پارادوکس ظاهری را حل کند. معمای دوم در مورد تلهپورتاسیون این است که به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می کند، در حالی که آشکارا قضیه عدم شبیه سازی مورد بحث در بخش 1.3.5 را نقض می کند.
-
- This violation is only illusory since after the teleportation process only the target qubit is left in the state |ψ〉, and the original data qubit ends up in one of the computational basis states |0〉 or |1〉, depending upon the measurement result on the first
-qubit. What can we learn from quantum teleportation? Quite a lot! It’s much more than just a neat trick one can do with quantum states. 
-
-این نقض فقط توهمی است زیرا پس از فرآیند انتقال از راه دور فقط کیوبیت هدف در حالت |ψ〉 باقی می ماند و کیوبیت داده اصلی بسته به نتیجه اندازه گیری به یکی از حالت های پایه محاسباتی |0 یا |1 می رسد. در اول
-کیوبیت از تله پورت کوانتومی چه چیزی می توانیم یاد بگیریم؟ خیلی زیاد! این خیلی بیشتر از یک ترفند ساده است که می توان با حالت های کوانتومی انجام داد.
-
-
-
-
-Quantum teleportation emphasizes the interchangeability of different resources in quantum mechanics, showing that one shared EPR pair together with two classical bits of communication is a resource at least the equal of one qubit of communication. Quantum computation and quantum information has revealed a plethora of methods for interchanging resources, many built upon quantum teleportation. 
-
-تله پورت کوانتومی بر قابلیت تعویض منابع مختلف در مکانیک کوانتومی تاکید می کند و نشان می دهد که یک جفت EPR مشترک به همراه دو بیت کلاسیک ارتباط، منبعی حداقل برابر با یک کیوبیت ارتباط است. محاسبات کوانتومی و اطلاعات کوانتومی روش‌های زیادی را برای تبادل منابع نشان داده‌اند که بسیاری از آنها بر اساس تله‌پورت کوانتومی ساخته شده‌اند.
-
-
-In particular, in Chapter 10 we explain how teleportation can be used to build quantum gates which are resistant to the effects of noise, and in Chapter 12 we show that teleportation is intimately connected with the properties of quantum error-correcting codes. Despite these connections with other subjects, it is fair to say that we are only beginning to understand why it is that quantum teleportation is possible in quantum mechanics; in later chapters we endeavor to explain some of the insights that make such an understanding possible.
-
-به طور خاص، در فصل 10 توضیح می دهیم که چگونه می توان از تله پورت برای ساخت دروازه های کوانتومی مقاوم در برابر اثرات نویز استفاده کرد و در فصل 12 نشان دادیم که انتقال از راه دور با ویژگی های کدهای تصحیح خطای کوانتومی ارتباط نزدیکی دارد. علیرغم این ارتباط با موضوعات دیگر، منصفانه است که بگوییم که ما تازه در حال درک این موضوع هستیم که چرا انتقال از راه دور کوانتومی در مکانیک کوانتومی امکان پذیر است. در فصل‌های بعدی سعی می‌کنیم برخی از بینش‌هایی را توضیح دهیم که چنین درکی را ممکن می‌سازد.
-
-
+این نقض ناشی از دقت کم و یا توهم است؛ زیرا پس از فرآیند دوربری فقط کیوبیت هدف در حالت $\vert \Psi \rangle$ باقی می ماند و کیوبیت اصلی که حامل داده است؛ با توجه به فرآیند اندازه گیری حالت اصلی به یکی از حالت های پایه محاسباتی $\vert 0 \rangle$ یا$\vert 1 \rangle$ رمبش می‌کند.
 
 \newpage
 	
