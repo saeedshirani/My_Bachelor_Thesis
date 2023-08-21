@@ -1285,58 +1285,39 @@ $$
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. 
-\section{درهمتنیدگی و حالات بل}
-% https://www.youtube.com/watch?v=I0jH1_H3x1o
-% pls search about bell eq
-در اغلب موارد، سیستم از دو کیوبیت درهمتنیده تشکیل شده‌است. تابع حالت این سیستم‌ها به شکل زیر تعریف می‌شوند:
-\begin{center}
-	$\vert \psi_{00} \rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
-\end{center}
-برای آماده‌سازی این حالت کوانتومی‌، در حالت \lr{$\vert0\rangle$} داریم. با اعمال یک گیت هدامارد روی یکی از کیوبیت‌ها و سپس با کنترل‌ آن با گیت \lr{CNOT}، (به نحوی که کیوبیت دوم هدف قرارگیرد.) می‌توان به یک حالت درهمتنیده رسید. می‌توان این مراحل را به شکل زیر شرح داد:
-\begin{center}
-	$\vert\psi_{00}\rangle = C_{10}H_{1}\vert00\rangle$
-\end{center}
+\section{حالات بل}
 
-%می‌توان رابطه‌ی بالا را به هریک از حالات $\vert00\rangle, \vert 01\rangl, \vert 10\rangl, \vert 11\rangl$ تعمیم داد:%
-\[
-\vert\psi_{xy}\rangle = C_{10}H_{1}\vert xy \rangle
-\]
+Let's consider a slightly more complicated circuit, shown in Figure 1.12, which has a Hadamard gate followed by a CNOT, and transforms the four computational basis states according to the table given. As an explicit example, the Hadamard gate takes the input |00) to (0) + 1))|0)/√2, and then the CNOT gives the output state (100) + |11))/√2. Note how this works: first, the Hadamard transform puts the top qubit in a superposition; this then acts as a control input to the CNOT, and the target gets inverted only when the control is 1. The output states
+به مدار نمایش داده شده در شکل زیر دقت کنید:
 
-از آنجایی که چهار حالت $\vert xy\rangle$ یک مجموعه متعامد هستند و گیت‌های هادامارد و cNOT یکه هستند، چهار حالت درهم تنیده $\vert \psi_{xy}\rangle$ نیز یک مجموعه متعامد هستند، که به نام پایه Bell نامگذاری شده‌اند.  می‌توان رابطه‌ی بالا را یک حالت کلی تعمیم داد:
-
-% read about bell state equation
-\begin{center}
-$\vert \psi_{xy}\rangle = C10H1X^{x}_{1} X^{y}_{0} \vert00\rangle$\\
-\end{center}
-
-\begin{figure}
-	\centering
-	\begin{subfigure}[b]{}
-		\centering
-		\includegraphics[width=0.2\textwidth]{psi00.png}
-		\caption{$y=x$}
-		\label{fig:y equals x}
-	\end{subfigure}
-	\hfill
-	\begin{subfigure}[b]{}
-		\centering
-		\includegraphics[width=0.2\textwidth]{psixy.png}
-		\caption{$y=3\sin x$}
-		\label{fig:three sin x}
-	\end{subfigure}
-	\caption{(a) A circuit that creates the entangled state
-		|ψ00〉 = 1√2
-		(|00〉 + |11〉) from the unentangled computational-basis
-		state |00〉. (b) A circuit that creates the four orthonormal entangled
-		Bell states |ψxy〉 from the unentangled computational-basis state |xy〉}
-	\label{fig:three graphs}
-\end{figure}
+این مدار دارای یک گیت هادامارد و سپس CNOT است و چهار حالت پایه محاسباتی را مطابق جدول داده شده تبدیل می کند. به عنوان مثال:
+ گیت هادامارد ورودی |00) را به حالت (0) + 1))|0)/√2 انتقال می‌دهد و سپس CNOT حالت خروجی (100) + |11))/√2 را آماده می‌کند. 
+ 
+ بار دیگر مراحل را مرور می‌کنیم:
+  ابتدا اعمال تبدیل هادامارد حالت کیوبیت بالایی را به یک برهمنهی کوانتومی منتقل می‌کند. این برهمنهی ایجاد شده،‌ به عنوان کیوبیت کنترل به CNOT عمل می کند و حالت کیوبیت هدف تنها زمانی معکوس می شود که حالت کیوبیت کنترل 1 باشد.
+  
+  
+حالت خروجی را می‌توان به شکل زیر نمایش داد:
 
 
-درنظر داشته باشید که حالات بل قابل تبدیل به یکدیگرند؛ با کمک رابطه‌ی تعمیم یافته ‌می‌توان از هر حالت بل به حالت $\vert00 \rangle$ رسید.
-توضیحات درباره‌ی تبدیلات بنویس
+1.23 - 1.26
 
-این روابط به شکل‌های متعدد قابل بیان است که از حوصله‌ی بحث خارج است.
+
+are known as the Bell states, or sometimes the EPR states or EPR pairs, after some of
+the people – Bell, and Einstein, Podolsky, and Rosen – who first pointed out the strange
+properties of states like these. The mnemonic notation |β00, |β01, |β10, |β11 may be understood via the equation
+ 
+ از حالت‌های بالا به عنوان حالات بل یا حالات EPR یاد‌می‌کنیم.
+  
+  
+خصوصیات حالات |β00، |β01، |β10، |β11 از طریق فرمول زیر بهتر درک خواهند شد:
+
+ 
+ 1.27
+ 
+ where ¯y is the negation of y.
+ fig 1.12
+
 \newpage
 
 
@@ -1344,23 +1325,31 @@ $\vert \psi_{xy}\rangle = C10H1X^{x}_{1} X^{y}_{0} \vert00\rangle$\\
 
 
 
-\subsection{درهمتنیدگی}
+\section{درهمتنیدگی}
 
 Entanglement: The Mysterious Connection in Quantum Physics
 
-In the realm of quantum physics, one of the most baffling phenomena that continues to capture the imagination of scientists and philosophers alike is "entanglement." This concept challenges our conventional understanding of reality and has given rise to countless debates, experiments, and philosophical inquiries.
+In the realm of quantum physics, one of the most baffling phenomena that continues to capture the imagination of scientists and philosophers alike is "entanglement." This concept challenges our conventional understanding of reality and has given rise to countless debates, experiments, and philosophical inquiries.\\
+در حوزه فیزیک کوانتومی، یکی از گیج کننده ترین پدیده هایی که همچنان تخیل دانشمندان و فیلسوفان را به خود جذب می کند، «درهم تنیدگی» است. این مفهوم درک متعارف ما از واقعیت را به چالش می‌کشد و باعث بحث‌ها، آزمایش‌ها و تحقیقات فلسفی بی‌شماری شده است.\\
 
-At its core, entanglement refers to the extraordinary connection that can exist between two or more particles, regardless of the distance separating them. When particles become entangled, their properties, such as spin, momentum, and polarization, become linked in such a way that the state of one particle instantaneously influences the state of the other, no matter the physical space between them. This instantaneous connection seems to defy classical notions of cause and effect and has led Albert Einstein to dub it "spooky action at a distance."
+At its core, entanglement refers to the extraordinary connection that can exist between two or more particles, regardless of the distance separating them. When particles become entangled, their properties, such as spin, momentum, and polarization, become linked in such a way that the state of one particle instantaneously influences the state of the other, no matter the physical space between them. This instantaneous connection seems to defy classical notions of cause and effect and has led Albert Einstein to dub it "spooky action at a distance."\\
+در هسته خود، درهم تنیدگی به ارتباط فوق‌العاده‌ای اطلاق می‌شود که می‌تواند بین دو یا چند ذره، بدون توجه به فاصله‌ای که آنها را از هم جدا می‌کند، وجود داشته باشد. هنگامی که ذرات در هم می‌پیچند، ویژگی‌های آن‌ها مانند اسپین، تکانه و پلاریزاسیون به گونه‌ای به هم مرتبط می‌شوند که حالت یک ذره بدون توجه به فضای فیزیکی بین آنها، فوراً بر وضعیت ذره دیگر تأثیر می‌گذارد. به نظر می‌رسد این ارتباط آنی با مفاهیم کلاسیک علت و معلول مخالفت می‌کند و آلبرت انیشتین را وادار کرده است که آن را «عمل شبح‌آور از راه دور» بنامد.\\
 
-One of the most famous thought experiments illustrating entanglement is the Einstein-Podolsky-Rosen (EPR) paradox. In this scenario, two entangled particles, often referred to as "Alice" and "Bob," are separated and sent to different locations. When a measurement is performed on one particle, its state is instantaneously determined, causing the other particle's state to be known as well, even if they are light-years apart. This apparent violation of the speed of light's limit has challenged our understanding of how information can be transmitted.
+One of the most famous thought experiments illustrating entanglement is the Einstein-Podolsky-Rosen (EPR) paradox. In this scenario, two entangled particles, often referred to as "Alice" and "Bob," are separated and sent to different locations. When a measurement is performed on one particle, its state is instantaneously determined, causing the other particle's state to be known as well, even if they are light-years apart. This apparent violation of the speed of light's limit has challenged our understanding of how information can be transmitted.\\
+یکی از مشهورترین آزمایش‌های فکری که درهم تنیدگی را نشان می‌دهد، پارادوکس انیشتین-پودولسکی-روزن (EPR) است. در این سناریو، دو ذره درهم تنیده که اغلب به آنها «آلیس» و «باب» گفته می شود، جدا شده و به مکان های مختلف فرستاده می شوند. وقتی اندازه‌گیری روی یک ذره انجام می‌شود، حالت آن فوراً مشخص می‌شود و باعث می‌شود وضعیت ذره دیگر نیز مشخص شود، حتی اگر سال‌های نوری از هم فاصله داشته باشند. این نقض آشکار محدودیت سرعت نور، درک ما از نحوه انتقال اطلاعات را به چالش کشیده است.\\
 
-Entanglement is not just a theoretical concept; it has been experimentally observed and verified through a variety of experiments. One of the most groundbreaking experiments demonstrating entanglement is the Bell test, which tests the violation of Bell inequalities. When the measurements on entangled particles violate these inequalities, it strongly suggests that their behavior cannot be explained by classical physics and instead points to the reality of quantum entanglement.
+Entanglement is not just a theoretical concept; it has been experimentally observed and verified through a variety of experiments. One of the most groundbreaking experiments demonstrating entanglement is the Bell test, which tests the violation of Bell inequalities. When the measurements on entangled particles violate these inequalities, it strongly suggests that their behavior cannot be explained by classical physics and instead points to the reality of quantum entanglement.\\
+درهم تنیدگی فقط یک مفهوم نظری نیست. به طور تجربی از طریق آزمایش های مختلف مشاهده و تأیید شده است. یکی از پیشگامانه‌ترین آزمایش‌هایی که درهم تنیدگی را نشان می‌دهد، آزمون بل است که نقض نابرابری‌های بل را آزمایش می‌کند. وقتی اندازه‌گیری‌های ذرات درهم تنیده این نابرابری‌ها را نقض می‌کند، به شدت نشان می‌دهد که رفتار آنها توسط فیزیک کلاسیک قابل توضیح نیست و در عوض به واقعیت درهم‌تنیدگی کوانتومی اشاره می‌کند.\\
 
-The implications of entanglement are profound and extend beyond the confines of physics laboratories. Researchers are actively exploring the potential applications of entanglement in fields like quantum computing and quantum cryptography. Entanglement's ability to enable qubits (quantum bits) to exist in multiple states simultaneously has the potential to revolutionize computation and cryptography, leading to solutions that were previously considered impossible.
+
+The implications of entanglement are profound and extend beyond the confines of physics laboratories. Researchers are actively exploring the potential applications of entanglement in fields like quantum computing and quantum cryptography. Entanglement's ability to enable qubits (quantum bits) to exist in multiple states simultaneously has the potential to revolutionize computation and cryptography, leading to solutions that were previously considered impossible.\\
+پیامدهای درهم تنیدگی عمیق است و فراتر از محدوده آزمایشگاه های فیزیک است. محققان به طور فعال در حال بررسی کاربردهای بالقوه درهم تنیدگی در زمینه هایی مانند محاسبات کوانتومی و رمزنگاری کوانتومی هستند. توانایی درهم تنیدگی برای فعال کردن کیوبیت‌ها (بیت‌های کوانتومی) برای وجود همزمان در چندین حالت، این پتانسیل را دارد که محاسبات و رمزنگاری را متحول کند و به راه‌حل‌هایی منجر شود که قبلا غیرممکن تلقی می‌شدند.\\
 
 However, entanglement also presents us with philosophical and conceptual challenges. The nature of the instantaneous connection between entangled particles challenges our understanding of space, time, and causality. It has sparked debates about the true nature of reality and the role of human observation in collapsing the quantum wave function.
 
 In conclusion, entanglement stands as one of the most intriguing and perplexing phenomena in the realm of quantum physics. Its mysterious connection between particles defies classical intuitions and continues to push the boundaries of our understanding of the universe. As scientists delve deeper into the intricacies of entanglement and its potential applications, it's clear that this phenomenon will continue to captivate and inspire generations to come.
+
+در نتیجه، درهم تنیدگی به عنوان یکی از جذاب ترین و گیج کننده ترین پدیده ها در قلمرو فیزیک کوانتومی است. ارتباط اسرارآمیز آن بین ذرات، شهود کلاسیک را به چالش می کشد و همچنان مرزهای درک ما از جهان را پیش می برد. همانطور که دانشمندان عمیق تر به پیچیدگی های درهم تنیدگی و کاربردهای بالقوه آن می پردازند، واضح است که این پدیده همچنان نسل های آینده را مجذوب خود کرده و الهام بخش خواهد بود.
 
 
 \newpage

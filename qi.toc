@@ -49,7 +49,7 @@
 \contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{38}{}%
 \contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{39}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{43}{}%
-\contentsline {section}{\numberline {4.1}درهمتنیدگی و حالات بل}{43}{}%
-\contentsline {subsection}{\numberline {4.1.1}درهمتنیدگی}{45}{}%
-\contentsline {section}{\numberline {4.2}رمزگذاری متراکم کوانتومی}{47}{}%
-\contentsline {section}{\numberline {4.3}دوربری}{50}{}%
+\contentsline {section}{\numberline {4.1}حالات بل}{43}{}%
+\contentsline {section}{\numberline {4.2}درهمتنیدگی}{45}{}%
+\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{48}{}%
+\contentsline {section}{\numberline {4.4}دوربری}{51}{}%

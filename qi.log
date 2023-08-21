@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  19 AUG 2023 18:42
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  21 AUG 2023 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1449,114 +1449,106 @@ Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 [41] [42]
 فصل 4.
+
+Overfull \hbox (9.35039pt too wide) in paragraph at lines 1290--1292
+[]\TU/XBZar(0)/m/n/10 gives the output state (۱۰۰) + |۱۱))/√۲. Note how this wo
+rks: first، the Hadamard[]
+ []
+
 [43
 
 ]
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1314--1314
-[][]\TU/XBZar(0)/m/n/8 (آ)[]
- []
-
-
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1314--1314
-[]\TU/XBZar(0)/m/n/8 b []
- []
-
-File: psi00.png Graphic file (type bmp)
-<psi00.png>
-
-Overfull \hbox (9.44922pt too wide) in paragraph at lines 1321--1321
-[][]\TU/XBZar(0)/m/n/8 (آ)[]
- []
-
-
-Overfull \hbox (4.44922pt too wide) in paragraph at lines 1321--1321
-[]\TU/XBZar(0)/m/n/8 b []
- []
-
-File: psixy.png Graphic file (type bmp)
-<psixy.png>
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
+Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 [44]
-Overfull \hbox (5.2686pt too wide) in paragraph at lines 1357--1358
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1334
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1335--1337
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1338--1340
+[][]
+ []
+
+[45]
+Overfull \hbox (5.2686pt too wide) in paragraph at lines 1341--1343
 []\TU/XBZar(0)/m/n/10 groundbreaking experiments demonstrating entanglement is 
 the Bell test، which[]
  []
 
 
-Overfull \hbox (0.31418pt too wide) in paragraph at lines 1359--1360
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1343
+[][]
+ []
+
+
+Overfull \hbox (0.31418pt too wide) in paragraph at lines 1345--1347
 [][]\TU/XBZar(0)/m/n/10 The implications of entanglement are profound and exten
 d beyond the con-[]
  []
 
-[45] [46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-File: super dence.png Graphic file (type bmp)
-<super dence.png>
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 1432--1433
+Underfull \hbox (badness 10000) in paragraph at lines 1345--1347
 [][]
  []
 
+[46] [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+File: super dence.png Graphic file (type bmp)
+<super dence.png>
+
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 1448--1449
+Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
+[][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 1437--1438
 [][]
  []
 
 
 Underfull \vbox (badness 2818) has occurred while \output is active []
 
- [50]
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 1536--1537
+ [51]
+[52]
+Underfull \hbox (badness 10000) in paragraph at lines 1525--1526
 [][]
  []
 
-[52] [53] (./qi.aux)
+[53] [54] (./qi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38194 strings out of 476179
- 958624 string characters out of 5813072
+ 38173 strings out of 476179
+ 958338 string characters out of 5813072
  1600594 words of memory out of 5000000
- 58331 multiletter control sequences out of 15000+600000
+ 58312 multiletter control sequences out of 15000+600000
  478576 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,18n,104p,1033b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on qi.pdf (53 pages).
+Output written on qi.pdf (54 pages).
