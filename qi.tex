@@ -156,7 +156,6 @@ $\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d
 حالت کوانتومی معتبر انتظار می‌‌رود، برآورده کند. این بدان معناست که حالت پس از اندازه گیری به گونه ای تغییر می کند که احتمالات آن جمع شده و برابر 1 شود.
 
 \section{اندازه‌گیری در فضای هیلبرت}
-\subsection{bloch vector}
 % https://g.co/bard/share/2972a6a63b24
 ما تاکنون اندازه گیری های کوانتومی یک کیوبیت در حالت $\alpha\vert0\rangle + \beta\vert1\rangle$را به عنوان نتیجه 0 یا 1 توصیف کرده ایم که کیوبیت را در حالت $\vert 0 \rangle$ یا $\vert 1 \rangle$مربوطه باقی می گذارد، با احتمالات $\vert\alpha\vert ^ 2$ و $\vert\beta\vert ^ 2$. در حقیقت، مکانیک کوانتوم به اندازه کافی انعطاف پذیری در کلاس اندازه گیری هایی که می توان انجام داد، اگرچه مطمئناً به اندازه کافی نیست که $\alpha$ و $\beta$ را از یک اندازه گیری واحد بازیابی کند!
 
@@ -405,7 +404,7 @@ $\vert\Psi \rangle = \alpha \vert 00\rangle + \beta \vert 01\rangle + \gamma \ve
 
 
 \begin{center}
-	$U_{CNOT}\vert ab\rangle = \vert a a\oplus \rangle b$
+	$U_{CNOT}\vert ab\rangle = \vert a\hspace{0.1cm} a\oplus \rangle b$
 \end{center}
 
 
@@ -604,8 +603,8 @@ $$
  
  
  
-\subsection{Swap gate}
-یک گیت SWAP اعداد را در حالت های پایه یک رجیستر 2 کیوبیتی جابجا می کند. اگر فقط حالت های پایه را در نظر بگیریم، معادل مبادله حالات دو الکترون است. این گیت به صورت  زیر تعریف می‌شود:
+\subsection{گیت مبادله}
+یک گیت مبادله\footnote{\lr{Swap gate}} اعداد را در حالت های پایه یک رجیستر 2 کیوبیتی جابجا می کند. اگر فقط حالت های پایه را در نظر بگیریم، معادل مبادله حالات دو الکترون است. این گیت به صورت  زیر تعریف می‌شود:
 \begin{center}
 	$U_{SWAP}   \vert ab\rangle = \vert ba \rangle$
 \end{center}
@@ -622,11 +621,11 @@ $$
 
 
 
-بنابراین، تنها $\vert 01 \rangle$ و $\vert 10 \rangle$ تحت SWAP (به یکدیگر) تغییر می کنند.
+بنابراین، تنها $\vert 01 \rangle$ و $\vert 10 \rangle$ تحت مبادله (به یکدیگر) تغییر می کنند.
 اعمال این گیت برای حالات $\vert 00 \rangle$ و $\vert 11 \rangle$، بدون اثر است؛ زیرا "0" و "0" یا "1" و "1" تعویض می‌شوند؛ که پیامد خاصی در پی ندارد.
 
 
-\subsubsection{نمایش ماتریسی گیت swap}
+\subsubsection{نمایش ماتریسی گیت مبادله}
 نمایش ماتریسی $U_{S W A P}$ به شکل زیر است:
 \begin{center}
 	$$U_{S W A P}=\left(\begin{array}{llll}
@@ -637,7 +636,7 @@ $$
 	\end{array}\right)$$
 \end{center}
 \
- از آنجایی که این یک گیت 2 کیوبیتی برای عملیات است یک بردار در فضای چهار بعدی $\mathbb{c}^4$، ماتریس (اپراتور) باید 4 × 4 باشد. علاوه بر این، فقط حالت پایه دوم و سوم را جابجا می کند. بنابراین، تنها ردیف دوم و سوم با ماتریس یکه متفاوت هستند. به طور مثال:
+ از آنجایی که این یک گیت 2 کیوبیتی برای عملیات است یک بردار در فضای چهار بعدی $\mathbb{c}^4$، ماتریس (یا عملگر) باید 4 × 4 باشد. علاوه بر این، فقط حالت پایه دوم و سوم را جابجا می کند. بنابراین، تنها ردیف دوم و سوم با ماتریس یکه متفاوت هستند. به طور مثال:
 \begin{center}
 	$$U_{S W A P}|10\rangle=\left(\begin{array}{llll}
 		1 & 0 & 0 & 0 \\
@@ -658,7 +657,7 @@ $$
 \end{center}
 این رابطه‌ بصورت معکوس نیز برقرارست.
 
-\subsubsection{گیت swap در مدار و خصوصیات آن}
+\subsubsection{گیت مبادله در مدار و خصوصیات آن}
 به طور کلی، برای یک بردار 2 کیوبیتی، نظیر $\vert \Psi \rangle=\alpha|00\rangle+\gamma|01\rangle+\beta|10\rangle+\delta|11\rangle$ داریم:
 
 \begin{center}
@@ -691,7 +690,7 @@ $$
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=50mm,scale=0.5]{swap.png}
-	\caption{ نمایش گیت کوانتومی \lr{SWAP}}
+	\caption{نمایش گیت کوانتومی مبادله در مدار کوانتومی}
 	\label{SWAP}
 \end{figure}
 
@@ -842,7 +841,7 @@ $$
 	$\vert\psi\rangle = \alpha\vert0\rangle + \beta\vert1\rangle$
 \end{center}
 
-هریک از حالات داخل رابطه‌ی بالا به صورت یک ماتریس قابل تعریف هستند. به طور مشابه هریک از عملگر های کوانتمی را می‌توان به صورت یک ماتریس تعریف کرد. ماتریس‌هایی مشابه ماتریس پائولی یا در مقیاس‌های بالاتر ماتریس فردکین که برای سه کیوبیت تعریف می‌شود؛ و محاسبات را سریع می‌سازد.
+هریک از حالات داخل رابطه‌ی بالا به صورت یک ماتریس قابل تعریف هستند. به طور مشابه هریک از عملگر های کوانتومی را می‌توان به صورت یک ماتریس تعریف کرد. ماتریس‌هایی مشابه ماتریس پائولی یا در مقیاس‌های بالاتر ماتریس فردکین که برای سه کیوبیت تعریف می‌شود؛ و محاسبات را سریع می‌سازد.
 
 
 
@@ -881,7 +880,9 @@ $$
 \section{کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}
 
 \subsection{معرفی QisKit}
-یک زبان برنامه‌نویسی کوانتومی است. این زبان دارای مشابهت‌های زیادی با زبان پایتون می‌باشد. دو دلیل عمده برای این شباهت وجود دارد. 1. این زبان براساس زبان پایتون و برخی کتابخانه‌های آن ساخته شده است. 2. جامعه دانشمندان کوانتوم و به‌طور کلی فیزیکدانان از سابق برای انجام شبیه‌سازی‌های خود از زبان پایتون استفاده می‌کنند و پایتون نیز کتابخانه‌هاي بسیار کارآمدی - نظیر نامپای\footnote{Numpy} ، پانداس\footnote{Pandas} ، سایپای\footnote{Scipy} و .. - ارائه کرده است.
+یک زبان برنامه‌نویسی کوانتومی است. این زبان دارای مشابهت‌های زیادی با زبان پایتون می‌باشد. دو دلیل عمده برای این شباهت وجود دارد:\\
+ 1. این زبان براساس زبان پایتون و برخی کتابخانه‌های آن ساخته شده است. \\
+ 2. جامعه دانشمندان کوانتوم و به‌طور کلی فیزیکدانان از سابق برای انجام شبیه‌سازی‌های خود از زبان پایتون استفاده می‌کنند و پایتون نیز کتابخانه‌هاي بسیار کارآمدی - نظیر نامپای\footnote{Numpy} ، پانداس\footnote{Pandas} ، سایپای\footnote{Scipy} و .. - ارائه کرده است.
 
 \subsection{کدنویسی به زبان QisKit}
 برای کدنویسی به زبان \lr{QisKit} می‌توان از محیط \lr{Jupyter notebook} استفاده کرد. پس از نصب \lr{Qiskit} برای فرخواندن این کتابخانه به راحتی می‌توان نوشت:
@@ -1038,7 +1039,8 @@ $$
 	$f (x) : \{0, 1\} \rightarrow \{0, 1\}$\\
 \end{center}
 
-روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
+روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به
+ $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
 
 \footnote{Modulo 2 is a mathematical operation that returns the remainder of a division by 2. For example, 5 mod 2 is 1, because 5 divided by 2 has a quotient of 2 and a remainder of 1.
 	
@@ -1076,9 +1078,9 @@ $$
 	$\frac{\vert 0,f(0) \rangle +\vert 1,f(1) \rangle }{\sqrt{2}}$
 \end{center}
 
-این یک حالت استثنایی است! جملات مختلف کسر بالا حاوی اطلاعاتی در مورد f (0) وf (1) می‌باشند؛ به‌نحوی که انگار f (x) را برای دو مقدار x به طور همزمان ارزیابی کرده ایم، این ویژگی به "موازی  سازی کوانتومی" موسوم می‌باشد. بر خلاف موازی سازی کلاسیک، که در آن هر یک مدارهای متعددی دارند ساخته شده برای محاسبه f (x) به طور همزمان اجرا می شوند، در اینجا برای ارزیابی تابع برای چندین مقدار x به طور همزمان، یک مدار f (x) (با قابلیت برهمنهی کوانتومی)استفاده می شود.
+این یک حالت استثنایی است! جملات مختلف کسر بالا حاوی اطلاعاتی در مورد$ f (0)$ و$f (1)$ می‌باشند؛ به‌نحوی که انگار $f (x)$ را برای دو مقدار $x$ به طور همزمان ارزیابی کرده ایم، این ویژگی به "موازی  سازی کوانتومی" موسوم می‌باشد. بر خلاف موازی سازی کلاسیک، که در آن هر یک مدارهای متعددی دارند ساخته شده برای محاسبه $f (x)$ به طور همزمان اجرا می شوند، در اینجا برای ارزیابی تابع برای چندین مقدار $x$ به طور همزمان، یک مدار $f (x)$ (با قابلیت برهمنهی کوانتومی)استفاده می شود.
 
-این فرآیند را می توان به راحتی  با استفاده از یک عمل کلی به نام تبدیل هادامارد، به توابعی با تعداد بیت دلخواه تعمیم داد. این عمل فقط تعداد n گیت هادامارد است که به طور موازی روی n کیوبیت عمل می کنند.
+این فرآیند را می توان به راحتی  با استفاده از یک عمل کلی به نام تبدیل هادامارد، به توابعی با تعداد بیت دلخواه تعمیم داد. این عمل فقط تعداد $n$ گیت هادامارد است که به طور موازی روی $n $کیوبیت عمل می کنند.
 
 برای مثال در شکل زیر؛ دو کیوبیت در حالت $\vert 0 \rangle$ آماده شده‌‌اند. پس از اعمال گیت‌های هادامارد بر روی این رجیستر به خروجی زیر خواهیم رسید: 
 
@@ -1113,8 +1115,6 @@ $$
 \end{enumerate}
 درنهایت حالت زیر تولید ‌می‌شود:
 
-1√2n∑x|x〉|f (x)〉
-
 \begin{center}
 	$\frac{1}{\sqrt{2^n}} \sum_{x} \vert x \rangle \vert f (x)\rangle$ 
 \end{center}
@@ -1122,13 +1122,8 @@ $$
 
 به طور کلی موازی‌سازی کوانتومی امکان ارزیابی همزمان همه مقادیر ممکن تابع f را فراهم می‌کند، حتی اگر ظاهراً فقط یک بار f را ارزیابی کرده باشیم. با این حال، این موازی‌سازی بلافاصله مفید نیست. 
 
-
-در مثال تک کیوبیتی ما، اندازه‌گیری حالت فقط $\vert 0, f(0)\rangle$ یا $\vert 1, f(1)\rangle$ را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت ∑x |x, f (x)〉 فقط$ f (x)$ را برای یک مقدار x خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار f (x) از حالت‌های سوپرپوزیسیون مانند ∑x |x, f (x)〉 نیاز دارد. 
+در مثال تک کیوبیتی ما، اندازه‌گیری حالت فقط $\vert 0, f(0)\rangle$ یا $\vert 1, f(1)\rangle$ را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت $\sum_{x} \vert x, f(x) \rangle$ فقط $ f (x)$ را برای یک مقدار $x$ خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار $f (x)$ از حالت‌های برهمنهی مانند $\sum _{x}\vert x, f(x) \rangle$ نیاز دارد. 
 در بخش های بعدی به مثال‌های خواهیم پرداخت که این مسائل را حل کند.
-
-
-
-$\sum_{x} \vert x, f(x)\rangle$
 
 \newpage
 \subsection{مدل محاسباتی استاندارد}
@@ -1155,7 +1150,7 @@ $\sum_{x} \vert x, f(x)\rangle$
 \end{figure}
 
 
-در این مدل واحد محاسباتی دیگر داده‌ها را در قالب رشته‌ای از اطلاعات دردسترس ندارد؛ بلکه می‌تواند آن‌ها را از بخش \lr{input} دریافت کند. در گاهی از مواقع به سیستم \lr{input}،‌\lr{oracle} یا جعبه‌ی سیاه می‌گویند. تابع \lr{Oracle } یا جعبه‌ی سیاه یک سیستم است که ما به عنوان ناظر به سازوکار داخلی آن و  تمامی اطلاعات آن دسترسی نداریم و فقط می‌توانیم مقادیر مجاز را به آن داده و مقادیر خروجی را دریافت کنیم. 
+در این مدل واحد محاسباتی دیگر داده‌ها را در قالب رشته‌ای از اطلاعات دردسترس ندارد؛ بلکه می‌تواند آن‌ها را از بخش تولید ورودی دریافت کند. در گاهی از مواقع به سیستم ورودی، ‌\lr{Oracle} یا جعبه‌ی سیاه می‌گویند. تابع \lr{Oracle } یا جعبه‌ی سیاه یک سیستم است که ما به عنوان ناظر به سازوکار داخلی آن و  تمامی اطلاعات آن دسترسی نداریم و فقط می‌توانیم مقادیر مجاز را به آن داده و مقادیر خروجی را دریافت کنیم. 
 
 تابع \lr{oracle} به صورت زیر تعریف می‌شود:
 \begin{center}
@@ -1174,13 +1169,13 @@ $$
 \section{معرفی و پیاده سازی الگوریتم دوچ}
 
 \subsection{مسئله‌ی دوچ}
-الگوریتم \lr{Deutsch} اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{David Deutsch} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
+الگوریتم دوچ اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{\lr{David Deutsch}} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
 
 مسئله‌ی \lr{Deutsch} یکی از ساده‌ترین مفاهیم ممکن را مطرح می‌کند. اگر یک تابع به فرم زیر تعریف شود: 
 \begin{center}
 	$f : \sum \rightarrow \sum$
 \end{center}
-هدف بررسی ثابت بودن یا متعادل\footnote{Constante or balanse.} بودن تابع \lr{f} است. 
+هدف بررسی ثابت بودن یا متعادل\footnote{\lr{Constante or balanse.}} بودن تابع \lr{f} است. 
 به‌طور کلی، درساده‌ترین حالت، می‌توان چهار وضعیت را برای تابع $f : \sum \rightarrow \sum$ درنظر گرفت:\\
 \begin{figure}[ht]
 	\centering
@@ -1215,7 +1210,7 @@ $$
 \end{center}
 
 
-یک تغییر ساده در مدار شکل 1.3 نشان می دهد که چگونه مدارهای کوانتومی می توانند با پیاده سازی الگوریتم Deutsch از مدارهای کلاسیک پیشی بگیرند\footnote{ما در واقع یک نسخه ساده شده و بهبود یافته از الگوریتم اصلی را ارائه می دهیم.}. الگوریتم Deutsch ترکیبی از موازی سازی کوانتومی با خاصیتی از مکانیک کوانتوم به نام تداخل\footnote{how interference is using in deutsch algorithm : Interference is used in the Deutsch algorithm to distinguish between constant and balanced functions. A constant function is a function that always returns the same value, regardless of its input. A balanced function is a function that returns 0 for half of its inputs and 1 for the other half.
+مدار زیر نشان می دهد که چگونه مدارهای کوانتومی می توانند با پیاده سازی الگوریتم دوچ از مدارهای کلاسیک پیشی بگیرند\footnote{ما در واقع یک نسخه ساده شده و بهبود یافته از الگوریتم اصلی را ارائه می دهیم.}. الگوریتم دوچ ترکیبی از موازی سازی کوانتومی با خاصیتی از مکانیک کوانتوم به نام تداخل\footnote{how interference is using in deutsch algorithm : Interference is used in the Deutsch algorithm to distinguish between constant and balanced functions. A constant function is a function that always returns the same value, regardless of its input. A balanced function is a function that returns 0 for half of its inputs and 1 for the other half.
 	
 	The Deutsch algorithm works by first preparing two qubits in a superposition of states. The first qubit is prepared in the state |+⟩, which is the equal superposition of $\vert 0 \rangle$ and $\vert 1 \rangle$. The second qubit is prepared in the state |ψ⟩, which is a superposition of the states $\vert 0 \rangle$ and $\vert 1 \rangle$ with opposite phases.
 	
@@ -1226,7 +1221,7 @@ $$
 	If the first qubit is measured to be $\vert 1 \rangle$, then the function f is balanced. This is because the state |ψ⟩ is parallel to the state $\vert 1 \rangle$, so the interference between the two states will constructively interfere.
 	
 	The Deutsch algorithm is a simple example of how quantum interference can be used to solve a problem that is difficult to solve classically. In this case, the Deutsch algorithm can distinguish between constant and balanced functions in a single step, while a classical computer would need to take an exponential number of steps.} است.
-مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان برهمنهی ($vert 0 \rangle$ + |1〉)/√2 استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت |1> به عنوان بهرهمنهی ($vert 0 \rangle$ - |1〉)/√2 آماده کنیم. به‌شکل زیر دقت کنید:
+مشابه قبل،‌ابتدا از گیت هادامارد برای آماده سازی اولین کیوبیت به عنوان برهمنهی $\frac{(\vert 0 \rangle + \vert 1 \rangle)}{\sqrt{2}}$استفاده کنیم، اما اکنون کیوبیت دوم y را با اعمال یک گیت هادامارد به حالت $\vert 1 \rangle$ به عنوان بهرهمنهی $\frac{(\vert 0 \rangle - \vert 1 \rangle)}{\sqrt{2}}$ آماده کنیم. به‌شکل زیر دقت کنید:
 
 
 
@@ -1248,7 +1243,11 @@ $$
 \begin{center}
 $\left|\psi_1\right\rangle=\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
 \end{center}
-با کمی تأمل می‌توان دریافت که اگر Uf را به حالت |x〉($vert 0 \rangle$ - |1〉)/√2 اعمال کنیم، سپس به حالت (−1)f (x)|x〉($vert 0 \rangle$ - |1〉)/√2 می رسیم. بنابرین اعمال Uf به |ψ1〉 ما را با یکی از دو امکان زیر مواجه می کند:
+
+
+
+با کمی تأمل می‌توان دریافت که اگر $U_{f}$ را به حالت $\vert x \rangle (\vert 0 \rangle - \vert 1 \rangle)/\sqrt{2}$ اعمال کنیم، سپس به حالت $(-1)^{f(x)}\vert x \rangle(\vert 0 \rangle - \vert 1 \rangle)/\sqrt{2}$ می رسیم. بنابرین اعمال $U_{f}$ به $\vert \Psi_{1} \rangle$ ما را با یکی از دو امکان زیر مواجه می کند:
+
 \begin{center}
 	$\left|\psi_2\right\rangle= \begin{cases} \pm\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
 \end{center}
@@ -1283,40 +1282,70 @@ $$
 
 % implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
 
+\subsubsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
+\begin{verbatim}
+	https://learn.qiskit.org/course/ch-algorithms/quantum-teleportation
+\end{verbatim}
+
+
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. 
 \section{حالات بل}
-
-Let's consider a slightly more complicated circuit, shown in Figure 1.12, which has a Hadamard gate followed by a CNOT, and transforms the four computational basis states according to the table given. As an explicit example, the Hadamard gate takes the input |00) to (0) + 1))|0)/√2, and then the CNOT gives the output state (100) + |11))/√2. Note how this works: first, the Hadamard transform puts the top qubit in a superposition; this then acts as a control input to the CNOT, and the target gets inverted only when the control is 1. The output states
 به مدار نمایش داده شده در شکل زیر دقت کنید:
 
 این مدار دارای یک گیت هادامارد و سپس CNOT است و چهار حالت پایه محاسباتی را مطابق جدول داده شده تبدیل می کند. به عنوان مثال:
- گیت هادامارد ورودی |00) را به حالت (0) + 1))|0)/√2 انتقال می‌دهد و سپس CNOT حالت خروجی (100) + |11))/√2 را آماده می‌کند. 
+ گیت هادامارد ورودی $\vert 00 \rangle$ را به حالت  $\frac{(\vert 0 \rangle + \vert 1 \rangle)}{\sqrt{2}}$ انتقال می‌دهد و سپس CNOT حالت خروجی $\frac{(\vert 00 \rangle + \vert 11 \rangle)}{\sqrt{2}}$ را آماده می‌کند.\\ 
  
- بار دیگر مراحل را مرور می‌کنیم:
-  ابتدا اعمال تبدیل هادامارد حالت کیوبیت بالایی را به یک برهمنهی کوانتومی منتقل می‌کند. این برهمنهی ایجاد شده،‌ به عنوان کیوبیت کنترل به CNOT عمل می کند و حالت کیوبیت هدف تنها زمانی معکوس می شود که حالت کیوبیت کنترل 1 باشد.
+ بار دیگر مراحل را مرور می‌کنیم:\\
+  ابتدا اعمال تبدیل هادامارد حالت کیوبیت بالایی را به یک برهمنهی کوانتومی منتقل می‌کند. این برهمنهی ایجاد شده،‌ به عنوان کیوبیت کنترل به CNOT عمل می کند و حالت کیوبیت هدف تنها زمانی معکوس می شود که حالت کیوبیت کنترل 1 باشد.\\
   
   
-حالت خروجی را می‌توان به شکل زیر نمایش داد:
+حالت خروجی را می‌توان به شکل زیر نمایش داد:\\
 
 
-1.23 - 1.26
+1.23 - 1.26\\
 
 
-are known as the Bell states, or sometimes the EPR states or EPR pairs, after some of
-the people – Bell, and Einstein, Podolsky, and Rosen – who first pointed out the strange
-properties of states like these. The mnemonic notation |β00, |β01, |β10, |β11 may be understood via the equation
+
  
  از حالت‌های بالا به عنوان حالات بل یا حالات EPR یاد‌می‌کنیم.
   
   
-خصوصیات حالات |β00، |β01، |β10، |β11 از طریق فرمول زیر بهتر درک خواهند شد:
+خصوصیات حالات $\vert \beta_{00} \rangle, \vert \beta_{01} \rangle, \vert \beta_{10} \rangle, \vert \beta_{11} \rangle,$از طریق فرمول زیر بهتر درک خواهند شد:
 
  
  1.27
  
  where ¯y is the negation of y.
  fig 1.12
+ 
+ 
+ 
+ 
+ \subsubsection{پیاده‌سازی حالات بل در کیس کیت}
+ 
+\begin{verbatim}
+	
+	
+	qc = QuantumCircuit(2)
+	qc.h(0)
+	qc.cx(0, 1)
+	
+	
+	
+	from qiskit import QuantumCircuit, execute
+	
+	qc = QuantumCircuit(2)
+	qc.h(0)
+	qc.cx(0, 1)
+	
+	backend = Aer.get_backend('qasm_simulator')
+	result = execute(qc, backend).result()
+	
+	counts = result.get_counts()
+	
+	print(counts)
+\end{verbatim}
 
 \newpage
 
@@ -1326,32 +1355,34 @@ properties of states like these. The mnemonic notation |β00, |β01, |β10, |β1
 
 
 \section{درهمتنیدگی}
+در حوزه فیزیک کوانتومی، یکی از گیج کننده ترین پدیده هایی که همچنان توجه دانشمندان و فیلسوفان را به خود جذب می کند، «درهم تنیدگی» است. این مفهوم درک متعارف ما از واقعیت را به چالش می‌کشد و باعث بحث‌ها، آزمایش‌ها و تحقیقات فلسفی بی‌شماری شده است.\\
+درهم تنیدگی به ارتباط فوق‌العاده‌ای اطلاق می‌شود که می‌تواند بین دو یا چند ذره، بدون توجه به فاصله‌ای که آنها را از هم، وجود داشته باشد. هنگامی که ذرات در هم می‌پیچند، ویژگی‌های آن‌ها مانند اسپین، تکانه و قطبش به گونه‌ای به هم مرتبط می‌شوند که تغییر حالت یک ذره بدون توجه به فضای فیزیکی بین آنها، فوراً بر وضعیت ذره دیگر تأثیر می‌گذارد. به نظر می‌رسد این ارتباط آنی با مفاهیم کلاسیک علت و معلول مخالفت می‌کند.\\
 
-Entanglement: The Mysterious Connection in Quantum Physics
+یکی از مشهورترین آزمایش‌های فکری که درهم تنیدگی را نشان می‌دهد، پارادوکس انیشتین-پودولسکی-روزن (EPR) است. در این سناریو، دو ذره درهم تنیده که اغلب به آنها «آلیس» و «باب» گفته می شود، جدا شده و به مکان های مختلف فرستاده می شوند. وقتی اندازه‌گیری روی یک ذره انجام می‌شود، حالت آن فوراً مشخص می‌شود و باعث می‌شود وضعیت ذره دیگر نیز مشخص شود، این تغییر حالت از راه دور حتی اگر دو ذره‌ی درهم‌تنیده سال‌های نوری از هم فاصله داشته باشند؛ رخ خواهد داد. این نقض آشکار محدودیت سرعت نور، درک ما از نحوه انتقال اطلاعات را به چالش کشیده است.\\
 
-In the realm of quantum physics, one of the most baffling phenomena that continues to capture the imagination of scientists and philosophers alike is "entanglement." This concept challenges our conventional understanding of reality and has given rise to countless debates, experiments, and philosophical inquiries.\\
-در حوزه فیزیک کوانتومی، یکی از گیج کننده ترین پدیده هایی که همچنان تخیل دانشمندان و فیلسوفان را به خود جذب می کند، «درهم تنیدگی» است. این مفهوم درک متعارف ما از واقعیت را به چالش می‌کشد و باعث بحث‌ها، آزمایش‌ها و تحقیقات فلسفی بی‌شماری شده است.\\
+درهم تنیدگی فقط یک مفهوم نظری نیست. به طور تجربی از طریق آزمایش های مختلف مشاهده و تأیید شده است. یکی از مهم‌ترین آزمایش‌هایی که درهم تنیدگی را به صورت تجربی نشان می‌دهد، آزمون بل است.
+این آزمایش نقض نابرابری‌های بل را آزمایش می‌کند. وقتی اندازه‌گیری‌های ذرات درهم تنیده این نابرابری‌ها را نقض می‌کند، نشان می‌دهد که رفتار آنها توسط فیزیک کلاسیک قابل توضیح نیست و در عوض به واقعیت درهم‌تنیدگی کوانتومی اشاره می‌کند.\\
 
-At its core, entanglement refers to the extraordinary connection that can exist between two or more particles, regardless of the distance separating them. When particles become entangled, their properties, such as spin, momentum, and polarization, become linked in such a way that the state of one particle instantaneously influences the state of the other, no matter the physical space between them. This instantaneous connection seems to defy classical notions of cause and effect and has led Albert Einstein to dub it "spooky action at a distance."\\
-در هسته خود، درهم تنیدگی به ارتباط فوق‌العاده‌ای اطلاق می‌شود که می‌تواند بین دو یا چند ذره، بدون توجه به فاصله‌ای که آنها را از هم جدا می‌کند، وجود داشته باشد. هنگامی که ذرات در هم می‌پیچند، ویژگی‌های آن‌ها مانند اسپین، تکانه و پلاریزاسیون به گونه‌ای به هم مرتبط می‌شوند که حالت یک ذره بدون توجه به فضای فیزیکی بین آنها، فوراً بر وضعیت ذره دیگر تأثیر می‌گذارد. به نظر می‌رسد این ارتباط آنی با مفاهیم کلاسیک علت و معلول مخالفت می‌کند و آلبرت انیشتین را وادار کرده است که آن را «عمل شبح‌آور از راه دور» بنامد.\\
+پیامدهای درهم تنیدگی عمیق و پیچیده است و فراتر از محدوده آزمایشگاه های فیزیک است. محققان همواره در حال بررسی کاربردهای بالقوه درهم تنیدگی در زمینه هایی مانند محاسبات کوانتومی و رمزنگاری کوانتومی هستند. توانایی درهم تنیدگی برای فعال کردن کیوبیت‌ها (بیت‌های کوانتومی) برای وجود همزمان در چندین حالت، این پتانسیل ایجاد تحولات شگرفی در رمزنگاری کوانتومی و محاسبات کوانتومی دارد و به راه‌حل‌هایی منجر شود که قبلا غیرممکن تلقی می‌شدند.\\
 
-One of the most famous thought experiments illustrating entanglement is the Einstein-Podolsky-Rosen (EPR) paradox. In this scenario, two entangled particles, often referred to as "Alice" and "Bob," are separated and sent to different locations. When a measurement is performed on one particle, its state is instantaneously determined, causing the other particle's state to be known as well, even if they are light-years apart. This apparent violation of the speed of light's limit has challenged our understanding of how information can be transmitted.\\
-یکی از مشهورترین آزمایش‌های فکری که درهم تنیدگی را نشان می‌دهد، پارادوکس انیشتین-پودولسکی-روزن (EPR) است. در این سناریو، دو ذره درهم تنیده که اغلب به آنها «آلیس» و «باب» گفته می شود، جدا شده و به مکان های مختلف فرستاده می شوند. وقتی اندازه‌گیری روی یک ذره انجام می‌شود، حالت آن فوراً مشخص می‌شود و باعث می‌شود وضعیت ذره دیگر نیز مشخص شود، حتی اگر سال‌های نوری از هم فاصله داشته باشند. این نقض آشکار محدودیت سرعت نور، درک ما از نحوه انتقال اطلاعات را به چالش کشیده است.\\
+Non locality \\ 
 
-Entanglement is not just a theoretical concept; it has been experimentally observed and verified through a variety of experiments. One of the most groundbreaking experiments demonstrating entanglement is the Bell test, which tests the violation of Bell inequalities. When the measurements on entangled particles violate these inequalities, it strongly suggests that their behavior cannot be explained by classical physics and instead points to the reality of quantum entanglement.\\
-درهم تنیدگی فقط یک مفهوم نظری نیست. به طور تجربی از طریق آزمایش های مختلف مشاهده و تأیید شده است. یکی از پیشگامانه‌ترین آزمایش‌هایی که درهم تنیدگی را نشان می‌دهد، آزمون بل است که نقض نابرابری‌های بل را آزمایش می‌کند. وقتی اندازه‌گیری‌های ذرات درهم تنیده این نابرابری‌ها را نقض می‌کند، به شدت نشان می‌دهد که رفتار آنها توسط فیزیک کلاسیک قابل توضیح نیست و در عوض به واقعیت درهم‌تنیدگی کوانتومی اشاره می‌کند.\\
-
-
-The implications of entanglement are profound and extend beyond the confines of physics laboratories. Researchers are actively exploring the potential applications of entanglement in fields like quantum computing and quantum cryptography. Entanglement's ability to enable qubits (quantum bits) to exist in multiple states simultaneously has the potential to revolutionize computation and cryptography, leading to solutions that were previously considered impossible.\\
-پیامدهای درهم تنیدگی عمیق است و فراتر از محدوده آزمایشگاه های فیزیک است. محققان به طور فعال در حال بررسی کاربردهای بالقوه درهم تنیدگی در زمینه هایی مانند محاسبات کوانتومی و رمزنگاری کوانتومی هستند. توانایی درهم تنیدگی برای فعال کردن کیوبیت‌ها (بیت‌های کوانتومی) برای وجود همزمان در چندین حالت، این پتانسیل را دارد که محاسبات و رمزنگاری را متحول کند و به راه‌حل‌هایی منجر شود که قبلا غیرممکن تلقی می‌شدند.\\
-
-However, entanglement also presents us with philosophical and conceptual challenges. The nature of the instantaneous connection between entangled particles challenges our understanding of space, time, and causality. It has sparked debates about the true nature of reality and the role of human observation in collapsing the quantum wave function.
-
-In conclusion, entanglement stands as one of the most intriguing and perplexing phenomena in the realm of quantum physics. Its mysterious connection between particles defies classical intuitions and continues to push the boundaries of our understanding of the universe. As scientists delve deeper into the intricacies of entanglement and its potential applications, it's clear that this phenomenon will continue to captivate and inspire generations to come.
-
-در نتیجه، درهم تنیدگی به عنوان یکی از جذاب ترین و گیج کننده ترین پدیده ها در قلمرو فیزیک کوانتومی است. ارتباط اسرارآمیز آن بین ذرات، شهود کلاسیک را به چالش می کشد و همچنان مرزهای درک ما از جهان را پیش می برد. همانطور که دانشمندان عمیق تر به پیچیدگی های درهم تنیدگی و کاربردهای بالقوه آن می پردازند، واضح است که این پدیده همچنان نسل های آینده را مجذوب خود کرده و الهام بخش خواهد بود.
-
-
+در نتیجه، از درهم تنیدگی به عنوان یکی از جذاب ترین و گیج کننده ترین پدیده ها در قلمرو فیزیک کوانتومی یاد‌می‌شود. ارتباط اسرارآمیز آن بین ذرات، شهود کلاسیک را به چالش می کشد و همچنان مرزهای درک ما از جهان را پیش می برد. همانطور که دانشمندان عمیق تر به پیچیدگی های درهم تنیدگی و کاربردهای بالقوه آن می پردازند.
+\subsection{پیاده‌سازی درهمتنیدگی در کیس کیت}
+\begin{verbatim}
+	from qiskit import QuantumCircuit, execute
+	
+	qc = QuantumCircuit(2)
+	qc.h(0)
+	qc.cx(0, 1)
+	
+	backend = Aer.get_backend('qasm_simulator')
+	result = execute(qc, backend).result()
+	
+	counts = result.get_counts()
+	
+	print(counts)
+\end{verbatim}
 \newpage
 
 
@@ -1369,6 +1400,7 @@ In conclusion, entanglement stands as one of the most intriguing and perplexing 
 \begin{center}
 	$\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}$
 \end{center}
+
 
 
 بیانات چی بیتی
@@ -1430,6 +1462,13 @@ $$\begin{aligned}
 \end{itemize}
 
 پروتکل رمزگذاری متراکم؛ یک مثال عالی از قدرت مکانیک کوانتوم در انتقال اطلاعات است. این پروتکل نشان می‌دهد که می‌توان با استفاده از قوانین مکانیک کوانتوم، اطلاعات را به روش‌های غیرممکن در فیزیک کلاسیک انتقال داد.
+
+\subsection{پیاده سازی رمزگذاری متراکم در کیس کیت}
+
+
+\begin{verbatim}
+	https://gist.github.com/GDLMadushanka/9ebae6b3fff104514f4bc82b3803dba9
+\end{verbatim}
 \newpage
 \section{دوربری}
 دوربری کوانتومی تکنیکی برای جابجایی حالات کوانتومی به نقاط دیگر است. در اینجا نحوه عملکرد دوربری کوانتومی آمده است:
@@ -1530,6 +1569,12 @@ fig 1.13
 
 این نقض ناشی از دقت کم و یا توهم است؛ زیرا پس از فرآیند دوربری فقط کیوبیت هدف در حالت $\vert \Psi \rangle$ باقی می ماند و کیوبیت اصلی که حامل داده است؛ با توجه به فرآیند اندازه گیری حالت اصلی به یکی از حالت های پایه محاسباتی $\vert 0 \rangle$ یا$\vert 1 \rangle$ رمبش می‌کند.
 
+
+
+\subsection{پیاده‌سازی دوربری در کیس کیت}
+\begin{verbatim}
+	https://learn.qiskit.org/course/ch-algorithms/quantum-teleportation
+\end{verbatim}
 \newpage
 	
 % https://learn.qiskit.org/course/ch-algorithms/quantum-circuits

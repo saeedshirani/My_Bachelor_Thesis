@@ -3,16 +3,15 @@
 \contentsline {subsection}{\numberline {1.1.1}کیوبیت‌ واحد}{5}{}%
 \contentsline {subsection}{\numberline {1.1.2}کیوبیت‌های چندتایی}{8}{}%
 \contentsline {section}{\numberline {1.2}اندازه‌گیری در فضای هیلبرت}{9}{}%
-\contentsline {subsection}{\numberline {1.2.1}bloch vector}{9}{}%
 \contentsline {section}{\numberline {1.3}گیت‌های کوانتومی}{11}{}%
 \contentsline {subsection}{\numberline {1.3.1}انواع گیت کوانتومی}{11}{}%
 \contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{12}{}%
 \contentsline {subsubsection}{مدار NOT و خصوصیات آن}{13}{}%
 \contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{17}{}%
 \contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{18}{}%
-\contentsline {subsection}{\numberline {1.3.2}Swap gate}{19}{}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت swap}{19}{}%
-\contentsline {subsubsection}{گیت swap در مدار و خصوصیات آن}{20}{}%
+\contentsline {subsection}{\numberline {1.3.2}گیت مبادله}{19}{}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت مبادله}{19}{}%
+\contentsline {subsubsection}{گیت مبادله در مدار و خصوصیات آن}{20}{}%
 \contentsline {section}{\numberline {1.4}مدار‌های کوانتومی}{21}{}%
 \contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{22}{}%
 \contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{23}{}%
@@ -48,8 +47,13 @@
 \contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{38}{}%
 \contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{38}{}%
 \contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{39}{}%
+\contentsline {subsubsection}{پیاده‌سازی الگوریتم دوچ در کیس کیت}{42}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{43}{}%
 \contentsline {section}{\numberline {4.1}حالات بل}{43}{}%
+\contentsline {subsubsection}{پیاده‌سازی حالات بل در کیس کیت}{44}{}%
 \contentsline {section}{\numberline {4.2}درهمتنیدگی}{45}{}%
-\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{48}{}%
+\contentsline {subsection}{\numberline {4.2.1}پیاده‌سازی درهمتنیدگی در کیس کیت}{46}{}%
+\contentsline {section}{\numberline {4.3}رمزگذاری متراکم کوانتومی}{47}{}%
+\contentsline {subsection}{\numberline {4.3.1}پیاده سازی رمزگذاری متراکم در کیس کیت}{50}{}%
 \contentsline {section}{\numberline {4.4}دوربری}{51}{}%
+\contentsline {subsection}{\numberline {4.4.1}پیاده‌سازی دوربری در کیس کیت}{54}{}%

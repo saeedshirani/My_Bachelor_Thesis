@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  21 AUG 2023 14:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  21 AUG 2023 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1206,19 +1206,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Missing character: There is no α ("3B1) in font cmmi10!
 Missing character: There is no α ("3B1) in font cmmi10!
 [9] [10]
-Overfull \hbox (0.72522pt too wide) in paragraph at lines 196--197
+Overfull \hbox (0.72522pt too wide) in paragraph at lines 195--196
 []\TU/XBZar(0)/m/n/10 گیت‌های کوانتومی[][] یکی از اولین و مهم‌ترین اجزای‌ مدار‌
 های کوانتومی ‌می‌باشند. این گیت‌ها عملگر‌هایی[]
  []
 
 
-Overfull \hbox (3.03609pt too wide) in paragraph at lines 199--200
+Overfull \hbox (3.03609pt too wide) in paragraph at lines 198--199
 []\TU/XBZar(0)/m/n/10 گیت‌های کوانتومی، دارای انواع مختلف گوناگونی می‌باشند. به
  طور کلی گیت‌های کوانتومی، عملگر‌هایی[]
  []
 
 
-Overfull \hbox (0.7363pt too wide) in paragraph at lines 210--211
+Overfull \hbox (0.7363pt too wide) in paragraph at lines 209--210
 [][]\TU/XBZar(0)/m/n/10 این گیت کوانتومی‌ به صورت خطی روی یک دسته‌ کت اثر مي‌کن
 د. نمایش ماتریسی این گیت‌کوانتومی[]
  []
@@ -1227,7 +1227,7 @@ Overfull \hbox (0.7363pt too wide) in paragraph at lines 210--211
 Underfull \vbox (badness 1590) has occurred while \output is active []
 
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 [][]
  []
 
@@ -1236,22 +1236,22 @@ Underfull \vbox (badness 4181) has occurred while \output is active []
 
  [13]
 <xymatrix 5x1 219>
-Underfull \hbox (badness 10000) in paragraph at lines 399--401
+Underfull \hbox (badness 10000) in paragraph at lines 398--400
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 [][]
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 [][]
  []
 
@@ -1263,12 +1263,12 @@ File: Matrix-representation-and-quantum-circuit-of-CNOT-gate.png Graphic file (
 type bmp)
 <Matrix-representation-and-quantum-circuit-of-CNOT-gate.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 [][]
  []
 
@@ -1313,7 +1313,7 @@ File: meas-firstcirc.png Graphic file (type bmp)
  [24]
 فصل 2.
 
-Overfull \hbox (8.87376pt too wide) in paragraph at lines 816--817
+Overfull \hbox (8.87376pt too wide) in paragraph at lines 815--816
 []\TU/XBZar(0)/m/n/10 کوانتومی از بیت‌های کوانتومی (کیوبیت‌ها) برای ذخیره اطلاع
 ات استفاده می‌کنند، در حالی که کامپیوترهای[]
  []
@@ -1321,7 +1321,7 @@ Overfull \hbox (8.87376pt too wide) in paragraph at lines 816--817
 [25
 
 ] [26] [27]
-Overfull \hbox (13.78262pt too wide) in paragraph at lines 870--871
+Overfull \hbox (13.78262pt too wide) in paragraph at lines 869--870
 [] \TU/XBZar(0)/b/n/10 توسعه‌ی الگوریتم‌های جایگزین برای تصحیح خطای‌‌کوانتومی[]
  \TU/XBZar(0)/m/n/10 الگوریتم های تصحیح خطا کوانتومی[]
  []
@@ -1330,7 +1330,7 @@ Overfull \hbox (13.78262pt too wide) in paragraph at lines 870--871
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-Overfull \hbox (80.25pt too wide) in paragraph at lines 961--961
+Overfull \hbox (80.25pt too wide) in paragraph at lines 962--962
 [][]\TU/lmtt/m/n/10 circuit.draw(output = "mpl")  # output = "mpl" is defining 
 type of circuit output[] []
  []
@@ -1343,13 +1343,13 @@ phic file (type bmp)
 ]
 فصل 3.
 
-Overfull \hbox (0.4648pt too wide) in paragraph at lines 1033--1034
+Overfull \hbox (0.4648pt too wide) in paragraph at lines 1034--1035
 []\TU/XBZar(0)/m/n/10 موازی‌سازی کوانتومی[][]، پایه‌واساس بسیاری از الگوریتم‌ها
 ی کوانتومی است. با گذار یک حالت کوانتومی[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
 [][]
  []
 
@@ -1364,29 +1364,20 @@ File: Uforacle.png Graphic file (type bmp)
 <Uforacle.png>
 [34]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1086.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1088.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1086.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1088.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1086.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1088.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1086.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1088.
 
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
-[35]
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[36]
+[35] [36]
 File: standard computation model.png Graphic file (type bmp)
 <standard computation model.png>
 File: Query computation model.png Graphic file (type bmp)
@@ -1395,7 +1386,7 @@ File: Query computation model.png Graphic file (type bmp)
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1208--1209
+Underfull \hbox (badness 10000) in paragraph at lines 1203--1204
 [][]
  []
 
@@ -1417,114 +1408,95 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
 [39]
 File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type b
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
  [40]
+Underfull \hbox (badness 10000) in paragraph at lines 1236--1237
+[][]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
 [][]
  []
 
+[41]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1288--1288
+[][]\TU/lmtt/m/n/10 https://learn.qiskit.org/course/ch-algorithms/quantum-telep
+ortation[] []
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1247
+[42]
+فصل 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1298
 [][]
  []
 
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no 〉 (U+3009) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[41] [42]
-فصل 4.
 
-Overfull \hbox (9.35039pt too wide) in paragraph at lines 1290--1292
-[]\TU/XBZar(0)/m/n/10 gives the output state (۱۰۰) + |۱۱))/√۲. Note how this wo
-rks: first، the Hadamard[]
+Underfull \hbox (badness 10000) in paragraph at lines 1299--1301
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1303--1304
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1306--1307
+[][]
  []
 
 [43
 
-]
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no β (U+03B2) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-[44]
-Underfull \hbox (badness 10000) in paragraph at lines 1332--1334
+] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1360
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1337
+Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1338--1340
-[][]
- []
-
-[45]
-Overfull \hbox (5.2686pt too wide) in paragraph at lines 1341--1343
-[]\TU/XBZar(0)/m/n/10 groundbreaking experiments demonstrating entanglement is 
-the Bell test، which[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1341--1343
+Underfull \hbox (badness 10000) in paragraph at lines 1363--1365
 [][]
  []
 
 
-Overfull \hbox (0.31418pt too wide) in paragraph at lines 1345--1347
-[][]\TU/XBZar(0)/m/n/10 The implications of entanglement are profound and exten
-d beyond the con-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1345--1347
+Underfull \hbox (badness 10000) in paragraph at lines 1366--1367
 [][]
  []
 
-[46] [47]
+
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1369
+[][]
+ []
+
+[45] [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [47]
 File: super dence.png Graphic file (type bmp)
 <super dence.png>
 
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 1421--1422
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 1453--1454
 [][]
  []
 
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1437--1438
+
+Overfull \hbox (22.5pt too wide) in paragraph at lines 1471--1471
+[][]\TU/lmtt/m/n/10 https://gist.github.com/GDLMadushanka/9ebae6b3fff104514f4bc
+82b3803dba9[] []
+ []
+
+[49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1477
 [][]
  []
 
@@ -1533,20 +1505,26 @@ Underfull \vbox (badness 2818) has occurred while \output is active []
 
  [51]
 [52]
-Underfull \hbox (badness 10000) in paragraph at lines 1525--1526
+Underfull \hbox (badness 10000) in paragraph at lines 1564--1565
 [][]
  []
 
-[53] [54] (./qi.aux)
+[53]
+Overfull \hbox (6.75pt too wide) in paragraph at lines 1577--1577
+[][]\TU/lmtt/m/n/10 https://learn.qiskit.org/course/ch-algorithms/quantum-telep
+ortation[] []
+ []
+
+[54] (./qi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 38173 strings out of 476179
- 958338 string characters out of 5813072
+ 38177 strings out of 476179
+ 958390 string characters out of 5813072
  1600594 words of memory out of 5000000
- 58312 multiletter control sequences out of 15000+600000
+ 58316 multiletter control sequences out of 15000+600000
  478576 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,18n,104p,1033b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
