@@ -1,4 +1,7 @@
 \documentclass{book}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{hyperref}
 \usepackage{titling}
 \usepackage{multirow}
 \usepackage{setspace}
@@ -7,22 +10,255 @@
 \usepackage{subfigure}
 \usepackage{braket}
 \usepackage{graphicx}
-\usepackage{array}
-
 \usepackage{qcircuit}
-\usepackage{graphicx}
-
+\usepackage{array}
 \usepackage{tabularray}
-\usepackage{amsmath}
 \usepackage{circuitikz}
 \usepackage{amssymb}
 \usepackage{setspace}
-\usepackage{amsmath}
-\usepackage{xepersian}
-\settextfont{XB Zar}
+\usepackage{pgfpages}
+\usepackage{color}
+\usepackage{fancyvrb}
+\usepackage{tcolorbox}
+
+
+
 \linespread{1.5}
 
+% ---------------
 
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+\usepackage{unicode-math}
+\defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+	\usepackage[]{microtype}
+	\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+	\IfFileExists{parskip.sty}{%
+		\usepackage{parskip}
+	}{% else
+		\setlength{\parindent}{0pt}
+		\setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+	\KOMAoptions{parskip=half}}
+\makeatother
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+	hidelinks,
+	pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+
+\pgfpagesdeclarelayout{boxed}
+{
+	\edef\pgfpageoptionborder{0pt}
+}
+{
+	\pgfpagesphysicalpageoptions
+	{%
+		logical pages=1,%
+	}
+	\pgfpageslogicalpageoptions{1}
+	{
+		border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+		border shrink=\pgfpageoptionborder,%
+		resized width=.95\pgfphysicalwidth,%
+		resized height=.95\pgfphysicalheight,%
+		center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+	}%
+}
+
+
+
+\pgfpagesuselayout{boxed}
+\usepackage{url}
+\usepackage{authblk}
+\usepackage{amsmath}
+\usepackage{setspace}\doublespacing
+\usepackage{graphicx} 
+\usepackage{amssymb}
+
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{floatflt}
+\usepackage{lipsum}
+%\usepackage[demo]{graphicx}
+\usepackage{upquote} % Upright quotes for verbatim code
+\usepackage{eurosym} % defines \euro
+\usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+\usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+
+\usepackage{grffile} % extends the file name processing of package graphics 
+\usepackage{xepersian}
+
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Pygments definitions
+
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+	\let\PY@ul=\relax \let\PY@tc=\relax%
+	\let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+	\PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+				\PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+%-----------
 
 \makeatletter
 \def\TikzBipolePath#1#2{\pgf@circ@bipole@path{#1}{#2}}
@@ -31,6 +267,11 @@
 
 % TikZ libraries `calc` needed now to tweak bracket.
 \usetikzlibrary{backgrounds,fit,decorations.pathreplacing,calc}
+
+\definecolor{cellbackground}{RGB}{255,255,255}
+\usepackage{bidi}
+\usepackage{xepersian}
+\settextfont{XB Zar}
 
 \begin{document}
 \tableofcontents
@@ -61,7 +302,7 @@
 
 کت‌های $\vert 0 \rangle$ و $\vert 1 \rangle$ بیانگر پایه‌های فضای محاسباتی\footnote{\lr{Computational Basis Vectors}} هستند؛ و مقادیر $\alpha^2$ و $\beta^2$ بیانگر احتمال وقوع هر یک از این حالات، در صورت مشاهده، می‌باشند. نمایش بردار $\psi$ به شکل زیر است:
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}\label{بردار حالت در فضای دو بعدی }
 	
 	% Define the axes
 	\draw[->] (-2,0)--(2,0) node[right]{$\vert 0 \rangle$};
@@ -1152,9 +1393,9 @@ $$
 \section{معرفی و پیاده سازی الگوریتم دوچ}
 
 \subsection{مسئله‌ی دوچ}
-الگوریتم دوچ اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{\lr{David Deutsch}} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
+الگوریتم دوچ\footnote{Deutsch algorithm} اولین و ساده‌ترین الگوریتم کوانتومی‌ است. این الگوریتم برای اولین بار در سال 1985 در مقاله‌ای مطرح شد؛ که توسط دیوید دوچ\footnote{\lr{David Deutsch}} نوشته شده‌‌بود. این الگوریتم نقطه‌ی شروعی برای اثبات برتری کامپیوترهای کوانتومی نسبت به کامپوترهای کلاسیک است.
 
-مسئله‌ی \lr{Deutsch} یکی از ساده‌ترین مفاهیم ممکن را مطرح می‌کند. اگر یک تابع به فرم زیر تعریف شود: 
+مسئله‌ی دوچ یکی از ساده‌ترین مفاهیم ممکن را مطرح می‌کند. اگر یک تابع به فرم زیر تعریف شود: 
 \begin{center}
 	$f : \sum \rightarrow \sum$
 \end{center}
@@ -1163,7 +1404,7 @@ $$
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Constantorbalanse.png}
-	\caption{}
+	\caption{تمام حالات ممکن برای یک تابع ثابت و یک تابع متعادل}
 \end{figure}\\
 در شکل بالا توابع \lr{f 1} , \lr{f 4} توابع ثابت و توابع \lr{f 2} و \lr{f 3} توابع متعادل هستند.
 \begin{center}
@@ -1218,46 +1459,52 @@ $$
 
 حالت ورودی:\\
 \begin{center}
-	$\vert\psi_{0}\rangle = \vert01\rangle$
+	\begin{equation}\label{zero state deutsch}
+		\vert\psi_{0}\rangle = \vert01\rangle
+	\end{equation}
 \end{center}
 
 سیستم دو کیوبیتی تشکیل شده،‌ پس از اعمال اثر دو گیت هادامارد می‌دهد:\\
 
 \begin{center}
-$\left|\psi_1\right\rangle=\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
+	\begin{equation}\label{first psi1 deutsch algorithm}
+		\left|\psi_1\right\rangle=\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]
+	\end{equation}
 \end{center}
-
-
-
 با کمی تأمل می‌توان دریافت که اگر $U_{f}$ را به حالت $\vert x \rangle (\vert 0 \rangle - \vert 1 \rangle)/\sqrt{2}$ اعمال کنیم، سپس به حالت $(-1)^{f(x)}\vert x \rangle(\vert 0 \rangle - \vert 1 \rangle)/\sqrt{2}$ می رسیم. بنابرین اعمال $U_{f}$ به $\vert \Psi_{1} \rangle$ ما را با یکی از دو امکان زیر مواجه می کند:
-
 \begin{center}
-	$\left|\psi_2\right\rangle= \begin{cases} \pm\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
+	\begin{equation}\label{first psi2 deutsch algorithm}
+	\left|\psi_2\right\rangle= \begin{cases} \pm\left[\frac{|0\rangle+|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}
+\end{equation}
 \end{center}
 با اعمال آخرین گیت هادامارد روی کیوبیت اول به حالت زیر خواهیم رسید:
 \begin{center}
-	$\left|\psi_3\right\rangle= \begin{cases} \pm|0\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm|1\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}$
+	\begin{equation}\label{first psi3 deutsch algorithm}
+	\left|\psi_3\right\rangle= \begin{cases} \pm|0\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0)=f(1) \\ \pm|1\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right] & \text { if } f(0) \neq f(1) \end{cases}
+	\end{equation}
 \end{center}
 با درنظر گرفتن شرایط زیر می‌توان $\vert\psi_{3}\rangle$ را به شکل زیر بازنویسی کرد:
-
-$$
-\begin{aligned}
-	\left\{
-	\begin{aligned}
-		f(0) &= f(1) 
-		\implies \qquad f(0) \oplus f(1) &= 0\\
-		f(0) &\neq f(1) 
-		\implies \qquad f(0) \oplus f(1) &= 1
-	\end{aligned}
-	\right.
-\end{aligned}$$
-
-از این رو:
-
 \begin{center}
-	$\left|\psi_3\right\rangle= \pm|f(0) \oplus f(1)\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]$
+\begin{equation}\label{key}
+	\begin{aligned}
+		\left\{
+		\begin{aligned}
+			f(0) &= f(1) 
+			\implies \qquad f(0) \oplus f(1) &= 0\\
+			f(0) &\neq f(1) 
+			\implies \qquad f(0) \oplus f(1) &= 1
+		\end{aligned}
+		\right.
+	\end{aligned}
+\end{equation}
 \end{center}
-بنابراین با اندازه گیری کیوبیت اول می توانیم $f(0) \oplus f(1)$ را تعیین کنیم. واقعاً جالب است! مدار کوانتومی به ما توانایی تعیین یک ویژگی جهانی از $f(x)$، یعنی$ f(0)\oplus f(1)$ را داده است، با استفاده از تنها یک ارزیابی از $f(x)$!این سریعتر از آن چیزی است که با یک دستگاه کلاسیک امکان‌پذیر است،یک دستگاه کلاسیک حداقل به دو ارزیابی نیاز دارد.
+از این رو:
+\begin{center}
+	\begin{equation}\label{psi3 deutsch algorithm}
+	\left|\psi_3\right\rangle= \pm|f(0) \oplus f(1)\rangle\left[\frac{|0\rangle-|1\rangle}{\sqrt{2}}\right]	
+	\end{equation}
+\end{center}
+بنابراین با اندازه گیری کیوبیت اول می توانیم $f(0) \oplus f(1)$ را تعیین کنیم. واقعاً جالب است! مدار کوانتومی به ما توانایی تعیین یک ویژگی کلی از $f(x)$، یعنی$ f(0)\oplus f(1)$ را داده است، با استفاده از تنها یک ارزیابی از $f(x)$!این سریعتر از آن چیزی است که با یک دستگاه کلاسیک امکان‌پذیر است،یک دستگاه کلاسیک حداقل به دو ارزیابی نیاز دارد.
 این مثال تفاوت بین موازی‌سازی کوانتومی و الگوریتم‌های تصادفی کلاسیک را برجسته می‌کند. به سادگی، ممکن است تصور شود که حالت $\vert0\rangle \vert f(0) \rangle + \vert1\rangle \vert f(1) \rangle$ مطابقت نزدیکی با یک رایانه کلاسیک تصادفی دارد که هرکدام از حالات $ f (0)$ یا$ f (1) $ با احتمال $1/2$ اندازه‌گیری می‌کند.
 تفاوت این است که در یک رایانه کلاسیک این دو گزینه همیشه یکدیگر را حذف می‌کنند. در یک رایانه کوانتومی، امکان دارد که دو گزینه با یکدیگر تداخل داشته باشند تا برخی از خواص کلی تابع $f$ را با استفاده از چیزی شبیه به گیت هادامارد برای بازترکیب گزینه‌های مختلف، مانند آنچه در الگوریتم دوچ انجام شد، به دست آورند.
 اساس طراحی بسیاری از الگوریتم‌های کوانتومی این است که یک انتخاب هوشمندانه از تابع و تبدیل نهایی اجازه می‌دهد تا اطلاعات جهانی مفیدی در مورد تابع تعیین شود - اطلاعاتی که نمی‌توان به سرعت در یک رایانه کلاسیک به دست آورد.
@@ -1266,9 +1513,212 @@ $$
 % implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
 
 \subsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
-\begin{verbatim}
-کد ها ضمیمه شود
-\end{verbatim}
+
+
+   \begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+		\PY{k+kn}{from} \PY{n+nn}{qiskit}\PY{n+nn}{.}\PY{n+nn}{tools}\PY{n+nn}{.}\PY{n+nn}{visualization} \PY{k+kn}{import} \PY{n}{plot\PYZus{}histogram}
+		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\linewidth]{output_2_0.png}
+	\caption{This is an image.}
+\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\linewidth]{output_3_0.png}
+	\caption{This is an image.}
+\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		<qiskit.circuit.instructionset.InstructionSet at 0x7fb3a83c1c70>
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+	
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{output_5_0.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{backend} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+		\PY{n}{result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{backend}\PY{p}{,} \PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+		\PY{n}{counts} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
+		
+		\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{counts}\PY{p}{]}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{output_6_0.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{}Real Quantum Computer}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{IBMQ}\PY{o}{.}\PY{n}{load\PYZus{}account}\PY{p}{(}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{provider} \PY{o}{=} \PY{n}{IBMQ}\PY{o}{.}\PY{n}{get\PYZus{}provider}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ibm\PYZhy{}q}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{k}{for} \PY{n}{backend} \PY{o+ow}{in} \PY{n}{provider}\PY{o}{.}\PY{n}{backends}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+		\PY{k}{try}\PY{p}{:}
+		\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{backend}\PY{o}{.}\PY{n}{properties}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{qubits}\PY{p}{)}
+		\PY{k}{except}\PY{p}{:}
+		\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{simulated}\PY{l+s+s2}{\PYZdq{}}
+		\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{name}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ : }\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+	ibmq\_qasm\_simulator : 3 \& simulated qubits
+	ibmqx2 : 12 \& 5 qubits
+	ibmq\_16\_melbourne : 411 \& 15 qubits
+	ibmq\_armonk : 48 \& 1 qubits
+	ibmq\_athens : 7 \& 5 qubits
+	ibmq\_santiago : 13 \& 5 qubits
+	ibmq\_lima : 12 \& 5 qubits
+	ibmq\_belem : 5 \& 5 qubits
+	ibmq\_quito : 4 \& 5 qubits
+	simulator\_statevector : 4 \& simulated qubits
+	simulator\_mps : 3 \& simulated qubits
+	simulator\_extended\_stabilizer : 3 \& simulated qubits
+	simulator\_stabilizer : 3 \& simulated qubits
+	ibmq\_manila : 15 \& 5 qubits
+\end{Verbatim}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{quantum\PYZus{}computer} \PY{o}{=} \PY{n}{provider}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ibmq\PYZus{}belem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{quantum\PYZus{}result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{quantum\PYZus{}computer}\PY{p}{,}\PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{quantum\PYZus{}counts} \PY{o}{=} \PY{n}{quantum\PYZus{}result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
+		\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{quantum\PYZus{}counts}\PY{p}{]}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{output_13_0.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+% Add a bibliography block to the postdoc
+
 
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
@@ -1285,22 +1735,38 @@ $$
   
 حالت خروجی را می‌توان به شکل زیر نمایش داد:\\
 
+\begin{equation}
+	%\begin{align*}
+	\begin{split}
+		\ket{\beta_{00}} &= \frac{\ket{00} + \ket{11}}{\sqrt{2}} \\
+		\ket{\beta_{01}} &= \frac{\ket{01} + \ket{10}}{\sqrt{2}} \\
+		\ket{\beta_{10}} &= \frac{\ket{00} - \ket{11}}{\sqrt{2}} \\
+		\ket{\beta_{11}} &= \frac{\ket{01} - \ket{10}}{\sqrt{2}}
+	\end{split}	
+	%\end{align*}
+\end{equation}
 
-1.23 - 1.26\\
-
-
-
- 
  از حالت‌های بالا به عنوان حالات بل یا حالات EPR یاد‌می‌کنیم.
   
   
 خصوصیات حالات $\vert \beta_{00} \rangle, \vert \beta_{01} \rangle, \vert \beta_{10} \rangle, \vert \beta_{11} \rangle,$از طریق فرمول زیر بهتر درک خواهند شد:
+\begin{equation}\label{Bell formula}
+	\ket{\beta_{ay}} = \frac{\ket{0, y} + (-1)^{y} \ket{1, \bar{y}}}{\sqrt{2}}
+\end{equation}
+
+منظور از این جمله چیه؟؟
+where ¯y is the negation of y.
+
+
+
 
  
- 1.27
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Bell_state.png}
+	\caption{مدار کوانتومی بل به‌همراه ورودی و خروجی آن}
+\end{figure}
  
- where ¯y is the negation of y.
- fig 1.12
  
  
  
@@ -1349,14 +1815,15 @@ Non locality \\
 رمزگذاری متراکم شامل دو طرفین است که به طور معمول به عنوان «آلیس» و «باب» شناخته می‌شوند، که از هم فاصله زیادی دارند. هدف آنها انتقال برخی اطلاعات کلاسیک از آلیس به باب است. فرض کنید آلیس قصد دارد دوبیت داده‌ی کلاسیک را برای باب ارسال کند، اما فقط مجاز است یک کیوبیت به باب ارسال کند. آیا می‌تواند به هدف خود برسد؟
 
 رمزگذاری متراکم به ما می‌گوید که پاسخ این سؤال بله است. فرض کنید آلیس و باب در ابتدا یک جفت کیوبیت در حالت درهم‌تنیده زیر به اشتراک می‌گذارند:
-
-
 \begin{center}
-	$\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}$
+	\begin{equation}\label{entangel psi}
+		\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}
+	\end{equation}
+	
 \end{center}
 
 
-آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات باتوجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل یکه را به کیوبیت خود اعمال می‌کند.
+آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات با توجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل یکه را به کیوبیت خود اعمال می‌کند.
 
 این تبدیل واحد باعث می‌شود که کیوبیت آلیس و کیوبیت باب در یکی از چهار حالت متعامد بل قرار گیرند. اگر آلیس کیوبیت خود را در حالت $\vert 00 \rangle$ قرار دهد، کیوبیت باب به طور خودکار به حالت $\vert 00 \rangle$ تبدیل می‌شود. این بدان معناست که آلیس دو بیت اطلاعات $(0, 0)$ را به باب منتقل کرده است.
 
@@ -1367,14 +1834,14 @@ Non locality \\
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width=3in]{super dence.png}
-		\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهمتنیده را در اختیار دارند.}
+		\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهم‌تنیده را در اختیار دارند.}
 		\label{fig:myimage}
 	\end{figure}
 \end{center}
 
 همانطور که در شکل بالا قابل ملاحظه است؛ آلیس و باب، هرکدام یک کیوبیت در اختیار دارند. توجه داشته باشید که $\Psi$ یک حالت ثابت است؛ نیازی نیست که آلیس برای آماده‌سازی این حالت، کیوبیتی را به باب ارسال کند. در عوض، ممکن است یک طرف ثالث قبلاً حالت درهم‌تنیده را آماده کند، یکی از کیوبیت‌ها را به آلیس و دیگری را به باب ارسال کند.
 
-با ارسال تک کیوبیت آلیس  به باب، معلوم می‌شود که آلیس می‌تواند دو بیت اطلاعات کلاسیک را به باب منتقل کند. در اینجا روشی که او استفاده می‌کند؛ آورده شده است. اگر او بخواهد رشته‌بیت :
+با ارسال تک کیوبیت آلیس  به باب، معلوم می‌شود که آلیس می‌تواند دو بیت اطلاعات کلاسیک را به باب منتقل کند. در اینجا روشی که او استفاده می‌کند؛ آورده شده است. اگر او بخواهد رشته بیت :
 
 \begin{itemize}
 	\item  $"00"$ را ارسال کند $\impliedby$ هیچ کاری روی کیوبیت خود انجام ندهد.
@@ -1384,12 +1851,14 @@ Non locality \\
 \end{itemize}
 چهار حالت حاصل به راحتی قابل مشاهده هستند:
 \begin{center}
-$$\begin{aligned}
-	& 00:|\psi\rangle \rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}} \\
-	& 01:|\psi\rangle \rightarrow \frac{|00\rangle-|11\rangle}{\sqrt{2}} \\
-	& 10:|\psi\rangle \rightarrow \frac{|10\rangle+|01\rangle}{\sqrt{2}} \\
-	& 11:|\psi\rangle \rightarrow \frac{|01\rangle-|10\rangle}{\sqrt{2}} .
-\end{aligned}$$	
+\begin{equation}\label{Alice action superdense}
+	\begin{aligned}
+		& 00:|\psi\rangle \rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}} \\
+		& 01:|\psi\rangle \rightarrow \frac{|00\rangle-|11\rangle}{\sqrt{2}} \\
+		& 10:|\psi\rangle \rightarrow \frac{|10\rangle+|01\rangle}{\sqrt{2}} \\
+		& 11:|\psi\rangle \rightarrow \frac{|01\rangle-|10\rangle}{\sqrt{2}} .
+	\end{aligned}
+\end{equation}
 \end{center}
 
 همانطور که پیش‌از این اشاره شد؛این چهار حالت به عنوان پایه بل، حالت‌های بل، یا جفت‌های EPR شناخته می‌شوند.
@@ -1416,6 +1885,285 @@ $$\begin{aligned}
 \subsection{پیاده سازی رمزگذاری متراکم در کیس کیت}
 
 
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Superdense Coding}
+		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Step 0: Prepare the Bell State}
+		\PY{n}{bell\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup1.png}
+		\caption{This is an image.}
+	\end{figure}
+	
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Step 1: Prepare Alice circuits depending on b0b1}
+		
+		\PY{c+c1}{\PYZsh{} Case 00: the circuit has no gates}
+		\PY{n}{alice\PYZus{}00} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup2.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Case 01: the circuit has the X gate}
+		\PY{n}{alice\PYZus{}01} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup3.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Case 10: the circuit has the Z gate}
+		\PY{n}{alice\PYZus{}10} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup4.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Case 11: the circuit has the X gate and then Z gate}
+		\PY{n}{alice\PYZus{}11} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup5.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Step 2: Apply the inverted entanglement circuit, and then measure}
+		\PY{n}{invert\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Qiskit measures are always reversed, b1b0 not b0b1}
+		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup6.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} When merged, the whole circuit looks like}
+		\PY{p}{(}\PY{n}{bell\PYZus{}circuit} \PY{o}{+} \PY{n}{alice\PYZus{}11} \PY{o}{+} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup7.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} Now we simulate each outcome, to do so we create an auxiliary function that runs it}
+		\PY{k}{def} \PY{n+nf}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{prep}\PY{p}{,} \PY{n}{encoding}\PY{p}{,} \PY{n}{decoding}\PY{p}{)}\PY{p}{:}
+		\PY{+w}{    }\PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Returns the counts of the circuit that is combination of the three circuits\PYZdq{}\PYZdq{}\PYZdq{}}
+		\PY{n}{circuit} \PY{o}{=} \PY{n}{prep} \PY{o}{+} \PY{n}{encoding} \PY{o}{+} \PY{n}{decoding}
+		\PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{qasm\PYZus{}simulator}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+		\PY{n}{job} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{simulator}\PY{p}{,} \PY{n}{shots} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{16}\PY{p}{)}
+		\PY{n}{result} \PY{o}{=} \PY{n}{job}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+		\PY{n}{count} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+		\PY{k}{return} \PY{n}{count}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} For 00}
+		\PY{n}{count\PYZus{}00} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}00}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}00}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup9.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} For 01}
+		\PY{n}{count\PYZus{}01} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}01}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}01}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup10.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} For 10}
+		\PY{n}{count\PYZus{}10} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}10}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}10}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup11.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} For 11}
+		\PY{n}{count\PYZus{}11} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}11}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}11}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{sup12.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{c+c1}{\PYZsh{} The results match our predictions!}
+		\PY{c+c1}{\PYZsh{} For purposes of reproducibility, the Qiskit version is}
+		\PY{n}{qiskit}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}qiskit\PYZus{}version\PYZus{}\PYZus{}}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\{'qiskit-terra': '0.11.0',
+		'qiskit-aer': '0.3.4',
+		'qiskit-ignis': '0.2.0',
+		'qiskit-ibmq-provider': '0.4.4',
+		'qiskit-aqua': '0.6.1',
+		'qiskit': '0.14.0'\}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+% Add a bibliography block to the postdoc
+
+
 \begin{verbatim}
 
 \end{verbatim}
@@ -1423,7 +2171,7 @@ $$\begin{aligned}
 \section{دوربری}
 دوربری کوانتومی تکنیکی برای جابجایی حالات کوانتومی به نقاط دیگر است. در اینجا نحوه عملکرد دوربری کوانتومی آمده است:
 
- آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سال‌ها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت $\vert \Psi \rangle$ به باب است. او وضعیت  و خصوصیات کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟\\
+ آلیس و باب مدت ها پیش با هم آشنا شدند اما اکنون دور از هم زندگی می کنند. در حالی که آنها با هم یک جفت EPR تولید کردند، هر کدام یک کیوبیت از جفت EPR را در هنگام جدا شدن می‌گرفتند. سالها بعد، باب مخفی است، و ماموریت آلیس، در صورتی که آن را بپذیرد، تحویل یک کیوبیت $\vert \Psi \rangle$ به باب است. او وضعیت  و خصوصیات کیوبیت را نمی داند و علاوه بر این فقط می تواند اطلاعات کلاسیک را برای باب ارسال کند. آیا آلیس باید این مأموریت را بپذیرد؟\\
 
 
 درظاهر، تمام شرایط علیه آلیس است. او وضعیت $\vert \Psi \rangle$ کیوبیتی را که باید برای باب بفرستد نمی داند، و طبق قوانین مکانیک کوانتومی، او حق تعیین وضعیت $\vert \Psi \rangle$ را ندارد؛‌زیرا فقط یک نسخه از جفت کیوبیت را در اختیار دارد. به علاوه، حتی اگر او حالت $\vert \Psi \rangle$ را می دانست، توصیف دقیق آن به مقدار نامحدودی از اطلاعات کلاسیک نیاز دارد، زیرا $\vert \Psi \rangle$ مقادیری را در یک فضای پیوسته می گیرد.
@@ -1439,60 +2187,72 @@ $$\begin{aligned}
 دوربری حالتی که باید از راه دور منتقل شود عبارت است از $\vert \Psi \rangle = \alpha \vert 0 \rangle + \beta \vert 1 \rangle$ که $\alpha$ و $\beta$ ناشناخته هستند.
 
 \begin{center}
-	$$\left.\left|\psi_0\right\rangle=|\psi\rangle\right\rangle\left|\beta_{00}\right\rangle$$
+	\begin{equation}\label{psi before spooky action}
+		\left.\left|\psi_0\right\rangle=\vert \psi\rangle \vert \beta_{00}\right\rangle
+	\end{equation}
 \end{center}
 
 
-
-fig 1.13
-
-
-
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=3in]{spooky action.png}
+	\caption{مدار کوانتومی برای انتقال یک کیوبیت دو خط بالا نشان دهنده سیستم آلیس هستند، در حالی که خط پایین نشان دهنده سیستم آلیس است
+		خط سیستم باب است. مترها اندازه گیری را نشان می دهند و خطوط دوتایی که از آنها بیرون می آیند دارای حالت کلاسیک هستند
+		بیت ها (به یاد بیاورید که خطوط منفرد نشان دهنده کیوبیت هستند)}
+\end{figure}
 
 \begin{center}
-	$$=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|00\rangle+|11\rangle)]$$
+	\begin{equation}\label{wide version spooky psi}
+		=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|00\rangle+|11\rangle)]
+	\end{equation}
 \end{center}
 
-جایی که ما از این قاعده استفاده می کنیم که دو کوبیت اول (در سمت چپ) متعلق به آلیس هستند و
-کوبیت سوم متعلق به باب است. همانطور که قبلا توضیح دادیم ، کوبیت دوم آلیس و کوبیت باب
+جایی که ما از این قاعده استفاده می کنیم که دو کیوبیت اول (در سمت چپ) متعلق به آلیس هستند و
+کیوبیت سوم متعلق به باب است. همانطور که قبلا توضیح دادیم ، کیوبیت دوم آلیس و کیوبیت باب
 در یک حالت EPR شروع می شوند. آلیس یک گیت $CNOT$ را روی کیوبیت‌های خود اثر می‌دهد. از این رو:
 
 
 \begin{center}
-	$$\left|\psi_1\right\rangle=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|10\rangle+|01\rangle)]$$
+	\begin{equation}\label{Teleport psi1}
+		\left|\psi_1\right\rangle=\frac{1}{\sqrt{2}}[\alpha|0\rangle(|00\rangle+|11\rangle)+\beta|1\rangle(|10\rangle+|01\rangle)]
+	\end{equation}
 \end{center}
 
 سپس گیت هادامارد را روی اولین کیوبیت اثر می‌دهد و به دست می آورد:
 
 \begin{center}
-	$$\left|\psi_2\right\rangle=\frac{1}{2}[\alpha(|0\rangle+|1\rangle)(|00\rangle+|11\rangle)+\beta(|0\rangle-|1\rangle)(|10\rangle+|01\rangle)]$$
+	\begin{equation}\label{Teleport psi2}
+		\left|\psi_2\right\rangle=\frac{1}{2}[\alpha(|0\rangle+|1\rangle)(|00\rangle+|11\rangle)+\beta(|0\rangle-|1\rangle)(|10\rangle+|01\rangle)]
+	\end{equation}
 \end{center}
 
 این حالت را می توان به روش زیر بازنویسی کرد، به سادگی با گروه بندی مجدد عبارات:
 
 \begin{center}
-	$$\begin{aligned}
-		\left|\psi_2\right\rangle= & \frac{1}{2}[|00\rangle(\alpha|0\rangle+\beta|1\rangle)+|01\rangle(\alpha|1\rangle+\beta|0\rangle) \\
-		& +|10\rangle(\alpha|0\rangle-\beta|1\rangle)+|11\rangle(\alpha|1\rangle-\beta|0\rangle)]
-	\end{aligned}$$
+	\begin{equation}\label{Teleport psi2 rewrite}
+		\begin{aligned}
+			\left|\psi_2\right\rangle= & \frac{1}{2}[|00\rangle(\alpha|0\rangle+\beta|1\rangle)+|01\rangle(\alpha|1\rangle+\beta|0\rangle) \\
+			& +|10\rangle(\alpha|0\rangle-\beta|1\rangle)+|11\rangle(\alpha|1\rangle-\beta|0\rangle)]
+		\end{aligned}
+	\end{equation}
+
 \end{center}
 
 
 این عبارت به طور طبیعی به چهار اصطلاح تقسیم می شود. عبارت اول دارای کیوبیت های آلیس است
-در حالت $\vert 00 \rangle$ و کیوبیت باب، که بیانگر حالت اصلی $\vert \Psi \rangle$ است؛ در حالت     $\alpha \vert 0 \rangle + \beta \ vert 1 \rangle$  قرار دارد.
+در حالت $\vert 00 \rangle$ و کیوبیت باب، که بیانگر حالت اصلی $\vert \Psi \rangle$ است؛ در حالت $\alpha \vert 0 \rangle + \beta \vert 1 \rangle$  قرار دارد.
 
 
-. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، آنگاه کیوبیت باب دقیقا همان $\vert \Psi \rangle$ می‌باشد.
-
-
- به طور مشابه:
+. اگر آلیس یک اندازه گیری را انجام دهد و نتیجه 00 را به دست آورد، آنگاه کیوبیت باب دقیقا همان $\vert \Psi \rangle$ می‌باشد. به طور مشابه:
 \begin{center}
-	$$\begin{aligned}
-		00 \longmapsto\left|\psi_3(00)\right\rangle & \equiv[\alpha|0\rangle+\beta|1\rangle] \\
-		01 \longmapsto\left|\psi_3(01)\right\rangle & \equiv[\alpha|1\rangle+\beta|0\rangle] \\
-		10 \longmapsto\left|\psi_3(10)\right\rangle & \equiv[\alpha|0\rangle-\beta|1\rangle] \\
-		11 \longmapsto\left|\psi_3(11)\right\rangle & \equiv[\alpha|1\rangle-\beta|0\rangle]
-	\end{aligned}$$
+	\begin{equation}\label{alice action}
+		\begin{aligned}
+			00 \longmapsto\left|\psi_3(00)\right\rangle & \equiv[\alpha|0\rangle+\beta|1\rangle] \\
+			01 \longmapsto\left|\psi_3(01)\right\rangle & \equiv[\alpha|1\rangle+\beta|0\rangle] \\
+			10 \longmapsto\left|\psi_3(10)\right\rangle & \equiv[\alpha|0\rangle-\beta|1\rangle] \\
+			11 \longmapsto\left|\psi_3(11)\right\rangle & \equiv[\alpha|1\rangle-\beta|0\rangle]
+		\end{aligned}
+	\end{equation}
 \end{center}
 
 بسته به نتیجه اندازه گیری آلیس، کیوبیت باب به یکی از این چهار حالت ممکن قرار خواهد گرفت. البته، برای پیدا کردن حالت کیوبیت، باید نتیجه اندازه‌گیری آلیس را به باب اعلام کرد.
@@ -1515,16 +2275,164 @@ fig 1.13
 
 
 \textbf{سوال دوم}\\
-در فرآیند دوربری به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می‌شود؛ در حالی که آشکارا قضیه عدم شبیه سازی\footnote{No cloning theorem} مورد بحث نقض می کند.
+در فرآیند دوربری به نظر می رسد یک کپی از حالت کوانتومی در حال انتقال از راه دور ایجاد می‌شود؛ در حالی که آشکارا قضیه عدم شبیه سازی\footnote{\lr{No cloning theorem}} مورد بحث نقض می کند.
 
 این نقض ناشی از دقت کم و یا توهم است؛ زیرا پس از فرآیند دوربری فقط کیوبیت هدف در حالت $\vert \Psi \rangle$ باقی می ماند و کیوبیت اصلی که حامل داده است؛ با توجه به فرآیند اندازه گیری حالت اصلی به یکی از حالت های پایه محاسباتی $\vert 0 \rangle$ یا$\vert 1 \rangle$ رمبش می‌کند.
 
 
 
 \subsection{پیاده‌سازی دوربری در کیس کیت}
-\begin{verbatim}
 
-\end{verbatim}
+
+\begin{tcolorbox}
+	
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)} \PY{c+c1}{\PYZsh{} optional, we want to transfer state 1 in this example}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		<qiskit.circuit.instructionset.InstructionSet at 0x7fc41902df70>
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+	\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Teleport3.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Teleport4.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+		
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Teleport5.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{cz}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Teleport6.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}[width=13cm, colback=gray, boxsep=10pt, halign=center]	
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{simulator}\PY{p}{,} \PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+\PY{k+kn}{from} \PY{n+nn}{qiskit}\PY{n+nn}{.}\PY{n+nn}{visualization} \PY{k+kn}{import} \PY{n}{plot\PYZus{}histogram}
+\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Teleport7.png}
+		\caption{This is an image.}
+	\end{figure}
+\end{center}
+{ \hspace*{\fill} \\}
+
+
+\begin{tcolorbox}
+	\begin{Verbatim}[commandchars=\\\{\}]
+		
+	\end{Verbatim}
+\end{tcolorbox}
+
+
+% Add a bibliography block to the postdoc
+
+
+
 \newpage
 	
 % https://learn.qiskit.org/course/ch-algorithms/quantum-circuits
