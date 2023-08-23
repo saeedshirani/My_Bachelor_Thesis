@@ -1140,7 +1140,7 @@ $$
 
 
 \newpage
-\section{کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}
+\section{کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}\label{sec:Qiskit}
 
 \subsection{معرفی QisKit}
 یک زبان برنامه‌نویسی کوانتومی است. این زبان دارای مشابهت‌های زیادی با زبان پایتون می‌باشد. دو دلیل عمده برای این شباهت وجود دارد:\\
@@ -1470,7 +1470,7 @@ $$
 \end{center}
 با درنظر گرفتن شرایط زیر می‌توان $\vert\psi_{3}\rangle$ را به شکل زیر بازنویسی کرد:
 \begin{center}
-\begin{equation}\label{key}
+\begin{equation}\label{constantorbalanse}
 	\begin{aligned}
 		\left\{
 		\begin{aligned}
@@ -1499,7 +1499,7 @@ $$
 
 \subsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
 
-
+ابتدا کتابخانه‌های مورد نیاز را فراخوانی می‌کنیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
@@ -1508,12 +1508,13 @@ $$
 \end{Verbatim}
 \end{tcolorbox}
 
+یک مدار کوانتومی با دو کیوبیت و یک بیت کلاسیک ایجاد می‌کنیم؛ این الگوریتم با یک بیت کلاسیک نیز قابل اجراست. کیوبیت‌ اول برای بررسی تابع ایجاد شده و کیوبیت دوم برای کنترل بهتر شرایط ایجاد شده است:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-
+به اولین کیوبیت یک گیت هادامارد اثر می‌دهیم. سپس بر دومین کیوبیت،‌ به ترتیب یک گیت ایکس پائولی و یک گیت هادامارد اثر می‌دهیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
@@ -1528,10 +1529,10 @@ $$
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{output_2_0.png}
-	\caption{This is an image.}
+	\caption{آماده‌سازی دو کیوبیت}
 \end{figure}
 \end{center}
-
+حال یک گیت \lr{CNOT} با هدف قرار دادن کیوبیت دوم به مدار اعمال می‌کنیم. سپس گیت هادامارد را بر اولین کیوبیت اعمال ‌می‌کنیم؛ چرا که قصد اندازه‌گیری این کیوبیت را داریم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
@@ -1546,16 +1547,15 @@ $$
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{output_3_0.png}
-\caption{This is an image.}
+\caption{وضعیت مدار پس از اعمال اوراکل بر کیوبیت ها}
 \end{figure}
 \end{center}
-
+حال اندازه‌گیری را انجام می‌دهیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 <qiskit.circuit.instructionset.InstructionSet at 0x7fb3a83c1c70>
@@ -1572,10 +1572,11 @@ $$
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\linewidth]{output_5_0.png}
-\caption{This is an image.}
+\caption{مدار کوانتومی کامل که روی شبیه‌ساز کلاسیک پیاده‌سازی شده‌است.}
 \end{figure}
 \end{center}
 
+حال این کد را به شبیه‌ساز کلاسیک \lr{IBM} منتقل می‌کنیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{backend} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -1590,36 +1591,31 @@ $$
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.6\linewidth]{output_6_0.png}
-\caption{This is an image.}
+\caption{خروجی شبیه‌سازی برابر با یک شده است. طبق فرمول \ref{constantorbalanse} این تابع یک تابع متعادل است.}
 \end{figure}
 \end{center}
+به ازای تمامی شات‌ها(تعداد دفعات تکرار آزمایش) به مقدار یک دست یافتیم؛ این به معنای متعادل بودن تابع است. حال وقت آن رسیده ‌‌که با کامپیوتر کوانتومی حقیقی کار کنیم. همانطور که در بخش ~\ref{sec:Qiskit} گفته شد؛ می‌بایست با حساب کاربری خود به این کامپیوتر کوانتومی وصل شویم:
 
+\begin{latin}
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{c+c1}{\PYZsh{}Real Quantum Computer}
-\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
-\begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{IBMQ}\PY{o}{.}\PY{n}{load\PYZus{}account}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
+\end{latin}
 
 \begin{tcolorbox}[width=14cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 <AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
 \end{Verbatim}
 \end{tcolorbox}
+حال لیست کامپیوتر‌های کوانتومی که بیشترین منابع را در اختیار دارند را استخراج می‌کنیم:
 
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{provider} \PY{o}{=} \PY{n}{IBMQ}\PY{o}{.}\PY{n}{get\PYZus{}provider}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ibm\PYZhy{}q}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-\end{Verbatim}
-\end{tcolorbox}
 
-\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
-\begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{for} \PY{n}{backend} \PY{o+ow}{in} \PY{n}{provider}\PY{o}{.}\PY{n}{backends}\PY{p}{(}\PY{p}{)}\PY{p}{:}
 \PY{k}{try}\PY{p}{:}
 \PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{backend}\PY{o}{.}\PY{n}{properties}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{qubits}\PY{p}{)}
@@ -1629,7 +1625,7 @@ $$
 	\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-
+لیست وضعیت کامپیوترهای‌کوانتومی در حین اجرای این کد به شرح زیر بوده‌است:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 ibmq\_qasm\_simulator : 3 \& simulated qubits
@@ -1648,7 +1644,7 @@ simulator\_stabilizer : 3 \& simulated qubits
 ibmq\_manila : 15 \& 5 qubits
 \end{Verbatim}
 \end{tcolorbox}
-
+از کامپیوتر \lr{ibqm-belem} استفاده می‌کنیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{quantum\PYZus{}computer} \PY{o}{=} \PY{n}{provider}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ibmq\PYZus{}belem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -1660,7 +1656,8 @@ ibmq\_manila : 15 \& 5 qubits
 \PY{n}{quantum\PYZus{}result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{quantum\PYZus{}computer}\PY{p}{,}\PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-
+\pagebreak
+حال مقادیر محاسبه شده را به تصویر می‌کشیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{quantum\PYZus{}counts} \PY{o}{=} \PY{n}{quantum\PYZus{}result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
@@ -1671,10 +1668,10 @@ ibmq\_manila : 15 \& 5 qubits
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\linewidth]{output_13_0.png}
-\caption{This is an image.}
+\caption{مقادیر محاسبه‌شده باکمک کامپیوتر کوانتومی}
 \end{figure}
 \end{center}
-
+همانطور که مشاهده می‌شود؛ در کل شات‌های پیاده‌سازی مدار ایجاد شده، عدد یک در اغلب موارد به‌عنوان حاصل اعلام شده است. مابقی نتایح به عنوان نویز دسته‌بندی می‌شوند.
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
 در این بخش قصد داریم به بررسی پروتکل‌های ابتدایی در نظریه‌ی اطلاعات کوانتومی بپردازیم. تمامی این پروتکل‌ها به تعداد کمی کیوبیت نیاز دارند؛ و در آزمایشگاه به صورت تجربی پیاده‌سازی شده‌اند. 
