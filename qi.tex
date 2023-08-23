@@ -750,7 +750,6 @@ $$
 	1
 \end{pmatrix} = \ket{11}
 $$\\
-
 این فرآیند به صورت معکوس نیز قابل رخ دادن است:\\
 
 $$
@@ -771,9 +770,6 @@ $$
 	0
 \end{pmatrix} = \ket{10}
 $$
-\vspace{2cm}
-
-
 از این گیت کوانتومی‌، برای بسیاری مدار‌ها و شبیه‌سازی‌های کوانتومی، از جمله تلپورت، درهمتنیدگی و ...،استفاده می‌شود.
 
 \subsection*{گیت تغییر فاز}
@@ -1017,12 +1013,12 @@ $$
 \end{itemize}
 
 
-
+\renewcommand{\arraystretch}{1.5}
 \begin{table}[ht]
 	\centering
-	\begin{tabular}{|p{100pt}|p{100pt}|p{100pt}|}
+	\begin{tabular}[5pt]{|p{100pt}|p{100pt}|p{100pt}|}
 		\hline
-		ویژگی & مدار کوانتومی &مدار کلاسیک \\
+		\textbf{ویژگی} & \textbf{مدار کوانتومی} &\textbf{مدار کلاسیک} \\
 		\hline
 		واحد پایه داده & کیوبیت & بیت \\
 		\hline
@@ -1319,7 +1315,7 @@ circuit.draw(output = "mpl")  # output = "mpl" is defining type of circuit outpu
 \begin{center}
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[width=0.8\textwidth]{Multyhadamard.png}
+		\includegraphics[width=0.6\textwidth]{Multyhadamard.png}
 		\caption{اعمال تبدیل هادامارد $\operatorname{H} \otimes n$روی دو کیوبیت}
 	\end{figure}
 \end{center}
@@ -1362,13 +1358,13 @@ circuit.draw(output = "mpl")  # output = "mpl" is defining type of circuit outpu
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Query computation model.png}
-	\caption{شکل بالا نمود مدل محاسباتی‌کوئری است. واحد محاسباتی برای دریافت داده‌های جدید نیاز به درخواست از تابع \lr{input} دارد. خطوط قرمز و روبه‌بالا نشان از درخواست واحد محاسباتی و خطوط آبی روبه‌پایین نشان از پاسخ واحد \lr{input}می‌باشد.}
+	\caption{شکل بالا نمود مدل محاسباتی‌کوئری است. واحد محاسباتی برای دریافت داده‌های جدید نیاز به درخواست از تابع ورودی دارد. خطوط قرمز و روبه‌بالا نشان از درخواست واحد محاسباتی و خطوط آبی روبه‌پایین نشان از پاسخ واحد ورودی می‌باشد.}
 \end{figure}
 
 
-در این مدل واحد محاسباتی دیگر داده‌ها را در قالب رشته‌ای از اطلاعات دردسترس ندارد؛ بلکه می‌تواند آن‌ها را از بخش تولید ورودی دریافت کند. در گاهی از مواقع به سیستم ورودی، ‌\lr{Oracle} یا جعبه‌ی سیاه می‌گویند. تابع \lr{Oracle } یا جعبه‌ی سیاه یک سیستم است که ما به عنوان ناظر به سازوکار داخلی آن و  تمامی اطلاعات آن دسترسی نداریم و فقط می‌توانیم مقادیر مجاز را به آن داده و مقادیر خروجی را دریافت کنیم. 
+در این مدل واحد محاسباتی دیگر داده‌ها را در قالب رشته‌ای از اطلاعات دردسترس ندارد؛ بلکه می‌تواند آن‌ها را از بخش تولید ورودی دریافت کند. در گاهی از مواقع به سیستم ورودی را اوراکل یا جعبه‌ی سیاه می‌نامند. تابع اوراکل\footnote{Oracle} یا جعبه‌ی سیاه\footnote{Black Box} یک سیستم است که ما به عنوان ناظر به سازوکار داخلی آن و  تمامی اطلاعات آن دسترسی نداریم و فقط می‌توانیم مقادیر مجاز را به آن داده و مقادیر خروجی را دریافت کنیم. 
 
-تابع \lr{oracle} به صورت زیر تعریف می‌شود:
+تابع اوراکل به صورت زیر تعریف می‌شود:
 \begin{center}
 $$
 \left\{
@@ -1572,13 +1568,10 @@ $$
 \end{Verbatim}
 \end{tcolorbox}
 
-
-
-
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{output_5_0.png}
+\includegraphics[width=0.8\linewidth]{output_5_0.png}
 \caption{This is an image.}
 \end{figure}
 \end{center}
@@ -1596,7 +1589,7 @@ $$
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.9\linewidth]{output_6_0.png}
+\includegraphics[width=0.6\linewidth]{output_6_0.png}
 \caption{This is an image.}
 \end{figure}
 \end{center}
@@ -1625,14 +1618,15 @@ $$
 \end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}[width=16cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{k}{for} \PY{n}{backend} \PY{o+ow}{in} \PY{n}{provider}\PY{o}{.}\PY{n}{backends}\PY{p}{(}\PY{p}{)}\PY{p}{:}
 \PY{k}{try}\PY{p}{:}
 \PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{backend}\PY{o}{.}\PY{n}{properties}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{qubits}\PY{p}{)}
 \PY{k}{except}\PY{p}{:}
 \PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{simulated}\PY{l+s+s2}{\PYZdq{}}
-\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{name}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ : }\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{name}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ : }
+	\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
 
@@ -1673,8 +1667,6 @@ ibmq\_manila : 15 \& 5 qubits
 \PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{quantum\PYZus{}counts}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-
-
 \begin{center}
 \begin{figure}[h]
 \centering
@@ -1782,7 +1774,7 @@ where ¯y is the negation of y.
 
 \begin{itemize}
 	\item  $"00"$ را ارسال کند $\impliedby$ هیچ کاری روی کیوبیت خود انجام ندهد.
-	\item $"01"$ را ارسال کند $\impliedby$ تبدیل دگرگونی فاز\footnote{phase flip} را روی کیوبیت خود اثر می‌دهد.
+	\item $"01"$ را ارسال کند $\impliedby$ تبدیل دگرگونی فاز\footnote{\lr{phase flip}} را روی کیوبیت خود اثر می‌دهد.
 	\item  $"10"$ را ارسال کند $\impliedby$ گیت کوانتومی NOT، X، را به کیوبیت خود اعمال می‌کند.
 	\item  $"11"$ را ارسال کند $\impliedby$ تبدیل iY را به کیوبیت خود اعمال می‌کند.
 \end{itemize}
@@ -1861,7 +1853,7 @@ where ¯y is the negation of y.
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{sup2.png}
+\includegraphics[width=0.4\linewidth]{sup2.png}
 \caption{This is an image.}
 \end{figure}
 \end{center}
@@ -2180,14 +2172,10 @@ where ¯y is the negation of y.
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
-
 \PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)} \PY{c+c1}{\PYZsh{} optional, we want to transfer state 1 in this example}
-
 \PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-
 \PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
 \PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
-
 \PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}

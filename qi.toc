@@ -8,8 +8,8 @@
 \contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{14}{section*.12}%
 \contentsline {subsubsection}{مدار NOT و خصوصیات آن}{15}{section*.13}%
 \contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{20}{section*.16}%
-\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{21}{section*.17}%
-\contentsline {subsection}{گیت مبادله}{22}{section*.18}%
+\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{20}{section*.17}%
+\contentsline {subsection}{گیت مبادله}{21}{section*.18}%
 \contentsline {subsubsection}{نمایش ماتریسی گیت مبادله}{22}{section*.19}%
 \contentsline {subsubsection}{گیت مبادله در مدار و خصوصیات آن}{23}{section*.20}%
 \contentsline {section}{مدار‌های کوانتومی}{24}{section*.21}%
@@ -17,8 +17,8 @@
 \contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{26}{section*.23}%
 \contentsline {paragraph}{اندازه مدار کوانتومی}{26}{section*.24}%
 \contentsline {paragraph}{کیوبیت}{26}{section*.25}%
-\contentsline {paragraph}{دروازه}{27}{section*.26}%
-\contentsline {paragraph}{عملیات}{27}{section*.27}%
+\contentsline {paragraph}{دروازه}{26}{section*.26}%
+\contentsline {paragraph}{عملیات}{26}{section*.27}%
 \contentsline {subsection}{نحوه‌ی نمایش مدار‌های کوانتومی}{27}{section*.28}%
 \contentsline {chapter}{برنامه‌نویسی کوانتومی}{28}{chapter*.29}%
 \contentsline {section}{کامپیوترهای کوانتومی در مقابل کامپیوترهای کلاسیک}{28}{section*.30}%
@@ -43,7 +43,7 @@
 \contentsline {chapter}{الگوریتم‌های‌کوانتومی‌}{35}{chapter*.49}%
 \contentsline {section}{موازی سازی کوانتومی}{35}{section*.50}%
 \contentsline {subsection}{مدل محاسباتی استاندارد}{39}{section*.51}%
-\contentsline {section}{مدل کوئری}{40}{section*.52}%
+\contentsline {section}{مدل کوئری}{39}{section*.52}%
 \contentsline {section}{معرفی و پیاده سازی الگوریتم دوچ}{41}{section*.53}%
 \contentsline {subsection}{مسئله‌ی دوچ}{41}{section*.54}%
 \contentsline {subsection}{الگوریتم دوچ}{42}{section*.55}%
