@@ -277,8 +277,7 @@
 \tableofcontents
 \newpage
 \section*{مقدمه}	
-در عصر حاضر به‌ واسطه رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا
-\newpage
+در عصر حاضر به‌ واسطه رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا\pagebreak
 \chapter{آشنایی با مفاهیم اولیه}
 \section{کیوبیت}
 
@@ -352,7 +351,7 @@
 با وجود غیرقابل مشاهده بودن، حالت $\vert + \rangle$ واقعی است. وجود آن توسط آزمایشات به طور گسترده ای تأیید شده است. همچنین می توان از آن برای انجام محاسبات کوانتومی استفاده کرد.
 
 در آینده، ممکن است حالت $\vert + \rangle$ برای اهداف مختلف دیگری نیز استفاده شود. به عنوان مثال، می تواند برای ذخیره اطلاعات یا برای ایجاد ارتباطات امن استفاده شود.
-\pagebreak
+
 \subsection{کیوبیت‌های چندتایی}
 
 \begin{latin}
@@ -462,7 +461,7 @@ $\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d
 H\ket{0} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
 \end{equation}
 \end{center}
-\hspace{2cm}
+\hspace{1cm}
 \begin{center}
 	\begin{equation}\label{basis to forier}
 H\ket{1} = \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
@@ -470,7 +469,7 @@ H\ket{1} = \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
 \end{center}
 \vspace{1cm}
 
-این گیت کوانتومی‌ به صورت خطی روی یک دسته‌ کت اثر مي‌کند. نمایش ماتریسی این گیت‌کوانتومی به شرح زیر است:
+این گیت کوانتومی‌ به صورت خطی روی یک دسته‌ کت اثر مي‌کند. نمایش ماتریسی این گیت‌ کوانتومی به شرح زیر است:
 \begin{center}
 	\begin{equation}\label{Hadamard matrix}
 		H = \frac{1}{\sqrt{2}}
@@ -1068,8 +1067,6 @@ $$
 	\caption{مدارکوانتومی شبیه‌سازی شده برای آزمایش درهمتنیدگی}
 \end{figure}
 
-
-\newpage
 \chapter{برنامه‌نویسی کوانتومی}
 برنامه نویسی کوانتومی فرآیند طراحی و پیاده‌سازی دنباله هایی از دستورالعمل هایی موسوم مدارهای کوانتومی می‌باشد، با استفاده از گیت ها، سوئیچ ها و عملگرها برای دستکاری وضعیت کوانتومی یک کیوبیت به پردازش مسائل می‌پردازیم.
 
@@ -1219,32 +1216,29 @@ $$
 برای تصویر کردن وضعیت مدار کوانتومی می‌بایست از راه زیر استفاده کرد:
 
 \begin{latin}
-	\begin{verbatim}
-		# to run commands and show diagram in a easier way.
-		%matplotlib inline 
-		
-		# draw circuit
-		circuit.draw()
-		
-		# we can change look of diagram.
-		circuit.draw(output = "mpl")  # output = "mpl" is defining type of circuit output
-		
-	\end{verbatim}
+\begin{verbatim}
+# to run commands and show diagram in a easier way.
+%matplotlib inline 
+
+# draw circuit
+circuit.draw()
+
+# we can change look of diagram.
+circuit.draw(output = "mpl")  # output = "mpl" is defining type of circuit output
+
+\end{verbatim}
 \end{latin}
-
-
 
 درنهایت خروجی مشابه خروجی های زیر را می‌توان از این زبان برنامه نویسی دریافت کرد:
 
 \begin{center}
-	\begin{figure}[ht]
-		\centering
-		\includegraphics[]{tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png}
-		\caption{نمونه‌ای از خروجی \lr{Qiskit}}
-	\end{figure}
-	
+\begin{figure}[h]
+\centering
+\includegraphics[]{tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png}
+\caption{نمونه‌ای از خروجی کیس‌کیت}
+\end{figure}
 \end{center}
-
+\let\cleardoublepage\clearpage
 \chapter{الگوریتم‌های‌کوانتومی‌}
 
 
@@ -1348,8 +1342,6 @@ $$
 
 در مثال تک کیوبیتی ما، اندازه‌گیری حالت فقط $\vert 0, f(0)\rangle$ یا $\vert 1, f(1)\rangle$ را می‌دهد! به طور مشابه، در حالت کلی، اندازه‌گیری حالت $\sum_{x} \vert x, f(x) \rangle$ فقط $ f (x)$ را برای یک مقدار $x$ خاص می‌دهد. البته یک کامپیوتر کلاسیک می‌تواند این کار را به راحتی انجام دهد! محاسبات کوانتومی برای مفید بودن به چیزی بیش از موازی‌سازی کوانتومی نیاز دارد؛ به توانایی استخراج اطلاعات مربوط به بیش از یک مقدار $f (x)$ از حالت‌های برهمنهی مانند $\sum _{x}\vert x, f(x) \rangle$ نیاز دارد. 
 در بخش های بعدی به مثال‌های خواهیم پرداخت که این مسائل را حل کند.
-
-\newpage
 \subsection{مدل محاسباتی استاندارد}
 پیش از بررسی مدل کوئری،‌ مدل ساده و استاندارد محاسباتی را بررسی می‌کنیم. به تصویر زیر دقت کنید:
 
@@ -1454,9 +1446,6 @@ $$
 	\includegraphics[width=0.8\textwidth]{Quantum circuit implementing Deutsch’s algorithm.png}
 	\caption{پیاده‌سازی مدارکوانتومی‌ الگوریتم دوچ}
 \end{figure}
-
-\newpage
-
 حالت ورودی:\\
 \begin{center}
 	\begin{equation}\label{zero state deutsch}
@@ -1515,210 +1504,184 @@ $$
 \subsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
 
 
-   \begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
-		\PY{k+kn}{from} \PY{n+nn}{qiskit}\PY{n+nn}{.}\PY{n+nn}{tools}\PY{n+nn}{.}\PY{n+nn}{visualization} \PY{k+kn}{import} \PY{n}{plot\PYZus{}histogram}
-		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-
-\begin{center}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\linewidth]{output_2_0.png}
-	\caption{This is an image.}
-\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=0.9\linewidth]{output_3_0.png}
-	\caption{This is an image.}
-\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		<qiskit.circuit.instructionset.InstructionSet at 0x7fb3a83c1c70>
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-
-\begin{center}
-	
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{output_5_0.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{backend} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-		\PY{n}{result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{backend}\PY{p}{,} \PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
-		\PY{n}{counts} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
-		
-		\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{counts}\PY{p}{]}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{output_6_0.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{}Real Quantum Computer}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{IBMQ}\PY{o}{.}\PY{n}{load\PYZus{}account}\PY{p}{(}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{provider} \PY{o}{=} \PY{n}{IBMQ}\PY{o}{.}\PY{n}{get\PYZus{}provider}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ibm\PYZhy{}q}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{k}{for} \PY{n}{backend} \PY{o+ow}{in} \PY{n}{provider}\PY{o}{.}\PY{n}{backends}\PY{p}{(}\PY{p}{)}\PY{p}{:}
-		\PY{k}{try}\PY{p}{:}
-		\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{backend}\PY{o}{.}\PY{n}{properties}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{qubits}\PY{p}{)}
-		\PY{k}{except}\PY{p}{:}
-		\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{simulated}\PY{l+s+s2}{\PYZdq{}}
-		\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{name}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ : }\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
-	ibmq\_qasm\_simulator : 3 \& simulated qubits
-	ibmqx2 : 12 \& 5 qubits
-	ibmq\_16\_melbourne : 411 \& 15 qubits
-	ibmq\_armonk : 48 \& 1 qubits
-	ibmq\_athens : 7 \& 5 qubits
-	ibmq\_santiago : 13 \& 5 qubits
-	ibmq\_lima : 12 \& 5 qubits
-	ibmq\_belem : 5 \& 5 qubits
-	ibmq\_quito : 4 \& 5 qubits
-	simulator\_statevector : 4 \& simulated qubits
-	simulator\_mps : 3 \& simulated qubits
-	simulator\_extended\_stabilizer : 3 \& simulated qubits
-	simulator\_stabilizer : 3 \& simulated qubits
-	ibmq\_manila : 15 \& 5 qubits
+\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+\PY{k+kn}{from} \PY{n+nn}{qiskit}\PY{n+nn}{.}\PY{n+nn}{tools}\PY{n+nn}{.}\PY{n+nn}{visualization} \PY{k+kn}{import} \PY{n}{plot\PYZus{}histogram}
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
 \end{Verbatim}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{quantum\PYZus{}computer} \PY{o}{=} \PY{n}{provider}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ibmq\PYZus{}belem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{quantum\PYZus{}result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{quantum\PYZus{}computer}\PY{p}{,}\PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{quantum\PYZus{}counts} \PY{o}{=} \PY{n}{quantum\PYZus{}result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
-		\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{quantum\PYZus{}counts}\PY{p}{]}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{output_2_0.png}
+	\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{output_3_0.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+<qiskit.circuit.instructionset.InstructionSet at 0x7fb3a83c1c70>
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+
+
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{output_5_0.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{backend} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{backend}\PY{p}{,} \PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+\PY{n}{counts} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
+
+\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{counts}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\linewidth]{output_6_0.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{}Real Quantum Computer}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{IBMQ}\PY{o}{.}\PY{n}{load\PYZus{}account}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=14cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+<AccountProvider for IBMQ(hub='ibm-q', group='open', project='main')>
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{provider} \PY{o}{=} \PY{n}{IBMQ}\PY{o}{.}\PY{n}{get\PYZus{}provider}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ibm\PYZhy{}q}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=16cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k}{for} \PY{n}{backend} \PY{o+ow}{in} \PY{n}{provider}\PY{o}{.}\PY{n}{backends}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+\PY{k}{try}\PY{p}{:}
+\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{backend}\PY{o}{.}\PY{n}{properties}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{qubits}\PY{p}{)}
+\PY{k}{except}\PY{p}{:}
+\PY{n}{qubit\PYZus{}count} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{simulated}\PY{l+s+s2}{\PYZdq{}}
+\PY{n+nb}{print}\PY{p}{(}\PY{l+s+sa}{f}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{name}\PY{p}{(}\PY{p}{)}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ : }\PY{l+s+si}{\PYZob{}}\PY{n}{backend}\PY{o}{.}\PY{n}{status}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{pending\PYZus{}jobs}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ \PYZam{} }\PY{l+s+si}{\PYZob{}}\PY{n}{qubit\PYZus{}count}\PY{l+s+si}{\PYZcb{}}\PY{l+s+s2}{ qubits}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+ibmq\_qasm\_simulator : 3 \& simulated qubits
+ibmqx2 : 12 \& 5 qubits
+ibmq\_16\_melbourne : 411 \& 15 qubits
+ibmq\_armonk : 48 \& 1 qubits
+ibmq\_athens : 7 \& 5 qubits
+ibmq\_santiago : 13 \& 5 qubits
+ibmq\_lima : 12 \& 5 qubits
+ibmq\_belem : 5 \& 5 qubits
+ibmq\_quito : 4 \& 5 qubits
+simulator\_statevector : 4 \& simulated qubits
+simulator\_mps : 3 \& simulated qubits
+simulator\_extended\_stabilizer : 3 \& simulated qubits
+simulator\_stabilizer : 3 \& simulated qubits
+ibmq\_manila : 15 \& 5 qubits
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{quantum\PYZus{}computer} \PY{o}{=} \PY{n}{provider}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ibmq\PYZus{}belem}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=15.5cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{quantum\PYZus{}result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{quantum\PYZus{}computer}\PY{p}{,}\PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{quantum\PYZus{}counts} \PY{o}{=} \PY{n}{quantum\PYZus{}result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{n}{circuit}\PY{p}{)}
+\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{p}{[}\PY{n}{quantum\PYZus{}counts}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{output_13_0.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{output_13_0.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-% Add a bibliography block to the postdoc
-
 
 
 \chapter{شبیه‌سازی پدیده‌های کوانتومی}
@@ -1761,29 +1724,11 @@ where ¯y is the negation of y.
 
 
  
-\begin{figure}[ht]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Bell_state.png}
+	\includegraphics[width=0.5\textwidth]{Bell_state.png}
 	\caption{مدار کوانتومی بل به‌همراه ورودی و خروجی آن}
 \end{figure}
- 
- 
- 
- 
- 
- \subsubsection{پیاده‌سازی حالات بل در کیس کیت}
- 
-\begin{verbatim}
-	
-
-\end{verbatim}
-
-\newpage
-
-
-
-
-
 
 \section{درهمتنیدگی}
 در حوزه فیزیک کوانتومی، یکی از گیج کننده ترین پدیده هایی که همچنان توجه دانشمندان و فیلسوفان را به خود جذب می کند، «درهم تنیدگی» است. این مفهوم درک متعارف ما از واقعیت را به چالش می‌کشد و باعث بحث‌ها، آزمایش‌ها و تحقیقات فلسفی بی‌شماری شده است.\\
@@ -1796,16 +1741,9 @@ where ¯y is the negation of y.
 
 پیامدهای درهم تنیدگی عمیق و پیچیده است و فراتر از محدوده آزمایشگاه های فیزیک است. محققان همواره در حال بررسی کاربردهای بالقوه درهم تنیدگی در زمینه هایی مانند محاسبات کوانتومی و رمزنگاری کوانتومی هستند. توانایی درهم تنیدگی برای فعال کردن کیوبیت‌ها (بیت‌های کوانتومی) برای وجود همزمان در چندین حالت، این پتانسیل ایجاد تحولات شگرفی در رمزنگاری کوانتومی و محاسبات کوانتومی دارد و به راه‌حل‌هایی منجر شود که قبلا غیرممکن تلقی می‌شدند.\\
 
-Non locality \\ 
-
 در نتیجه، از درهم تنیدگی به عنوان یکی از جذاب ترین و گیج کننده ترین پدیده ها در قلمرو فیزیک کوانتومی یاد‌می‌شود. ارتباط اسرارآمیز آن بین ذرات، شهود کلاسیک را به چالش می کشد و همچنان مرزهای درک ما از جهان را پیش می برد. همانطور که دانشمندان عمیق تر به پیچیدگی های درهم تنیدگی و کاربردهای بالقوه آن می پردازند.
-\subsection{پیاده‌سازی درهمتنیدگی در کیس کیت}
-\begin{verbatim}
 
-\end{verbatim}
 \newpage
-
-
 
 \section{رمزگذاری متراکم کوانتومی}
 % from quantum computation l chuang
@@ -1816,10 +1754,9 @@ Non locality \\
 
 رمزگذاری متراکم به ما می‌گوید که پاسخ این سؤال بله است. فرض کنید آلیس و باب در ابتدا یک جفت کیوبیت در حالت درهم‌تنیده زیر به اشتراک می‌گذارند:
 \begin{center}
-	\begin{equation}\label{entangel psi}
-		\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}
-	\end{equation}
-	
+\begin{equation}\label{entangel psi}
+\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}
+\end{equation}	
 \end{center}
 
 
@@ -1831,12 +1768,12 @@ Non locality \\
 \pagebreak
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=3in]{super dence.png}
-		\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهم‌تنیده را در اختیار دارند.}
-		\label{fig:myimage}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{super dence.png}
+\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهم‌تنیده را در اختیار دارند.}
+\label{fig:myimage}
+\end{figure}
 \end{center}
 
 همانطور که در شکل بالا قابل ملاحظه است؛ آلیس و باب، هرکدام یک کیوبیت در اختیار دارند. توجه داشته باشید که $\Psi$ یک حالت ثابت است؛ نیازی نیست که آلیس برای آماده‌سازی این حالت، کیوبیتی را به باب ارسال کند. در عوض، ممکن است یک طرف ثالث قبلاً حالت درهم‌تنیده را آماده کند، یکی از کیوبیت‌ها را به آلیس و دیگری را به باب ارسال کند.
@@ -1884,290 +1821,241 @@ Non locality \\
 
 \subsection{پیاده سازی رمزگذاری متراکم در کیس کیت}
 
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Superdense Coding}
-		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
-		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Superdense Coding}
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Step 0: Prepare the Bell State}
-		\PY{n}{bell\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup1.png}
-		\caption{This is an image.}
-	\end{figure}
-	
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Step 1: Prepare Alice circuits depending on b0b1}
-		
-		\PY{c+c1}{\PYZsh{} Case 00: the circuit has no gates}
-		\PY{n}{alice\PYZus{}00} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup2.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Case 01: the circuit has the X gate}
-		\PY{n}{alice\PYZus{}01} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup3.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Case 10: the circuit has the Z gate}
-		\PY{n}{alice\PYZus{}10} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup4.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Case 11: the circuit has the X gate and then Z gate}
-		\PY{n}{alice\PYZus{}11} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup5.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Step 2: Apply the inverted entanglement circuit, and then measure}
-		\PY{n}{invert\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
-		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Qiskit measures are always reversed, b1b0 not b0b1}
-		\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup6.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} When merged, the whole circuit looks like}
-		\PY{p}{(}\PY{n}{bell\PYZus{}circuit} \PY{o}{+} \PY{n}{alice\PYZus{}11} \PY{o}{+} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup7.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} Now we simulate each outcome, to do so we create an auxiliary function that runs it}
-		\PY{k}{def} \PY{n+nf}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{prep}\PY{p}{,} \PY{n}{encoding}\PY{p}{,} \PY{n}{decoding}\PY{p}{)}\PY{p}{:}
-		\PY{+w}{    }\PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Returns the counts of the circuit that is combination of the three circuits\PYZdq{}\PYZdq{}\PYZdq{}}
-		\PY{n}{circuit} \PY{o}{=} \PY{n}{prep} \PY{o}{+} \PY{n}{encoding} \PY{o}{+} \PY{n}{decoding}
-		\PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{qasm\PYZus{}simulator}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-		\PY{n}{job} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{simulator}\PY{p}{,} \PY{n}{shots} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{16}\PY{p}{)}
-		\PY{n}{result} \PY{o}{=} \PY{n}{job}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
-		\PY{n}{count} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{p}{)}
-		\PY{k}{return} \PY{n}{count}
-	\end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} For 00}
-		\PY{n}{count\PYZus{}00} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}00}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
-		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}00}\PY{p}{)}
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-\begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup9.png}
-		\caption{This is an image.}
-	\end{figure}
-\end{center}
-{ \hspace*{\fill} \\}
-
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} For 01}
-		\PY{n}{count\PYZus{}01} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}01}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
-		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}01}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 0: Prepare the Bell State}
+\PY{n}{bell\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup10.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup1.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} For 10}
-		\PY{n}{count\PYZus{}10} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}10}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
-		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}10}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 1: Prepare Alice circuits depending on b0b1}
+\PY{c+c1}{\PYZsh{} Case 00: the circuit has no gates}
+\PY{n}{alice\PYZus{}00} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup2.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 01: the circuit has the X gate}
+\PY{n}{alice\PYZus{}01} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup3.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 10: the circuit has the Z gate}
+\PY{n}{alice\PYZus{}10} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup4.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 11: the circuit has the X gate and then Z gate}
+\PY{n}{alice\PYZus{}11} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup5.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 2: Apply the inverted entanglement circuit, and then measure}
+\PY{n}{invert\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Qiskit measures are always reversed, b1b0 not b0b1}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup6.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{latin}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} When merged, the whole circuit looks like}
+\PY{p}{(}\PY{n}{bell\PYZus{}circuit} \PY{o}{+} \PY{n}{alice\PYZus{}11} \PY{o}{+} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}	
+\end{latin}
 
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup11.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup7.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} For 11}
-		\PY{n}{count\PYZus{}11} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}11}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
-		\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}11}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Now we simulate each outcome, to do so we create an auxiliary function that runs it}
+\PY{k}{def} \PY{n+nf}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{prep}\PY{p}{,} \PY{n}{encoding}\PY{p}{,} \PY{n}{decoding}\PY{p}{)}\PY{p}{:}
+\PY{+w}{    }\PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Returns the counts of the circuit that is combination of the three circuits\PYZdq{}\PYZdq{}\PYZdq{}}
+\PY{n}{circuit} \PY{o}{=} \PY{n}{prep} \PY{o}{+} \PY{n}{encoding} \PY{o}{+} \PY{n}{decoding}
+\PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{qasm\PYZus{}simulator}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{job} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{simulator}\PY{p}{,} \PY{n}{shots} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{result} \PY{o}{=} \PY{n}{job}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+\PY{n}{count} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+\PY{k}{return} \PY{n}{count}
+\end{Verbatim}
 \end{tcolorbox}
 
-
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 00}
+\PY{n}{count\PYZus{}00} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}00}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}00}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{sup12.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup9.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{c+c1}{\PYZsh{} The results match our predictions!}
-		\PY{c+c1}{\PYZsh{} For purposes of reproducibility, the Qiskit version is}
-		\PY{n}{qiskit}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}qiskit\PYZus{}version\PYZus{}\PYZus{}}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 01}
+\PY{n}{count\PYZus{}01} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}01}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}01}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\{'qiskit-terra': '0.11.0',
-		'qiskit-aer': '0.3.4',
-		'qiskit-ignis': '0.2.0',
-		'qiskit-ibmq-provider': '0.4.4',
-		'qiskit-aqua': '0.6.1',
-		'qiskit': '0.14.0'\}
-	\end{Verbatim}
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup10.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 10}
+\PY{n}{count\PYZus{}10} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}10}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}10}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup11.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
 
-% Add a bibliography block to the postdoc
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 11}
+\PY{n}{count\PYZus{}11} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}11}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}11}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
 
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup12.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
 
-\begin{verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} The results match our predictions!}
+\PY{c+c1}{\PYZsh{} For purposes of reproducibility, the Qiskit version is}
+\PY{n}{qiskit}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}qiskit\PYZus{}version\PYZus{}\PYZus{}}
+\end{Verbatim}
+\end{tcolorbox}
 
-\end{verbatim}
-\newpage
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\{'qiskit-terra': '0.11.0',
+'qiskit-aer': '0.3.4',
+'qiskit-ignis': '0.2.0',
+'qiskit-ibmq-provider': '0.4.4',
+'qiskit-aqua': '0.6.1',
+'qiskit': '0.14.0'\}
+\end{Verbatim}
+\end{tcolorbox}
+
 \section{دوربری}
 دوربری کوانتومی تکنیکی برای جابجایی حالات کوانتومی به نقاط دیگر است. در اینجا نحوه عملکرد دوربری کوانتومی آمده است:
 
@@ -2193,11 +2081,10 @@ Non locality \\
 \end{center}
 
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=3in]{spooky action.png}
-	\caption{مدار کوانتومی برای انتقال یک کیوبیت دو خط بالا نشان دهنده سیستم آلیس هستند، در حالی که خط پایین نشان دهنده سیستم آلیس است
-		خط سیستم باب است. مترها اندازه گیری را نشان می دهند و خطوط دوتایی که از آنها بیرون می آیند دارای حالت کلاسیک هستند
+\begin{figure}[h]
+\centering
+\includegraphics[width=6in]{spooky action.png}
+\caption{مدار کوانتومی برای انتقال یک کیوبیت دو خط بالا نشان دهنده سیستم آلیس هستند، در حالی که خط پایین نشان دهنده سیستم آلیس است		خط سیستم باب است. مترها اندازه گیری را نشان می دهند و خطوط دوتایی که از آنها بیرون می آیند دارای حالت کلاسیک هستند
 		بیت ها (به یاد بیاورید که خطوط منفرد نشان دهنده کیوبیت هستند)}
 \end{figure}
 
@@ -2284,101 +2171,89 @@ Non locality \\
 \subsection{پیاده‌سازی دوربری در کیس کیت}
 
 
-\begin{tcolorbox}
-	
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)} \PY{c+c1}{\PYZsh{} optional, we want to transfer state 1 in this example}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+
+\PY{n}{circuit}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)} \PY{c+c1}{\PYZsh{} optional, we want to transfer state 1 in this example}
+
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+
+\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		<qiskit.circuit.instructionset.InstructionSet at 0x7fc41902df70>
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+<qiskit.circuit.instructionset.InstructionSet at 0x7fc41902df70>
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+\end{Verbatim}
 \end{tcolorbox}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
-
-
-
 
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{Teleport3.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{Teleport3.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
-
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{Teleport4.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{Teleport4.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
 
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-		
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
-		\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-	\end{Verbatim}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mpl}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
 \end{tcolorbox}
 
-
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{Teleport5.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{Teleport5.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
 \PY{n}{circuit}\PY{o}{.}\PY{n}{cz}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
@@ -2387,20 +2262,15 @@ Non locality \\
 \end{Verbatim}
 \end{tcolorbox}
 
-
-
-
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{Teleport6.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{Teleport6.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}[width=13cm, colback=gray, boxsep=10pt, halign=center]	
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]	
 \begin{Verbatim}[commandchars=\\\{\}]
 \PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{qasm\PYZus{}simulator}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \PY{n}{result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{simulator}\PY{p}{,} \PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
@@ -2409,34 +2279,12 @@ Non locality \\
 \end{Verbatim}
 \end{tcolorbox}
 
-
-
-
 \begin{center}
-	\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=0.9\linewidth]{Teleport7.png}
-		\caption{This is an image.}
-	\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{Teleport7.png}
+\caption{This is an image.}
+\end{figure}
 \end{center}
-{ \hspace*{\fill} \\}
 
-
-\begin{tcolorbox}
-	\begin{Verbatim}[commandchars=\\\{\}]
-		
-	\end{Verbatim}
-\end{tcolorbox}
-
-
-% Add a bibliography block to the postdoc
-
-
-
-\newpage
-	
-% https://learn.qiskit.org/course/ch-algorithms/quantum-circuits
-% ket + and ket - must be deffined.
-	
-	
 \end{document}
