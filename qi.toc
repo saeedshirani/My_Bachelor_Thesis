@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {1.2}اندازه‌گیری در فضای هیلبرت}{9}{}%
 \contentsline {section}{\numberline {1.3}گیت‌های کوانتومی}{11}{}%
 \contentsline {subsection}{\numberline {1.3.1}انواع گیت کوانتومی}{11}{}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{12}{}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{13}{}%
 \contentsline {subsubsection}{مدار NOT و خصوصیات آن}{13}{}%
 \contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{17}{}%
 \contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{18}{}%
@@ -47,7 +47,7 @@
 \contentsline {section}{\numberline {3.3}معرفی و پیاده سازی الگوریتم دوچ}{38}{}%
 \contentsline {subsection}{\numberline {3.3.1}مسئله‌ی دوچ}{38}{}%
 \contentsline {subsection}{\numberline {3.3.2}الگوریتم دوچ}{39}{}%
-\contentsline {subsubsection}{پیاده‌سازی الگوریتم دوچ در کیس کیت}{42}{}%
+\contentsline {subsection}{\numberline {3.3.3}پیاده‌سازی الگوریتم دوچ در کیس کیت}{42}{}%
 \contentsline {chapter}{\numberline {4}شبیه‌سازی پدیده‌های کوانتومی}{43}{}%
 \contentsline {section}{\numberline {4.1}حالات بل}{43}{}%
 \contentsline {subsubsection}{پیاده‌سازی حالات بل در کیس کیت}{44}{}%

@@ -36,12 +36,12 @@
 \tableofcontents
 \newpage
 \section*{مقدمه}	
-در عصر حاضر بواسطه‌ی رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا
+در عصر حاضر به‌ واسطه رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا
 \newpage
 \chapter{آشنایی با مفاهیم اولیه}
 \section{کیوبیت}
 
-یک کیوبیت\footnote{\lr{Qubit}}، معادل یک واحد اطلاعات کوانتومی می‌باشد. این مفهوم معادل مفهوم کلاسیک بیت\footnote{\lr{Binary Bit}} می‌باشد. به طور کلی هر کیوبیت حاوی دو بیت اطلاعات است. برای تبیین یک کیوبیت از خصوصیات سامانه های کوانتومی، بهره‌می‌بریم. کیوبیت یک سیستم کوانتومی با فضای دوبعدی است. برای تعیین این دوبعد می‌توان ا ز یکی از خصویات سامانه های کوانتومی استفاده کرد. 
+یک کیوبیت\footnote{\lr{Qubit}}، معادل یک واحد اطلاعات کوانتومی می‌باشد. این مفهوم معادل مفهوم کلاسیک بیت\footnote{\lr{Binary Bit}} می‌باشد. به طور کلی هر کیوبیت حاوی دو بیت اطلاعات است. برای تبیین یک کیوبیت از خصوصیات سامانه های کوانتومی، بهره‌ می‌بریم. کیوبیت یک سیستم کوانتومی با فضای دوبعدی است. برای تعیین این دوبعد می‌توان ا ز یکی از خصویات سامانه های کوانتومی استفاده کرد. 
 \subsection{کیوبیت‌ واحد}
 برخلاف بیت ها که مقادیر ثابت 0 یا 1 را به خود می‌گیرند؛ یک کیوبیت می‌تواند در یک حالت «برهمنهی کوانتومی\footnote{\lr{Quantum Superposition}}» باشد؛ این بدان معناست که یک کیوبیت بواسطه‌ی مشاهده ناظر به یکی از حالات 0 یا یک تبدیل شود. این مهم‌ترین مزیت استفاده از کیوبیت‌هاست. 
 
@@ -49,14 +49,15 @@
 
 بیان ریاضی یک کیوبیت ،در حالت برهمنهی، به شرح زیر است:
 \vspace{0.5cm}
-$$
-\left\{
-\begin{array}{ll}
-	  \vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle \\
-	  \alpha^2 + \beta^2 = 1
-\end{array}
-\right.
-$$
+
+\begin{equation}\label{psi ket}
+	\left\{
+	\begin{array}{ll}
+		\vert \psi \rangle = \alpha\vert 0 \rangle + \beta\vert 1 \rangle \\
+		\alpha^2 + \beta^2 = 1
+	\end{array}
+	\right.
+\end{equation}
 
 کت‌های $\vert 0 \rangle$ و $\vert 1 \rangle$ بیانگر پایه‌های فضای محاسباتی\footnote{\lr{Computational Basis Vectors}} هستند؛ و مقادیر $\alpha^2$ و $\beta^2$ بیانگر احتمال وقوع هر یک از این حالات، در صورت مشاهده، می‌باشند. نمایش بردار $\psi$ به شکل زیر است:
 \begin{center}
@@ -78,7 +79,7 @@ $$
 
 در بسیاری از مواقع برای سهولت در محاسبات، عملگر‌ها و حالات کوانتومی به کمک ماتریس‌ها نمایش داده ‌می‌شوند. فرم ماتریسی هر یک از حالات ذکر شده در بالا به شرح زیر است:
 
-\begin{equation}
+\begin{equation}\label{basis ket}
 	\vert 1 \rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
 	\hspace{2cm}
 	\vert 0 \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}	
@@ -97,7 +98,10 @@ $$
 
 
 \begin{center}
-	$\frac{1}{\sqrt{2}} \vert 0\rangle + \frac{1}{\sqrt{2}} \vert 1\rangle$
+	\begin{equation}\label{superposition}
+		\frac{1}{\sqrt{2}} \vert 0\rangle + \frac{1}{\sqrt{2}} \vert 1\rangle
+	\end{equation}
+	
 \end{center}
 
 حالت $\vert+\rangle$ حالتی از کیوبیت است که با یک بردار 2 بعدی واحد نشان داده می شود. این حالت، زمانی که اندازه گیری شود، نتیجه 0 را 50 درصد از زمان و نتیجه 1 را 50 درصد از زمان می دهد. این حالت را می توان به عنوان یک ترکیب خطی از دو حالت پایه $\vert0\rangle$ و $\vert 1 \rangle$ در نظر گرفت.
@@ -121,7 +125,9 @@ $$
 فرض کنید دو کیوبیت داریم. اگر این دو بیت کلاسیک بودند، چهار حالت ممکن وجود داشت: 00، 01، 10 و 11. به همین ترتیب، یک سیستم دو کیوبیتی دارای چهار حالت محاسباتی است که با $\vert 00 \rangle, \vert 01 \rangle, \vert 10 \rangle, \vert 11 \rangle$ نشان داده می شود. یک جفت کیوبیت همچنین می تواند در برهمنهی این چهار حالت وجود داشته باشد.
 بنابراین حالت کوانتومی دو کیوبیت با اختصاص یک عدد مختلط - گاهی اوقات به عنوان یک دامنه شناخته می شود - به هر حالت محاسباتی، بیان می‌شود. بردار حالت توصیف کننده دو کیوبیت به شکل زیر است:
 \begin{center}
-	$\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d \vert11\rangle $
+	\begin{equation}\label{two qubit system}
+		\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d \vert11\rangle 
+	\end{equation}
 \end{center}
 
 جایی که a، b، c و d دامنه های چهار حالت را نشان می دهند. دامنه ها می توانند هر عدد مختلطی باشند، اما معمولاً به گونه ای نرمال می شوند که مجموع آنها برابر 1 باشد. این بدان معناست که بردار حالت یک حالت کوانتومی معتبر را نشان می دهد و کیوبیت ها به طور مساوی احتمال اندازه گیری در هر یک از چهار حالت محاسباتی را دارند.
@@ -135,8 +141,10 @@ $\vert \Psi \rangle = \frac{1}{\sqrt{2}} \vert00\rangle + \frac{1}{\sqrt{2}} \ve
 یک سیستم دو کیوبیتی را نشان می دهد که در یک برهمنهی مساوی از حالت های 00 و 11 است. این بدان معناست که کیوبیت ها به طور مساوی احتمال اندازه گیری در حالت 00 یا 11 را دارند.
 
 بردار حالت یک سیستم دو کیوبیتی را می توان برای محاسبه احتمال اندازه گیری کیوبیت ها در هر یک از چهار حالت محاسباتی استفاده کرد. به عنوان مثال، احتمال اندازه گیری کیوبیت ها در حالت 00 با فرمول زیر داده می شود:
-\begin{center}
-$P(\vert00\rangle) = \vert a\vert^ 2 = \frac{1}{2}$
+\begin{center}\label{possible value}
+\begin{equation}
+	P(\vert00\rangle) = \vert a\vert^ 2 = \frac{1}{2}
+\end{equation}
 \end{center}
 
 
@@ -149,7 +157,9 @@ $\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d
 
 
 \begin{center}
-	$\left|\psi^{\prime}\right\rangle=\frac{\alpha_{00}|00\rangle+\alpha_{01}|01\rangle}{\sqrt{\left|\alpha_{00}\right|^2+\left|\alpha_{01}\right|^2}}$
+	\begin{equation}\label{psi after mesurment}
+		\left|\psi^{\prime}\right\rangle=\frac{\alpha_{00}|00\rangle+\alpha_{01}|01\rangle}{\sqrt{\left|\alpha_{00}\right|^2+\left|\alpha_{01}\right|^2}}
+	\end{equation}
 \end{center}
 توجه داشته باشید که حالت پس از اندازه گیری با عامل $\sqrt{|{α}_{00}|^2 + |{α}_{01}|^2}$ نرمال می شود
 تا همچنان شرط نرمال سازی را، درست همانطور که برای یک
@@ -160,15 +170,22 @@ $\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d
 ما تاکنون اندازه گیری های کوانتومی یک کیوبیت در حالت $\alpha\vert0\rangle + \beta\vert1\rangle$را به عنوان نتیجه 0 یا 1 توصیف کرده ایم که کیوبیت را در حالت $\vert 0 \rangle$ یا $\vert 1 \rangle$مربوطه باقی می گذارد، با احتمالات $\vert\alpha\vert ^ 2$ و $\vert\beta\vert ^ 2$. در حقیقت، مکانیک کوانتوم به اندازه کافی انعطاف پذیری در کلاس اندازه گیری هایی که می توان انجام داد، اگرچه مطمئناً به اندازه کافی نیست که $\alpha$ و $\beta$ را از یک اندازه گیری واحد بازیابی کند!
 
 توجه داشته باشید که $\vert 0 \rangle$ و $\vert 1 \rangle$ فقط یکی از بسیاری از انتخاب های ممکن برای پایه های حالت برای یک کیوبیت هستند. یک انتخاب دیگر مجموعه به شرح زیر است:
+
 \begin{center}
-$\vert+\rangle  \equiv (\vert0\rangle + \vert1\rangle)\sqrt{2}$
-$\vert-\rangle \equiv  (\vert0\rangle - \vert1\rangle)\sqrt{2}$
+\begin{equation}\label{ket +-} 
+	\begin{split}
+	\vert+\rangle  \equiv (\vert0\rangle + \vert1\rangle)\sqrt{2}\\
+	\vert-\rangle \equiv  (\vert0\rangle - \vert1\rangle)\sqrt{2}
+\end{split}
+\end{equation}
 \end{center}
  
  
  یک حالت دلخواه $\vert\Psi\rangle = \alpha0\rangle + \beta1\rangle$ را می توان با استفاده از حالت های $\vert + \rangle$ و $\vert - \rangle$ بازنویسی کرد:
 \begin{center}
-	$\vert\Psi\rangle = \alpha \vert0\rangle + \beta\vert1\rangle = \frac{(\alpha + \beta)}{2}\vert+\rangle + \frac{(\alpha - \beta)}{2}\vert-\rangle$
+	\begin{equation}\label{basis to forier}
+		\vert\Psi\rangle = \alpha \vert0\rangle + \beta\vert1\rangle = \frac{(\alpha + \beta)}{2}\vert+\rangle + \frac{(\alpha - \beta)}{2}\vert-\rangle
+	\end{equation}
 \end{center}
 
 
@@ -189,8 +206,6 @@ $\vert-\rangle \equiv  (\vert0\rangle - \vert1\rangle)\sqrt{2}$
 اندازه گیری در پایه های دیگر یک ابزار قدرتمند در محاسبات کوانتومی است. این امکان را می دهد تا ما در حالت های کوانتومی که در پایگاه محاسباتی قابل اندازه گیری نیستند، اندازه گیری کنیم. این امکان را می دهد تا ما از روش های محاسباتی جدیدی استفاده کنیم که در محاسبات کلاسیک غیرممکن است.
 
 دلایل زیادی برای استفاده از این مدل توسعه‌یافته برای اندازه گیری های کوانتومی وجود دارد، اما در نهایت بهترین دلیل این است: این مدل به ما امکان توصیف نتایج تجربی مشاهده شده نظیر نتایج آزمایش اشترن-گرلاخ\footnote{Stern–Gerlach} را می دهد.
-
-\newpage
 \section{گیت‌های کوانتومی}
 گیت‌های کوانتومی\footnote{\lr{Quantum Gates}} یکی از اولین و مهم‌ترین اجزای‌ مدار‌های کوانتومی ‌می‌باشند. این گیت‌ها عملگر‌هایی با قابلیت اثر‌گذاری روی کیوبیت‌ها می‌باشند. با اعمال یک گیت کوانتومی بر روی یک یا چند کیوبیت، می‌توان تغییرات مدنظر خود را روی کیوبیت اعمال کرد. با کمک این گیت‌ها می‌توان باعث برهم‌نهی کوانتومی یا رمز‌گذاری داده در داخل یک یا چند کیوبیت شد.
 
@@ -199,44 +214,55 @@ $\vert-\rangle \equiv  (\vert0\rangle - \vert1\rangle)\sqrt{2}$
 \subsection*{گیت هادامارد}
 مهم‌ترین گیت کوانتومی،‌گیت هادامارد\footnote{\lr{Hadamard gate}} است. با اعمال اثر این گیت روی یک کیوبیت، آن کیوبیت به‌یک حالت برهم نهی‌ کوانتومی‌ گذار‌ می‌کند. به عبارت دیگر هر یک از زیرحالات این حالت برهم‌نهی، با احتمال یکسانی قابل رخ دادن‌ هستند. 
 \vspace{1cm}
-$$
+
+
+\begin{center}
+	\begin{equation}\label{basis to forier}
 H\ket{0} = \frac{1}{\sqrt{2}} (\ket{0} + \ket{1})
+\end{equation}
+\end{center}
 \hspace{2cm}
+\begin{center}
+	\begin{equation}\label{basis to forier}
 H\ket{1} = \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
-$$
+\end{equation}
+\end{center}
 \vspace{1cm}
 
 این گیت کوانتومی‌ به صورت خطی روی یک دسته‌ کت اثر مي‌کند. نمایش ماتریسی این گیت‌کوانتومی به شرح زیر است:
 \begin{center}
-	\[
-	H = \frac{1}{\sqrt{2}}
-	\begin{pmatrix}
-		1 & 1 \\
-		1 & -1
-	\end{pmatrix}
-	\]
+	\begin{equation}\label{Hadamard matrix}
+		H = \frac{1}{\sqrt{2}}
+		\begin{pmatrix}
+			1 & 1 \\
+			1 & -1
+		\end{pmatrix}
+	\end{equation}
 \end{center}
 
 
 
 
 
-\begin{align*}
-	H |0\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \
-	= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \
-	= \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle)
-\end{align*}
+	\begin{equation}\label{Hadamard matrix}
+			H |0\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 1 \\ 0 \end{pmatrix} \
+		= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix} \
+		= \frac{1}{\sqrt{2}} (|0\rangle + |1\rangle)
+	\end{equation}
 
-\begin{align*}
+
+
+	\begin{equation}\label{Hadamard on ket}
 	H |1\rangle = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 0 \\ 1 \end{pmatrix} \
 	= \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ -1 \end{pmatrix} \
 	= \frac{1}{\sqrt{2}} (|0\rangle - |1\rangle)
-\end{align*}
+\end{equation}
+
 
 این گیت کوانتومی، یک گیت بازگشت‌پذیر است؛ یعنی اگر این گیت روی یک حالت کوانتومی اثر کند؛‌ می‌تواند آن را از حالت برهمنهی خارج کند. 
 
 برای اعمال این گیت کوانتومی، فقط به یک کیوبیت نیاز داریم. به اصطلاح این گیت،‌
-یک \lr{Single-Qubit Quantum gate} می‌باشد.
+یک گیت تک کیوبیت \footnote{ \lr{Single-Qubit Quantum gate} } می‌باشد.
 
 نمایش این گیت‌کوانتومی در مدار با علامت زیر است:
 \Qcircuit @C=1em @R=1.2em {
@@ -248,8 +274,12 @@ $$
 گیت کوانتومی $U_{NOT}$ یک عملگر یکه و بازگشت‌پذیر است. 
 
 \begin{center}
-	$U_{NOT}\vert0\rangle = \vert1\rangle$\\
-	$U_{NOT}\vert1\rangle = \vert0\rangle$
+	\begin{equation}\label{UNOT on ket}
+		\begin{split}
+			U_{NOT}\vert0\rangle = \vert1\rangle\\
+			U_{NOT}\vert1\rangle = \vert0\rangle
+		\end{split}
+	\end{equation}
 \end{center}
 
 
@@ -263,7 +293,6 @@ $$
 	 	1 & 0
 		\end{pmatrix}$
 \end{center}
-\pagebreak
 
 از آنجایی که یک حالت کیوبیت در فضای هیلبرت دو بعدی تعریف شده است. ابعاد ماتریس باید 2 × 2 باشد. از این رو می‌توان نوشت:
 $$
@@ -975,51 +1004,6 @@ $$
 	
 \end{center}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \chapter{الگوریتم‌های‌کوانتومی‌}
 
 
@@ -1039,8 +1023,7 @@ $$
 	$f (x) : \{0, 1\} \rightarrow \{0, 1\}$\\
 \end{center}
 
-روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به
- $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
+روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
 
 \footnote{Modulo 2 is a mathematical operation that returns the remainder of a division by 2. For example, 5 mod 2 is 1, because 5 divided by 2 has a quotient of 2 and a remainder of 1.
 	
@@ -1282,9 +1265,9 @@ $$
 
 % implimentation : https://learn.qiskit.org/course/ch-algorithms/deutsch-jozsa-algorithm
 
-\subsubsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
+\subsection{پیاده‌سازی الگوریتم دوچ در کیس کیت}
 \begin{verbatim}
-	https://learn.qiskit.org/course/ch-algorithms/quantum-teleportation
+کد ها ضمیمه شود
 \end{verbatim}
 
 
@@ -1326,25 +1309,7 @@ $$
  
 \begin{verbatim}
 	
-	
-	qc = QuantumCircuit(2)
-	qc.h(0)
-	qc.cx(0, 1)
-	
-	
-	
-	from qiskit import QuantumCircuit, execute
-	
-	qc = QuantumCircuit(2)
-	qc.h(0)
-	qc.cx(0, 1)
-	
-	backend = Aer.get_backend('qasm_simulator')
-	result = execute(qc, backend).result()
-	
-	counts = result.get_counts()
-	
-	print(counts)
+
 \end{verbatim}
 
 \newpage
@@ -1370,18 +1335,7 @@ Non locality \\
 در نتیجه، از درهم تنیدگی به عنوان یکی از جذاب ترین و گیج کننده ترین پدیده ها در قلمرو فیزیک کوانتومی یاد‌می‌شود. ارتباط اسرارآمیز آن بین ذرات، شهود کلاسیک را به چالش می کشد و همچنان مرزهای درک ما از جهان را پیش می برد. همانطور که دانشمندان عمیق تر به پیچیدگی های درهم تنیدگی و کاربردهای بالقوه آن می پردازند.
 \subsection{پیاده‌سازی درهمتنیدگی در کیس کیت}
 \begin{verbatim}
-	from qiskit import QuantumCircuit, execute
-	
-	qc = QuantumCircuit(2)
-	qc.h(0)
-	qc.cx(0, 1)
-	
-	backend = Aer.get_backend('qasm_simulator')
-	result = execute(qc, backend).result()
-	
-	counts = result.get_counts()
-	
-	print(counts)
+
 \end{verbatim}
 \newpage
 
@@ -1402,11 +1356,7 @@ Non locality \\
 \end{center}
 
 
-
-بیانات چی بیتی
-
-
-آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات باتوجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل 1 را به کیوبیت خود اعمال می‌کند.
+آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات باتوجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل یکه را به کیوبیت خود اعمال می‌کند.
 
 این تبدیل واحد باعث می‌شود که کیوبیت آلیس و کیوبیت باب در یکی از چهار حالت متعامد بل قرار گیرند. اگر آلیس کیوبیت خود را در حالت $\vert 00 \rangle$ قرار دهد، کیوبیت باب به طور خودکار به حالت $\vert 00 \rangle$ تبدیل می‌شود. این بدان معناست که آلیس دو بیت اطلاعات $(0, 0)$ را به باب منتقل کرده است.
 
@@ -1467,7 +1417,7 @@ $$\begin{aligned}
 
 
 \begin{verbatim}
-	https://gist.github.com/GDLMadushanka/9ebae6b3fff104514f4bc82b3803dba9
+
 \end{verbatim}
 \newpage
 \section{دوربری}
@@ -1573,7 +1523,7 @@ fig 1.13
 
 \subsection{پیاده‌سازی دوربری در کیس کیت}
 \begin{verbatim}
-	https://learn.qiskit.org/course/ch-algorithms/quantum-teleportation
+
 \end{verbatim}
 \newpage
 	
