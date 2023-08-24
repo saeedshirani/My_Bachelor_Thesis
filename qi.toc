@@ -1,54 +1,54 @@
-\contentsline {chapter}{آشنایی با مفاهیم اولیه}{6}{chapter*.3}%
-\contentsline {section}{کیوبیت}{6}{section*.4}%
-\contentsline {subsection}{کیوبیت‌ واحد}{6}{section*.5}%
-\contentsline {subsection}{کیوبیت‌های چندتایی}{9}{section*.6}%
-\contentsline {section}{اندازه‌گیری در فضای هیلبرت}{11}{section*.7}%
-\contentsline {section}{گیت‌های کوانتومی}{12}{section*.8}%
-\contentsline {subsection}{انواع گیت کوانتومی}{13}{section*.9}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{15}{section*.12}%
-\contentsline {subsubsection}{مدار NOT و خصوصیات آن}{15}{section*.13}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{20}{section*.16}%
-\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{21}{section*.17}%
-\contentsline {subsection}{گیت مبادله}{22}{section*.18}%
-\contentsline {subsubsection}{نمایش ماتریسی گیت مبادله}{22}{section*.19}%
-\contentsline {subsubsection}{گیت مبادله در مدار و خصوصیات آن}{23}{section*.20}%
-\contentsline {section}{مدار‌های کوانتومی}{25}{section*.21}%
-\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{26}{section*.22}%
-\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{27}{section*.23}%
-\contentsline {paragraph}{اندازه مدار کوانتومی}{27}{section*.24}%
-\contentsline {paragraph}{کیوبیت}{27}{section*.25}%
-\contentsline {paragraph}{دروازه}{27}{section*.26}%
-\contentsline {paragraph}{عملیات}{27}{section*.27}%
-\contentsline {subsection}{نحوه‌ی نمایش مدار‌های کوانتومی}{28}{section*.28}%
-\contentsline {chapter}{برنامه‌نویسی کوانتومی}{30}{chapter*.29}%
-\contentsline {section}{کامپیوترهای کوانتومی در مقابل کامپیوترهای کلاسیک}{30}{section*.30}%
-\contentsline {paragraph}{رمزنگاری}{31}{section*.31}%
-\contentsline {paragraph}{شبیه‌سازی مواد در علم شیمی}{31}{section*.32}%
-\contentsline {paragraph}{یادگیری ماشینی}{31}{section*.33}%
-\contentsline {section}{شبیه‌سازی کلاسیک در مقابل کامپیوتر کوانتومی}{32}{section*.34}%
-\contentsline {subsection}{تفاوت کامپیوترهای کوانتومی و شبیه‌سازهای کلاسیک}{32}{section*.35}%
-\contentsline {paragraph}{دما}{33}{section*.36}%
-\contentsline {paragraph}{برخورد}{33}{section*.37}%
-\contentsline {paragraph}{تابش الکترومغناطیسی}{33}{section*.38}%
-\contentsline {paragraph}{سردسازی کیوبیت‌ها}{33}{section*.39}%
-\contentsline {paragraph}{استفاده از مواد با همدوسی بالا}{33}{section*.40}%
-\contentsline {paragraph}{توسعه‌ی الگوریتم‌های جایگزین برای تصحیح خطای‌‌کوانتومی}{33}{section*.41}%
-\contentsline {section}{کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}{34}{section*.42}%
-\contentsline {subsection}{معرفی QisKit}{34}{section*.43}%
-\contentsline {subsection}{کدنویسی به زبان QisKit}{34}{section*.44}%
-\contentsline {subsection}{قواعد نوشتاری و ساختار داده}{34}{section*.45}%
-\contentsline {subsection}{پیاده‌سازی گیت‌های کوانتومی}{35}{section*.46}%
-\contentsline {subsection}{تصویر سازی}{36}{section*.47}%
-\contentsline {chapter}{الگوریتم‌های‌کوانتومی‌}{37}{chapter*.48}%
-\contentsline {section}{موازی سازی کوانتومی}{37}{section*.49}%
-\contentsline {subsection}{مدل محاسباتی استاندارد}{41}{section*.50}%
-\contentsline {section}{مدل کوئری}{42}{section*.51}%
-\contentsline {section}{معرفی و پیاده سازی الگوریتم دوچ}{43}{section*.52}%
-\contentsline {subsection}{مسئله‌ی دوچ}{43}{section*.53}%
-\contentsline {subsection}{الگوریتم دوچ}{44}{section*.54}%
-\contentsline {subsection}{پیاده‌سازی الگوریتم دوچ در کیس کیت}{47}{section*.55}%
-\contentsline {chapter}{شبیه‌سازی پدیده‌های کوانتومی}{55}{chapter*.56}%
-\contentsline {section}{حالات بل}{55}{section*.57}%
-\contentsline {section}{درهمتنیدگی}{56}{section*.58}%
-\contentsline {section}{دوربری}{58}{section*.59}%
-\contentsline {subsection}{پیاده‌سازی دوربری در کیس کیت}{62}{section*.60}%
+\contentsline {chapter}{آشنایی با مفاهیم اولیه}{5}{chapter*.3}%
+\contentsline {section}{کیوبیت}{5}{section*.4}%
+\contentsline {subsection}{کیوبیت‌ واحد}{5}{section*.5}%
+\contentsline {subsection}{کیوبیت‌های چندتایی}{8}{section*.6}%
+\contentsline {section}{اندازه‌گیری در فضای هیلبرت}{10}{section*.7}%
+\contentsline {section}{گیت‌های کوانتومی}{11}{section*.8}%
+\contentsline {subsection}{انواع گیت کوانتومی}{12}{section*.9}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت NOT}{14}{section*.12}%
+\contentsline {subsubsection}{مدار NOT و خصوصیات آن}{14}{section*.13}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت تغییر فاز}{19}{section*.16}%
+\contentsline {subsubsection}{گیت تغییر فاز در مدار و خصوصیات آن}{20}{section*.17}%
+\contentsline {subsection}{گیت مبادله}{21}{section*.18}%
+\contentsline {subsubsection}{نمایش ماتریسی گیت مبادله}{21}{section*.19}%
+\contentsline {subsubsection}{گیت مبادله در مدار و خصوصیات آن}{22}{section*.20}%
+\contentsline {section}{مدار‌های کوانتومی}{23}{section*.21}%
+\contentsline {subsubsection}{شباهت ها و تفاوت های مدارهای کلاسیک و کوانتومی}{25}{section*.22}%
+\contentsline {subsubsection}{اجزای مدار‌های کوانتومی و سایز آن }{26}{section*.23}%
+\contentsline {paragraph}{اندازه مدار کوانتومی}{26}{section*.24}%
+\contentsline {paragraph}{کیوبیت}{26}{section*.25}%
+\contentsline {paragraph}{دروازه}{26}{section*.26}%
+\contentsline {paragraph}{عملیات}{26}{section*.27}%
+\contentsline {subsection}{نحوه‌ی نمایش مدار‌های کوانتومی}{27}{section*.28}%
+\contentsline {chapter}{برنامه‌نویسی کوانتومی}{28}{chapter*.29}%
+\contentsline {section}{کامپیوترهای کوانتومی در مقابل کامپیوترهای کلاسیک}{28}{section*.30}%
+\contentsline {paragraph}{رمزنگاری}{29}{section*.31}%
+\contentsline {paragraph}{شبیه‌سازی مواد در علم شیمی}{29}{section*.32}%
+\contentsline {paragraph}{یادگیری ماشینی}{29}{section*.33}%
+\contentsline {section}{شبیه‌سازی کلاسیک در مقابل کامپیوتر کوانتومی}{30}{section*.34}%
+\contentsline {subsection}{تفاوت کامپیوترهای کوانتومی و شبیه‌سازهای کلاسیک}{30}{section*.35}%
+\contentsline {paragraph}{دما}{31}{section*.36}%
+\contentsline {paragraph}{برخورد}{31}{section*.37}%
+\contentsline {paragraph}{تابش الکترومغناطیسی}{31}{section*.38}%
+\contentsline {paragraph}{سردسازی کیوبیت‌ها}{31}{section*.39}%
+\contentsline {paragraph}{استفاده از مواد با همدوسی بالا}{31}{section*.40}%
+\contentsline {paragraph}{توسعه‌ی الگوریتم‌های جایگزین برای تصحیح خطای‌‌کوانتومی}{31}{section*.41}%
+\contentsline {section}{کامپیوترکوانتومی IBM و زبان برنامه‌نویسی QisKit}{32}{section*.42}%
+\contentsline {subsection}{معرفی QisKit}{32}{section*.43}%
+\contentsline {subsection}{کدنویسی به زبان QisKit}{32}{section*.44}%
+\contentsline {subsection}{قواعد نوشتاری و ساختار داده}{32}{section*.45}%
+\contentsline {subsection}{پیاده‌سازی گیت‌های کوانتومی}{33}{section*.46}%
+\contentsline {subsection}{تصویر سازی}{34}{section*.47}%
+\contentsline {chapter}{الگوریتم‌های‌کوانتومی‌}{35}{chapter*.48}%
+\contentsline {section}{موازی سازی کوانتومی}{35}{section*.49}%
+\contentsline {subsection}{مدل محاسباتی استاندارد}{39}{section*.50}%
+\contentsline {section}{مدل کوئری}{40}{section*.51}%
+\contentsline {section}{معرفی و پیاده سازی الگوریتم دوچ}{41}{section*.52}%
+\contentsline {subsection}{مسئله‌ی دوچ}{41}{section*.53}%
+\contentsline {subsection}{الگوریتم دوچ}{42}{section*.54}%
+\contentsline {subsection}{پیاده‌سازی الگوریتم دوچ در کیس کیت}{45}{section*.55}%
+\contentsline {chapter}{شبیه‌سازی پدیده‌های کوانتومی}{52}{chapter*.56}%
+\contentsline {section}{حالات بل}{52}{section*.57}%
+\contentsline {section}{درهمتنیدگی}{53}{section*.58}%
+\contentsline {section}{دوربری}{55}{section*.59}%
+\contentsline {subsection}{پیاده‌سازی دوربری در کیس کیت}{59}{section*.60}%

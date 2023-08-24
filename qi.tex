@@ -274,10 +274,12 @@
 \settextfont{XB Zar}
 
 \begin{document}
-\tableofcontents
-\newpage
 \section*{مقدمه}	
-در عصر حاضر به‌ واسطه رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این پا\pagebreak
+در عصر حاضر به‌ واسطه رشد و توسعه‌ی نظریه‌ی اطلاعات کوانتومی و سرمایه‌گذاری های مالی و انسانی بسیار در این زمینه،‌شاهد افزایش تعداد علاقمندان به این حوزه هستیم. در این نوشته ابتدا، به توضیح مفاهیم پایه و ابتدایی لازم برای ایجاد یک کامپیوتر کوانتومی می‌پردازد. در ادامه به بررسی تفاوت‌ها و برتری کامپیوتر کوانتومی بر کامپیوتر کلاسیک می‌پردازد. درانتها به معرفی و بررسی دوربری کوانتومی و پیاده‌سازی آن برکامپیوتر کوانتومی شرکت آی‌بی‌ام\footnote{IBM} خواهیم پرداخت.
+دوربری کوانتومی یکی از پدیده‌های کوانتومی ساده ولی بسیار شگرف است. علت سادگی این پدیده ناشی از کیوبیت‌های موٍثر در تعریف این پدیده است؛ می‌توان با سه کیوبیت و با تعریف برهم‌کنش‌های دوکیوبیتی، یک ذره را با دوربری به هرنقطه‌ی دیگری انتقال داد.
+دوکیوبیتی بودن برهمکنش‌های این پدیده منجر به ساده بودن انجام آزمایش یا شبیه سازی و درک مفاهیم مرتبط با آن می‌گردد.
+\let\cleardoublepage\clearpage
+\tableofcontents
 \chapter{آشنایی با مفاهیم اولیه}
 \section{کیوبیت}
 
@@ -851,13 +853,17 @@ $$
 \end{center}
 که در آن $\theta1$ و $\theta2$ به ترتیب فازهای $\alpha$ و $\beta$ هستند.
 
+\textbf{اشکال}
 بنابراین، اختلاف فاز آنها θ1 - θ2 است. با توجه به رفتارگیت تغییر فاز، تغییر فاز $\alpha$ صفر می‌باشد؛‌اما فاز β به Φ + θ2 تغییر می کند. بنابراین، خویشاوندان آنها فاز با Φ تغییر می کند. 
 
-\begin{center}
-	 This also explains why the phase shift is only applied to the
-	second basis state to be meaningful. If it is applied to both, there will be no change
-	in the phase difference.
-\end{center}
+\begin{latin}
+	\begin{center}
+		This also explains why the phase shift is only applied to the
+		second basis state to be meaningful. If it is applied to both, there will be no change
+		in the phase difference.
+	\end{center}
+\end{latin}
+
 
  (1 0
 0 e iπ
@@ -970,7 +976,6 @@ $$
 
 
 همانطور که انتظار می رود، ضرایب حالت های پایه دوم و سوم با هم مبادله می شوند.
-\newpage
 \section{مدار‌های کوانتومی}
 مدار‌های ‌کوانتومی\footnote{quantum circuit}، یک دسته از گیت ها‌ی کوانتومی،که با یک توالی بخصوص قرار گرفته اند، ‌می‌باشند. این کیوبیت ها، با توالی یاد شده، روی یک یا چند دسته کیوبیت، اثر داده ‌می‌شوند. 
 
@@ -1376,14 +1381,14 @@ f (x) : \{0, 1\} \rightarrow \{0, 1\}
 
 تابع اوراکل به صورت زیر تعریف می‌شود:
 \begin{center}
-$$
-\left\{
-\begin{array}{ll}
-f : \sum^n = \sum^m\\
-Which : m, n \in \mathbb{N}
-\end{array}
-\right.
-$$
+	\begin{equation}\label{key}
+		\left\{
+		\begin{array}{ll}
+			f : \sum^n = \sum^m\\
+			Which : m, n \in \mathbb{N}
+		\end{array}
+		\right.
+	\end{equation}
 \end{center}
 
 ما در این نظریه کوئری‌ها را می‌شماریم و وضعیت آن‌‌ها را بررسی می‌کنیم.
@@ -1666,7 +1671,7 @@ ibmq\_manila : 15 \& 5 qubits
 \PY{n}{quantum\PYZus{}result} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{backend}\PY{o}{=}\PY{n}{quantum\PYZus{}computer}\PY{p}{,}\PY{n}{shots}\PY{o}{=}\PY{l+m+mi}{1024}\PY{p}{)}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 \end{tcolorbox}
-\pagebreak
+
 حال مقادیر محاسبه شده را به تصویر می‌کشیم:
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]
@@ -1864,7 +1869,7 @@ where ¯y is the negation of y.
 \PY{o}{%}\PY{n+nn}{matplotlib inline}
 \end{Verbatim}
 \end{tcolorbox}
-\lr{از استاد بپرس چرا گیت ایکس را به کیوبیت سای اثر دادیم؟}
+\textbf{از استاد بپرس چرا گیت ایکس را به کیوبیت سای اثر دادیم؟}\\
 یک مدار کوانتومی با سه کیوبیت و سه بیت کلاسیک تعریف می‌کنیم. پس از آن یک گیت x روی اولین کیوبیت اثر می‌دهیم؛ تا حالت آن را تغییر دهیم. یک گیت هادامارد به کیوبیت اول و یک گیت \lr{CNOT} به هردو کیوبیت اثر می‌دهیم. خروجی این کار درهم‌تنیدگی دو کیوبیت یک و دو خواهد بود. سپس خروجی را مشاهده می‌کنیم: 
 \begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
 \begin{Verbatim}[commandchars=\\\{\}]

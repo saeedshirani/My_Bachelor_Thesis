@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  24 AUG 2023 15:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  24 AUG 2023 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1561,6 +1561,9 @@ LaTeX Warning: Label `Hadamard matrix' multiply defined.
 
 LaTeX Warning: Label `fig:my_image' multiply defined.
 
+
+LaTeX Warning: Label `key' multiply defined.
+
 )
 \openout1 = `qi.aux'.
 
@@ -2147,35 +2150,33 @@ Package microtype Warning: Unknown slot number of character
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 23.51292pt on input line 277.
+(Font)              scaled to size 13.60875pt on input line 277.
 LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
-(Font)              scaled to size 23.51292pt on input line 277.
- (./qi.toc
-LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
-(Font)              scaled to size 9.45053pt on input line 1.
+(Font)              scaled to size 13.60875pt on input line 277.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 2.
+(Font)              scaled to size 6.9999pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 4.99992pt on input line 2.
+(Font)              scaled to size 4.99992pt on input line 278.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-.
+78.
 
 (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 2.
+(Font)              scaled to size 10.00092pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 2.
+(Font)              scaled to size 7.00064pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 2.
+(Font)              scaled to size 5.00046pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 2.
+(Font)              scaled to size 9.99893pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 2.
+(Font)              scaled to size 6.99925pt on input line 278.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 2.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(Font)              scaled to size 4.99947pt on input line 278.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 278
+.
 
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2183,118 +2184,115 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 278
+.
 
 (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+)
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
+(Font)              scaled to size 6.61537pt on input line 278.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
+(Font)              scaled to size 7.56042pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.99988pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.99991pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 8.00073pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 6.00055pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.99915pt on input line 278.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.99936pt on input line 278.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
+(Font)              scaled to size 5.67032pt on input line 278.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 2
+82.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/it' will be
+(Font)              scaled to size 9.45053pt on input line 282.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
+(Font)              scaled to size 23.51292pt on input line 282.
+LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
+(Font)              scaled to size 23.51292pt on input line 282.
+ (./qi.toc
+LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
+(Font)              scaled to size 9.45053pt on input line 1.
+ [2
+
+])
 \tf@toc=\write6
 \openout6 = `qi.toc'.
 
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/XBZar(0)/m/it' tried instead on input line 2
-78.
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/it' will be
-(Font)              scaled to size 9.45053pt on input line 278.
- [2
 
+[3
 
 ]
+LaTeX Font Info:    Font shape `TU/lmroman10-regular(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 286.
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 13.60875pt on input line 279.
+(Font)              scaled to size 11.34064pt on input line 287.
 LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
-(Font)              scaled to size 13.60875pt on input line 279.
+(Font)              scaled to size 11.34064pt on input line 287.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-[4]
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 6.61537pt on input line 284.
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 7.56042pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.99988pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.99991pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 284.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 284.
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 5.67032pt on input line 284.
+ [4]
+[5
+
+] [6]
 LaTeX Font Info:    Font shape `TU/lmroman10-regular(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 284.
-LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 11.34064pt on input line 285.
-LaTeX Font Info:    Font shape `TU/XBZar(0)/b/n' will be
-(Font)              scaled to size 11.34064pt on input line 285.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5
-
-]
-[6] [7]
-LaTeX Font Info:    Font shape `TU/lmroman10-regular(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 357.
+(Font)              scaled to size 10.0pt on input line 359.
 
 Underfull \vbox (badness 1424) has occurred while \output is active []
 
- [8]
+ [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10] [11]
+ [8]
+[9] [10]
 Underfull \vbox (badness 2173) has occurred while \output is active []
 
- [12]
-<xymatrix 5x2 205> [13]
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
+ [11]
+<xymatrix 5x2 205> [12]
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 [][]
  []
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 9.99985pt on input line 561.
+(Font)              scaled to size 9.99985pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 6.9999pt on input line 561.
+(Font)              scaled to size 6.9999pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 4.99992pt on input line 561.
+(Font)              scaled to size 4.99992pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 10.00092pt on input line 561.
+(Font)              scaled to size 10.00092pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 7.00064pt on input line 561.
+(Font)              scaled to size 7.00064pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 5.00046pt on input line 561.
+(Font)              scaled to size 5.00046pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 9.99893pt on input line 561.
+(Font)              scaled to size 9.99893pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 6.99925pt on input line 561.
+(Font)              scaled to size 6.99925pt on input line 563.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 4.99947pt on input line 561.
+(Font)              scaled to size 4.99947pt on input line 563.
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 4.72527pt on input line 561.
+(Font)              scaled to size 4.72527pt on input line 563.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [13]
 <xymatrix 5x1 219>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 669--671
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 672--673
+ [14]
+Underfull \hbox (badness 10000) in paragraph at lines 671--673
 [][]
  []
 
@@ -2303,26 +2301,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 674--675
 [][]
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+[][]
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 710--711
 [][]
  []
 
 File: Matrix-representation-and-quantum-circuit-of-CNOT-gate.png Graphic file (
 type bmp)
 <Matrix-representation-and-quantum-circuit-of-CNOT-gate.png>
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 754--756
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 756--758
 [][]
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [17]
 Underfull \vbox (badness 2261) has occurred while \output is active []
 
- [19]
+ [18]
 Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
@@ -2342,39 +2345,49 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 
 Underfull \vbox (badness 1365) has occurred while \output is active []
 
+ [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
 File: swap.png.jpg Graphic file (type bmp)
 <swap.png.jpg>
-
-[23]
 File: cnot in circuit.png Graphic file (type bmp)
 <cnot in circuit.png>
+
+[22]
 File: measurment.png Graphic file (type bmp)
 <measurment.png>
- [24] [25] [26]
+
+Underfull \vbox (badness 6675) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 1783) has occurred while \output is active []
+
+ [25]
 File: meas-firstcirc.png Graphic file (type bmp)
 <meas-firstcirc.png>
- [27] [28] [29
+
+[26] [27]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[29]
+Underfull \vbox (badness 3514) has occurred while \output is active []
 
  [30]
 [31]
-Underfull \vbox (badness 3514) has occurred while \output is active []
-
- [32]
-[33]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34]
-Overfull \hbox (80.25pt too wide) in paragraph at lines 1224--1224
+ [32]
+Overfull \hbox (80.25pt too wide) in paragraph at lines 1229--1229
 [][]\TU/lmtt/m/n/10 circuit.draw(output = "mpl")  # output = "mpl" is defining 
 type of circuit output[] []
  []
@@ -2382,12 +2395,12 @@ type of circuit output[] []
 File: tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png Gra
 phic file (type bmp)
 <tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png>
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1259
 [][]
  []
 
-[36]
+[34]
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
@@ -2399,42 +2412,42 @@ File: Uforacle.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37
+ [35
 
 ]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1313.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1313.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1313.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1313.
 
 
 Underfull \vbox (badness 1584) has occurred while \output is active []
 
- [38]
+ [36]
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
 
-[39]
+[37]
 File: standard computation model.png Graphic file (type bmp)
 <standard computation model.png>
- [40]
+ [38]
 File: Query computation model.png Graphic file (type bmp)
 <Query computation model.png>
- [41]
+ [39]
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
 Underfull \vbox (badness 3240) has occurred while \output is active []
 
- [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
+ [40]
+Underfull \hbox (badness 10000) in paragraph at lines 1430--1431
 [][]
  []
 
@@ -2456,41 +2469,41 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[43]
+[41]
 File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type b
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
+Underfull \hbox (badness 10000) in paragraph at lines 1460--1461
 [][]
  []
 
 
 Underfull \vbox (badness 1242) has occurred while \output is active []
 
- [44]
-Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
+ [42]
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1468
 [][]
  []
 
-[45]
+[43]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1515.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1520.
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1519--1519
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1524--1524
 [][][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1526--1526
+ [44]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1531--1531
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1536--1536
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1541--1541
 [][][][] []
  []
 
@@ -2500,38 +2513,38 @@ File: output_2_0.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1554--1554
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1559--1559
 [][][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
+ [45]
 File: output_3_0.png Graphic file (type bmp)
 <output_3_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1568--1568
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1573--1573
 [][][][] []
  []
 
 
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
- [48]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1573--1573
+ [46]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1578--1578
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1579--1579
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1584--1584
 [][][][] []
  []
 
 File: output_5_0.png Graphic file (type bmp)
 <output_5_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1598--1598
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1603--1603
 [][][][] []
  []
 
@@ -2541,202 +2554,113 @@ File: output_6_0.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package hyperref Warning: Suppressing empty link on input line 1607.
+Package hyperref Warning: Suppressing empty link on input line 1612.
+
+[47]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1620--1620
+[][][][] []
+ []
+
+
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 1627--1627
+[][][][] []
+ []
+
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1642--1642
+[][][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1661--1661
+[][][][] []
+ []
 
 [49]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1615--1615
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1667--1667
 [][][][] []
  []
 
 
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 1622--1622
+Overfull \hbox (96.01772pt too wide) in paragraph at lines 1673--1673
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1637--1637
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [50]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1656--1656
-[][][][] []
- []
-
-[51]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1662--1662
-[][][][] []
- []
-
-
-Overfull \hbox (96.01772pt too wide) in paragraph at lines 1668--1668
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [52]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1676--1676
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1681--1681
 [][][][] []
  []
 
 File: output_13_0.png Graphic file (type bmp)
 <output_13_0.png>
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 1691--1693
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 1696--1698
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1696
+Underfull \hbox (badness 10000) in paragraph at lines 1699--1701
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
+Underfull \hbox (badness 10000) in paragraph at lines 1703--1704
 [][]
  []
 
-[54]
+[51]
 File: Bell_state.png Graphic file (type bmp)
 <Bell_state.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 1733--1735
-[][]
- []
-
-[55
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1736--1737
-[][]
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 1738--1740
 [][]
  []
 
+[52
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 1741--1742
 [][]
  []
 
-[56]
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1749
+
+Underfull \hbox (badness 10000) in paragraph at lines 1743--1745
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1746--1747
+[][]
+ []
+
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1753--1754
+[][]
+ []
+
+[54]
+File: spooky action.png Graphic file (type bmp)
+<spooky action.png>
+
+Overfull \hbox (88.62pt too wide) in paragraph at lines 1777--1779
+ [][][][][][] 
+ []
+
+[55] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 1852--1853
 [][]
  []
 
 [57]
-File: spooky action.png Graphic file (type bmp)
-<spooky action.png>
-
-Overfull \hbox (88.62pt too wide) in paragraph at lines 1772--1774
- [][][][][][] 
- []
-
-[58] [59]
-Underfull \hbox (badness 10000) in paragraph at lines 1847--1848
-[][]
- []
-
-[60]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1866--1866
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1871--1871
 [][][][] []
  []
 
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ز (U+0632) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no پ (U+067E) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no چ (U+0686) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no گ (U+06AF) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ک (U+06A9) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ه (U+0647) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ک (U+06A9) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no و (U+0648) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ث (U+062B) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no م (U+0645) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
-Missing character: There is no ؟ (U+061F) in font [lmroman10-regular]/OT:script
-=latn;language=dflt;mapping=tex-text;!
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1879--1879
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1884--1884
 [][][][] []
  []
 
@@ -2745,34 +2669,30 @@ File: Teleport3.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1897--1897
+[58]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1902--1902
 [][][][] []
  []
 
-[61]
 File: Teleport4.png Graphic file (type bmp)
 <Teleport4.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1914--1914
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1919--1919
 [][][][] []
  []
 
-
-Underfull \vbox (badness 5696) has occurred while \output is active []
-
- [62]
+[59]
 File: Teleport5.png Graphic file (type bmp)
 <Teleport5.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1932--1932
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1937--1937
 [][][][] []
  []
 
 File: Teleport6.png Graphic file (type bmp)
 <Teleport6.png>
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 1937--1938
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 1942--1943
  [][][][][][] 
  []
 
@@ -2780,29 +2700,29 @@ Overfull \hbox (34.5021pt too wide) in paragraph at lines 1937--1938
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1951--1951
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1956--1956
 [][][][] []
  []
 
 
 Underfull \vbox (badness 3219) has occurred while \output is active []
 
- [63]
+ [60]
 File: Teleport7.png Graphic file (type bmp)
 <Teleport7.png>
 
-[64] [65] [66] (./qi.aux)
+[61] [62] [63] (./qi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 54095 strings out of 476179
- 1236794 string characters out of 5813072
- 2078345 words of memory out of 5000000
- 73991 multiletter control sequences out of 15000+600000
+ 54101 strings out of 476179
+ 1236869 string characters out of 5813072
+ 2079358 words of memory out of 5000000
+ 73997 multiletter control sequences out of 15000+600000
  477859 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,18n,136p,1013b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on qi.pdf (65 pages).
+Output written on qi.pdf (62 pages).
