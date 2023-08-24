@@ -1,0 +1,310 @@
+\section{رمزگذاری متراکم کوانتومی}
+% from quantum computation l chuang
+
+رمزگذاری متراکم کوانتومی\footnote{\lr{Quantum super dense coding}} یک کاربرد ساده اما شگفت‌انگیز از مفاهیم ابتدایی مکانیک کوانتومی است. این کاربرد، همه ایده‌های اساسی و ابتدایی مکانیک کوانتومی را به روشی ملموس و غیرقابل‌توضیح ترکیب می‌کند، بنابراین مثالی ایده‌آل از اهداف و وظایف پردازش اطلاعات است که می‌توان با استفاده از مکانیک کوانتومی انجام داد.
+
+رمزگذاری متراکم شامل دو طرفین است که به طور معمول به عنوان «آلیس» و «باب» شناخته می‌شوند، که از هم فاصله زیادی دارند. هدف آنها انتقال برخی اطلاعات کلاسیک از آلیس به باب است. فرض کنید آلیس قصد دارد دوبیت داده‌ی کلاسیک را برای باب ارسال کند، اما فقط مجاز است یک کیوبیت به باب ارسال کند. آیا می‌تواند به هدف خود برسد؟
+
+رمزگذاری متراکم به ما می‌گوید که پاسخ این سؤال بله است. فرض کنید آلیس و باب در ابتدا یک جفت کیوبیت در حالت درهم‌تنیده زیر به اشتراک می‌گذارند:
+\begin{center}
+\begin{equation}\label{entangel psi}
+\vert \Psi \rangle = \frac{\vert 00 \rangle + \vert 11\rangle}{\sqrt{2}}
+\end{equation}	
+\end{center}
+
+
+آلیس می‌تواند با استفاده از دو کیوبیت درهم‌تنیده، دو بیت کلاسیک را به باب منتقل کند. او این کار را با اعمال یک سری از تبدیلات به کیوبیت خود انجام می‌دهد؛ انتخاب این تبدیلات با توجه به بیت‌هایی که قصد ارسالشان را دارد؛‌ تعیین می‌شود.  به عنوان مثال، اگر آلیس می‌خواهد بیت‌های 00 را به باب ارسال کند، او تبدیل یکه را به کیوبیت خود اعمال می‌کند.
+
+این تبدیل واحد باعث می‌شود که کیوبیت آلیس و کیوبیت باب در یکی از چهار حالت متعامد بل قرار گیرند. اگر آلیس کیوبیت خود را در حالت $\vert 00 \rangle$ قرار دهد، کیوبیت باب به طور خودکار به حالت $\vert 00 \rangle$ تبدیل می‌شود. این بدان معناست که آلیس دو بیت اطلاعات $(0, 0)$ را به باب منتقل کرده است.
+
+باب سپس کیوبیت خود را اندازه‌گیری می‌کند و یکی از مقادیر 0 یا 1 را به دست می‌آورد. بسته به مقداری که باب اندازه‌گیری می‌کند، او می‌تواند دو بیت کلاسیک که آلیس به او ارسال کرده است را بازیابی کند.
+\pagebreak
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=3in]{super dence.png}
+\caption{تنظیمات اولیه برای کدگذاری فوق متراکم، آلیس و باب که هر کدام یک کیوبیت، از جفت کیوبیت درهم‌تنیده را در اختیار دارند.}
+\label{fig:myimage}
+\end{figure}
+\end{center}
+
+همانطور که در شکل بالا قابل ملاحظه است؛ آلیس و باب، هرکدام یک کیوبیت در اختیار دارند. توجه داشته باشید که $\Psi$ یک حالت ثابت است؛ نیازی نیست که آلیس برای آماده‌سازی این حالت، کیوبیتی را به باب ارسال کند. در عوض، ممکن است یک طرف ثالث قبلاً حالت درهم‌تنیده را آماده کند، یکی از کیوبیت‌ها را به آلیس و دیگری را به باب ارسال کند.
+
+با ارسال تک کیوبیت آلیس  به باب، معلوم می‌شود که آلیس می‌تواند دو بیت اطلاعات کلاسیک را به باب منتقل کند. در اینجا روشی که او استفاده می‌کند؛ آورده شده است. اگر او بخواهد رشته بیت :
+
+\begin{itemize}
+	\item  $"00"$ را ارسال کند $\impliedby$ هیچ کاری روی کیوبیت خود انجام ندهد.
+	\item $"01"$ را ارسال کند $\impliedby$ تبدیل دگرگونی فاز\footnote{\lr{phase flip}} را روی کیوبیت خود اثر می‌دهد.
+	\item  $"10"$ را ارسال کند $\impliedby$ گیت کوانتومی NOT، X، را به کیوبیت خود اعمال می‌کند.
+	\item  $"11"$ را ارسال کند $\impliedby$ تبدیل iY را به کیوبیت خود اعمال می‌کند.
+\end{itemize}
+چهار حالت حاصل به راحتی قابل مشاهده هستند:
+\begin{center}
+\begin{equation}\label{Alice action superdense}
+	\begin{aligned}
+		& 00:|\psi\rangle \rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}} \\
+		& 01:|\psi\rangle \rightarrow \frac{|00\rangle-|11\rangle}{\sqrt{2}} \\
+		& 10:|\psi\rangle \rightarrow \frac{|10\rangle+|01\rangle}{\sqrt{2}} \\
+		& 11:|\psi\rangle \rightarrow \frac{|01\rangle-|10\rangle}{\sqrt{2}} .
+	\end{aligned}
+\end{equation}
+\end{center}
+
+همانطور که پیش‌از این اشاره شد؛این چهار حالت به عنوان پایه بل، حالت‌های بل، یا جفت‌های EPR شناخته می‌شوند.
+ توجه داشته باشید که حالت‌های بل؛ پایه‌های متعامد هستند؛ و بنابراین می‌توانند با اندازه‌گیری کوانتومی مناسب از یکدیگر متمایز شوند. اگر آلیس کیوبیت خود را به باب بفرستد، و باب هر دو کیوبیت را در اختیار داشته باشد، سپس با انجام اندازه‌گیری در پایه بل، باب می‌تواند تعیین کند که کدام یک از چهار رشته بیت ممکن را آلیس ارسال کرده است.
+
+به طور خلاصه می‌توان گفت:
+ آلیس، با تعامل و اثرگذاری تنها روی یک کیوبیت، قادر به انتقال دو بیت اطلاعات به باب است. البته دو کیوبیت در پروتکل دخیل هستند، اما آلیس هرگز نیازی به تعامل با کیوبیت دوم ندارد. از نظر کلاسیک، وظیفه‌ای که آلیس انجام می‌دهد، اگر فقط یک بیت کلاسیک ارسال می‌کرد، غیرممکن بود.
+
+علاوه بر این، پروتکل رمزگذاری متراکم، تا حدی در آزمایشگاه تأیید شده است.  یک نکته کلیدی را می‌توان در این مثال زیبا مشاهده کرد: اطلاعات فیزیکی است، و نظریه‌های فیزیکی شگفت‌انگیز مانند مکانیک کوانتوم ممکن است توانایی‌های پردازش اطلاعات شگفت‌انگیزی را پیش‌بینی کنند.
+
+مراحل این پروتکل به اختصار به شرح زیر است:\\
+
+\begin{itemize}
+	\item آلیس و باب یک جفت کیوبیت درهم‌تنیده را با هم به اشتراک می‌گذارند.
+	\item آلیس می‌خواهد دو بیت کلاسیک، 00 یا 01 را به باب ارسال کند.
+	\item آلیس یک عمل واحد بر روی کیوبیت خود اعمال می‌کند که بسته به بیت‌هایی که می‌خواهد به باب ارسال کند متفاوت است.
+	\item آلیس کیوبیت خود را به باب می‌فرستد.
+	\item باب کیوبیت را اندازه‌گیری می‌کند و دو بیت کلاسیکی که آلیس به او ارسال کرده است را دریافت می‌کند.
+	\item اگر آلیس یک عمل یکه بر روی کیوبیت خود اعمال نکند، باب فقط می‌تواند یک بیت کلاسیک را دریافت کند. با این حال، اگر آلیس عمل یکه مناسب را اعمال کند، می‌تواند دو بیت کلاسیک را با ارسال یک کیوبیت انتقال دهد.
+\end{itemize}
+
+پروتکل رمزگذاری متراکم؛ یک مثال عالی از قدرت مکانیک کوانتوم در انتقال اطلاعات است. این پروتکل نشان می‌دهد که می‌توان با استفاده از قوانین مکانیک کوانتوم، اطلاعات را به روش‌های غیرممکن در فیزیک کلاسیک انتقال داد.
+
+\subsection{پیاده سازی رمزگذاری متراکم در کیس کیت}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Superdense Coding}
+\PY{o}{\PYZpc{}}\PY{k}{matplotlib} inline
+\PY{k+kn}{from} \PY{n+nn}{qiskit} \PY{k+kn}{import} \PY{o}{*}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 0: Prepare the Bell State}
+\PY{n}{bell\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{bell\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup1.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 1: Prepare Alice circuits depending on b0b1}
+\PY{c+c1}{\PYZsh{} Case 00: the circuit has no gates}
+\PY{n}{alice\PYZus{}00} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}00}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\linewidth]{sup2.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 01: the circuit has the X gate}
+\PY{n}{alice\PYZus{}01} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}01}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup3.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 10: the circuit has the Z gate}
+\PY{n}{alice\PYZus{}10} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}10}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup4.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Case 11: the circuit has the X gate and then Z gate}
+\PY{n}{alice\PYZus{}11} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{x}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{z}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{alice\PYZus{}11}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup5.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Step 2: Apply the inverted entanglement circuit, and then measure}
+\PY{n}{invert\PYZus{}circuit} \PY{o}{=} \PY{n}{QuantumCircuit}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{cx}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{h}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{barrier}\PY{p}{(}\PY{p}{)}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{measure}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}  \PY{c+c1}{\PYZsh{} Qiskit measures are always reversed, b1b0 not b0b1}
+\PY{n}{invert\PYZus{}circuit}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup6.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{latin}
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} When merged, the whole circuit looks like}
+\PY{p}{(}\PY{n}{bell\PYZus{}circuit} \PY{o}{+} \PY{n}{alice\PYZus{}11} \PY{o}{+} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}\PY{o}{.}\PY{n}{draw}\PY{p}{(}\PY{n}{output}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{mpl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}	
+\end{latin}
+
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup7.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Now we simulate each outcome, to do so we create an auxiliary function that runs it}
+\PY{k}{def} \PY{n+nf}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{prep}\PY{p}{,} \PY{n}{encoding}\PY{p}{,} \PY{n}{decoding}\PY{p}{)}\PY{p}{:}
+\PY{+w}{    }\PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{}Returns the counts of the circuit that is combination of the three circuits\PYZdq{}\PYZdq{}\PYZdq{}}
+\PY{n}{circuit} \PY{o}{=} \PY{n}{prep} \PY{o}{+} \PY{n}{encoding} \PY{o}{+} \PY{n}{decoding}
+\PY{n}{simulator} \PY{o}{=} \PY{n}{Aer}\PY{o}{.}\PY{n}{get\PYZus{}backend}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{qasm\PYZus{}simulator}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{job} \PY{o}{=} \PY{n}{execute}\PY{p}{(}\PY{n}{circuit}\PY{p}{,} \PY{n}{simulator}\PY{p}{,} \PY{n}{shots} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{result} \PY{o}{=} \PY{n}{job}\PY{o}{.}\PY{n}{result}\PY{p}{(}\PY{p}{)}
+\PY{n}{count} \PY{o}{=} \PY{n}{result}\PY{o}{.}\PY{n}{get\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+\PY{k}{return} \PY{n}{count}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 00}
+\PY{n}{count\PYZus{}00} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}00}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}00}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup9.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 01}
+\PY{n}{count\PYZus{}01} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}01}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}01}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup10.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 10}
+\PY{n}{count\PYZus{}10} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}10}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup11.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} For 11}
+\PY{n}{count\PYZus{}11} \PY{o}{=} \PY{n}{simulate\PYZus{}circuit}\PY{p}{(}\PY{n}{bell\PYZus{}circuit}\PY{p}{,} \PY{n}{alice\PYZus{}11}\PY{p}{,} \PY{n}{invert\PYZus{}circuit}\PY{p}{)}
+\PY{n}{visualization}\PY{o}{.}\PY{n}{plot\PYZus{}histogram}\PY{p}{(}\PY{n}{count\PYZus{}11}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.5\linewidth]{sup12.png}
+\caption{This is an image.}
+\end{figure}
+\end{center}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} The results match our predictions!}
+\PY{c+c1}{\PYZsh{} For purposes of reproducibility, the Qiskit version is}
+\PY{n}{qiskit}\PY{o}{.}\PY{n}{\PYZus{}\PYZus{}qiskit\PYZus{}version\PYZus{}\PYZus{}}
+\end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[width=13cm, colback=gray9, boxsep=10pt, halign=center]
+\begin{Verbatim}[commandchars=\\\{\}]
+\{'qiskit-terra': '0.11.0',
+'qiskit-aer': '0.3.4',
+'qiskit-ignis': '0.2.0',
+'qiskit-ibmq-provider': '0.4.4',
+'qiskit-aqua': '0.6.1',
+'qiskit': '0.14.0'\}
+\end{Verbatim}
+\end{tcolorbox}

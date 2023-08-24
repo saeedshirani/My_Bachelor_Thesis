@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  24 AUG 2023 01:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  24 AUG 2023 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2245,49 +2245,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [6] [7]
 LaTeX Font Info:    Font shape `TU/lmroman10-regular(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 357.
- [8] [9] [10] [11]
+
+Underfull \vbox (badness 1424) has occurred while \output is active []
+
+ [8]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10] [11]
+Underfull \vbox (badness 2173) has occurred while \output is active []
 
  [12]
 <xymatrix 5x2 205> [13]
-Underfull \hbox (badness 10000) in paragraph at lines 555--556
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 [][]
  []
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 9.99985pt on input line 559.
+(Font)              scaled to size 9.99985pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 6.9999pt on input line 559.
+(Font)              scaled to size 6.9999pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/b/n' will be
-(Font)              scaled to size 4.99992pt on input line 559.
+(Font)              scaled to size 4.99992pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 10.00092pt on input line 559.
+(Font)              scaled to size 10.00092pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 7.00064pt on input line 559.
+(Font)              scaled to size 7.00064pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/b/n' will be
-(Font)              scaled to size 5.00046pt on input line 559.
+(Font)              scaled to size 5.00046pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 9.99893pt on input line 559.
+(Font)              scaled to size 9.99893pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 6.99925pt on input line 559.
+(Font)              scaled to size 6.99925pt on input line 561.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/b/n' will be
-(Font)              scaled to size 4.99947pt on input line 559.
+(Font)              scaled to size 4.99947pt on input line 561.
 LaTeX Font Info:    Font shape `TU/XBZar(0)/m/n' will be
-(Font)              scaled to size 4.72527pt on input line 559.
-
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
- [14]
-<xymatrix 5x1 219>
-Underfull \hbox (badness 10000) in paragraph at lines 667--669
-[][]
- []
-
+(Font)              scaled to size 4.72527pt on input line 561.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [14]
+<xymatrix 5x1 219>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 670--671
+Underfull \hbox (badness 10000) in paragraph at lines 669--671
 [][]
  []
 
@@ -2296,8 +2298,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 672--673
 [][]
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+[][]
+ []
+
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 706--707
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 [][]
  []
 
@@ -2305,11 +2312,17 @@ File: Matrix-representation-and-quantum-circuit-of-CNOT-gate.png Graphic file (
 type bmp)
 <Matrix-representation-and-quantum-circuit-of-CNOT-gate.png>
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 752--754
+Underfull \hbox (badness 10000) in paragraph at lines 754--756
 [][]
  []
 
-[18] [19]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 2261) has occurred while \output is active []
+
+ [19]
 Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no θ (U+03B8) in font XB Zar/OT:script=latn;languag
@@ -2327,34 +2340,41 @@ e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no Φ (U+03A6) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 
-Underfull \vbox (badness 7451) has occurred while \output is active []
+Underfull \vbox (badness 1365) has occurred while \output is active []
 
  [20]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
 File: swap.png.jpg Graphic file (type bmp)
 <swap.png.jpg>
 
-[22]
+[23]
 File: cnot in circuit.png Graphic file (type bmp)
 <cnot in circuit.png>
 File: measurment.png Graphic file (type bmp)
 <measurment.png>
- [23] [24] [25]
+ [24] [25] [26]
 File: meas-firstcirc.png Graphic file (type bmp)
 <meas-firstcirc.png>
- [26] [27]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28
+ [27] [28] [29
 
 ]
-[29] [30] [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [30]
+[31]
+Underfull \vbox (badness 3514) has occurred while \output is active []
+
  [32]
-Overfull \hbox (80.25pt too wide) in paragraph at lines 1223--1223
+[33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+Overfull \hbox (80.25pt too wide) in paragraph at lines 1224--1224
 [][]\TU/lmtt/m/n/10 circuit.draw(output = "mpl")  # output = "mpl" is defining 
 type of circuit output[] []
  []
@@ -2362,12 +2382,12 @@ type of circuit output[] []
 File: tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png Gra
 phic file (type bmp)
 <tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png>
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1252--1253
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 1253--1254
 [][]
  []
 
-[34]
+[36]
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
@@ -2376,44 +2396,50 @@ Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;langua
 e=dflt;script=arab;mapping=persian-tex-text;!
 File: Uforacle.png Graphic file (type bmp)
 <Uforacle.png>
-[35
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37
 
 ]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1302.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1302.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1302.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1302.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1308.
 
-[36]
+
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [38]
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
- [37]
+
+[39]
 File: standard computation model.png Graphic file (type bmp)
 <standard computation model.png>
+ [40]
 File: Query computation model.png Graphic file (type bmp)
 <Query computation model.png>
- [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
+ [41]
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1415--1416
+Underfull \vbox (badness 3240) has occurred while \output is active []
+
+ [42]
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1426
 [][]
  []
 
-[40]
 File: Deutsch algorithm.png Graphic file (type bmp)
 <Deutsch algorithm.png>
-
 Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
@@ -2430,362 +2456,287 @@ Missing character: There is no ψ (U+03C8) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no ⟩ (U+27E9) in font XB Zar/OT:script=latn;languag
 e=dflt;script=arab;mapping=persian-tex-text;!
-[41]
+[43]
 File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type b
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
+Underfull \hbox (badness 10000) in paragraph at lines 1455--1456
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1452--1453
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+ [44]
+Underfull \hbox (badness 10000) in paragraph at lines 1462--1463
 [][]
  []
 
-[42] [43]
+[45]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1505.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1515.
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1509--1509
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1519--1519
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1516--1516
-[][][][] []
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
+ [46]
 Overfull \hbox (24.88582pt too wide) in paragraph at lines 1526--1526
 [][][][] []
  []
 
 
-Underfull \vbox (badness 5036) has occurred while \output is active []
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1536--1536
+[][][][] []
+ []
 
- [44]
 File: output_2_0.png Graphic file (type bmp)
 <output_2_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1544--1544
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1554--1554
 [][][][] []
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
 File: output_3_0.png Graphic file (type bmp)
 <output_3_0.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[45]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1558--1558
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1568--1568
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1563--1563
+Underfull \vbox (badness 7273) has occurred while \output is active []
+
+ [48]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1573--1573
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1569--1569
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1579--1579
 [][][][] []
  []
 
 File: output_5_0.png Graphic file (type bmp)
 <output_5_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1588--1588
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1598--1598
 [][][][] []
  []
 
-
-Underfull \vbox (badness 6775) has occurred while \output is active []
-
- [46]
 File: output_6_0.png Graphic file (type bmp)
 <output_6_0.png>
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Warning: Suppressing empty link on input line 1597.
 
+Package hyperref Warning: Suppressing empty link on input line 1607.
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1605--1605
+[49]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1615--1615
 [][][][] []
  []
 
 
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 1612--1612
-[][][][] []
- []
-
-[47]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1627--1627
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 1622--1622
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1646--1646
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [48]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1652--1652
-[][][][] []
- []
-
-
-Overfull \hbox (96.01772pt too wide) in paragraph at lines 1658--1658
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1637--1637
 [][][][] []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1666--1666
+ [50]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1656--1656
+[][][][] []
+ []
+
+[51]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1662--1662
+[][][][] []
+ []
+
+
+Overfull \hbox (96.01772pt too wide) in paragraph at lines 1668--1668
+[][][][] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1676--1676
 [][][][] []
  []
 
 File: output_13_0.png Graphic file (type bmp)
 <output_13_0.png>
-[50]
-Underfull \hbox (badness 10000) in paragraph at lines 1681--1683
+[53]
+Underfull \hbox (badness 10000) in paragraph at lines 1691--1693
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1684--1686
+Underfull \hbox (badness 10000) in paragraph at lines 1694--1696
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1688--1689
+Underfull \hbox (badness 10000) in paragraph at lines 1698--1699
 [][]
  []
 
-[51]
+[54]
 File: Bell_state.png Graphic file (type bmp)
 <Bell_state.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1723--1725
+Underfull \hbox (badness 10000) in paragraph at lines 1733--1735
 [][]
  []
 
-[52
+[55
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1726--1727
+Underfull \hbox (badness 10000) in paragraph at lines 1736--1737
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1728--1730
+Underfull \hbox (badness 10000) in paragraph at lines 1738--1740
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1731--1732
-[][]
- []
-
-[53] [54]
-File: super dence.png Graphic file (type bmp)
-<super dence.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55]
-Underfull \hbox (badness 10000) in paragraph at lines 1798--1799
+Underfull \hbox (badness 10000) in paragraph at lines 1741--1742
 [][]
  []
 
 [56]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1819--1819
-[][][][] []
- []
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1830--1830
-[][][][] []
- []
-
-File: sup1.png Graphic file (type bmp)
-<sup1.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1848--1848
-[][][][] []
+Underfull \hbox (badness 10000) in paragraph at lines 1748--1749
+[][]
  []
 
 [57]
-File: sup2.png Graphic file (type bmp)
-<sup2.png>
+File: spooky action.png Graphic file (type bmp)
+<spooky action.png>
 
+Overfull \hbox (88.62pt too wide) in paragraph at lines 1772--1774
+ [][][][][][] 
+ []
+
+[58] [59]
+Underfull \hbox (badness 10000) in paragraph at lines 1847--1848
+[][]
+ []
+
+[60]
 Overfull \hbox (24.88582pt too wide) in paragraph at lines 1866--1866
 [][][][] []
  []
 
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ز (U+0632) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no پ (U+067E) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no چ (U+0686) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no گ (U+06AF) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ک (U+06A9) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ه (U+0647) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ک (U+06A9) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no و (U+0648) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ب (U+0628) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ت (U+062A) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no س (U+0633) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ث (U+062B) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ر (U+0631) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ا (U+0627) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no د (U+062F) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ی (U+06CC) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no م (U+0645) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
+Missing character: There is no ؟ (U+061F) in font [lmroman10-regular]/OT:script
+=latn;language=dflt;mapping=tex-text;!
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [58]
-File: sup3.png Graphic file (type bmp)
-<sup3.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1884--1884
-[][][][] []
- []
-
-File: sup4.png Graphic file (type bmp)
-<sup4.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1903--1903
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [59]
-File: sup5.png Graphic file (type bmp)
-<sup5.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1923--1923
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [60]
-File: sup6.png Graphic file (type bmp)
-<sup6.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1939--1939
-[][][][] []
- []
-
-File: sup7.png Graphic file (type bmp)
-<sup7.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1963--1963
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [61]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1971--1971
-[][][][] []
- []
-
-File: sup9.png Graphic file (type bmp)
-<sup9.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1987--1987
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [62]
-File: sup10.png Graphic file (type bmp)
-<sup10.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2003--2003
-[][][][] []
- []
-
-File: sup11.png Graphic file (type bmp)
-<sup11.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2019--2019
-[][][][] []
- []
-
-[63]
-File: sup12.png Graphic file (type bmp)
-<sup12.png>
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2035--2035
-[][][][] []
- []
-
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-Missing character: There is no ‏ (U+200F) in font [lmmono10-regular]:!
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2046--2046
-[][][][] []
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [64]
-Underfull \hbox (badness 10000) in paragraph at lines 2051--2052
-[][]
- []
-
-
-Underfull \vbox (badness 7099) has occurred while \output is active []
-
- [65]
-File: spooky action.png Graphic file (type bmp)
-<spooky action.png>
-
-Overfull \hbox (88.62pt too wide) in paragraph at lines 2075--2077
- [][][][][][] 
- []
-
-[66] [67]
-Underfull \hbox (badness 10000) in paragraph at lines 2150--2151
-[][]
- []
-
-[68]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2167--2167
-[][][][] []
- []
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2178--2178
-[][][][] []
- []
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2184--2184
-[][][][] []
- []
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2190--2190
-[][][][] []
- []
-
-
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2196--2196
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1879--1879
 [][][][] []
  []
 
@@ -2795,55 +2746,63 @@ File: Teleport3.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2214--2214
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1897--1897
 [][][][] []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
+[61]
 File: Teleport4.png Graphic file (type bmp)
 <Teleport4.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2231--2231
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1914--1914
 [][][][] []
  []
 
+
+Underfull \vbox (badness 5696) has occurred while \output is active []
+
+ [62]
 File: Teleport5.png Graphic file (type bmp)
 <Teleport5.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[70]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2248--2248
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1932--1932
 [][][][] []
  []
 
 File: Teleport6.png Graphic file (type bmp)
 <Teleport6.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 2265--2265
-[][][][] []
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 1937--1938
+ [][][][][][] 
  []
 
-File: Teleport7.png Graphic file (type bmp)
-<Teleport7.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[71] [72] [73] (./qi.aux)
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1951--1951
+[][][][] []
+ []
+
+
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+ [63]
+File: Teleport7.png Graphic file (type bmp)
+<Teleport7.png>
+
+[64] [65] [66] (./qi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 54223 strings out of 476179
- 1238526 string characters out of 5813072
- 2080588 words of memory out of 5000000
- 74107 multiletter control sequences out of 15000+600000
+ 54095 strings out of 476179
+ 1236794 string characters out of 5813072
+ 2078345 words of memory out of 5000000
+ 73991 multiletter control sequences out of 15000+600000
  477859 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,18n,136p,1013b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on qi.pdf (72 pages).
+Output written on qi.pdf (65 pages).
