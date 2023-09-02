@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  1 SEP 2023 16:57
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  2 SEP 2023 05:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2305,28 +2305,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 686--687
  []
 
 [15]
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-Missing character: There is no ⊕ (U+2295) in font XB Zar/OT:script=latn;languag
-e=dflt;script=arab;mapping=persian-tex-text;!
-
-Underfull \hbox (badness 10000) in paragraph at lines 737--738
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 [][]
  []
 
-[16]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
 File: Matrix-representation-and-quantum-circuit-of-CNOT-gate.png Graphic file (
 type bmp)
 <Matrix-representation-and-quantum-circuit-of-CNOT-gate.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--785
+Underfull \hbox (badness 10000) in paragraph at lines 768--770
 [][]
  []
 
 [17]
-Underfull \vbox (badness 1546) has occurred while \output is active []
+Underfull \vbox (badness 5133) has occurred while \output is active []
 
  [18]
 [19]
@@ -2368,7 +2364,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33]
-Overfull \hbox (80.25pt too wide) in paragraph at lines 1254--1254
+Overfull \hbox (80.25pt too wide) in paragraph at lines 1239--1239
 [][]\TU/lmtt/m/n/10 circuit.draw(output = "mpl")  # output = "mpl" is defining 
 type of circuit output[] []
  []
@@ -2377,7 +2373,7 @@ File: tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png Gra
 phic file (type bmp)
 <tutorials_circuits_advanced_03_advanced_circuit_visualization_7_0.png>
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+Underfull \hbox (badness 10000) in paragraph at lines 1268--1269
 [][]
  []
 
@@ -2388,16 +2384,16 @@ File: Uforacle.png Graphic file (type bmp)
 
 ]
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1321.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1306.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1321.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1306.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1321.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1306.
 
 
-LaTeX Warning: Command \textbar invalid in math mode on input line 1321.
+LaTeX Warning: Command \textbar invalid in math mode on input line 1306.
 
 File: Multyhadamard.png Graphic file (type bmp)
 <Multyhadamard.png>
@@ -2413,7 +2409,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Constantorbalanse.png Graphic file (type bmp)
 <Constantorbalanse.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1438--1439
+Underfull \hbox (badness 10000) in paragraph at lines 1423--1424
 [][]
  []
 
@@ -2424,20 +2420,20 @@ File: Quantum circuit implementing Deutsch’s algorithm.png Graphic file (type 
 mp)
 <Quantum circuit implementing Deutsch’s algorithm.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1458--1459
+Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
 [][]
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 1465--1466
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1451
 [][]
  []
 
 [43]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1518.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1503.
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1522--1522
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1507--1507
 [][][][] []
  []
 
@@ -2445,12 +2441,12 @@ Overfull \hbox (24.88582pt too wide) in paragraph at lines 1522--1522
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1529--1529
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1514--1514
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1539--1539
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1524--1524
 [][][][] []
  []
 
@@ -2460,7 +2456,7 @@ File: output_2_0.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1557--1557
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1542--1542
 [][][][] []
  []
 
@@ -2471,7 +2467,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: output_3_0.png Graphic file (type bmp)
 <output_3_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1571--1571
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1556--1556
 [][][][] []
  []
 
@@ -2479,19 +2475,19 @@ Overfull \hbox (24.88582pt too wide) in paragraph at lines 1571--1571
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
  [46]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1576--1576
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1561--1561
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1582--1582
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1567--1567
 [][][][] []
  []
 
 File: output_5_0.png Graphic file (type bmp)
 <output_5_0.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1601--1601
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1586--1586
 [][][][] []
  []
 
@@ -2501,20 +2497,20 @@ File: output_6_0.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package hyperref Warning: Suppressing empty link on input line 1610.
+Package hyperref Warning: Suppressing empty link on input line 1595.
 
 [47]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1618--1618
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1603--1603
 [][][][] []
  []
 
 
-Overfull \hbox (53.33858pt too wide) in paragraph at lines 1625--1625
+Overfull \hbox (53.33858pt too wide) in paragraph at lines 1610--1610
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1640--1640
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1625--1625
 [][][][] []
  []
 
@@ -2522,22 +2518,22 @@ Overfull \hbox (24.88582pt too wide) in paragraph at lines 1640--1640
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1659--1659
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1644--1644
 [][][][] []
  []
 
 [49]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1665--1665
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1650--1650
 [][][][] []
  []
 
 
-Overfull \hbox (96.01772pt too wide) in paragraph at lines 1671--1671
+Overfull \hbox (96.01772pt too wide) in paragraph at lines 1656--1656
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1679--1679
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1664--1664
 [][][][] []
  []
 
@@ -2547,44 +2543,44 @@ File: output_13_0.png Graphic file (type bmp)
 File: Bell_state.png Graphic file (type bmp)
 <Bell_state.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 1700--1702
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1687
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1703--1705
+Underfull \hbox (badness 10000) in paragraph at lines 1688--1690
 [][]
  []
 
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 1707--1708
+Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1729--1731
+Underfull \hbox (badness 10000) in paragraph at lines 1714--1716
 [][]
  []
 
 [52
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1732--1733
+Underfull \hbox (badness 10000) in paragraph at lines 1717--1718
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1736
+Underfull \hbox (badness 10000) in paragraph at lines 1719--1721
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1737--1738
+Underfull \hbox (badness 10000) in paragraph at lines 1722--1723
 [][]
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
+Underfull \hbox (badness 10000) in paragraph at lines 1729--1730
 [][]
  []
 
@@ -2592,22 +2588,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1744--1745
 File: spooky action.png Graphic file (type bmp)
 <spooky action.png>
 
-Overfull \hbox (88.62pt too wide) in paragraph at lines 1768--1770
+Overfull \hbox (88.62pt too wide) in paragraph at lines 1753--1755
  [][][][][][] 
  []
 
 [55] [56]
-Underfull \hbox (badness 10000) in paragraph at lines 1843--1844
+Underfull \hbox (badness 10000) in paragraph at lines 1828--1829
 [][]
  []
 
 [57]
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1862--1862
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1847--1847
 [][][][] []
  []
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1875--1875
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1860--1860
 [][][][] []
  []
 
@@ -2617,7 +2613,7 @@ File: Teleport3.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1893--1893
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1878--1878
 [][][][] []
  []
 
@@ -2628,7 +2624,7 @@ Underfull \vbox (badness 4621) has occurred while \output is active []
 File: Teleport4.png Graphic file (type bmp)
 <Teleport4.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1910--1910
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1895--1895
 [][][][] []
  []
 
@@ -2636,14 +2632,14 @@ Overfull \hbox (24.88582pt too wide) in paragraph at lines 1910--1910
 File: Teleport5.png Graphic file (type bmp)
 <Teleport5.png>
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1928--1928
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1913--1913
 [][][][] []
  []
 
 File: Teleport6.png Graphic file (type bmp)
 <Teleport6.png>
 
-Overfull \hbox (34.5021pt too wide) in paragraph at lines 1933--1934
+Overfull \hbox (34.5021pt too wide) in paragraph at lines 1918--1919
  [][][][][][] 
  []
 
@@ -2651,7 +2647,7 @@ Overfull \hbox (34.5021pt too wide) in paragraph at lines 1933--1934
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (24.88582pt too wide) in paragraph at lines 1947--1947
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 1932--1932
 [][][][] []
  []
 
@@ -2670,7 +2666,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  54108 strings out of 476179
  1236960 string characters out of 5813072
- 2077512 words of memory out of 5000000
+ 2077511 words of memory out of 5000000
  74004 multiletter control sequences out of 15000+600000
  477859 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
