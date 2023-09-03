@@ -280,7 +280,7 @@
 
  درانتها به معرفی و بررسی دوربری کوانتومی و پیاده‌سازی آن برکامپیوتر کوانتومی شرکت آی‌بی‌ام\footnote{IBM} خواهیم پرداخت.\\
 دوربری کوانتومی یکی از پدیده‌های کوانتومی ساده ولی بسیار شگرف دنیای فیزیک است. علت سادگی این پدیده ناشی از وضعیت کیوبیت‌های موٍثر در تعریف این پدیده است؛ می‌توان با سه کیوبیت و با تعریف برهم‌کنش‌های دوکیوبیتی، یک ذره را با روش دوربری به هرنقطه‌ی دیگری انتقال داد. باید دقت داشت که خود ذره در فضا منتقل نمی‌شود؛ بلکه اطلاعات آن به نقطه‌ی دیگری فرستاد می‌شود.
-دوکیوبیتی بودن برهمکنش‌های این پدیده منجر به ساده بودن انجام آزمایش یا شبیه سازی و درک مفاهیم مرتبط با آن می‌گردد.//
+دوکیوبیتی بودن برهمکنش‌های این پدیده منجر به ساده بودن انجام آزمایش یا شبیه سازی و درک مفاهیم مرتبط با آن می‌گردد.\\
 هدف اصلی این نوشته،‌نشان دادن برتری و تفاوت یک کامپیوتر کوانتومی نسبت به کامپیوتر کلاسیک، درشبیه‌سازی پدیده‌های کوانتومی می‌باشد؛ این مهم با شبیه‌سازی الگوریتم دوچ و دوربری کوانتومی میسر می‌شود.
 
 \let\cleardoublepage\clearpage
@@ -348,7 +348,7 @@
 		\begin{aligned}
 			\vert+\rangle &= \frac{1}{\sqrt{2}} \vert 0\rangle + \frac{1}{\sqrt{2}} \vert 1\rangle \\
 			\vspace{0.5cm}
-			\boldsymbol{\vert-\rangle} &= \frac{1}{\sqrt{2}} \vert 0\rangle + \frac{1}{\sqrt{2}} \vert 1\rangle
+			\boldsymbol{\vert-\rangle} &= \frac{1}{\sqrt{2}} \vert 0\rangle - \frac{1}{\sqrt{2}} \vert 1\rangle
 		\end{aligned}
 	\end{equation}
 \end{center}
@@ -456,7 +456,7 @@ $\vert \Psi \rangle = a \vert00\rangle + b \vert01\rangle + c \vert10\rangle + d
 
 به طور کلی تر، با توجه به هر دو پایه حالت $\vert a\rangle$ و $\vert b\rangle$ برای یک کیوبیت، می توان هر حالت دلخواهی را به عنوان یک ترکیب خطی $\alpha \vert a\rangle + \beta \vert b\rangle$ از آن حالات بیان کرد. علاوه بر این، اگر این حالات  متعامد باشند، می توان با توجه به پایه $\vert a\rangle$، $\vert b\rangle$ اندازه گیری کرد، که نتیجه a با احتمال $\vert\alpha\vert ^2$ و b با احتمال $\vert\beta\vert ^2$ قابل رخداد است.
 
-با توجه به بیان احتمالاتی مفهوم کیوبیت و نرمال بودن مقادیر احتمالات و متعامد بودن پایه‌ها، لازم است تا $\vert\alpha\vert ^ 2 + \vert\alpha\vert ^ 2 = 1$ باشد همانطور که برای احتمالات انتظار می رود. به طور مشابه، در اصل می توان یک سیستم کوانتومی از بسیاری از کیوبیت ها را با توجه به یک پایه متعامد دلخواه اندازه گیری کرد.
+با توجه به بیان احتمالاتی مفهوم کیوبیت و نرمال بودن مقادیر احتمالات و متعامد بودن پایه‌ها، لازم است تا $\vert\alpha\vert ^ 2 + \vert\beta\vert ^ 2 = 1$ باشد همانطور که برای احتمالات انتظار می رود. به طور مشابه، در اصل می توان یک سیستم کوانتومی از بسیاری از کیوبیت ها را با توجه به یک پایه متعامد دلخواه اندازه گیری کرد.
 
 اندازه گیری در پایه های دیگر یک ابزار قدرتمند در محاسبات کوانتومی است. این امکان را می دهد تا ما در حالت های کوانتومی که در پایگاه محاسباتی قابل اندازه گیری نیستند، اندازه گیری کنیم. این امکان را می دهد تا ما از روش های محاسباتی جدیدی استفاده کنیم که در محاسبات کلاسیک غیرممکن است.
 
@@ -526,7 +526,7 @@ H\ket{1} = \frac{1}{\sqrt{2}} (\ket{0} - \ket{1})
 }
 
 \subsection*{گیت NOT}
-گیت کوانتومی $U_{NOT}$ یک عملگر یکه و بازگشت‌پذیر است. 
+گیت کوانتومی $U_{NOT}$ یک گیت یکه و بازگشت‌پذیر است. 
 
 \begin{center}
 	\begin{equation}\label{UNOT on ket}
@@ -944,7 +944,7 @@ $$
 این رابطه‌ بصورت معکوس نیز برقرارست.
 
 \subsubsection{گیت مبادله در مدار و خصوصیات آن}
-به طور کلی، برای یک بردار 2 کیوبیتی، نظیر $\vert \Psi \rangle=\alpha|00\rangle+\gamma|01\rangle+\beta|10\rangle+\delta|11\rangle$ داریم:
+به طور کلی، برای یک بردار 2 کیوبیتی، نظیر $\vert \Psi \rangle=\alpha|00\rangle+\beta|01\rangle+\gamma|10\rangle+\delta|11\rangle$ داریم:
 
 \begin{center}
 	$$\begin{aligned}
@@ -1270,7 +1270,7 @@ f (x) : \{0, 1\} \rightarrow \{0, 1\}
 \end{equation}
 \end{center}
 
-روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert f(x) \oplus x, y\rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
+روش مناسب برای محاسبه این تابع در یک کامپیوتر کوانتومی، با در نظر گرفتن دو کیوبیت که در حالت $\vert x, y\rangle$شروع می شود. با یک توالی مناسب از گیت های منطقی می توان این حالت را به $\vert x \hspace{0.1 cm} y\oplus f(x) \rangle$ تبدیل کرد که در آن $\oplus$ بیانگر جمع مدوله با پایه‌2 می‌باشد.
 
 هریک از دسته‌های کیوبیت، \textbf{رجیستر کوانتومی} نامیده‌می‌شوند. اولین رجیستر، «رجیستر داده» و دومین رجیستر «رجیستر هدف» نامیده می‌شود.\\
 ازین پس در این بخش به عامل گذار $\vert x, y \rangle \rightarrow \vert x, y \oplus f(x) \rangle$، عنوان «تابع \lr{$U_{f}$}» را اطلاق خواهیم کرد. لازم به ذکرست که این تبدیل، یک تبدیل یکه به شمار می‌آید.\footnote{اثبات این مطلب از حوصله‌ی بحث خارج است.}
@@ -1939,5 +1939,27 @@ ibmq\_manila : 15 \& 5 qubits
 
 
 عدد اول بیانگر حالت کیوبیت اول است. تمامی حالاتی که مقدار این کیوبیت برابر یک باشد برای ما اهمیت دارد.
+
+
+
+
+
+
+
+\section{مراجع و منابع}
+\begin{latin}
+\begin{itemize}
+	\item (Scientific and Engineering Computation) Eleanor Rieffel, Wolfgang Polak - Quantum Computing\_ A Gentle Introduction-The MIT Press (2011)
+	\item Chris Bernhardt - Quantum Computing for Everyone (The MIT Press)-The MIT Press (2019)
+	\item Hiu Yung Wong - Introduction to Quantum Computing\_ From a Layperson to a Programmer in 30 Steps-Springer (2022)
+	\item Introduction to Quantum Computing wong
+	\item John Watrous - The Theory of Quantum Information-Cambridge University Press (2018)
+	\item Michael A. Nielsen, Isaac L. Chuang - Quantum Computation and Quantum Information\_ 10th Anniversary Edition-Cambridge University Press (2011)
+	\item N. David Mermin - Quantum computer science\_ an introduction-Cambridge University Press (2007)
+	\item Stephen Barnett - Quantum Information (Oxford Master Series in Physics\_ Atomic, Optical, and Laser Physics)-Oxford University Press, USA (2009)
+	\item Qiskit Documentation
+\end{itemize}	
+\end{latin}
+
 
 \end{document}

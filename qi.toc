@@ -52,3 +52,4 @@
 \contentsline {section}{درهمتنیدگی}{52}{section*.58}%
 \contentsline {section}{دوربری}{54}{section*.59}%
 \contentsline {subsection}{پیاده‌سازی دوربری در کیس کیت}{58}{section*.60}%
+\contentsline {section}{مراجع و منابع}{62}{section*.61}%

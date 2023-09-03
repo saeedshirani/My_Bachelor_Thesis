@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  2 SEP 2023 09:26
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.1.31)  3 SEP 2023 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2647,16 +2647,28 @@ Underfull \vbox (badness 3219) has occurred while \output is active []
 File: Teleport7.png Graphic file (type bmp)
 <Teleport7.png>
 
-[60] [61] [62] (./qi.aux)
+[60]
+Underfull \hbox (badness 1337) in paragraph at lines 1958--1959
+[][]\TU/lmroman10-regular(0)/m/n/10 N. David Mermin - Quantum computer science_
+ an introduction-[]
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 1959--1960
+[][]\TU/lmroman10-regular(0)/m/n/10 Stephen Barnett - Quantum Information (Oxfo
+rd Master Series in[]
+ []
+
+[61] [62] (./qi.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 54106 strings out of 476179
- 1236936 string characters out of 5813072
+ 54107 strings out of 476179
+ 1236942 string characters out of 5813072
  2077708 words of memory out of 5000000
- 74002 multiletter control sequences out of 15000+600000
+ 74003 multiletter control sequences out of 15000+600000
  477859 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  100i,18n,136p,1013b,655s stack positions out of 10000i,1000n,20000p,200000b,200000s
