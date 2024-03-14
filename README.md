@@ -1,4 +1,4 @@
-# My_Bachlor_Thesis
+# My_Bachelor_Thesis
 
 
 for pictures i used some of pictures in the Qiskit site
