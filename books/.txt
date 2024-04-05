@@ -1,9 +1,0 @@
-(Scientific and Engineering Computation) Eleanor Rieffel, Wolfgang Polak - Quantum Computing_ A Gentle Introduction-The MIT Press (2011)
-Chris Bernhardt - Quantum Computing for Everyone (The MIT Press)-The MIT Press (2019)
-Hiu Yung Wong - Introduction to Quantum Computing_ From a Layperson to a Programmer in 30 Steps-Springer (2022)
-Introduction to Quantum Computing wong
-John Watrous - The Theory of Quantum Information-Cambridge University Press (2018)
-Michael A. Nielsen, Isaac L. Chuang - Quantum Computation and Quantum Information_ 10th Anniversary Edition-Cambridge University Press (2011)
-N. David Mermin - Quantum computer science_ an introduction-Cambridge University Press (2007)
-Stephen Barnett - Quantum Information (Oxford Master Series in Physics_ Atomic, Optical, and Laser Physics)-Oxford University Press, USA (2009)
-Qiskit Documentation
